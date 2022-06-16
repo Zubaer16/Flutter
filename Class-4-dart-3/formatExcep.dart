@@ -5,7 +5,7 @@ void main(){
     int age = int.parse('4s');
     print(age);
   } catch(e){
-    print('This is error');
+    print('This is FormatException ');
   }
 
   print('finish');  
