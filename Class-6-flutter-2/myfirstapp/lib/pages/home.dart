@@ -1,5 +1,7 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, prefer_final_fields
 
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -190,21 +192,74 @@ class HomeScreen extends StatelessWidget {
                 },
               ),
             ),
-            SizedBox(height: 5),
+            SizedBox(
+              height: 5,
+            ),
             Container(
-              height: 1000,
-              child: GridView.builder(
-                  physics: NeverScrollableScrollPhysics(),
-                  itemCount: 10,
-                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                      crossAxisSpacing: 10,
+              height: 1100,
+              clipBehavior: Clip.none,
+              child: Padding(
+                padding: const EdgeInsets.only(right: 20),
+                child: GridView.builder(
+                    physics: NeverScrollableScrollPhysics(),
+                    itemCount: 10,
+                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                       crossAxisCount: 2,
-                      mainAxisSpacing: 10),
-                  itemBuilder: (_, index) {
-                    return Container(
-                      color: Colors.green,
-                    );
-                  }),
+                      crossAxisSpacing: 10,
+                      mainAxisSpacing: 10,
+                      childAspectRatio: .7,
+                    ),
+                    itemBuilder: (_, index) {
+                      return Padding(
+                        padding: const EdgeInsets.only(top: 50),
+                        child: Card(
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(15.0),
+                          ),
+                          child: Stack(
+                            clipBehavior: Clip.none,
+                            children: [
+                              Positioned(
+                                top: -100,
+                                child: Padding(
+                                  padding:
+                                      const EdgeInsets.only(top: 50, left: 20),
+                                  child: Image.asset(
+                                    "assets/watch.png",
+                                    width: 140,
+                                  ),
+                                ),
+                              ),
+                              Column(
+                                mainAxisAlignment: MainAxisAlignment.end,
+                                children: [
+                                  Text(
+                                    'Watch',
+                                    style: TextStyle(
+                                        fontSize: 22,
+                                        fontWeight: FontWeight.w600),
+                                  ),
+                                  Text(
+                                    "Series 6. Red",
+                                    style: TextStyle(
+                                        fontSize: 16,
+                                        color: Colors.black.withOpacity(0.5)),
+                                  ),
+                                  Text(
+                                    "\$ 359",
+                                    style: TextStyle(
+                                        fontSize: 17,
+                                        fontWeight: FontWeight.w700,
+                                        color: Color(0xFF5956E9)),
+                                  )
+                                ],
+                              )
+                            ],
+                          ),
+                        ),
+                      );
+                    }),
+              ),
             )
           ]),
         ),
