@@ -19,6 +19,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0xFFE5E5E5),
       body: SafeArea(
           child: Padding(
         padding: const EdgeInsets.only(top: 30, left: 20),
@@ -166,6 +167,9 @@ class HomeScreen extends StatelessWidget {
                 ),
               ],
             ),
+            SizedBox(
+              height: 15,
+            ),
             Container(
               height: 40,
               child: ListView.builder(
@@ -214,7 +218,7 @@ class HomeScreen extends StatelessWidget {
                         padding: const EdgeInsets.only(top: 50),
                         child: Card(
                           shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(15.0),
+                            borderRadius: BorderRadius.circular(20.0),
                           ),
                           child: Stack(
                             clipBehavior: Clip.none,
@@ -223,7 +227,7 @@ class HomeScreen extends StatelessWidget {
                                 top: -100,
                                 child: Padding(
                                   padding:
-                                      const EdgeInsets.only(top: 50, left: 20),
+                                      const EdgeInsets.only(top: 50, left: 16),
                                   child: Image.asset(
                                     "assets/watch.png",
                                     width: 140,
@@ -232,25 +236,38 @@ class HomeScreen extends StatelessWidget {
                               ),
                               Column(
                                 mainAxisAlignment: MainAxisAlignment.end,
+                                crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  Text(
-                                    'Watch',
-                                    style: TextStyle(
-                                        fontSize: 22,
-                                        fontWeight: FontWeight.w600),
+                                  Padding(
+                                    padding: const EdgeInsets.only(
+                                        bottom: 10, left: 20),
+                                    child: Text(
+                                      'Apple Watch',
+                                      style: TextStyle(
+                                          fontSize: 22,
+                                          fontWeight: FontWeight.w600),
+                                    ),
                                   ),
-                                  Text(
-                                    "Series 6. Red",
-                                    style: TextStyle(
-                                        fontSize: 16,
-                                        color: Colors.black.withOpacity(0.5)),
+                                  Padding(
+                                    padding: const EdgeInsets.only(
+                                        bottom: 10, left: 20),
+                                    child: Text(
+                                      "Series 6. Red",
+                                      style: TextStyle(
+                                          fontSize: 16,
+                                          color: Colors.black.withOpacity(0.5)),
+                                    ),
                                   ),
-                                  Text(
-                                    "\$ 359",
-                                    style: TextStyle(
-                                        fontSize: 17,
-                                        fontWeight: FontWeight.w700,
-                                        color: Color(0xFF5956E9)),
+                                  Padding(
+                                    padding: const EdgeInsets.only(
+                                        bottom: 10, left: 20),
+                                    child: Text(
+                                      "\$ 359",
+                                      style: TextStyle(
+                                          fontSize: 17,
+                                          fontWeight: FontWeight.w700,
+                                          color: Color(0xFF5956E9)),
+                                    ),
                                   )
                                 ],
                               )
