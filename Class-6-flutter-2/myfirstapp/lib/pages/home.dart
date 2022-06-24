@@ -30,7 +30,7 @@ class HomeScreen extends StatelessWidget {
               style: TextStyle(fontSize: 26, fontWeight: FontWeight.w600),
             ),
             Text(
-              "Let's gets something?",
+              "Let's get something?",
               style: TextStyle(
                   fontSize: 16,
                   fontWeight: FontWeight.w600,
@@ -198,7 +198,7 @@ class HomeScreen extends StatelessWidget {
               height: 5,
             ),
             Container(
-              height: 1100,
+              height: 1070,
               clipBehavior: Clip.none,
               child: Padding(
                 padding: const EdgeInsets.only(right: 20),
