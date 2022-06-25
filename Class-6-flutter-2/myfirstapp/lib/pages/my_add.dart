@@ -79,123 +79,117 @@ class MyAdsScreen extends StatelessWidget {
               body: TabBarView(children: [
                 Padding(
                   padding: const EdgeInsets.only(top: 100, left: 20),
-                  child: Expanded(
-                    child: Padding(
-                      padding: const EdgeInsets.only(right: 20),
-                      child: GridView.builder(
-                          itemCount: 20,
-                          gridDelegate:
-                              SliverGridDelegateWithFixedCrossAxisCount(
-                            crossAxisCount: 2,
-                            crossAxisSpacing: 10,
-                            mainAxisSpacing: 10,
-                            childAspectRatio: .7,
-                          ),
-                          itemBuilder: (_, index) {
-                            return Padding(
-                              padding: const EdgeInsets.only(top: 50),
-                              child: Card(
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(20.0),
-                                ),
-                                child: Stack(
-                                  clipBehavior: Clip.none,
-                                  children: [
-                                    Positioned(
-                                      top: -100,
-                                      child: Padding(
-                                        padding: const EdgeInsets.only(
-                                            top: 50, left: 16),
-                                        child: Image.asset(
-                                          "assets/watch.png",
-                                          width: 140,
-                                        ),
+                  child: Padding(
+                    padding: const EdgeInsets.only(right: 20),
+                    child: GridView.builder(
+                        itemCount: 20,
+                        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                          crossAxisCount: 2,
+                          crossAxisSpacing: 10,
+                          mainAxisSpacing: 10,
+                          childAspectRatio: .7,
+                        ),
+                        itemBuilder: (_, index) {
+                          return Padding(
+                            padding: const EdgeInsets.only(top: 50),
+                            child: Card(
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(20.0),
+                              ),
+                              child: Stack(
+                                clipBehavior: Clip.none,
+                                children: [
+                                  Positioned(
+                                    top: -100,
+                                    child: Padding(
+                                      padding: const EdgeInsets.only(
+                                          top: 50, left: 16),
+                                      child: Image.asset(
+                                        "assets/watch.png",
+                                        width: 140,
                                       ),
                                     ),
-                                    Column(
-                                      mainAxisAlignment: MainAxisAlignment.end,
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: [
-                                        Padding(
-                                          padding: const EdgeInsets.only(
-                                              bottom: 10, left: 20),
-                                          child: Text(
-                                            'Apple Watch',
-                                            style: TextStyle(
-                                                fontSize: 22,
-                                                fontWeight: FontWeight.w600),
-                                          ),
+                                  ),
+                                  Column(
+                                    mainAxisAlignment: MainAxisAlignment.end,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Padding(
+                                        padding: const EdgeInsets.only(
+                                            bottom: 10, left: 20),
+                                        child: Text(
+                                          'Apple Watch',
+                                          style: TextStyle(
+                                              fontSize: 22,
+                                              fontWeight: FontWeight.w600),
                                         ),
-                                        Padding(
-                                          padding: const EdgeInsets.only(
-                                              bottom: 10, left: 20),
-                                          child: Text(
-                                            "Series 6. Red",
-                                            style: TextStyle(
-                                                fontSize: 16,
-                                                color: Colors.black
-                                                    .withOpacity(0.5)),
-                                          ),
+                                      ),
+                                      Padding(
+                                        padding: const EdgeInsets.only(
+                                            bottom: 10, left: 20),
+                                        child: Text(
+                                          "Series 6. Red",
+                                          style: TextStyle(
+                                              fontSize: 16,
+                                              color: Colors.black
+                                                  .withOpacity(0.5)),
                                         ),
-                                        Padding(
-                                          padding: const EdgeInsets.only(
-                                              bottom: 10, left: 20),
-                                          child: Text(
-                                            "\$ 359",
-                                            style: TextStyle(
-                                                fontSize: 17,
-                                                fontWeight: FontWeight.w700,
-                                                color: Color(0xFF5956E9)),
-                                          ),
-                                        )
-                                      ],
-                                    )
-                                  ],
-                                ),
+                                      ),
+                                      Padding(
+                                        padding: const EdgeInsets.only(
+                                            bottom: 10, left: 20),
+                                        child: Text(
+                                          "\$ 359",
+                                          style: TextStyle(
+                                              fontSize: 17,
+                                              fontWeight: FontWeight.w700,
+                                              color: Color(0xFF5956E9)),
+                                        ),
+                                      )
+                                    ],
+                                  )
+                                ],
                               ),
-                            );
-                          }),
-                    ),
+                            ),
+                          );
+                        }),
                   ),
                 ),
                 Padding(
                   padding: const EdgeInsets.only(top: 110, left: 20),
-                  child: Expanded(
-                    child: Padding(
-                      padding: const EdgeInsets.only(right: 20),
-                      child: ListView.builder(
-                          itemCount: 20,
-                          itemBuilder: (_, index) {
-                            return Card(
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(10.0),
+                  child: Padding(
+                    padding: const EdgeInsets.only(right: 20),
+                    child: ListView.builder(
+                        itemCount: 20,
+                        itemBuilder: (_, index) {
+                          return Card(
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10.0),
+                            ),
+                            elevation: 5,
+                            child: ListTile(
+                              leading: CircleAvatar(
+                                backgroundImage:
+                                    ExactAssetImage('assets/watch.png'),
                               ),
-                              elevation: 5,
-                              child: ListTile(
-                                leading: CircleAvatar(
-                                  backgroundImage:
-                                      ExactAssetImage('assets/watch.png'),
-                                ),
-                                title: Text(
-                                  'Apple Watch',
+                              title: Text(
+                                'Apple Watch',
+                                style: TextStyle(
+                                    fontSize: 20, fontWeight: FontWeight.w600),
+                              ),
+                              subtitle: Text(
+                                'Series 6. Red',
+                                style: TextStyle(fontSize: 14),
+                              ),
+                              trailing: Text('\$ 369',
                                   style: TextStyle(
-                                      fontSize: 20,
-                                      fontWeight: FontWeight.w600),
-                                ),
-                                subtitle: Text(
-                                  'Series 6. Red',
-                                  style: TextStyle(fontSize: 14),
-                                ),
-                                trailing: Text('\$ 369',
-                                    style: TextStyle(
-                                        fontSize: 17,
-                                        fontWeight: FontWeight.w700,
-                                        color: Color(0xFF5956E9))),
-                              ),
-                            );
-                          }),
-                    ),
+                                      fontSize: 17,
+                                      fontWeight: FontWeight.w700,
+                                      color: Color(0xFF5956E9))),
+                            ),
+                          );
+                        }),
                   ),
                 ),
               ]))),
