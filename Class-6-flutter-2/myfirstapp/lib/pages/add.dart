@@ -32,9 +32,9 @@ class MyStatelessWidget extends StatelessWidget {
                 handle:
                     NestedScrollView.sliverOverlapAbsorberHandleFor(context),
                 sliver: SliverAppBar(
-                  // title: const Text('Books'),
+                  title: const Text('Books'),
                   pinned: true,
-                  // expandedHeight: 150.0,
+                  expandedHeight: 150.0,
                   forceElevated: innerBoxIsScrolled,
                   bottom: TabBar(
                     tabs: tabs.map((String name) => Tab(text: name)).toList(),
