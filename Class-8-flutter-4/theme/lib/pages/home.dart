@@ -20,14 +20,7 @@ class HomeScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                'app_name'.tr,
-                style: TextStyle(fontSize: 40),
-              ),
-              Text(
-                'app_title'.tr,
-                style: TextStyle(fontSize: 20),
-              ),
-              Text('This is dummy for theme'),
+                  'Lorem Ipsum is a simply dummy text of the printing and typesetting industry'),
               SizedBox(
                 height: 50,
               ),
