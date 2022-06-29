@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-// import 'package:google_fonts/google_fonts.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import 'package:myfirstapp/bottom_nav_controller.dart';
 import 'package:myfirstapp/details_screen.dart';
@@ -17,15 +17,13 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Example',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+          primarySwatch: Colors.blue,
 
-        /* THIS TEXT THEME IS COMMENTED FOR OVERFLOW ISSUES. FOR ASSIGNMENT
+          /* THIS TEXT THEME IS COMMENTED FOR OVERFLOW ISSUES. FOR ASSIGNMENT
         AND UNDERSTANDIG PURPOSE, THIS TEXT THEME APPLIED BEFORE COMMENTING */
 
-        /* textTheme: GoogleFonts.poppinsTextTheme(
-          Theme.of(context).textTheme.apply()
-        )*/
-      ),
+          textTheme:
+              GoogleFonts.latoTextTheme(Theme.of(context).textTheme.apply())),
       initialRoute: '/',
       routes: {
         '/first-screen': (context) => AddScreen(),
