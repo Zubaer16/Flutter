@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
-import 'package:theme/languages/ban.dart';
-import 'package:theme/languages/eng.dart';
+import 'package:myfirstapp/languages/ban.dart';
+import 'package:myfirstapp/languages/eng.dart';
 
 class Languages extends Translations {
   @override

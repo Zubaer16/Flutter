@@ -1,11 +1,11 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:theme/pages/account.dart';
-import 'package:theme/pages/add.dart';
-import 'package:theme/pages/chat.dart';
-import 'package:theme/pages/home.dart';
-import 'package:theme/pages/my_add.dart';
+import 'package:myfirstapp/pages/account.dart';
+import 'package:myfirstapp/pages/add.dart';
+import 'package:myfirstapp/pages/chat.dart';
+import 'package:myfirstapp/pages/home.dart';
+import 'package:myfirstapp/pages/my_add.dart';
 
 class BottomNavController extends StatefulWidget {
   @override
