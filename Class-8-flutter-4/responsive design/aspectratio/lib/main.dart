@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 
-import 'package:animatedcontainer/bottom_nav_controller.dart';
+import 'package:aspectratio/bottom_nav_controller.dart';
 
 void main() {
   runApp(const MyApp());
