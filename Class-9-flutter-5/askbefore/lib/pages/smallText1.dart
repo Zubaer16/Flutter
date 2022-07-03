@@ -10,7 +10,7 @@ class SmallText1 extends StatelessWidget {
         ? Column(
             children: [
               SizedBox(
-                height: 30,
+                height: 27,
               ),
               Text(
                 'Grow closer to your loved ones \nby asking this question.',
@@ -21,6 +21,9 @@ class SmallText1 extends StatelessWidget {
                   ),
                 ),
               ),
+              SizedBox(
+                height: 20,
+              )
             ],
           )
         : Column(
@@ -36,6 +39,9 @@ class SmallText1 extends StatelessWidget {
                       0xFF4F7C87,
                     )),
               ),
+              SizedBox(
+                height: 20,
+              )
             ],
           );
   }

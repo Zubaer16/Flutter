@@ -2,7 +2,9 @@
 
 import 'package:askbefore/pages/logo.dart';
 import 'package:askbefore/pages/nav.dart';
+import 'package:askbefore/pages/question.dart';
 import 'package:askbefore/pages/smallText1.dart';
+
 import 'package:flutter/material.dart';
 
 class AskBefore extends StatelessWidget {
@@ -16,7 +18,8 @@ class AskBefore extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [Logo(), Nav()],
           ),
-          SmallText1()
+          SmallText1(),
+          Question(),
         ],
       ),
     );
