@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import 'copyButton.dart';
+
 List<String> mylist = [
   ' Who do you remember from school?',
   'Did you have a best friend, and if so, how did that relationship play out over the course of your life? ',
@@ -16,6 +18,8 @@ class Question extends StatefulWidget {
   @override
   State<Question> createState() => _QuestionState();
 }
+
+bool isvisible = false;
 
 class _QuestionState extends State<Question> {
   @override
@@ -129,40 +133,48 @@ class _QuestionState extends State<Question> {
                       ),
                     ),
                   )
-                : GestureDetector(
-                    onTap: () {
-                      setState(() {
-                        _colors = Color(
-                          0xFF4F7C87,
-                        );
-                      });
-                    },
-                    child: Container(
-                      decoration: BoxDecoration(
-                          color: Color(0xFFFFFFFF),
-                          border: Border.all(color: _colors, width: 2),
-                          borderRadius: BorderRadius.all(
-                            Radius.circular(20),
-                          )),
-                      width: 800.h,
-                      child: Padding(
-                        padding: const EdgeInsets.only(
-                            top: 27, left: 5, right: 5, bottom: 27),
-                        child: Center(
-                          child: Text(
-                            'What are your favourite family vacation memories?',
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                                color: Color(
-                                  0xFF4F7C87,
-                                ),
-                                height: 1.5,
-                                fontSize: 40,
-                                fontWeight: FontWeight.bold),
+                : Column(
+                    children: [
+                      CopyButton(
+                        isvisible: isvisible,
+                      ),
+                      GestureDetector(
+                        onTap: () {
+                          setState(() {
+                            _colors = Color(
+                              0xFF4F7C87,
+                            );
+                            isvisible = true;
+                          });
+                        },
+                        child: Container(
+                          decoration: BoxDecoration(
+                              color: Color(0xFFFFFFFF),
+                              border: Border.all(color: _colors, width: 2),
+                              borderRadius: BorderRadius.all(
+                                Radius.circular(20),
+                              )),
+                          width: 800.h,
+                          child: Padding(
+                            padding: const EdgeInsets.only(
+                                top: 27, left: 5, right: 5, bottom: 27),
+                            child: Center(
+                              child: Text(
+                                'What are your favourite family vacation memories?',
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                    color: Color(
+                                      0xFF4F7C87,
+                                    ),
+                                    height: 1.5,
+                                    fontSize: 40,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                            ),
                           ),
                         ),
                       ),
-                    ),
+                    ],
                   );
   }
 }
