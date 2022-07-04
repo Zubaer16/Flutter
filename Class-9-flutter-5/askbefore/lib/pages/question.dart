@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 
+import 'package:askbefore/pages/tryanother.dart';
 import 'package:flutter/material.dart';
 
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -22,6 +23,12 @@ class Question extends StatefulWidget {
 bool isvisible = false;
 
 class _QuestionState extends State<Question> {
+  int value = 0;
+  // Pass this method to the child page.
+  void _update(int newValue) {
+    setState(() => value = newValue);
+  }
+
   @override
   Widget build(BuildContext context) {
     final screenWidth = MediaQuery.of(context).size.width;
@@ -160,7 +167,7 @@ class _QuestionState extends State<Question> {
                                 top: 27, left: 5, right: 5, bottom: 27),
                             child: Center(
                               child: Text(
-                                'What are your favourite family vacation memories?',
+                                mylist[value],
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
                                     color: Color(
@@ -174,6 +181,7 @@ class _QuestionState extends State<Question> {
                           ),
                         ),
                       ),
+                      TryAnother(update: _update)
                     ],
                   );
   }

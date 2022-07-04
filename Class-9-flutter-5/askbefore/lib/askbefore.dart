@@ -6,6 +6,7 @@ import 'package:askbefore/pages/logo.dart';
 import 'package:askbefore/pages/nav.dart';
 import 'package:askbefore/pages/question.dart';
 import 'package:askbefore/pages/smallText1.dart';
+import 'package:askbefore/pages/tryanother.dart';
 
 import 'package:flutter/material.dart';
 
@@ -22,7 +23,6 @@ class AskBefore extends StatelessWidget {
           ),
           SmallText1(),
           Question(),
-          CopyThis()
         ],
       ),
     );
