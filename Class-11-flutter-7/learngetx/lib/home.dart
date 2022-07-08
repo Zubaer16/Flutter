@@ -30,6 +30,16 @@ class HomeScreen extends StatelessWidget {
                     child: Text('Snackbar')),
                 ElevatedButton(
                     onPressed: () {
+                      Get.toNamed(getxstate);
+                    },
+                    child: Text('GetxState')),
+                ElevatedButton(
+                    onPressed: () {
+                      Get.toNamed(getTheme);
+                    },
+                    child: Text('Get Theme')),
+                ElevatedButton(
+                    onPressed: () {
                       Get.toNamed(storage);
                     },
                     child: Text('GetStorage')),

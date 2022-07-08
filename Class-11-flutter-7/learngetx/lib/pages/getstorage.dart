@@ -1,7 +1,11 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import 'package:get_storage/get_storage.dart';
 import 'package:learngetx/pages/data.dart';
+import 'package:learngetx/pages/route.dart';
 
 class GetandStorage extends StatelessWidget {
   TextEditingController _nameController = TextEditingController();
@@ -10,6 +14,9 @@ class GetandStorage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: FloatingActionButton(onPressed: () {
+        Get.toNamed(storage2);
+      }),
       body: Padding(
         padding: const EdgeInsets.all(30.0),
         child: Column(
