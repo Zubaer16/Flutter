@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
+
 import 'package:get/get.dart';
 import 'package:learngetx/pages/route.dart';
 
@@ -38,6 +37,11 @@ class HomeScreen extends StatelessWidget {
                       Get.toNamed(storage);
                     },
                     child: Text('GetStorage')),
+                ElevatedButton(
+                    onPressed: () {
+                      Get.toNamed(getValid);
+                    },
+                    child: Text('ValidationGetx')),
                 ElevatedButton(
                     onPressed: () {
                       Get.toNamed(getTheme);

@@ -6,6 +6,8 @@ import 'package:learngetx/pages/getstorage.dart';
 import 'package:learngetx/pages/getstorage2.dart';
 import 'package:learngetx/pages/gettheme.dart';
 import 'package:learngetx/pages/getxstate.dart';
+import 'package:learngetx/pages/getxvalidation.dart';
+import 'package:learngetx/pages/getxvalidation2.dart';
 import 'package:learngetx/pages/navigation.dart';
 import 'package:learngetx/pages/navigatoin2.dart';
 import 'package:learngetx/pages/snckbar.dart';
@@ -18,6 +20,8 @@ const String storage = '/storage-screen';
 const String storage2 = '/storage2-screen';
 const String getxstate = '/getx-state';
 const String getTheme = '/getx-theme';
+const String getValid = '/getx-validator';
+const String getValid2 = '/getx-validator2';
 
 List<GetPage> getPages = [
   GetPage(
@@ -51,5 +55,13 @@ List<GetPage> getPages = [
   GetPage(
       name: getTheme,
       page: () => GetxandTheme(),
+      transition: Transition.leftToRight),
+  GetPage(
+      name: getValid,
+      page: () => ValidationGetx(),
+      transition: Transition.leftToRight),
+  GetPage(
+      name: getValid2,
+      page: () => ValidationGetx2(),
       transition: Transition.leftToRight),
 ];
