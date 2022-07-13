@@ -1,18 +1,21 @@
 import 'package:flutter/material.dart';
-import 'package:get/get_navigation/src/root/get_material_app.dart';
+import 'package:get/get.dart';
+
 import 'package:get_storage/get_storage.dart';
 import 'package:learngetx/home.dart';
 
 import 'package:learngetx/pages/route.dart';
+import 'package:learngetx/themes/theme_controller.dart';
+import 'package:learngetx/themes/themes.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await GetStorage.init();
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  final themeController = Get.put(ThemeController());
 
   // This widget is the root of your application.
   @override
@@ -20,6 +23,9 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       title: 'Flutter Demo',
       home: HomeScreen(),
+      themeMode: themeController.theme,
+      theme: Themes.lightTheme,
+      darkTheme: Themes.darkTheme,
       initialRoute: homeScreen,
       getPages: getPages,
     );

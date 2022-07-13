@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:learngetx/themes/theme_controller.dart';
 
 class GetxandTheme extends StatelessWidget {
-  const GetxandTheme({Key? key}) : super(key: key);
+  GetxandTheme({Key? key}) : super(key: key);
+
+  final themeController = Get.find<ThemeController>();
 
   @override
   Widget build(BuildContext context) {
