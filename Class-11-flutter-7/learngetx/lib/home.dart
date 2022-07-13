@@ -35,14 +35,14 @@ class HomeScreen extends StatelessWidget {
                     child: Text('GetxState')),
                 ElevatedButton(
                     onPressed: () {
-                      Get.toNamed(getTheme);
-                    },
-                    child: Text('Get Theme')),
-                ElevatedButton(
-                    onPressed: () {
                       Get.toNamed(storage);
                     },
                     child: Text('GetStorage')),
+                ElevatedButton(
+                    onPressed: () {
+                      Get.toNamed(getTheme);
+                    },
+                    child: Text('Change Theme')),
               ],
             ),
           ),
