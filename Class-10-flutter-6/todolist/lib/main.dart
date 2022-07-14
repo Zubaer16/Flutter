@@ -6,8 +6,9 @@ import 'package:todolist/todo.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Hive.initFlutter();
-  runApp(const MyApp());
   Box box = await Hive.openBox('todo-list');
+  Box box2 = await Hive.openBox('description');
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
