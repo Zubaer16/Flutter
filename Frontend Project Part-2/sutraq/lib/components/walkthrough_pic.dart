@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors, non_constant_identifier_names, camel_case_types, unnecessary_this, use_key_in_widget_constructors
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -16,6 +18,9 @@ class Walkthrough_Pic extends StatelessWidget {
   final String? stack_2nd_image;
   final String? big_text;
   final String? small_text;
+  final Color? color_1;
+  final Color? color_2;
+  final Color? color_3;
 
   const Walkthrough_Pic(
       {this.padding_left,
@@ -30,7 +35,10 @@ class Walkthrough_Pic extends StatelessWidget {
       this.stack_2nd_image_height,
       this.stack_2nd_image_width,
       this.big_text,
-      this.small_text});
+      this.small_text,
+      this.color_1,
+      this.color_2,
+      this.color_3});
 
   @override
   Widget build(BuildContext context) {
@@ -68,6 +76,41 @@ class Walkthrough_Pic extends StatelessWidget {
             ),
           ),
         ),
+        Padding(
+          padding: const EdgeInsets.all(8.0).r,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Container(
+                margin: EdgeInsets.only(right: 10),
+                height: 6,
+                width: 6,
+                decoration: BoxDecoration(
+                  color: this.color_1 ?? Color(0xFF62BB46),
+                  borderRadius: BorderRadius.circular(3),
+                ),
+              ),
+              Container(
+                margin: EdgeInsets.only(right: 10),
+                height: 6,
+                width: 6,
+                decoration: BoxDecoration(
+                  color: this.color_2 ?? Color(0xFF62BB46),
+                  borderRadius: BorderRadius.circular(3),
+                ),
+              ),
+              Container(
+                margin: EdgeInsets.only(right: 10).r,
+                height: 6.h,
+                width: 6.w,
+                decoration: BoxDecoration(
+                  color: this.color_3 ?? Color(0xFF62BB46),
+                  borderRadius: BorderRadius.circular(3),
+                ),
+              ),
+            ],
+          ),
+        ),
         Container(
           height: 211,
           width: MediaQuery.of(context).size.width,
@@ -76,12 +119,8 @@ class Walkthrough_Pic extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                // SizedBox(
-                //   height: 60.h,
-                // ),
                 Text(
                   '${this.big_text}',
-                  //'Send Money Anywhere',
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 27,
@@ -94,7 +133,6 @@ class Walkthrough_Pic extends StatelessWidget {
                   padding: const EdgeInsets.only(left: 10, right: 10).r,
                   child: Text(
                     '${this.small_text}',
-                    // 'With our unique technology, you can get money anywhere in the world',
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 16,
