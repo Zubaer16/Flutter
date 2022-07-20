@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:sutraq/components/color_storage.dart';
 
-class WalkthroughPic extends StatelessWidget {
+class Walkthrough extends StatelessWidget {
   final double? padding_left;
   final double? padding_top;
 
@@ -23,7 +23,7 @@ class WalkthroughPic extends StatelessWidget {
   final Color? color_2;
   final Color? color_3;
 
-  const WalkthroughPic(
+  const Walkthrough(
       {this.padding_left,
       this.padding_top,
       this.container_height,

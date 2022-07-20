@@ -5,14 +5,14 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:sutraq/components/color_storage.dart';
 import 'package:sutraq/components/custom_button.dart';
-import 'package:sutraq/components/walkthrough_pic.dart';
+import 'package:sutraq/components/walkthrough.dart';
 import 'package:sutraq/route/route_mange.dart';
 
 class WalkthroughScreen extends StatelessWidget {
   WalkthroughScreen({Key? key}) : super(key: key);
 
   final List<Widget> pic = [
-    WalkthroughPic(
+    Walkthrough(
       padding_left: 15.r,
       padding_top: 30.r,
       container_height: 360.h,
@@ -29,7 +29,7 @@ class WalkthroughScreen extends StatelessWidget {
           'With our unique technology, you can get money anywhere in the world.',
       color_1: dotWhiteColor,
     ),
-    WalkthroughPic(
+    Walkthrough(
       padding_left: 0.r,
       padding_top: 30.r,
       container_height: 360.h,
@@ -46,7 +46,7 @@ class WalkthroughScreen extends StatelessWidget {
           "Safety of your funds is guaranteed. We've got you covered 24/7.",
       color_2: dotWhiteColor,
     ),
-    WalkthroughPic(
+    Walkthrough(
       padding_left: 0,
       padding_top: 30.r,
       container_height: 360.h,
