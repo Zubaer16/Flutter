@@ -6,18 +6,21 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:sutraq/components/color_storage.dart';
 import 'package:sutraq/components/sutraq_logo.dart';
 import 'package:sutraq/route/route_mange.dart';
 
-class Splash_Screen extends StatelessWidget {
+class SplashScreen extends StatelessWidget {
+  const SplashScreen({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     Timer(Duration(seconds: 4), () => Get.toNamed(intro_screen));
 
     return Scaffold(
-      backgroundColor: Color(0xFFE5E5E5),
+      backgroundColor: ColorStorage().splashBackgroundColor,
       body: Center(
-          child: Sutraq_logo(
+          child: SutraqLogo(
         width: 118.h,
         height: 108.h,
       )),

@@ -2,8 +2,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:sutraq/components/color_storage.dart';
 
-class Walkthrough_Pic extends StatelessWidget {
+class WalkthroughPic extends StatelessWidget {
   final double? padding_left;
   final double? padding_top;
 
@@ -22,7 +23,7 @@ class Walkthrough_Pic extends StatelessWidget {
   final Color? color_2;
   final Color? color_3;
 
-  const Walkthrough_Pic(
+  const WalkthroughPic(
       {this.padding_left,
       this.padding_top,
       this.container_height,
@@ -49,7 +50,7 @@ class Walkthrough_Pic extends StatelessWidget {
             left: padding_left ?? 0,
             top: padding_top ?? 0,
           ),
-          child: Container(
+          child: SizedBox(
             height: container_height,
             width: MediaQuery.of(context).size.width,
             child: Stack(
@@ -77,25 +78,25 @@ class Walkthrough_Pic extends StatelessWidget {
           ),
         ),
         Padding(
-          padding: const EdgeInsets.all(8.0).r,
+          padding: const EdgeInsets.only(bottom: 27.5, top: 27.5).r,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Container(
                 margin: EdgeInsets.only(right: 10),
-                height: 6,
-                width: 6,
+                height: 6.h,
+                width: 6.h,
                 decoration: BoxDecoration(
-                  color: this.color_1 ?? Color(0xFF62BB46),
+                  color: this.color_1 ?? ColorStorage().greenColor,
                   borderRadius: BorderRadius.circular(3),
                 ),
               ),
               Container(
                 margin: EdgeInsets.only(right: 10),
-                height: 6,
-                width: 6,
+                height: 6.h,
+                width: 6.h,
                 decoration: BoxDecoration(
-                  color: this.color_2 ?? Color(0xFF62BB46),
+                  color: this.color_2 ?? ColorStorage().greenColor,
                   borderRadius: BorderRadius.circular(3),
                 ),
               ),
@@ -104,7 +105,7 @@ class Walkthrough_Pic extends StatelessWidget {
                 height: 6.h,
                 width: 6.w,
                 decoration: BoxDecoration(
-                  color: this.color_3 ?? Color(0xFF62BB46),
+                  color: this.color_3 ?? ColorStorage().greenColor,
                   borderRadius: BorderRadius.circular(3),
                 ),
               ),
@@ -112,9 +113,14 @@ class Walkthrough_Pic extends StatelessWidget {
           ),
         ),
         Container(
-          height: 211,
+          decoration: BoxDecoration(
+              color: ColorStorage().greenColor,
+              borderRadius: BorderRadius.only(
+                topLeft: const Radius.circular(30),
+                topRight: const Radius.circular(30),
+              )),
+          height: 221.h,
           width: MediaQuery.of(context).size.width,
-          color: Color(0xFF62BB46),
           child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.center,
@@ -122,21 +128,21 @@ class Walkthrough_Pic extends StatelessWidget {
                 Text(
                   '${this.big_text}',
                   style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 27,
-                  ),
+                      color: Colors.white,
+                      fontSize: 27.sp,
+                      fontWeight: FontWeight.w600),
                 ),
                 SizedBox(
-                  height: 30,
+                  height: 30.h,
                 ),
                 Padding(
                   padding: const EdgeInsets.only(left: 10, right: 10).r,
                   child: Text(
                     '${this.small_text}',
                     style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 16,
-                    ),
+                        color: Colors.white,
+                        fontSize: 16.sp,
+                        fontWeight: FontWeight.w400),
                     textAlign: TextAlign.center,
                   ),
                 )

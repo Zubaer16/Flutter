@@ -10,10 +10,10 @@ const String intro_screen = '/intro_screen';
 List<GetPage> getPages = [
   GetPage(
     name: splash_screen,
-    page: () => Splash_Screen(),
+    page: () => const SplashScreen(),
   ),
   GetPage(
     name: intro_screen,
-    page: () => Walkthrough_Screen(),
+    page: () => WalkthroughScreen(),
   ),
 ];

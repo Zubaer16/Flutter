@@ -2,18 +2,17 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
+import 'package:sutraq/components/color_storage.dart';
+import 'package:sutraq/components/custom_button.dart';
 import 'package:sutraq/components/walkthrough_pic.dart';
+import 'package:sutraq/route/route_mange.dart';
 
-class Walkthrough_Screen extends StatefulWidget {
-  @override
-  State<Walkthrough_Screen> createState() => _Walkthrough_ScreenState();
-}
+class WalkthroughScreen extends StatelessWidget {
+  WalkthroughScreen({Key? key}) : super(key: key);
 
-class _Walkthrough_ScreenState extends State<Walkthrough_Screen> {
-  final controller = PageController(viewportFraction: 0.8, keepPage: true);
-
-  List<Widget> pic = [
-    Walkthrough_Pic(
+  final List<Widget> pic = [
+    WalkthroughPic(
       padding_left: 15.r,
       padding_top: 30.r,
       container_height: 360.h,
@@ -28,9 +27,9 @@ class _Walkthrough_ScreenState extends State<Walkthrough_Screen> {
       big_text: 'Send Money Anywhere',
       small_text:
           'With our unique technology, you can get money anywhere in the world.',
-      color_1: Color(0xFFF6F6F6),
+      color_1: ColorStorage().dotColor,
     ),
-    Walkthrough_Pic(
+    WalkthroughPic(
       padding_left: 0.r,
       padding_top: 30.r,
       container_height: 360.h,
@@ -45,9 +44,9 @@ class _Walkthrough_ScreenState extends State<Walkthrough_Screen> {
       big_text: 'Safe & Secured',
       small_text:
           "Safety of your funds is guaranteed. We've got you covered 24/7.",
-      color_2: Color(0xFFF6F6F6),
+      color_2: ColorStorage().dotColor,
     ),
-    Walkthrough_Pic(
+    WalkthroughPic(
       padding_left: 0,
       padding_top: 30.r,
       container_height: 360.h,
@@ -62,26 +61,48 @@ class _Walkthrough_ScreenState extends State<Walkthrough_Screen> {
       big_text: 'Unbeatable Support',
       small_text:
           'Send money to other sutraq users free of charge, with no additional fee.',
-      color_3: Color(0xFFF6F6F6),
+      color_3: ColorStorage().dotColor,
     ),
   ];
-
-  int changeValue = 0;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Color(0xFFE5E5E5),
         body: Column(
-          children: [
-            Expanded(
-              child: PageView.builder(
-                  itemCount: pic.length,
-                  itemBuilder: (context, index) {
-                    return pic[index];
+      children: [
+        Expanded(
+          flex: 2,
+          child: PageView.builder(
+              itemCount: pic.length,
+              itemBuilder: (context, index) {
+                return pic[index];
+              }),
+        ),
+        Container(
+          color: ColorStorage().greenColor,
+          height: 140.h,
+          width: MediaQuery.of(context).size.width,
+          child: Column(
+            children: [
+              CustomButton(
+                  buttonText: 'LOGIN',
+                  customFunction: () {
+                    Get.toNamed(splash_screen);
                   }),
-            ),
-          ],
-        ));
+              SizedBox(
+                height: 18.h,
+              ),
+              Text(
+                'TRY SUTRAQ',
+                style: TextStyle(
+                    fontWeight: FontWeight.w700,
+                    fontSize: 16.sp,
+                    color: Colors.white),
+              )
+            ],
+          ),
+        )
+      ],
+    ));
   }
 }
