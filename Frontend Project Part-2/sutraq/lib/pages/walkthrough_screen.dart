@@ -27,7 +27,7 @@ class WalkthroughScreen extends StatelessWidget {
       big_text: 'Send Money Anywhere',
       small_text:
           'With our unique technology, you can get money anywhere in the world.',
-      color_1: ColorStorage().dotColor,
+      color_1: dotWhiteColor,
     ),
     WalkthroughPic(
       padding_left: 0.r,
@@ -44,7 +44,7 @@ class WalkthroughScreen extends StatelessWidget {
       big_text: 'Safe & Secured',
       small_text:
           "Safety of your funds is guaranteed. We've got you covered 24/7.",
-      color_2: ColorStorage().dotColor,
+      color_2: dotWhiteColor,
     ),
     WalkthroughPic(
       padding_left: 0,
@@ -61,7 +61,7 @@ class WalkthroughScreen extends StatelessWidget {
       big_text: 'Unbeatable Support',
       small_text:
           'Send money to other sutraq users free of charge, with no additional fee.',
-      color_3: ColorStorage().dotColor,
+      color_3: dotWhiteColor,
     ),
   ];
 
@@ -79,7 +79,7 @@ class WalkthroughScreen extends StatelessWidget {
               }),
         ),
         Container(
-          color: ColorStorage().greenColor,
+          color: greenColor,
           height: 140.h,
           width: MediaQuery.of(context).size.width,
           child: Column(

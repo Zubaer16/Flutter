@@ -87,7 +87,7 @@ class WalkthroughPic extends StatelessWidget {
                 height: 6.h,
                 width: 6.h,
                 decoration: BoxDecoration(
-                  color: this.color_1 ?? ColorStorage().greenColor,
+                  color: this.color_1 ?? greenColor,
                   borderRadius: BorderRadius.circular(3),
                 ),
               ),
@@ -96,7 +96,7 @@ class WalkthroughPic extends StatelessWidget {
                 height: 6.h,
                 width: 6.h,
                 decoration: BoxDecoration(
-                  color: this.color_2 ?? ColorStorage().greenColor,
+                  color: this.color_2 ?? greenColor,
                   borderRadius: BorderRadius.circular(3),
                 ),
               ),
@@ -105,7 +105,7 @@ class WalkthroughPic extends StatelessWidget {
                 height: 6.h,
                 width: 6.w,
                 decoration: BoxDecoration(
-                  color: this.color_3 ?? ColorStorage().greenColor,
+                  color: this.color_3 ?? greenColor,
                   borderRadius: BorderRadius.circular(3),
                 ),
               ),
@@ -114,7 +114,7 @@ class WalkthroughPic extends StatelessWidget {
         ),
         Container(
           decoration: BoxDecoration(
-              color: ColorStorage().greenColor,
+              color: greenColor,
               borderRadius: BorderRadius.only(
                 topLeft: const Radius.circular(30),
                 topRight: const Radius.circular(30),

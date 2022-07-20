@@ -18,7 +18,7 @@ class SplashScreen extends StatelessWidget {
     Timer(Duration(seconds: 4), () => Get.toNamed(intro_screen));
 
     return Scaffold(
-      backgroundColor: ColorStorage().splashBackgroundColor,
+      backgroundColor: splashBackgroundColor,
       body: Center(
           child: SutraqLogo(
         width: 118.h,

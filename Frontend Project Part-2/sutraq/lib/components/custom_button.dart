@@ -31,8 +31,8 @@ class CustomButton extends StatelessWidget {
           customFunction();
         },
         style: ButtonStyle(
-          backgroundColor: MaterialStateProperty.all(
-              buttonColor ?? ColorStorage().buttonBlackColor),
+          backgroundColor:
+              MaterialStateProperty.all(buttonColor ?? buttonBlackColor),
         ),
         child: Text(
           buttonText ?? 'Custom button',
