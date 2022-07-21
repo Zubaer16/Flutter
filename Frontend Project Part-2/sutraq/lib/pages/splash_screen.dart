@@ -6,10 +6,11 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:sutraq/components/color_storage.dart';
+
 import 'package:sutraq/components/sutraq_logo.dart';
 
 import 'package:sutraq/route/route_mange.dart';
+import 'package:sutraq/storage/color_storage.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);

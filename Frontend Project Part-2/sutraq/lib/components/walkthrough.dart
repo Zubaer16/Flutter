@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:sutraq/components/color_storage.dart';
+import 'package:sutraq/storage/color_storage.dart';
 
 class Walkthrough extends StatelessWidget {
   final double? padding_left;
