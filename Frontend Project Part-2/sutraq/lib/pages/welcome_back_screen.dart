@@ -1,18 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 import 'package:sutraq/components/custom_button.dart';
 
 import 'package:sutraq/components/sutraq_logo.dart';
+import 'package:sutraq/route/route_mange.dart';
 import 'package:sutraq/storage/color_storage.dart';
 import 'package:sutraq/storage/icon_storage.dart';
 
-class LoginScreen extends StatelessWidget {
-  const LoginScreen({Key? key}) : super(key: key);
+class WelcomeBackScreen extends StatelessWidget {
+  const WelcomeBackScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        resizeToAvoidBottomInset: false,
         body: Column(children: [
           Padding(
             padding: const EdgeInsets.only(top: 10).r,
@@ -131,7 +134,9 @@ class LoginScreen extends StatelessWidget {
                   ))),
           TextButton(
               style: TextButton.styleFrom(primary: greenColor),
-              onPressed: () {},
+              onPressed: () {
+                Get.toNamed(forgot_password_screen);
+              },
               child: Padding(
                 padding: const EdgeInsets.only(right: 28).r,
                 child: Align(
@@ -145,6 +150,8 @@ class LoginScreen extends StatelessWidget {
           CustomButton(
             customFunction: () {},
             buttonColor: greenColor,
+            buttonText: 'LOGIN',
+            buttonTextWeight: FontWeight.w500,
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -163,6 +170,24 @@ class LoginScreen extends StatelessWidget {
                         TextStyle(fontSize: 14.sp, fontWeight: FontWeight.w400),
                   ))
             ],
+          ),
+          SizedBox(
+            height: 43.h,
+          ),
+          Image.asset(
+            'images/fingerprint.png',
+            width: 48.w,
+            height: 48.h,
+          ),
+          Padding(
+            padding: const EdgeInsets.only(top: 9).r,
+            child: Text(
+              'Tap to use fingerprint',
+              style: TextStyle(
+                  color: greenColor,
+                  fontSize: 14.sp,
+                  fontWeight: FontWeight.w500),
+            ),
           )
         ]),
       ),

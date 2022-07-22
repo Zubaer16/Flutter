@@ -87,7 +87,7 @@ class WalkthroughScreen extends StatelessWidget {
               CustomButton(
                   buttonText: 'LOGIN',
                   customFunction: () {
-                    Get.toNamed(login_screen);
+                    Get.toNamed(welcome_back_screen);
                   }),
               SizedBox(
                 height: 18.h,
