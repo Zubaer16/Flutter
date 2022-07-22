@@ -154,10 +154,13 @@ class WelcomeBackScreen extends StatelessWidget {
                   ),
                 )),
             CustomButton(
-              customFunction: () {},
+              customFunction: () {
+                Get.toNamed(login_tip_screen);
+              },
               buttonColor: greenColor,
               buttonText: 'LOGIN',
               buttonTextWeight: FontWeight.w500,
+              buttonFontSize: 16.sp,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,

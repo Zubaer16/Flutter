@@ -12,6 +12,7 @@ class CustomButton extends StatelessWidget {
   final String? buttonText;
   final Color? buttonColor;
   final FontWeight? buttonTextWeight;
+  final double? buttonFontSize;
   const CustomButton(
       {Key? key,
       required this.customFunction,
@@ -19,7 +20,8 @@ class CustomButton extends StatelessWidget {
       this.buttonWidth,
       this.buttonText,
       this.buttonColor,
-      this.buttonTextWeight})
+      this.buttonTextWeight,
+      this.buttonFontSize})
       : super(key: key);
 
   @override
@@ -38,7 +40,8 @@ class CustomButton extends StatelessWidget {
         child: Text(
           buttonText ?? 'Custom button',
           style: TextStyle(
-              fontSize: 17.sp, fontWeight: buttonTextWeight ?? FontWeight.w700),
+              fontSize: buttonFontSize ?? 17.sp,
+              fontWeight: buttonTextWeight ?? FontWeight.w700),
         ),
       ),
     );

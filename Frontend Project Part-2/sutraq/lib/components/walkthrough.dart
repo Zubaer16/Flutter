@@ -88,7 +88,7 @@ class Walkthrough extends StatelessWidget {
                 width: 6.h,
                 decoration: BoxDecoration(
                   color: this.color_1 ?? greenColor,
-                  borderRadius: BorderRadius.circular(3),
+                  borderRadius: BorderRadius.circular(3.r),
                 ),
               ),
               Container(
@@ -97,7 +97,7 @@ class Walkthrough extends StatelessWidget {
                 width: 6.h,
                 decoration: BoxDecoration(
                   color: this.color_2 ?? greenColor,
-                  borderRadius: BorderRadius.circular(3),
+                  borderRadius: BorderRadius.circular(3.r),
                 ),
               ),
               Container(
@@ -106,7 +106,7 @@ class Walkthrough extends StatelessWidget {
                 width: 6.w,
                 decoration: BoxDecoration(
                   color: this.color_3 ?? greenColor,
-                  borderRadius: BorderRadius.circular(3),
+                  borderRadius: BorderRadius.circular(3.r),
                 ),
               ),
             ],
@@ -116,8 +116,8 @@ class Walkthrough extends StatelessWidget {
           decoration: BoxDecoration(
               color: greenColor,
               borderRadius: BorderRadius.only(
-                topLeft: const Radius.circular(30),
-                topRight: const Radius.circular(30),
+                topLeft: Radius.circular(30.r),
+                topRight: Radius.circular(30.r),
               )),
           height: 221.h,
           width: MediaQuery.of(context).size.width,

@@ -57,7 +57,7 @@ class ForgotPasswordScreen extends StatelessWidget {
             child: Text(
               'Forgot Password?',
               style: TextStyle(
-                  fontSize: 30.sp,
+                  fontSize: 27.sp,
                   fontWeight: FontWeight.w600,
                   color: welcomeBalckColor),
             ),
@@ -123,6 +123,7 @@ class ForgotPasswordScreen extends StatelessWidget {
             buttonColor: greenColor,
             buttonText: 'RECOVER PASSWORD',
             buttonTextWeight: FontWeight.w500,
+            buttonFontSize: 16.sp,
           )
         ]),
       ),
