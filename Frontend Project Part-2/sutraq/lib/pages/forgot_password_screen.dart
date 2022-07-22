@@ -13,113 +13,119 @@ class ForgotPasswordScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-        child: Scaffold(
-      resizeToAvoidBottomInset: false,
-      body: Column(children: [
-        SizedBox(
-          width: MediaQuery.of(context).size.width,
-          child: Align(
-            alignment: Alignment.topLeft,
-            child: Padding(
-              padding: const EdgeInsets.only(top: 29, left: 21).r,
-              child: ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                    shape: const CircleBorder(),
-                    padding: const EdgeInsets.all(8).r,
-                    primary: greenColor),
-                onPressed: () {
-                  Get.toNamed(welcome_back_screen);
-                },
-                child: Icon(
-                  arrowBackIcon,
-                  size: 25.w,
+        child: GestureDetector(
+      onTap: () {
+        FocusScope.of(context).unfocus();
+      },
+      child: Scaffold(
+        resizeToAvoidBottomInset: false,
+        body: Column(children: [
+          SizedBox(
+            width: MediaQuery.of(context).size.width,
+            child: Align(
+              alignment: Alignment.topLeft,
+              child: Padding(
+                padding: const EdgeInsets.only(top: 29, left: 21).r,
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                      shape: const CircleBorder(),
+                      padding: const EdgeInsets.all(8).r,
+                      primary: greenColor),
+                  onPressed: () {
+                    Get.toNamed(welcome_back_screen);
+                  },
+                  child: Icon(
+                    arrowBackIcon,
+                    size: 25.w,
+                  ),
                 ),
               ),
             ),
           ),
-        ),
-        SizedBox(
-          height: 32.h,
-        ),
-        SutraqLogo(
-          width: 94.w,
-          height: 86.h,
-        ),
-        SizedBox(
-          height: 28.h,
-        ),
-        Padding(
-          padding: const EdgeInsets.only(bottom: 10).r,
-          child: Text(
-            'Forgot Password?',
-            style: TextStyle(
-                fontSize: 30.sp,
-                fontWeight: FontWeight.w600,
-                color: welcomeBalckColor),
+          SizedBox(
+            height: 32.h,
           ),
-        ),
-        SizedBox(
-          width: MediaQuery.of(context).size.width,
-          child: Text(
-            'Enter the email address associated with your account to recover password.',
-            textAlign: TextAlign.center,
-            style: TextStyle(
-                fontSize: 16.sp,
-                fontWeight: FontWeight.w400,
-                color: lightBalckColor),
+          SutraqLogo(
+            width: 94.w,
+            height: 86.h,
           ),
-        ),
-        SizedBox(
-          height: 40.h,
-        ),
-        SizedBox(
-          width: MediaQuery.of(context).size.width,
-          child: Padding(
-            padding: const EdgeInsets.only(left: 35, bottom: 7).r,
+          SizedBox(
+            height: 28.h,
+          ),
+          Padding(
+            padding: const EdgeInsets.only(bottom: 10).r,
             child: Text(
-              'Email Address',
+              'Forgot Password?',
               style: TextStyle(
-                fontSize: 14.sp,
-                fontWeight: FontWeight.w500,
-                color: lightBalckColor,
-              ),
-              textAlign: TextAlign.left,
+                  fontSize: 30.sp,
+                  fontWeight: FontWeight.w600,
+                  color: welcomeBalckColor),
             ),
           ),
-        ),
-        Padding(
-          padding: const EdgeInsets.only(bottom: 23).r,
-          child: Theme(
-              data: ThemeData(
-                  inputDecorationTheme: const InputDecorationTheme(
-                      border: OutlineInputBorder(
-                          borderSide: BorderSide(color: Color(0xFFC5C5C5))))),
-              child: SizedBox(
-                  width: 307.w,
-                  height: 57.h,
-                  child: TextFormField(
-                    keyboardType: TextInputType.emailAddress,
-                    decoration: InputDecoration(
-                        prefixIcon: Padding(
-                          padding: const EdgeInsets.only(left: 15, right: 22).r,
-                          child: const Icon(
-                            emailIcon,
-                            color: greenColor,
+          SizedBox(
+            width: MediaQuery.of(context).size.width,
+            child: Text(
+              'Enter the email address associated with your account to recover password.',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                  fontSize: 16.sp,
+                  fontWeight: FontWeight.w400,
+                  color: lightBalckColor),
+            ),
+          ),
+          SizedBox(
+            height: 40.h,
+          ),
+          SizedBox(
+            width: MediaQuery.of(context).size.width,
+            child: Padding(
+              padding: const EdgeInsets.only(left: 35, bottom: 7).r,
+              child: Text(
+                'Email Address',
+                style: TextStyle(
+                  fontSize: 14.sp,
+                  fontWeight: FontWeight.w500,
+                  color: lightBalckColor,
+                ),
+                textAlign: TextAlign.left,
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(bottom: 23).r,
+            child: Theme(
+                data: ThemeData(
+                    inputDecorationTheme: const InputDecorationTheme(
+                        border: OutlineInputBorder(
+                            borderSide: BorderSide(color: Color(0xFFC5C5C5))))),
+                child: SizedBox(
+                    width: 307.w,
+                    height: 57.h,
+                    child: TextFormField(
+                      keyboardType: TextInputType.emailAddress,
+                      decoration: InputDecoration(
+                          prefixIcon: Padding(
+                            padding:
+                                const EdgeInsets.only(left: 15, right: 22).r,
+                            child: const Icon(
+                              emailIcon,
+                              color: greenColor,
+                            ),
                           ),
-                        ),
-                        focusedBorder: const OutlineInputBorder(
-                            borderSide: BorderSide(color: focusBlueColor))),
-                  ))),
-        ),
-        CustomButton(
-          customFunction: () {
-            Get.toNamed(check_inbox_screen);
-          },
-          buttonColor: greenColor,
-          buttonText: 'RECOVER PASSWORD',
-          buttonTextWeight: FontWeight.w500,
-        )
-      ]),
+                          focusedBorder: const OutlineInputBorder(
+                              borderSide: BorderSide(color: focusBlueColor))),
+                    ))),
+          ),
+          CustomButton(
+            customFunction: () {
+              Get.toNamed(check_inbox_screen);
+            },
+            buttonColor: greenColor,
+            buttonText: 'RECOVER PASSWORD',
+            buttonTextWeight: FontWeight.w500,
+          )
+        ]),
+      ),
     ));
   }
 }
