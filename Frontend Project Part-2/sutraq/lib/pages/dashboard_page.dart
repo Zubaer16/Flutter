@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:sutraq/storage/color_storage.dart';
-import 'package:sutraq/storage/icon_storage.dart';
 
 class DashboardPage extends StatelessWidget {
   const DashboardPage({Key? key}) : super(key: key);
@@ -11,20 +9,30 @@ class DashboardPage extends StatelessWidget {
     return SafeArea(
         child: Scaffold(
             backgroundColor: Color(0xFF051F0E),
-            body: Row(
+            body: Column(
               children: [
-                Container(
-                  height: 30.h,
-                  width: 30.w,
-                  decoration: BoxDecoration(
-                      color: Colors.white, shape: BoxShape.circle),
-                  child: Align(
-                    alignment: Alignment.center,
-                    child: Text(
-                      'OP',
+                ListTile(
+                  leading: Container(
+                    height: 30.h,
+                    width: 30.w,
+                    decoration: BoxDecoration(
+                        gradient: LinearGradient(colors: [
+                          Color(0xFF3417A8),
+                          Color(0xFF4E17A887),
+                        ], stops: [
+                          1,
+                          0.53
+                        ]),
+                        shape: BoxShape.circle),
+                    child: Align(
+                      alignment: Alignment.center,
+                      child: Text(
+                        'OP',
+                        style: TextStyle,
+                      ),
                     ),
                   ),
-                ),
+                )
               ],
             )));
   }

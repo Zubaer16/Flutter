@@ -26,6 +26,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: BottomNavigationBar(
+        type: BottomNavigationBarType.fixed,
         selectedItemColor: const Color(0xFF0DBE53),
         unselectedItemColor: const Color(0xFFDADADA),
         backgroundColor: Colors.white,
