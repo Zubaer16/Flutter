@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:test/passDynamicValueAnotherCalss/dynamic_value_1.dart';
 
-class Test extends StatelessWidget {
-  const Test({Key? key}) : super(key: key);
+class DynamicValue extends StatelessWidget {
+  const DynamicValue({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -23,11 +24,10 @@ class Test extends StatelessWidget {
             height: 30,
             width: 30,
             color: Colors.amber,
-          )
-        ],
-      )
-          // Test1(),
           ),
+          DynamicValue1(),
+        ],
+      )),
     );
   }
 }

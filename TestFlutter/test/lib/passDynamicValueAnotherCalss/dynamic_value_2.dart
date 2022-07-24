@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class Test2 extends StatefulWidget {
+class DynamicValue2 extends StatefulWidget {
   ValueChanged<int> update;
-  Test2({required this.update});
+  DynamicValue2({required this.update});
   @override
-  State<Test2> createState() => _Test2State();
+  State<DynamicValue2> createState() => _DynamicValue2State();
 }
 
-class _Test2State extends State<Test2> {
+class _DynamicValue2State extends State<DynamicValue2> {
   int value = 0;
   @override
   Widget build(BuildContext context) {

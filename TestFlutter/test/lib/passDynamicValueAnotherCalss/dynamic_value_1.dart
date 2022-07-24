@@ -1,17 +1,16 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:test/passDynamicValueAnotherCalss/test2.dart';
-import 'package:test/passDynamicValueAnotherCalss/test2.dart';
+import 'package:test/passDynamicValueAnotherCalss/dynamic_value_2.dart';
 
 List<String> myList = ['hi', 'this', 'is'];
 
-class Test1 extends StatefulWidget {
+class DynamicValue1 extends StatefulWidget {
   @override
-  State<Test1> createState() => _Test1State();
+  State<DynamicValue1> createState() => _DynamicValue1State();
 }
 
-class _Test1State extends State<Test1> {
+class _DynamicValue1State extends State<DynamicValue1> {
   int value = 0;
   // Pass this method to the child page.
   void _update(int newValue) {
@@ -23,7 +22,7 @@ class _Test1State extends State<Test1> {
     return Column(
       children: [
         Text(myList[value]),
-        Test2(update: _update),
+        DynamicValue2(update: _update),
       ],
     );
   }
