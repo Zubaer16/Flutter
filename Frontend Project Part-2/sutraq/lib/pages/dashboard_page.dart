@@ -1,9 +1,17 @@
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class DashboardPage extends StatelessWidget {
+class DashboardPage extends StatefulWidget {
   const DashboardPage({Key? key}) : super(key: key);
 
+  @override
+  State<DashboardPage> createState() => _DashboardPageState();
+}
+
+class _DashboardPageState extends State<DashboardPage> {
+  final ValueNotifier<int> _pageNotifier = ValueNotifier<int>(0);
+  final PageController _pageController = PageController();
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -73,6 +81,57 @@ class DashboardPage extends StatelessWidget {
                       ]),
                     ),
                   ),
+                ),
+                Expanded(
+                  child: PageView.builder(
+                    controller: _pageController,
+                    itemCount: 4,
+                    itemBuilder: (context, i) {
+                      return Container(
+                          margin: EdgeInsets.only(top: 10),
+                          child: Container(
+                            child: PageView(
+                              children: <Widget>[
+                                Container(
+                                  height: 100,
+                                  width: 100,
+                                  decoration: BoxDecoration(
+                                    color: Colors.amber,
+                                    borderRadius: BorderRadius.circular(4.0),
+                                  ),
+                                ),
+                                Container(
+                                  decoration: BoxDecoration(
+                                    color: Colors.black,
+                                    borderRadius: BorderRadius.circular(4.0),
+                                  ),
+                                ),
+                                Container(
+                                  decoration: BoxDecoration(
+                                    color: Colors.brown,
+                                    borderRadius: BorderRadius.circular(4.0),
+                                  ),
+                                ),
+                                Container(
+                                  decoration: BoxDecoration(
+                                    color: Colors.cyan,
+                                    borderRadius: BorderRadius.circular(4.0),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ));
+                    },
+                    onPageChanged: (index) {
+                      setState(() {
+                        _pageNotifier.value = index;
+                      });
+                    },
+                  ),
+                ),
+                SizedBox(
+                  height: 500,
+                  child: Center(),
                 )
               ],
             )));
