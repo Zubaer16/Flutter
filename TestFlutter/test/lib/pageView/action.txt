@@ -1,0 +1,7 @@
+// in Scaffold
+
+actions: [
+    iconButton(icon: Icon(Icons.arrow_back_ios),onPressed(){
+        pageController.animateToPage(1, duration: Duration(miliseconds: 250),curve: Curves.box)
+    })
+]
