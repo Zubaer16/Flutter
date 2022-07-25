@@ -4,6 +4,9 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+import 'package:sutraq/components/sutraq_logo.dart';
+import 'package:sutraq/storage/color_storage.dart';
+import 'package:sutraq/storage/icon_storage.dart';
 import 'package:visibility_detector/visibility_detector.dart';
 
 class DashboardPage extends StatefulWidget {
@@ -113,7 +116,7 @@ class _DashboardPageState extends State<DashboardPage> {
                 Padding(
                   padding: const EdgeInsets.only(top: 24).r,
                   child: AnimatedSmoothIndicator(
-                    duration: Duration(milliseconds: 0),
+                    duration: Duration(milliseconds: 300),
                     activeIndex: _currentItem,
                     count: 3,
                     effect: SlideEffect(
@@ -138,6 +141,40 @@ class FirstSlider extends StatelessWidget {
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10.r),
           color: Colors.white,
+        ),
+        child: Column(
+          children: [
+            SizedBox(
+              height: 30.h,
+              width: 195.w,
+              child: Row(
+                children: [
+                  SutraqLogo(
+                    height: 12.h,
+                    width: 14.w,
+                  ),
+                  Text(
+                    'SUTRAQ CURRENCY',
+                    style: TextStyle(
+                        color: Color(0xff0A004A),
+                        fontSize: 10.sp,
+                        fontWeight: FontWeight.w700),
+                  ),
+                  Icon(
+                    eyeIcon,
+                    size: 11.w,
+                  )
+                ],
+              ),
+            ),
+            Text(
+              'AVAILABLE BALANCE',
+              style: TextStyle(
+                  color: Color(0xff0A004A).withOpacity(.4),
+                  fontSize: 7.sp,
+                  fontWeight: FontWeight.w700),
+            )
+          ],
         ),
       ),
     );
