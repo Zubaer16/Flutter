@@ -65,7 +65,7 @@ class thirdSlider extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 150,
-      width: 15K0,
+      width: 15,
       color: Colors.pink,
     );
   }

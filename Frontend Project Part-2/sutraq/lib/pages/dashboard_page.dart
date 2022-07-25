@@ -1,6 +1,10 @@
+import 'dart:math';
+
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+import 'package:visibility_detector/visibility_detector.dart';
 
 class DashboardPage extends StatefulWidget {
   const DashboardPage({Key? key}) : super(key: key);
@@ -9,9 +13,10 @@ class DashboardPage extends StatefulWidget {
   State<DashboardPage> createState() => _DashboardPageState();
 }
 
+final slider = [FirstSlider(), SecondSlider(), ThirdSlider()];
+int _currentItem = 0;
+
 class _DashboardPageState extends State<DashboardPage> {
-  final ValueNotifier<int> _pageNotifier = ValueNotifier<int>(0);
-  final PageController _pageController = PageController();
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -69,71 +74,104 @@ class _DashboardPageState extends State<DashboardPage> {
                         ),
                         Positioned(
                           right: 4,
-                          top: 2,
+                          top: 3,
                           child: Container(
                             height: 6.h,
                             width: 6.w,
-                            decoration: const BoxDecoration(
+                            decoration: BoxDecoration(
                                 color: Color(0xFF046AE1),
-                                shape: BoxShape.circle),
+                                shape: BoxShape.circle,
+                                border: Border.all(
+                                    color: Colors.white, width: 0.5)),
                           ),
                         )
                       ]),
                     ),
                   ),
                 ),
-                Expanded(
-                  child: PageView.builder(
-                    controller: _pageController,
-                    itemCount: 4,
-                    itemBuilder: (context, i) {
-                      return Container(
-                          margin: EdgeInsets.only(top: 10),
-                          child: Container(
-                            child: PageView(
-                              children: <Widget>[
-                                Container(
-                                  height: 100,
-                                  width: 100,
-                                  decoration: BoxDecoration(
-                                    color: Colors.amber,
-                                    borderRadius: BorderRadius.circular(4.0),
-                                  ),
-                                ),
-                                Container(
-                                  decoration: BoxDecoration(
-                                    color: Colors.black,
-                                    borderRadius: BorderRadius.circular(4.0),
-                                  ),
-                                ),
-                                Container(
-                                  decoration: BoxDecoration(
-                                    color: Colors.brown,
-                                    borderRadius: BorderRadius.circular(4.0),
-                                  ),
-                                ),
-                                Container(
-                                  decoration: BoxDecoration(
-                                    color: Colors.cyan,
-                                    borderRadius: BorderRadius.circular(4.0),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ));
-                    },
-                    onPageChanged: (index) {
-                      setState(() {
-                        _pageNotifier.value = index;
-                      });
+                SizedBox(
+                  height: 89.h,
+                  width: MediaQuery.of(context).size.width,
+                  child: ListView.builder(
+                    shrinkWrap: true,
+                    scrollDirection: Axis.horizontal,
+                    itemCount: slider.length,
+                    itemBuilder: (_, index) {
+                      return VisibilityDetector(
+                          key: Key(index.toString()),
+                          child: slider[index],
+                          onVisibilityChanged: (VisibilityInfo info) {
+                            if (info.visibleFraction == 1) {
+                              setState(() {
+                                _currentItem = index;
+                              });
+                            }
+                          });
                     },
                   ),
                 ),
-                SizedBox(
-                  height: 500,
-                  child: Center(),
+                Padding(
+                  padding: const EdgeInsets.only(top: 24).r,
+                  child: AnimatedSmoothIndicator(
+                    duration: Duration(milliseconds: 0),
+                    activeIndex: _currentItem,
+                    count: 3,
+                    effect: SlideEffect(
+                        dotWidth: 16.67.w,
+                        dotHeight: 2.h,
+                        dotColor: Color(0xff46A02A).withOpacity(.5),
+                        activeDotColor: Color(0xff46A02A)),
+                  ),
                 )
               ],
             )));
+  }
+}
+
+class FirstSlider extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.only(left: 16).r,
+      child: Container(
+        width: 196.w,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(10.r),
+          color: Colors.white,
+        ),
+      ),
+    );
+  }
+}
+
+class SecondSlider extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.only(left: 16).r,
+      child: Container(
+        width: 196.w,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(10.r),
+          color: Colors.white,
+        ),
+      ),
+    );
+  }
+}
+
+class ThirdSlider extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.only(left: 16, right: 16).r,
+      child: Container(
+        width: 196.w,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(10.r),
+          color: Colors.white,
+        ),
+      ),
+    );
   }
 }

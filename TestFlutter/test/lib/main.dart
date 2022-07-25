@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:test/pageView/caro_slider.dart';
+import 'package:test/pageView/pageViews.dart';
 import 'package:test/passDynamicValueAnotherCalss/dynamic_value.dart';
 
 void main() {
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: CaroSlider(),
+      home: PageViews(),
     );
   }
 }
