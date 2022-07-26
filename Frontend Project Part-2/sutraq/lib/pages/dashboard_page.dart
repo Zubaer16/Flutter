@@ -1,11 +1,8 @@
-import 'dart:math';
-
-import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:sutraq/components/sutraq_logo.dart';
-import 'package:sutraq/storage/color_storage.dart';
+
 import 'package:sutraq/storage/icon_storage.dart';
 import 'package:visibility_detector/visibility_detector.dart';
 
@@ -16,7 +13,7 @@ class DashboardPage extends StatefulWidget {
   State<DashboardPage> createState() => _DashboardPageState();
 }
 
-final slider = [FirstSlider(), SecondSlider(), ThirdSlider()];
+final slider = [const FirstSlider(), const SecondSlider(), const ThirdSlider()];
 int _currentItem = 0;
 
 class _DashboardPageState extends State<DashboardPage> {
@@ -82,7 +79,7 @@ class _DashboardPageState extends State<DashboardPage> {
                             height: 6.h,
                             width: 6.w,
                             decoration: BoxDecoration(
-                                color: Color(0xFF046AE1),
+                                color: const Color(0xFF046AE1),
                                 shape: BoxShape.circle,
                                 border: Border.all(
                                     color: Colors.white, width: 0.5)),
@@ -116,14 +113,14 @@ class _DashboardPageState extends State<DashboardPage> {
                 Padding(
                   padding: const EdgeInsets.only(top: 24).r,
                   child: AnimatedSmoothIndicator(
-                    duration: Duration(milliseconds: 300),
+                    duration: const Duration(milliseconds: 300),
                     activeIndex: _currentItem,
                     count: 3,
                     effect: SlideEffect(
                         dotWidth: 16.67.w,
                         dotHeight: 2.h,
-                        dotColor: Color(0xff46A02A).withOpacity(.5),
-                        activeDotColor: Color(0xff46A02A)),
+                        dotColor: const Color(0xff46A02A).withOpacity(.5),
+                        activeDotColor: const Color(0xff46A02A)),
                   ),
                 )
               ],
@@ -132,6 +129,8 @@ class _DashboardPageState extends State<DashboardPage> {
 }
 
 class FirstSlider extends StatelessWidget {
+  const FirstSlider({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -159,7 +158,7 @@ class FirstSlider extends StatelessWidget {
                       child: Text(
                         'SUTRAQ CURRENCY',
                         style: TextStyle(
-                            color: Color(0xff0A004A),
+                            color: const Color(0xff0A004A),
                             fontSize: 10.sp,
                             fontWeight: FontWeight.w700),
                       ),
@@ -179,7 +178,7 @@ class FirstSlider extends StatelessWidget {
                 child: Text(
                   'AVAILABLE BALANCE',
                   style: TextStyle(
-                      color: Color(0xff0A004A).withOpacity(.4),
+                      color: const Color(0xff0A004A).withOpacity(.4),
                       fontSize: 7.sp,
                       fontWeight: FontWeight.w700),
                 ),
@@ -196,14 +195,14 @@ class FirstSlider extends StatelessWidget {
                       child: Text(
                         'Q190,000',
                         style: TextStyle(
-                            color: Color(0xff46A02A),
+                            color: const Color(0xff46A02A),
                             fontSize: 22.sp,
                             fontWeight: FontWeight.w700),
                       ),
                     ),
                     Icon(
                       arrowForward,
-                      color: Color(0xff46A02A),
+                      color: const Color(0xff46A02A),
                       size: 10.w,
                     )
                   ],
@@ -218,33 +217,137 @@ class FirstSlider extends StatelessWidget {
 }
 
 class SecondSlider extends StatelessWidget {
+  const SecondSlider({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(left: 16).r,
       child: Container(
-        width: 196.w,
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(10.r),
-          color: Colors.white,
-        ),
-      ),
+          width: 196.w,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(10.r),
+            color: Colors.white,
+          ),
+          child: Column(
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(top: 16, left: 18).r,
+                child: SizedBox(
+                  width: 196.w,
+                  child: Row(children: [
+                    Image.asset(
+                      'images/usa.png',
+                      height: 7.h,
+                      width: 13.w,
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 4).r,
+                      child: const Text('USD',
+                          style: TextStyle(
+                              color: Color(0xff0A004A),
+                              fontSize: 10,
+                              fontWeight: FontWeight.w700)),
+                    )
+                  ]),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 18, top: 10).r,
+                child: SizedBox(
+                  width: 196.w,
+                  child: Text(
+                    'AVAILABLE BALANCE',
+                    style: TextStyle(
+                        color: const Color(0xff0A004A).withOpacity(.4),
+                        fontSize: 7.sp,
+                        fontWeight: FontWeight.w700),
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 17, top: 4).r,
+                child: SizedBox(
+                  width: 196.w,
+                  child: Text(
+                    '\$42,000',
+                    style: TextStyle(
+                        color: const Color(0xff46A02A),
+                        fontSize: 22.sp,
+                        fontWeight: FontWeight.w700),
+                  ),
+                ),
+              ),
+            ],
+          )),
     );
   }
 }
 
 class ThirdSlider extends StatelessWidget {
+  const ThirdSlider({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: 16, right: 16).r,
-      child: Container(
-        width: 196.w,
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(10.r),
-          color: Colors.white,
-        ),
-      ),
-    );
+        padding: const EdgeInsets.only(left: 16, right: 16).r,
+        child: Container(
+          width: 196.w,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(10.r),
+            color: Colors.white,
+          ),
+          child: Column(
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(top: 16, left: 18).r,
+                child: SizedBox(
+                  width: 196.w,
+                  child: Row(children: [
+                    Image.asset(
+                      'images/usa.png',
+                      height: 7.h,
+                      width: 13.w,
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 4).r,
+                      child: const Text('USD',
+                          style: TextStyle(
+                              color: Color(0xff0A004A),
+                              fontSize: 10,
+                              fontWeight: FontWeight.w700)),
+                    )
+                  ]),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 18, top: 10).r,
+                child: SizedBox(
+                  width: 196.w,
+                  child: Text(
+                    'AVAILABLE BALANCE',
+                    style: TextStyle(
+                        color: const Color(0xff0A004A).withOpacity(.4),
+                        fontSize: 7.sp,
+                        fontWeight: FontWeight.w700),
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 17, top: 4).r,
+                child: SizedBox(
+                  width: 196.w,
+                  child: Text(
+                    '\$42,000',
+                    style: TextStyle(
+                        color: const Color(0xff46A02A),
+                        fontSize: 22.sp,
+                        fontWeight: FontWeight.w700),
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ));
   }
 }
