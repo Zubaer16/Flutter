@@ -9,3 +9,4 @@ const dashboardIcon = Icons.dashboard_outlined;
 const walletIcon = Icons.account_balance_wallet_outlined;
 const cardsIcon = Icons.credit_card_outlined;
 const settingsIcon = Icons.settings_outlined;
+const arrowForward = Icons.arrow_forward_outlined;

@@ -144,35 +144,71 @@ class FirstSlider extends StatelessWidget {
         ),
         child: Column(
           children: [
-            SizedBox(
-              height: 30.h,
-              width: 195.w,
-              child: Row(
-                children: [
-                  SutraqLogo(
-                    height: 12.h,
-                    width: 14.w,
-                  ),
-                  Text(
-                    'SUTRAQ CURRENCY',
-                    style: TextStyle(
-                        color: Color(0xff0A004A),
-                        fontSize: 10.sp,
-                        fontWeight: FontWeight.w700),
-                  ),
-                  Icon(
-                    eyeIcon,
-                    size: 11.w,
-                  )
-                ],
+            Padding(
+              padding: const EdgeInsets.only(top: 14, left: 13).r,
+              child: SizedBox(
+                width: 196.w,
+                child: Row(
+                  children: [
+                    SutraqLogo(
+                      height: 12.h,
+                      width: 14.w,
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 5, right: 45.5).r,
+                      child: Text(
+                        'SUTRAQ CURRENCY',
+                        style: TextStyle(
+                            color: Color(0xff0A004A),
+                            fontSize: 10.sp,
+                            fontWeight: FontWeight.w700),
+                      ),
+                    ),
+                    Icon(
+                      eyeIcon,
+                      size: 11.w,
+                    )
+                  ],
+                ),
               ),
             ),
-            Text(
-              'AVAILABLE BALANCE',
-              style: TextStyle(
-                  color: Color(0xff0A004A).withOpacity(.4),
-                  fontSize: 7.sp,
-                  fontWeight: FontWeight.w700),
+            Padding(
+              padding: const EdgeInsets.only(top: 12, left: 17).r,
+              child: SizedBox(
+                width: 196.w,
+                child: Text(
+                  'AVAILABLE BALANCE',
+                  style: TextStyle(
+                      color: Color(0xff0A004A).withOpacity(.4),
+                      fontSize: 7.sp,
+                      fontWeight: FontWeight.w700),
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 16, top: 4).r,
+              child: SizedBox(
+                width: 196.w,
+                child: Row(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(right: 57).r,
+                      child: Text(
+                        'Q190,000',
+                        style: TextStyle(
+                            color: Color(0xff46A02A),
+                            fontSize: 22.sp,
+                            fontWeight: FontWeight.w700),
+                      ),
+                    ),
+                    Icon(
+                      arrowForward,
+                      color: Color(0xff46A02A),
+                      size: 10.w,
+                    )
+                  ],
+                ),
+              ),
             )
           ],
         ),
