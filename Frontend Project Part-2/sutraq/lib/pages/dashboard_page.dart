@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:sutraq/components/sutraq_logo.dart';
-
+import 'package:sutraq/storage/color_storage.dart';
 import 'package:sutraq/storage/icon_storage.dart';
 import 'package:visibility_detector/visibility_detector.dart';
 
@@ -119,8 +119,83 @@ class _DashboardPageState extends State<DashboardPage> {
                     effect: SlideEffect(
                         dotWidth: 16.67.w,
                         dotHeight: 2.h,
-                        dotColor: const Color(0xff46A02A).withOpacity(.5),
-                        activeDotColor: const Color(0xff46A02A)),
+                        dotColor: greenColor1.withOpacity(.5),
+                        activeDotColor: greenColor1),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 11).r,
+                  child: Container(
+                    width: MediaQuery.of(context).size.width,
+                    decoration: BoxDecoration(
+                        color: greenColor1,
+                        borderRadius: BorderRadius.only(
+                            topLeft: Radius.circular(20).r,
+                            topRight: Radius.circular(20).r)),
+                    child: Column(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(left: 47, top: 18).r,
+                          child: SizedBox(
+                              width: MediaQuery.of(context).size.width,
+                              child: Row(
+                                children: [
+                                  Padding(
+                                    padding: const EdgeInsets.only(right: 65).r,
+                                    child: Container(
+                                      height: 56.h,
+                                      width: 56.w,
+                                      decoration: BoxDecoration(
+                                          color: Color(0xff051F0E),
+                                          shape: BoxShape.circle),
+                                      child: Align(
+                                        alignment: Alignment.center,
+                                        child: Icon(
+                                          accountBalance,
+                                          color: Color(0xffDADADA),
+                                          size: 24.w,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.only(right: 65).r,
+                                    child: Container(
+                                      height: 56.h,
+                                      width: 56.w,
+                                      decoration: BoxDecoration(
+                                          color: Color(0xff051F0E),
+                                          shape: BoxShape.circle),
+                                      child: Align(
+                                        alignment: Alignment.center,
+                                        child: Icon(
+                                          inputIcon,
+                                          color: Color(0xffDADADA),
+                                          size: 24.w,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                  Container(
+                                    height: 56.h,
+                                    width: 56.w,
+                                    decoration: BoxDecoration(
+                                        color: Color(0xff051F0E),
+                                        shape: BoxShape.circle),
+                                    child: Align(
+                                      alignment: Alignment.center,
+                                      child: Icon(
+                                        driveFileIcon,
+                                        color: Color(0xffDADADA),
+                                        size: 24.w,
+                                      ),
+                                    ),
+                                  )
+                                ],
+                              )),
+                        ),
+                      ],
+                    ),
                   ),
                 )
               ],
@@ -144,7 +219,7 @@ class FirstSlider extends StatelessWidget {
         child: Column(
           children: [
             Padding(
-              padding: const EdgeInsets.only(top: 14, left: 13).r,
+              padding: const EdgeInsets.only(top: 16, left: 13).r,
               child: SizedBox(
                 width: 196.w,
                 child: Row(
@@ -172,7 +247,7 @@ class FirstSlider extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(top: 12, left: 17).r,
+              padding: const EdgeInsets.only(top: 10, left: 17).r,
               child: SizedBox(
                 width: 196.w,
                 child: Text(
@@ -195,14 +270,14 @@ class FirstSlider extends StatelessWidget {
                       child: Text(
                         'Q190,000',
                         style: TextStyle(
-                            color: const Color(0xff46A02A),
+                            color: greenColor1,
                             fontSize: 22.sp,
                             fontWeight: FontWeight.w700),
                       ),
                     ),
                     Icon(
                       arrowForward,
-                      color: const Color(0xff46A02A),
+                      color: greenColor1,
                       size: 10.w,
                     )
                   ],
@@ -272,7 +347,7 @@ class SecondSlider extends StatelessWidget {
                   child: Text(
                     '\$42,000',
                     style: TextStyle(
-                        color: const Color(0xff46A02A),
+                        color: greenColor1,
                         fontSize: 22.sp,
                         fontWeight: FontWeight.w700),
                   ),
@@ -340,7 +415,7 @@ class ThirdSlider extends StatelessWidget {
                   child: Text(
                     '\$42,000',
                     style: TextStyle(
-                        color: const Color(0xff46A02A),
+                        color: greenColor1,
                         fontSize: 22.sp,
                         fontWeight: FontWeight.w700),
                   ),
