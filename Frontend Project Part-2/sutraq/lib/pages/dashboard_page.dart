@@ -27,11 +27,11 @@ class _DashboardPageState extends State<DashboardPage> {
                   (BuildContext context, bool innerBoxIsScrolled) {
                 return [
                   SliverAppBar(
-                    toolbarHeight: 407.55.h,
+                    toolbarHeight: 404.8.h,
                     pinned: false,
                     backgroundColor: const Color(0xFF051F0E),
                     title: SizedBox(
-                      height: 407.55.h,
+                      height: 405.9.h,
                       child: Column(
                         children: [
                           Padding(
@@ -270,7 +270,7 @@ class _DashboardPageState extends State<DashboardPage> {
                         ],
                       ),
                     ),
-                    titleSpacing: 1,
+                    titleSpacing: 0,
                     automaticallyImplyLeading: false,
                   )
                 ];
