@@ -1,9 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:test/pageView/caro_slider.dart';
-import 'package:test/pageView/pageViews.dart';
-import 'package:test/passDynamicValueAnotherCalss/dynamic_value.dart';
+import 'package:test/nested_scroll_view/nest_scroll_view.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: PageViews(),
+      home: NestScrollView(),
     );
   }
 }
