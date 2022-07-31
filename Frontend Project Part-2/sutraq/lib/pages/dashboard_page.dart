@@ -135,96 +135,112 @@ class _DashboardPageState extends State<DashboardPage> {
                                   topRight: Radius.circular(20).r)),
                           child: Column(
                             children: [
-                              Padding(
-                                padding:
-                                    const EdgeInsets.only(top: 18, bottom: 11)
+                              SizedBox(
+                                  width: MediaQuery.of(context).size.width,
+                                  child: Padding(
+                                    padding: const EdgeInsets.only(
+                                            top: 18, bottom: 19)
                                         .r,
-                                child: SizedBox(
-                                    width: MediaQuery.of(context).size.width,
                                     child: Row(
                                       mainAxisAlignment:
                                           MainAxisAlignment.spaceAround,
                                       children: [
-                                        Container(
-                                          height: 56.h,
-                                          width: 56.w,
-                                          decoration: BoxDecoration(
-                                              color: Color(0xff051F0E),
-                                              shape: BoxShape.circle),
-                                          child: Align(
-                                            alignment: Alignment.center,
-                                            child: Icon(
-                                              accountBalance,
-                                              color: Color(0xffDADADA),
-                                              size: 24.w,
+                                        Column(
+                                          children: [
+                                            Padding(
+                                              padding: const EdgeInsets.only(
+                                                      bottom: 11)
+                                                  .r,
+                                              child: Container(
+                                                height: 56.h,
+                                                width: 56.w,
+                                                decoration: BoxDecoration(
+                                                    color: Color(0xff051F0E),
+                                                    shape: BoxShape.circle),
+                                                child: Align(
+                                                  alignment: Alignment.center,
+                                                  child: Icon(
+                                                    accountBalance,
+                                                    color: Color(0xffDADADA),
+                                                    size: 24.w,
+                                                  ),
+                                                ),
+                                              ),
                                             ),
-                                          ),
+                                            Text(
+                                              'Fund Wallet',
+                                              style: TextStyle(
+                                                  color: Colors.white,
+                                                  fontSize: 14.sp,
+                                                  fontWeight: FontWeight.w700),
+                                            ),
+                                          ],
                                         ),
-                                        Container(
-                                          height: 56.h,
-                                          width: 56.w,
-                                          decoration: BoxDecoration(
-                                              color: Color(0xff051F0E),
-                                              shape: BoxShape.circle),
-                                          child: Align(
-                                            alignment: Alignment.center,
-                                            child: Icon(
-                                              inputIcon,
-                                              color: Color(0xffDADADA),
-                                              size: 24.w,
+                                        Column(
+                                          children: [
+                                            Padding(
+                                              padding: const EdgeInsets.only(
+                                                      bottom: 11)
+                                                  .r,
+                                              child: Container(
+                                                height: 56.h,
+                                                width: 56.w,
+                                                decoration: BoxDecoration(
+                                                    color: Color(0xff051F0E),
+                                                    shape: BoxShape.circle),
+                                                child: Align(
+                                                  alignment: Alignment.center,
+                                                  child: Icon(
+                                                    inputIcon,
+                                                    color: Color(0xffDADADA),
+                                                    size: 24.w,
+                                                  ),
+                                                ),
+                                              ),
                                             ),
-                                          ),
+                                            Text(
+                                              'Send Money',
+                                              style: TextStyle(
+                                                  color: Colors.white,
+                                                  fontSize: 14.sp,
+                                                  fontWeight: FontWeight.w700),
+                                            ),
+                                          ],
                                         ),
-                                        Container(
-                                          height: 56.h,
-                                          width: 56.w,
-                                          decoration: BoxDecoration(
-                                              color: Color(0xff051F0E),
-                                              shape: BoxShape.circle),
-                                          child: Align(
-                                            alignment: Alignment.center,
-                                            child: Icon(
-                                              driveFileIcon,
-                                              color: Color(0xffDADADA),
-                                              size: 24.w,
+                                        Column(
+                                          children: [
+                                            Padding(
+                                              padding: const EdgeInsets.only(
+                                                      bottom: 11)
+                                                  .r,
+                                              child: Container(
+                                                height: 56.h,
+                                                width: 56.w,
+                                                decoration: BoxDecoration(
+                                                    color: Color(0xff051F0E),
+                                                    shape: BoxShape.circle),
+                                                child: Align(
+                                                  alignment: Alignment.center,
+                                                  child: Icon(
+                                                    driveFileIcon,
+                                                    color: Color(0xffDADADA),
+                                                    size: 24.w,
+                                                  ),
+                                                ),
+                                              ),
                                             ),
-                                          ),
+                                            Text(
+                                              'Withdraw',
+                                              style: TextStyle(
+                                                  color: Colors.white,
+                                                  fontSize: 14.sp,
+                                                  fontWeight: FontWeight.w700),
+                                            ),
+                                          ],
                                         )
                                       ],
-                                    )),
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.only(bottom: 19).r,
-                                child: SizedBox(
-                                    width: MediaQuery.of(context).size.width,
-                                    child: Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceAround,
-                                      children: [
-                                        Text(
-                                          'Fund Wallet',
-                                          style: TextStyle(
-                                              color: Colors.white,
-                                              fontSize: 14.sp,
-                                              fontWeight: FontWeight.w700),
-                                        ),
-                                        Text(
-                                          'Send Money',
-                                          style: TextStyle(
-                                              color: Colors.white,
-                                              fontSize: 14.sp,
-                                              fontWeight: FontWeight.w700),
-                                        ),
-                                        Text(
-                                          'Withdraw',
-                                          style: TextStyle(
-                                              color: Colors.white,
-                                              fontSize: 14.sp,
-                                              fontWeight: FontWeight.w700),
-                                        ),
-                                      ],
-                                    )),
-                              ),
+                                    ),
+                                  )),
                               Container(
                                 width: MediaQuery.of(context).size.width,
                                 decoration: BoxDecoration(
@@ -292,42 +308,50 @@ class _DashboardPageState extends State<DashboardPage> {
                                                 padding: const EdgeInsets.only(
                                                         left: 13, top: 11)
                                                     .r,
-                                                child: Column(
-                                                  crossAxisAlignment:
-                                                      CrossAxisAlignment.start,
-                                                  children: [
-                                                    Padding(
-                                                      padding:
-                                                          const EdgeInsets.only(
-                                                                  bottom: 4)
-                                                              .r,
-                                                      child: Text(
-                                                        'Access Bank',
+                                                child: SizedBox(
+                                                  width: 121.w,
+                                                  child: Column(
+                                                    crossAxisAlignment:
+                                                        CrossAxisAlignment
+                                                            .start,
+                                                    children: [
+                                                      Padding(
+                                                        padding:
+                                                            const EdgeInsets
+                                                                        .only(
+                                                                    bottom: 4)
+                                                                .r,
+                                                        child: Text(
+                                                          'Access Bank',
+                                                          style: TextStyle(
+                                                              color: Color(
+                                                                  0xff0A004A),
+                                                              fontSize: 14.sp,
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .w500),
+                                                        ),
+                                                      ),
+                                                      Text(
+                                                        '28, Jan 2020',
+                                                        textAlign:
+                                                            TextAlign.left,
                                                         style: TextStyle(
                                                             color: Color(
-                                                                0xff0A004A),
-                                                            fontSize: 14.sp,
+                                                                    0xff929292)
+                                                                .withOpacity(
+                                                                    .7),
+                                                            fontSize: 10.sp,
                                                             fontWeight:
                                                                 FontWeight
-                                                                    .w500),
+                                                                    .w400),
                                                       ),
-                                                    ),
-                                                    Text(
-                                                      '28, Jan 2020',
-                                                      textAlign: TextAlign.left,
-                                                      style: TextStyle(
-                                                          color: Color(
-                                                                  0xff929292)
-                                                              .withOpacity(.7),
-                                                          fontSize: 10.sp,
-                                                          fontWeight:
-                                                              FontWeight.w400),
-                                                    ),
-                                                  ],
+                                                    ],
+                                                  ),
                                                 ),
                                               ),
                                               SizedBox(
-                                                width: 170.w,
+                                                width: 145.w,
                                                 child: Text(
                                                   '\$2400',
                                                   textAlign: TextAlign.end,
@@ -381,42 +405,50 @@ class _DashboardPageState extends State<DashboardPage> {
                                                 padding: const EdgeInsets.only(
                                                         left: 13, top: 11)
                                                     .r,
-                                                child: Column(
-                                                  crossAxisAlignment:
-                                                      CrossAxisAlignment.start,
-                                                  children: [
-                                                    Padding(
-                                                      padding:
-                                                          const EdgeInsets.only(
-                                                                  bottom: 4)
-                                                              .r,
-                                                      child: Text(
-                                                        'Alpha Loans',
+                                                child: SizedBox(
+                                                  width: 121.w,
+                                                  child: Column(
+                                                    crossAxisAlignment:
+                                                        CrossAxisAlignment
+                                                            .start,
+                                                    children: [
+                                                      Padding(
+                                                        padding:
+                                                            const EdgeInsets
+                                                                        .only(
+                                                                    bottom: 4)
+                                                                .r,
+                                                        child: Text(
+                                                          'Alpha Loans',
+                                                          style: TextStyle(
+                                                              color: Color(
+                                                                  0xff0A004A),
+                                                              fontSize: 14.sp,
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .w500),
+                                                        ),
+                                                      ),
+                                                      Text(
+                                                        '28, Jan 2020',
+                                                        textAlign:
+                                                            TextAlign.left,
                                                         style: TextStyle(
                                                             color: Color(
-                                                                0xff0A004A),
-                                                            fontSize: 14.sp,
+                                                                    0xff929292)
+                                                                .withOpacity(
+                                                                    .7),
+                                                            fontSize: 10.sp,
                                                             fontWeight:
                                                                 FontWeight
-                                                                    .w500),
+                                                                    .w400),
                                                       ),
-                                                    ),
-                                                    Text(
-                                                      '28, Jan 2020',
-                                                      textAlign: TextAlign.left,
-                                                      style: TextStyle(
-                                                          color: Color(
-                                                                  0xff929292)
-                                                              .withOpacity(.7),
-                                                          fontSize: 10.sp,
-                                                          fontWeight:
-                                                              FontWeight.w400),
-                                                    ),
-                                                  ],
+                                                    ],
+                                                  ),
                                                 ),
                                               ),
                                               SizedBox(
-                                                width: 175.w,
+                                                width: 145.w,
                                                 child: Row(
                                                   mainAxisAlignment:
                                                       MainAxisAlignment.end,
@@ -492,42 +524,50 @@ class _DashboardPageState extends State<DashboardPage> {
                                                 padding: const EdgeInsets.only(
                                                         left: 13, top: 11)
                                                     .r,
-                                                child: Column(
-                                                  crossAxisAlignment:
-                                                      CrossAxisAlignment.start,
-                                                  children: [
-                                                    Padding(
-                                                      padding:
-                                                          const EdgeInsets.only(
-                                                                  bottom: 4)
-                                                              .r,
-                                                      child: Text(
-                                                        'Access Bank',
+                                                child: SizedBox(
+                                                  width: 121.w,
+                                                  child: Column(
+                                                    crossAxisAlignment:
+                                                        CrossAxisAlignment
+                                                            .start,
+                                                    children: [
+                                                      Padding(
+                                                        padding:
+                                                            const EdgeInsets
+                                                                        .only(
+                                                                    bottom: 4)
+                                                                .r,
+                                                        child: Text(
+                                                          'Access Bank',
+                                                          style: TextStyle(
+                                                              color: Color(
+                                                                  0xff0A004A),
+                                                              fontSize: 14.sp,
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .w500),
+                                                        ),
+                                                      ),
+                                                      Text(
+                                                        '28, Jan 2020',
+                                                        textAlign:
+                                                            TextAlign.left,
                                                         style: TextStyle(
                                                             color: Color(
-                                                                0xff0A004A),
-                                                            fontSize: 14.sp,
+                                                                    0xff929292)
+                                                                .withOpacity(
+                                                                    .7),
+                                                            fontSize: 10.sp,
                                                             fontWeight:
                                                                 FontWeight
-                                                                    .w500),
+                                                                    .w400),
                                                       ),
-                                                    ),
-                                                    Text(
-                                                      '28, Jan 2020',
-                                                      textAlign: TextAlign.left,
-                                                      style: TextStyle(
-                                                          color: Color(
-                                                                  0xff929292)
-                                                              .withOpacity(.7),
-                                                          fontSize: 10.sp,
-                                                          fontWeight:
-                                                              FontWeight.w400),
-                                                    ),
-                                                  ],
+                                                    ],
+                                                  ),
                                                 ),
                                               ),
                                               SizedBox(
-                                                width: 175.w,
+                                                width: 145.w,
                                                 child: Row(
                                                   mainAxisAlignment:
                                                       MainAxisAlignment.end,
@@ -602,42 +642,50 @@ class _DashboardPageState extends State<DashboardPage> {
                                                 padding: const EdgeInsets.only(
                                                         left: 13, top: 11)
                                                     .r,
-                                                child: Column(
-                                                  crossAxisAlignment:
-                                                      CrossAxisAlignment.start,
-                                                  children: [
-                                                    Padding(
-                                                      padding:
-                                                          const EdgeInsets.only(
-                                                                  bottom: 4)
-                                                              .r,
-                                                      child: Text(
-                                                        'Alpha Loans',
+                                                child: SizedBox(
+                                                  width: 121.w,
+                                                  child: Column(
+                                                    crossAxisAlignment:
+                                                        CrossAxisAlignment
+                                                            .start,
+                                                    children: [
+                                                      Padding(
+                                                        padding:
+                                                            const EdgeInsets
+                                                                        .only(
+                                                                    bottom: 4)
+                                                                .r,
+                                                        child: Text(
+                                                          'Alpha Loans',
+                                                          style: TextStyle(
+                                                              color: Color(
+                                                                  0xff0A004A),
+                                                              fontSize: 14.sp,
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .w500),
+                                                        ),
+                                                      ),
+                                                      Text(
+                                                        '28, Jan 2020',
+                                                        textAlign:
+                                                            TextAlign.left,
                                                         style: TextStyle(
                                                             color: Color(
-                                                                0xff0A004A),
-                                                            fontSize: 14.sp,
+                                                                    0xff929292)
+                                                                .withOpacity(
+                                                                    .7),
+                                                            fontSize: 10.sp,
                                                             fontWeight:
                                                                 FontWeight
-                                                                    .w500),
+                                                                    .w400),
                                                       ),
-                                                    ),
-                                                    Text(
-                                                      '28, Jan 2020',
-                                                      textAlign: TextAlign.left,
-                                                      style: TextStyle(
-                                                          color: Color(
-                                                                  0xff929292)
-                                                              .withOpacity(.7),
-                                                          fontSize: 10.sp,
-                                                          fontWeight:
-                                                              FontWeight.w400),
-                                                    ),
-                                                  ],
+                                                    ],
+                                                  ),
                                                 ),
                                               ),
                                               SizedBox(
-                                                  width: 175.w,
+                                                  width: 145.w,
                                                   child: Row(
                                                     mainAxisAlignment:
                                                         MainAxisAlignment.end,
@@ -713,42 +761,50 @@ class _DashboardPageState extends State<DashboardPage> {
                                                 padding: const EdgeInsets.only(
                                                         left: 13, top: 11)
                                                     .r,
-                                                child: Column(
-                                                  crossAxisAlignment:
-                                                      CrossAxisAlignment.start,
-                                                  children: [
-                                                    Padding(
-                                                      padding:
-                                                          const EdgeInsets.only(
-                                                                  bottom: 4)
-                                                              .r,
-                                                      child: Text(
-                                                        'Access Bank',
+                                                child: SizedBox(
+                                                  width: 121.w,
+                                                  child: Column(
+                                                    crossAxisAlignment:
+                                                        CrossAxisAlignment
+                                                            .start,
+                                                    children: [
+                                                      Padding(
+                                                        padding:
+                                                            const EdgeInsets
+                                                                        .only(
+                                                                    bottom: 4)
+                                                                .r,
+                                                        child: Text(
+                                                          'Access Bank',
+                                                          style: TextStyle(
+                                                              color: Color(
+                                                                  0xff0A004A),
+                                                              fontSize: 14.sp,
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .w500),
+                                                        ),
+                                                      ),
+                                                      Text(
+                                                        '28, Jan 2020',
+                                                        textAlign:
+                                                            TextAlign.left,
                                                         style: TextStyle(
                                                             color: Color(
-                                                                0xff0A004A),
-                                                            fontSize: 14.sp,
+                                                                    0xff929292)
+                                                                .withOpacity(
+                                                                    .7),
+                                                            fontSize: 10.sp,
                                                             fontWeight:
                                                                 FontWeight
-                                                                    .w500),
+                                                                    .w400),
                                                       ),
-                                                    ),
-                                                    Text(
-                                                      '28, Jan 2020',
-                                                      textAlign: TextAlign.left,
-                                                      style: TextStyle(
-                                                          color: Color(
-                                                                  0xff929292)
-                                                              .withOpacity(.7),
-                                                          fontSize: 10.sp,
-                                                          fontWeight:
-                                                              FontWeight.w400),
-                                                    ),
-                                                  ],
+                                                    ],
+                                                  ),
                                                 ),
                                               ),
                                               SizedBox(
-                                                width: 175.w,
+                                                width: 145.w,
                                                 child: Row(
                                                   mainAxisAlignment:
                                                       MainAxisAlignment.end,
@@ -797,8 +853,7 @@ class _DashboardPageState extends State<DashboardPage> {
                                         )),
                                     Image.asset(
                                       'images/refer.png',
-                                      height: 115.h,
-                                      width: 338.w,
+                                      width: 360.w,
                                     )
                                   ],
                                 ),
