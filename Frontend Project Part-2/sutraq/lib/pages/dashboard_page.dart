@@ -327,16 +327,128 @@ class _DashboardPageState extends State<DashboardPage> {
                                                 ),
                                               ),
                                               SizedBox(
-                                                width: 121.w,
+                                                width: 170.w,
+                                                child: Text(
+                                                  '\$2400',
+                                                  textAlign: TextAlign.end,
+                                                  style: TextStyle(
+                                                      color: Color(0xff0A004A),
+                                                      fontSize: 16.sp,
+                                                      fontWeight:
+                                                          FontWeight.w600),
+                                                ),
                                               ),
-                                              Text(
-                                                '\$2400',
-                                                style: TextStyle(
-                                                    color: Color(0xff0A004A),
-                                                    fontSize: 16.sp,
-                                                    fontWeight:
-                                                        FontWeight.w600),
-                                              )
+                                            ],
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.only(
+                                              left: 35, right: 37)
+                                          .r,
+                                      child: SizedBox(
+                                        height: 56.h,
+                                        child: Container(
+                                          decoration: BoxDecoration(
+                                              border: Border(
+                                                  top: BorderSide(
+                                            color: Color(0xffDEDEDE)
+                                                .withOpacity(.4),
+                                          ))),
+                                          child: Row(
+                                            children: [
+                                              SizedBox(
+                                                height: 24.h,
+                                                width: 24.w,
+                                                child: Stack(children: [
+                                                  Image.asset(
+                                                    'images/outgoingBackground.png',
+                                                    height: 24.h,
+                                                    width: 24.w,
+                                                  ),
+                                                  Align(
+                                                    alignment: Alignment.center,
+                                                    child: Image.asset(
+                                                      'images/outgoing.png',
+                                                      height: 8.75.h,
+                                                      width: 8.75.w,
+                                                    ),
+                                                  )
+                                                ]),
+                                              ),
+                                              Padding(
+                                                padding: const EdgeInsets.only(
+                                                        left: 13, top: 11)
+                                                    .r,
+                                                child: Column(
+                                                  crossAxisAlignment:
+                                                      CrossAxisAlignment.start,
+                                                  children: [
+                                                    Padding(
+                                                      padding:
+                                                          const EdgeInsets.only(
+                                                                  bottom: 4)
+                                                              .r,
+                                                      child: Text(
+                                                        'Alpha Loans',
+                                                        style: TextStyle(
+                                                            color: Color(
+                                                                0xff0A004A),
+                                                            fontSize: 14.sp,
+                                                            fontWeight:
+                                                                FontWeight
+                                                                    .w500),
+                                                      ),
+                                                    ),
+                                                    Text(
+                                                      '28, Jan 2020',
+                                                      textAlign: TextAlign.left,
+                                                      style: TextStyle(
+                                                          color: Color(
+                                                                  0xff929292)
+                                                              .withOpacity(.7),
+                                                          fontSize: 10.sp,
+                                                          fontWeight:
+                                                              FontWeight.w400),
+                                                    ),
+                                                  ],
+                                                ),
+                                              ),
+                                              SizedBox(
+                                                width: 175.w,
+                                                child: Row(
+                                                  mainAxisAlignment:
+                                                      MainAxisAlignment.end,
+                                                  children: [
+                                                    Text(
+                                                      'N',
+                                                      style: TextStyle(
+                                                          decoration:
+                                                              TextDecoration
+                                                                  .lineThrough,
+                                                          decorationColor:
+                                                              Color(0xff0A004A),
+                                                          decorationThickness:
+                                                              2,
+                                                          color:
+                                                              Color(0xff0A004A),
+                                                          fontSize: 16.sp,
+                                                          fontWeight:
+                                                              FontWeight.w600),
+                                                    ),
+                                                    Text(
+                                                      '10000',
+                                                      style: TextStyle(
+                                                          color:
+                                                              Color(0xff0A004A),
+                                                          fontSize: 16.sp,
+                                                          fontWeight:
+                                                              FontWeight.w600),
+                                                    ),
+                                                  ],
+                                                ),
+                                              ),
                                             ],
                                           ),
                                         ),
@@ -415,16 +527,38 @@ class _DashboardPageState extends State<DashboardPage> {
                                                 ),
                                               ),
                                               SizedBox(
-                                                width: 121.w,
+                                                width: 175.w,
+                                                child: Row(
+                                                  mainAxisAlignment:
+                                                      MainAxisAlignment.end,
+                                                  children: [
+                                                    Text('N4',
+                                                        style: TextStyle(
+                                                            color: Color(
+                                                                0xff0A004A),
+                                                            fontSize: 16.sp,
+                                                            fontWeight:
+                                                                FontWeight.w600,
+                                                            decoration:
+                                                                TextDecoration
+                                                                    .lineThrough,
+                                                            decorationColor:
+                                                                Color(
+                                                                    0xff0a004a),
+                                                            decorationThickness:
+                                                                2)),
+                                                    Text(
+                                                      ',500,000',
+                                                      style: TextStyle(
+                                                          color:
+                                                              Color(0xff0A004A),
+                                                          fontSize: 16.sp,
+                                                          fontWeight:
+                                                              FontWeight.w600),
+                                                    ),
+                                                  ],
+                                                ),
                                               ),
-                                              Text(
-                                                '\$2400',
-                                                style: TextStyle(
-                                                    color: Color(0xff0A004A),
-                                                    fontSize: 16.sp,
-                                                    fontWeight:
-                                                        FontWeight.w600),
-                                              )
                                             ],
                                           ),
                                         ),
@@ -450,14 +584,14 @@ class _DashboardPageState extends State<DashboardPage> {
                                                 width: 24.w,
                                                 child: Stack(children: [
                                                   Image.asset(
-                                                    'images/incomingBackground.png',
+                                                    'images/outgoingBackground.png',
                                                     height: 24.h,
                                                     width: 24.w,
                                                   ),
                                                   Align(
                                                     alignment: Alignment.center,
                                                     child: Image.asset(
-                                                      'images/incoming.png',
+                                                      'images/outgoing.png',
                                                       height: 8.75.h,
                                                       width: 8.75.w,
                                                     ),
@@ -478,7 +612,7 @@ class _DashboardPageState extends State<DashboardPage> {
                                                                   bottom: 4)
                                                               .r,
                                                       child: Text(
-                                                        'Access Bank',
+                                                        'Alpha Loans',
                                                         style: TextStyle(
                                                             color: Color(
                                                                 0xff0A004A),
@@ -503,104 +637,39 @@ class _DashboardPageState extends State<DashboardPage> {
                                                 ),
                                               ),
                                               SizedBox(
-                                                width: 121.w,
-                                              ),
-                                              Text(
-                                                '\$2400',
-                                                style: TextStyle(
-                                                    color: Color(0xff0A004A),
-                                                    fontSize: 16.sp,
-                                                    fontWeight:
-                                                        FontWeight.w600),
-                                              )
-                                            ],
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                    Padding(
-                                      padding: const EdgeInsets.only(
-                                              left: 35, right: 37)
-                                          .r,
-                                      child: SizedBox(
-                                        height: 56.h,
-                                        child: Container(
-                                          decoration: BoxDecoration(
-                                              border: Border(
-                                                  top: BorderSide(
-                                            color: Color(0xffDEDEDE)
-                                                .withOpacity(.4),
-                                          ))),
-                                          child: Row(
-                                            children: [
-                                              SizedBox(
-                                                height: 24.h,
-                                                width: 24.w,
-                                                child: Stack(children: [
-                                                  Image.asset(
-                                                    'images/incomingBackground.png',
-                                                    height: 24.h,
-                                                    width: 24.w,
-                                                  ),
-                                                  Align(
-                                                    alignment: Alignment.center,
-                                                    child: Image.asset(
-                                                      'images/incoming.png',
-                                                      height: 8.75.h,
-                                                      width: 8.75.w,
-                                                    ),
-                                                  )
-                                                ]),
-                                              ),
-                                              Padding(
-                                                padding: const EdgeInsets.only(
-                                                        left: 13, top: 11)
-                                                    .r,
-                                                child: Column(
-                                                  crossAxisAlignment:
-                                                      CrossAxisAlignment.start,
-                                                  children: [
-                                                    Padding(
-                                                      padding:
-                                                          const EdgeInsets.only(
-                                                                  bottom: 4)
-                                                              .r,
-                                                      child: Text(
-                                                        'Access Bank',
+                                                  width: 175.w,
+                                                  child: Row(
+                                                    mainAxisAlignment:
+                                                        MainAxisAlignment.end,
+                                                    children: [
+                                                      Text('N',
+                                                          style: TextStyle(
+                                                              color: Color(
+                                                                  0xff0A004A),
+                                                              fontSize: 16.sp,
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .w600,
+                                                              decorationColor:
+                                                                  Color(
+                                                                      0xff0A004A),
+                                                              decorationThickness:
+                                                                  2,
+                                                              decoration:
+                                                                  TextDecoration
+                                                                      .lineThrough)),
+                                                      Text(
+                                                        '10000',
                                                         style: TextStyle(
                                                             color: Color(
                                                                 0xff0A004A),
-                                                            fontSize: 14.sp,
+                                                            fontSize: 16.sp,
                                                             fontWeight:
                                                                 FontWeight
-                                                                    .w500),
+                                                                    .w600),
                                                       ),
-                                                    ),
-                                                    Text(
-                                                      '28, Jan 2020',
-                                                      textAlign: TextAlign.left,
-                                                      style: TextStyle(
-                                                          color: Color(
-                                                                  0xff929292)
-                                                              .withOpacity(.7),
-                                                          fontSize: 10.sp,
-                                                          fontWeight:
-                                                              FontWeight.w400),
-                                                    ),
-                                                  ],
-                                                ),
-                                              ),
-                                              SizedBox(
-                                                width: 121.w,
-                                              ),
-                                              Text(
-                                                '\$2400',
-                                                style: TextStyle(
-                                                    color: Color(0xff0A004A),
-                                                    fontSize: 16.sp,
-                                                    fontWeight:
-                                                        FontWeight.w600),
-                                              )
+                                                    ],
+                                                  )),
                                             ],
                                           ),
                                         ),
@@ -679,16 +748,39 @@ class _DashboardPageState extends State<DashboardPage> {
                                                 ),
                                               ),
                                               SizedBox(
-                                                width: 121.w,
+                                                width: 175.w,
+                                                child: Row(
+                                                  mainAxisAlignment:
+                                                      MainAxisAlignment.end,
+                                                  children: [
+                                                    Text(
+                                                      'N',
+                                                      style: TextStyle(
+                                                          color:
+                                                              Color(0xff0A004A),
+                                                          fontSize: 16.sp,
+                                                          fontWeight:
+                                                              FontWeight.w600,
+                                                          decoration:
+                                                              TextDecoration
+                                                                  .lineThrough,
+                                                          decorationColor:
+                                                              Color(0xff0A004A),
+                                                          decorationThickness:
+                                                              2),
+                                                    ),
+                                                    Text(
+                                                      '2000',
+                                                      style: TextStyle(
+                                                          color:
+                                                              Color(0xff0A004A),
+                                                          fontSize: 16.sp,
+                                                          fontWeight:
+                                                              FontWeight.w600),
+                                                    ),
+                                                  ],
+                                                ),
                                               ),
-                                              Text(
-                                                '\$2400',
-                                                style: TextStyle(
-                                                    color: Color(0xff0A004A),
-                                                    fontSize: 16.sp,
-                                                    fontWeight:
-                                                        FontWeight.w600),
-                                              )
                                             ],
                                           ),
                                         ),
@@ -702,7 +794,12 @@ class _DashboardPageState extends State<DashboardPage> {
                                               color: greenColor1,
                                               fontSize: 14.sp,
                                               fontWeight: FontWeight.w700),
-                                        ))
+                                        )),
+                                    Image.asset(
+                                      'images/refer.png',
+                                      height: 115.h,
+                                      width: 338.w,
+                                    )
                                   ],
                                 ),
                               )
