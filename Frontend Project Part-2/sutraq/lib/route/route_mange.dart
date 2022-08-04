@@ -7,6 +7,7 @@ import 'package:sutraq/pages/dashboard_page.dart';
 import 'package:sutraq/pages/dashboard_screen.dart';
 import 'package:sutraq/pages/forgot_password_screen.dart';
 import 'package:sutraq/pages/login_tip.dart';
+import 'package:sutraq/pages/notifications_screen.dart';
 import 'package:sutraq/pages/settings_page.dart';
 import 'package:sutraq/pages/wallet_page.dart';
 import 'package:sutraq/pages/welcome_back_screen.dart';
@@ -24,6 +25,7 @@ const String dashboard_page = '/dashboard_page';
 const String wallet_page = '/wallet_page';
 const String cards_page = '/cards_page';
 const String settings_page = '/settings_page';
+const String notification_screen = '/notification_screen';
 
 List<GetPage> getPages = [
   GetPage(
@@ -71,4 +73,8 @@ List<GetPage> getPages = [
       name: settings_page,
       page: () => const SettingsPage(),
       transition: Transition.rightToLeft),
+  GetPage(
+    name: notification_screen,
+    page: () => const NotificationScreen(),
+  ),
 ];

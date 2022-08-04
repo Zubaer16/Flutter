@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:test/gesture_detector/gesture_dect.dart';
 import 'package:test/nested_scroll_view/nest_scroll_view.dart';
 import 'package:test/single_child_scroll_view/single_child_scr.dart';
 
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: SingleChildScr(),
+      home: GestureDect(),
     );
   }
 }

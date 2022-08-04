@@ -2,8 +2,10 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:sutraq/components/sutraq_logo.dart';
+import 'package:sutraq/route/route_mange.dart';
 import 'package:sutraq/storage/color_storage.dart';
 import 'package:sutraq/storage/icon_storage.dart';
 import 'package:visibility_detector/visibility_detector.dart';
@@ -70,26 +72,31 @@ class _DashboardPageState extends State<DashboardPage> {
                                 fontWeight: FontWeight.w700,
                                 color: Colors.white.withOpacity(0.5)),
                           ),
-                          trailing: Stack(children: [
-                            Icon(
-                              Icons.notifications,
-                              size: 27.w,
-                              color: Colors.white.withOpacity(0.6),
-                            ),
-                            Positioned(
-                              right: 4,
-                              top: 3,
-                              child: Container(
-                                height: 6.h,
-                                width: 6.w,
-                                decoration: BoxDecoration(
-                                    color: const Color(0xFF046AE1),
-                                    shape: BoxShape.circle,
-                                    border: Border.all(
-                                        color: Colors.white, width: 0.5)),
+                          trailing: GestureDetector(
+                            onTap: () {
+                              Get.toNamed(notification_screen);
+                            },
+                            child: Stack(children: [
+                              Icon(
+                                Icons.notifications,
+                                size: 27.w,
+                                color: Colors.white.withOpacity(0.6),
                               ),
-                            )
-                          ]),
+                              Positioned(
+                                right: 4,
+                                top: 3,
+                                child: Container(
+                                  height: 6.h,
+                                  width: 6.w,
+                                  decoration: BoxDecoration(
+                                      color: const Color(0xFF046AE1),
+                                      shape: BoxShape.circle,
+                                      border: Border.all(
+                                          color: Colors.white, width: 0.5)),
+                                ),
+                              )
+                            ]),
+                          ),
                         ),
                       ),
                       SizedBox(
