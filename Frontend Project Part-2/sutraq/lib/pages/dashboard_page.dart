@@ -886,81 +886,86 @@ class FirstSlider extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(left: 16).r,
-      child: Container(
-        width: 196.w,
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(10.r),
-          color: Colors.white,
-        ),
-        child: Column(
-          children: [
-            Padding(
-              padding: const EdgeInsets.only(top: 16, left: 13).r,
-              child: SizedBox(
-                width: 196.w,
-                child: Row(
-                  children: [
-                    SutraqLogo(
-                      height: 12.h,
-                      width: 14.w,
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(left: 5, right: 45.5).r,
-                      child: Text(
-                        'SUTRAQ CURRENCY',
-                        style: TextStyle(
-                            color: const Color(0xff0A004A),
-                            fontSize: 10.sp,
-                            fontWeight: FontWeight.w700),
+      child: GestureDetector(
+        onTap: () {
+          Get.toNamed(wallet_page);
+        },
+        child: Container(
+          width: 196.w,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(10.r),
+            color: Colors.white,
+          ),
+          child: Column(
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(top: 16, left: 13).r,
+                child: SizedBox(
+                  width: 196.w,
+                  child: Row(
+                    children: [
+                      SutraqLogo(
+                        height: 12.h,
+                        width: 14.w,
                       ),
-                    ),
-                    Icon(
-                      eyeIcon,
-                      size: 11.w,
-                    )
-                  ],
-                ),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(top: 10, left: 17).r,
-              child: SizedBox(
-                width: 196.w,
-                child: Text(
-                  'AVAILABLE BALANCE',
-                  style: TextStyle(
-                      color: const Color(0xff0A004A).withOpacity(.4),
-                      fontSize: 7.sp,
-                      fontWeight: FontWeight.w700),
-                ),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(left: 16, top: 4).r,
-              child: SizedBox(
-                width: 196.w,
-                child: Row(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(right: 57).r,
-                      child: Text(
-                        'Q190,000',
-                        style: TextStyle(
-                            color: greenColor1,
-                            fontSize: 22.sp,
-                            fontWeight: FontWeight.w700),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 5, right: 45.5).r,
+                        child: Text(
+                          'SUTRAQ CURRENCY',
+                          style: TextStyle(
+                              color: const Color(0xff0A004A),
+                              fontSize: 10.sp,
+                              fontWeight: FontWeight.w700),
+                        ),
                       ),
-                    ),
-                    Icon(
-                      arrowForward,
-                      color: greenColor1,
-                      size: 10.w,
-                    )
-                  ],
+                      Icon(
+                        eyeIcon,
+                        size: 11.w,
+                      )
+                    ],
+                  ),
                 ),
               ),
-            )
-          ],
+              Padding(
+                padding: const EdgeInsets.only(top: 10, left: 17).r,
+                child: SizedBox(
+                  width: 196.w,
+                  child: Text(
+                    'AVAILABLE BALANCE',
+                    style: TextStyle(
+                        color: const Color(0xff0A004A).withOpacity(.4),
+                        fontSize: 7.sp,
+                        fontWeight: FontWeight.w700),
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 16, top: 4).r,
+                child: SizedBox(
+                  width: 196.w,
+                  child: Row(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(right: 57).r,
+                        child: Text(
+                          'Q190,000',
+                          style: TextStyle(
+                              color: greenColor1,
+                              fontSize: 22.sp,
+                              fontWeight: FontWeight.w700),
+                        ),
+                      ),
+                      Icon(
+                        arrowForward,
+                        color: greenColor1,
+                        size: 10.w,
+                      )
+                    ],
+                  ),
+                ),
+              )
+            ],
+          ),
         ),
       ),
     );

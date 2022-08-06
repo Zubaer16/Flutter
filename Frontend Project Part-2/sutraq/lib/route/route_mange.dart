@@ -62,9 +62,9 @@ List<GetPage> getPages = [
       page: () => const DashboardPage(),
       transition: Transition.rightToLeft),
   GetPage(
-      name: wallet_page,
-      page: () => const WalletPage(),
-      transition: Transition.rightToLeft),
+    name: wallet_page,
+    page: () => const WalletPage(),
+  ),
   GetPage(
       name: cards_page,
       page: () => const CardsPage(),
