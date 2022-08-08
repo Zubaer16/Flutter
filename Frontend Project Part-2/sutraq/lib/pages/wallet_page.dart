@@ -17,7 +17,7 @@ class WalletPage extends StatefulWidget {
   State<WalletPage> createState() => _WalletPageState();
 }
 
-final slider = [const FirstSlider(), const SecondSlider(), const ThirdSlider()];
+final slider = [const ThirdSlider(), const SecondSlider(), const FirstSlider()];
 int _currentItem = 0;
 
 class _WalletPageState extends State<WalletPage> {
@@ -80,7 +80,7 @@ class _WalletPageState extends State<WalletPage> {
                         child: Container(
                           width: MediaQuery.of(context).size.width,
                           decoration: BoxDecoration(
-                              color: greenColor1,
+                              color: Colors.white,
                               borderRadius: BorderRadius.only(
                                   topLeft: Radius.circular(20).r,
                                   topRight: Radius.circular(20).r)),
@@ -106,7 +106,7 @@ class _WalletPageState extends State<WalletPage> {
                                                 height: 56.h,
                                                 width: 56.w,
                                                 decoration: BoxDecoration(
-                                                    color: Color(0xff051F0E),
+                                                    color: greenColor1,
                                                     shape: BoxShape.circle),
                                                 child: Align(
                                                   alignment: Alignment.center,
@@ -121,7 +121,7 @@ class _WalletPageState extends State<WalletPage> {
                                             Text(
                                               'Fund Wallet',
                                               style: TextStyle(
-                                                  color: Colors.white,
+                                                  color: Color(0xff333333),
                                                   fontSize: 14.sp,
                                                   fontWeight: FontWeight.w700),
                                             ),
@@ -137,7 +137,7 @@ class _WalletPageState extends State<WalletPage> {
                                                 height: 56.h,
                                                 width: 56.w,
                                                 decoration: BoxDecoration(
-                                                    color: Color(0xff051F0E),
+                                                    color: greenColor1,
                                                     shape: BoxShape.circle),
                                                 child: Align(
                                                   alignment: Alignment.center,
@@ -152,7 +152,7 @@ class _WalletPageState extends State<WalletPage> {
                                             Text(
                                               'Send Money',
                                               style: TextStyle(
-                                                  color: Colors.white,
+                                                  color: Color(0xff333333),
                                                   fontSize: 14.sp,
                                                   fontWeight: FontWeight.w700),
                                             ),
@@ -168,7 +168,7 @@ class _WalletPageState extends State<WalletPage> {
                                                 height: 56.h,
                                                 width: 56.w,
                                                 decoration: BoxDecoration(
-                                                    color: Color(0xff051F0E),
+                                                    color: greenColor1,
                                                     shape: BoxShape.circle),
                                                 child: Align(
                                                   alignment: Alignment.center,
@@ -183,7 +183,7 @@ class _WalletPageState extends State<WalletPage> {
                                             Text(
                                               'Withdraw',
                                               style: TextStyle(
-                                                  color: Colors.white,
+                                                  color: Color(0xff333333),
                                                   fontSize: 14.sp,
                                                   fontWeight: FontWeight.w700),
                                             ),
@@ -827,7 +827,7 @@ class FirstSlider extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: 16).r,
+      padding: const EdgeInsets.only(left: 16, right: 16).r,
       child: Container(
         width: 196.w,
         decoration: BoxDecoration(
@@ -983,12 +983,12 @@ class ThirdSlider extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-        padding: const EdgeInsets.only(left: 16, right: 16).r,
+        padding: const EdgeInsets.only(left: 16).r,
         child: Container(
           width: 196.w,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(10.r),
-            color: Colors.white,
+            color: Color(0xff08083D),
           ),
           child: Column(
             children: [
@@ -997,16 +997,21 @@ class ThirdSlider extends StatelessWidget {
                 child: SizedBox(
                   width: 196.w,
                   child: Row(children: [
-                    Image.asset(
-                      'images/usa.png',
+                    Container(
+                      color: Colors.white,
                       height: 7.h,
-                      width: 13.w,
+                      width: 11.w,
+                      child: Image.asset(
+                        'images/nigeria.png',
+                        height: 7.h,
+                        width: 13.w,
+                      ),
                     ),
                     Padding(
                       padding: const EdgeInsets.only(left: 4).r,
-                      child: const Text('USD',
+                      child: const Text('NGN',
                           style: TextStyle(
-                              color: Color(0xff0A004A),
+                              color: Color(0xffF1F3F4),
                               fontSize: 10,
                               fontWeight: FontWeight.w700)),
                     )
@@ -1020,25 +1025,47 @@ class ThirdSlider extends StatelessWidget {
                   child: Text(
                     'AVAILABLE BALANCE',
                     style: TextStyle(
-                        color: const Color(0xff0A004A).withOpacity(.4),
+                        color: const Color(0xffF1F3F4).withOpacity(.4),
                         fontSize: 7.sp,
                         fontWeight: FontWeight.w700),
                   ),
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(left: 17, top: 4).r,
+                padding: const EdgeInsets.only(left: 16, top: 4).r,
                 child: SizedBox(
                   width: 196.w,
-                  child: Text(
-                    '\$42,000',
-                    style: TextStyle(
+                  child: Row(
+                    children: [
+                      Text(
+                        'N',
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 22.sp,
+                            fontWeight: FontWeight.w700,
+                            decoration: TextDecoration.lineThrough,
+                            decorationColor: Colors.white,
+                            decorationThickness: 2),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(right: 57).r,
+                        child: Text(
+                          '190,000',
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 22.sp,
+                              fontWeight: FontWeight.w700),
+                        ),
+                      ),
+                      Icon(
+                        arrowForward,
                         color: greenColor1,
-                        fontSize: 22.sp,
-                        fontWeight: FontWeight.w700),
+                        size: 10.w,
+                      )
+                    ],
                   ),
                 ),
-              ),
+              )
             ],
           ),
         ));

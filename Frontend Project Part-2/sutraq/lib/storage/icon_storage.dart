@@ -14,3 +14,4 @@ const accountBalance = Icons.account_balance_wallet_outlined;
 const inputIcon = Icons.input_outlined;
 const driveFileIcon = Icons.drive_file_move_rtl_outlined;
 const cancelIcon = Icons.cancel;
+const trendingIcon = Icons.trending_up;
