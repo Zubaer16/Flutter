@@ -55,7 +55,7 @@ List<GetPage> getPages = [
       transition: Transition.rightToLeft),
   GetPage(
       name: dashboard_screen,
-      page: () => const DashboardScreen(),
+      page: () => DashboardScreen(),
       transition: Transition.rightToLeft),
   GetPage(
       name: dashboard_page,

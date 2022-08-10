@@ -1,8 +1,6 @@
 //ignore_for_file:prefer_const_constructors
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:get/get.dart';
-import 'package:sutraq/route/route_mange.dart';
 import 'package:sutraq/storage/color_storage.dart';
 import 'package:sutraq/storage/icon_storage.dart';
 
@@ -37,7 +35,7 @@ class NotificationScreen extends StatelessWidget {
                     padding: const EdgeInsets.only(left: 21, top: 3).r,
                     child: GestureDetector(
                       onTap: () {
-                        Get.toNamed(dashboard_page);
+                        Navigator.pop(context);
                       },
                       child: Icon(
                         cancelIcon,
