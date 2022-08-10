@@ -71,19 +71,19 @@ class _WalletPageState extends State<WalletPage> {
                           effect: SlideEffect(
                               dotWidth: 16.67.w,
                               dotHeight: 2.h,
-                              dotColor: greenColor1.withOpacity(.5),
-                              activeDotColor: greenColor1),
+                              dotColor: Colors.white,
+                              activeDotColor: Color(0xff046AE1)),
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(top: 11).r,
+                        padding:
+                            const EdgeInsets.only(top: 11, right: 11, left: 13)
+                                .r,
                         child: Container(
                           width: MediaQuery.of(context).size.width,
                           decoration: BoxDecoration(
                               color: Colors.white,
-                              borderRadius: BorderRadius.only(
-                                  topLeft: Radius.circular(20).r,
-                                  topRight: Radius.circular(20).r)),
+                              borderRadius: BorderRadius.circular(10).r),
                           child: Column(
                             children: [
                               SizedBox(
@@ -103,8 +103,8 @@ class _WalletPageState extends State<WalletPage> {
                                                       bottom: 11)
                                                   .r,
                                               child: Container(
-                                                height: 56.h,
-                                                width: 56.w,
+                                                height: 43.h,
+                                                width: 43.w,
                                                 decoration: BoxDecoration(
                                                     color: greenColor1,
                                                     shape: BoxShape.circle),
@@ -113,7 +113,7 @@ class _WalletPageState extends State<WalletPage> {
                                                   child: Icon(
                                                     accountBalance,
                                                     color: Color(0xffDADADA),
-                                                    size: 24.w,
+                                                    size: 14.w,
                                                   ),
                                                 ),
                                               ),
@@ -134,17 +134,17 @@ class _WalletPageState extends State<WalletPage> {
                                                       bottom: 11)
                                                   .r,
                                               child: Container(
-                                                height: 56.h,
-                                                width: 56.w,
+                                                height: 43.h,
+                                                width: 43.w,
                                                 decoration: BoxDecoration(
                                                     color: greenColor1,
                                                     shape: BoxShape.circle),
                                                 child: Align(
                                                   alignment: Alignment.center,
                                                   child: Icon(
-                                                    inputIcon,
+                                                    trendingIcon,
                                                     color: Color(0xffDADADA),
-                                                    size: 24.w,
+                                                    size: 14.w,
                                                   ),
                                                 ),
                                               ),
@@ -165,17 +165,17 @@ class _WalletPageState extends State<WalletPage> {
                                                       bottom: 11)
                                                   .r,
                                               child: Container(
-                                                height: 56.h,
-                                                width: 56.w,
+                                                height: 43.h,
+                                                width: 43.w,
                                                 decoration: BoxDecoration(
                                                     color: greenColor1,
                                                     shape: BoxShape.circle),
                                                 child: Align(
                                                   alignment: Alignment.center,
                                                   child: Icon(
-                                                    driveFileIcon,
+                                                    inputIcon,
                                                     color: Color(0xffDADADA),
-                                                    size: 24.w,
+                                                    size: 14.w,
                                                   ),
                                                 ),
                                               ),
@@ -196,9 +196,8 @@ class _WalletPageState extends State<WalletPage> {
                                 width: MediaQuery.of(context).size.width,
                                 decoration: BoxDecoration(
                                     color: Colors.white,
-                                    borderRadius: BorderRadius.only(
-                                        topLeft: Radius.circular(20).r,
-                                        topRight: Radius.circular(20).r)),
+                                    borderRadius: BorderRadius.vertical(
+                                        bottom: Radius.circular(10))),
                                 child: Column(
                                   children: [
                                     Padding(
@@ -260,7 +259,7 @@ class _WalletPageState extends State<WalletPage> {
                                                         left: 13, top: 11)
                                                     .r,
                                                 child: SizedBox(
-                                                  width: 121.w,
+                                                  width: 98.w,
                                                   child: Column(
                                                     crossAxisAlignment:
                                                         CrossAxisAlignment
@@ -357,7 +356,7 @@ class _WalletPageState extends State<WalletPage> {
                                                         left: 13, top: 11)
                                                     .r,
                                                 child: SizedBox(
-                                                  width: 121.w,
+                                                  width: 98.w,
                                                   child: Column(
                                                     crossAxisAlignment:
                                                         CrossAxisAlignment
@@ -476,7 +475,7 @@ class _WalletPageState extends State<WalletPage> {
                                                         left: 13, top: 11)
                                                     .r,
                                                 child: SizedBox(
-                                                  width: 121.w,
+                                                  width: 98.w,
                                                   child: Column(
                                                     crossAxisAlignment:
                                                         CrossAxisAlignment
@@ -594,7 +593,7 @@ class _WalletPageState extends State<WalletPage> {
                                                         left: 13, top: 11)
                                                     .r,
                                                 child: SizedBox(
-                                                  width: 121.w,
+                                                  width: 98.w,
                                                   child: Column(
                                                     crossAxisAlignment:
                                                         CrossAxisAlignment
@@ -676,7 +675,7 @@ class _WalletPageState extends State<WalletPage> {
                                     ),
                                     Padding(
                                       padding: const EdgeInsets.only(
-                                              left: 35, right: 37)
+                                              left: 35, right: 37, bottom: 15)
                                           .r,
                                       child: SizedBox(
                                         //height: 50.h,
@@ -713,7 +712,7 @@ class _WalletPageState extends State<WalletPage> {
                                                         left: 13, top: 11)
                                                     .r,
                                                 child: SizedBox(
-                                                  width: 121.w,
+                                                  width: 98.w,
                                                   child: Column(
                                                     crossAxisAlignment:
                                                         CrossAxisAlignment
@@ -793,19 +792,19 @@ class _WalletPageState extends State<WalletPage> {
                                         ),
                                       ),
                                     ),
-                                    TextButton(
-                                        onPressed: () {},
-                                        child: Text(
-                                          'View All',
-                                          style: TextStyle(
-                                              color: greenColor1,
-                                              fontSize: 14.sp,
-                                              fontWeight: FontWeight.w700),
-                                        )),
-                                    Image.asset(
-                                      'images/refer.png',
-                                      width: 360.w,
-                                    )
+                                    Padding(
+                                      padding:
+                                          const EdgeInsets.only(bottom: 12).r,
+                                      child: TextButton(
+                                          onPressed: () {},
+                                          child: Text(
+                                            'View All',
+                                            style: TextStyle(
+                                                color: greenColor1,
+                                                fontSize: 14.sp,
+                                                fontWeight: FontWeight.w700),
+                                          )),
+                                    ),
                                   ],
                                 ),
                               )
