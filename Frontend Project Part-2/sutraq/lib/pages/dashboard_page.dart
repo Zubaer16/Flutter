@@ -155,22 +155,70 @@ class _DashboardPageState extends State<DashboardPage> {
                                       children: [
                                         Column(
                                           children: [
-                                            Padding(
-                                              padding: const EdgeInsets.only(
-                                                      bottom: 11)
-                                                  .r,
-                                              child: Container(
-                                                height: 56.h,
-                                                width: 56.w,
-                                                decoration: BoxDecoration(
-                                                    color: Color(0xff051F0E),
-                                                    shape: BoxShape.circle),
-                                                child: Align(
-                                                  alignment: Alignment.center,
-                                                  child: Icon(
-                                                    accountBalance,
-                                                    color: Color(0xffDADADA),
-                                                    size: 24.w,
+                                            GestureDetector(
+                                              onTap: () {
+                                                showDialog(
+                                                    context: context,
+                                                    builder: (_) {
+                                                      return Padding(
+                                                        padding:
+                                                            const EdgeInsets
+                                                                        .only(
+                                                                    bottom: 210)
+                                                                .r,
+                                                        child: AlertDialog(
+                                                          contentPadding:
+                                                              EdgeInsets.zero,
+                                                          shape: RoundedRectangleBorder(
+                                                              borderRadius: BorderRadius
+                                                                  .all(Radius
+                                                                      .circular(
+                                                                          10.0))),
+                                                          content: Container(
+                                                            height: 304.h,
+                                                            width: 344.w,
+                                                            decoration: BoxDecoration(
+                                                                borderRadius:
+                                                                    BorderRadius.circular(
+                                                                            500)
+                                                                        .r),
+                                                            child: Column(
+                                                              children: [
+                                                                Text(
+                                                                  'Choose option',
+                                                                  style: TextStyle(
+                                                                      color: Color(
+                                                                          0xff636363),
+                                                                      fontSize:
+                                                                          18.sp,
+                                                                      fontWeight:
+                                                                          FontWeight
+                                                                              .w500),
+                                                                ),
+                                                              ],
+                                                            ),
+                                                          ),
+                                                        ),
+                                                      );
+                                                    });
+                                              },
+                                              child: Padding(
+                                                padding: const EdgeInsets.only(
+                                                        bottom: 11)
+                                                    .r,
+                                                child: Container(
+                                                  height: 56.h,
+                                                  width: 56.w,
+                                                  decoration: BoxDecoration(
+                                                      color: Color(0xff051F0E),
+                                                      shape: BoxShape.circle),
+                                                  child: Align(
+                                                    alignment: Alignment.center,
+                                                    child: Icon(
+                                                      accountBalance,
+                                                      color: Color(0xffDADADA),
+                                                      size: 24.w,
+                                                    ),
                                                   ),
                                                 ),
                                               ),
