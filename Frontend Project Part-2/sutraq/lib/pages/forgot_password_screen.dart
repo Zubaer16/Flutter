@@ -30,7 +30,7 @@ class ForgotPasswordScreen extends StatelessWidget {
                   style: ElevatedButton.styleFrom(
                       shape: const CircleBorder(),
                       padding: const EdgeInsets.all(8).r,
-                      primary: greenColor),
+                      backgroundColor: greenColor),
                   onPressed: () {
                     Get.toNamed(welcome_back_screen);
                   },
