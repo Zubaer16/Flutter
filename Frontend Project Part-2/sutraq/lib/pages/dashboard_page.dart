@@ -176,7 +176,11 @@ class _DashboardPageState extends State<DashboardPage> {
                                                                           10.0))),
                                                           content: Container(
                                                             height: 304.h,
-                                                            width: 344.w,
+                                                            width:
+                                                                double.infinity,
+                                                            padding: EdgeInsets
+                                                                .fromLTRB(20,
+                                                                    20, 20, 20),
                                                             decoration: BoxDecoration(
                                                                 borderRadius:
                                                                     BorderRadius.circular(
@@ -184,17 +188,88 @@ class _DashboardPageState extends State<DashboardPage> {
                                                                         .r),
                                                             child: Column(
                                                               children: [
-                                                                Text(
-                                                                  'Choose option',
-                                                                  style: TextStyle(
-                                                                      color: Color(
-                                                                          0xff636363),
-                                                                      fontSize:
-                                                                          18.sp,
-                                                                      fontWeight:
-                                                                          FontWeight
-                                                                              .w500),
+                                                                Padding(
+                                                                  padding: const EdgeInsets
+                                                                              .only(
+                                                                          top:
+                                                                              22,
+                                                                          bottom:
+                                                                              11)
+                                                                      .r,
+                                                                  child: Text(
+                                                                    'Choose option',
+                                                                    style: TextStyle(
+                                                                        color: Color(
+                                                                            0xff636363),
+                                                                        fontSize: 18
+                                                                            .sp,
+                                                                        fontWeight:
+                                                                            FontWeight.w500),
+                                                                  ),
                                                                 ),
+                                                                Padding(
+                                                                  padding: const EdgeInsets
+                                                                              .only(
+                                                                          bottom:
+                                                                              20)
+                                                                      .r,
+                                                                  child: Text(
+                                                                    "Pick a card to continue",
+                                                                    style: TextStyle(
+                                                                        color: Color(
+                                                                            0xff000000),
+                                                                        fontSize: 12
+                                                                            .sp,
+                                                                        fontWeight:
+                                                                            FontWeight.w400),
+                                                                  ),
+                                                                ),
+                                                                Row(
+                                                                  children: [
+                                                                    Container(
+                                                                      height:
+                                                                          96.h,
+                                                                      width:
+                                                                          102.w,
+                                                                      decoration: BoxDecoration(
+                                                                          color: Color(
+                                                                              0xff08083D),
+                                                                          borderRadius:
+                                                                              BorderRadius.all(Radius.circular(13).r)),
+                                                                      child:
+                                                                          Column(
+                                                                        children: [
+                                                                          Row(
+                                                                            children: [],
+                                                                          ),
+                                                                          Text(
+                                                                              "hi")
+                                                                        ],
+                                                                      ),
+                                                                    ),
+                                                                    Container(
+                                                                      height:
+                                                                          96.h,
+                                                                      width:
+                                                                          102.w,
+                                                                      decoration: BoxDecoration(
+                                                                          color: Color(
+                                                                              0xff08083D),
+                                                                          borderRadius:
+                                                                              BorderRadius.all(Radius.circular(13).r)),
+                                                                      child:
+                                                                          Column(
+                                                                        children: [
+                                                                          Row(
+                                                                            children: [],
+                                                                          ),
+                                                                          Text(
+                                                                              "hi")
+                                                                        ],
+                                                                      ),
+                                                                    ),
+                                                                  ],
+                                                                )
                                                               ],
                                                             ),
                                                           ),
