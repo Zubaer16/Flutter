@@ -157,119 +157,71 @@ class _DashboardPageState extends State<DashboardPage> {
                                           children: [
                                             GestureDetector(
                                               onTap: () {
-                                                showDialog(
+                                                showGeneralDialog(
                                                     context: context,
-                                                    builder: (_) {
-                                                      return Padding(
-                                                        padding:
-                                                            const EdgeInsets
-                                                                        .only(
-                                                                    bottom: 210)
-                                                                .r,
-                                                        child: AlertDialog(
-                                                          contentPadding:
-                                                              EdgeInsets.zero,
-                                                          shape: RoundedRectangleBorder(
-                                                              borderRadius: BorderRadius
-                                                                  .all(Radius
-                                                                      .circular(
-                                                                          10.0))),
-                                                          content: Container(
+                                                    barrierDismissible: true,
+                                                    barrierLabel:
+                                                        MaterialLocalizations
+                                                                .of(context)
+                                                            .modalBarrierDismissLabel,
+                                                    barrierColor: Colors.black
+                                                        .withOpacity(.5),
+                                                    transitionDuration:
+                                                        Duration(
+                                                            microseconds: 200),
+                                                    pageBuilder:
+                                                        (BuildContext context,
+                                                            Animation first,
+                                                            Animation second) {
+                                                      return Center(
+                                                        child: Padding(
+                                                          padding:
+                                                              const EdgeInsets
+                                                                          .only(
+                                                                      bottom:
+                                                                          170)
+                                                                  .r,
+                                                          child: Container(
+                                                            width: 344.w,
                                                             height: 304.h,
-                                                            width:
-                                                                double.infinity,
-                                                            padding: EdgeInsets
-                                                                .fromLTRB(20,
-                                                                    20, 20, 20),
                                                             decoration: BoxDecoration(
+                                                                color: Colors
+                                                                    .white,
                                                                 borderRadius:
-                                                                    BorderRadius.circular(
-                                                                            500)
-                                                                        .r),
+                                                                    BorderRadius.all(
+                                                                        Radius.circular(10)
+                                                                            .r)),
                                                             child: Column(
                                                               children: [
                                                                 Padding(
-                                                                  padding: const EdgeInsets
-                                                                              .only(
-                                                                          top:
-                                                                              22,
-                                                                          bottom:
-                                                                              11)
-                                                                      .r,
-                                                                  child: Text(
-                                                                    'Choose option',
-                                                                    style: TextStyle(
-                                                                        color: Color(
-                                                                            0xff636363),
-                                                                        fontSize: 18
-                                                                            .sp,
-                                                                        fontWeight:
-                                                                            FontWeight.w500),
-                                                                  ),
+                                                                  padding:
+                                                                      const EdgeInsets
+                                                                          .only(
+                                                                    top: 22,
+                                                                    bottom: 11,
+                                                                  ).r,
+                                                                  child: DefaultTextStyle(
+                                                                      style: TextStyle(
+                                                                          color: Color(
+                                                                              0xff636363),
+                                                                          fontSize: 18
+                                                                              .sp,
+                                                                          fontWeight: FontWeight
+                                                                              .w500),
+                                                                      child: Text(
+                                                                          'Choose Option')),
                                                                 ),
-                                                                Padding(
-                                                                  padding: const EdgeInsets
-                                                                              .only(
-                                                                          bottom:
-                                                                              20)
-                                                                      .r,
-                                                                  child: Text(
-                                                                    "Pick a card to continue",
+                                                                DefaultTextStyle(
                                                                     style: TextStyle(
                                                                         color: Color(
                                                                             0xff000000),
                                                                         fontSize: 12
                                                                             .sp,
                                                                         fontWeight:
-                                                                            FontWeight.w400),
-                                                                  ),
-                                                                ),
-                                                                Row(
-                                                                  children: [
-                                                                    Container(
-                                                                      height:
-                                                                          96.h,
-                                                                      width:
-                                                                          102.w,
-                                                                      decoration: BoxDecoration(
-                                                                          color: Color(
-                                                                              0xff08083D),
-                                                                          borderRadius:
-                                                                              BorderRadius.all(Radius.circular(13).r)),
-                                                                      child:
-                                                                          Column(
-                                                                        children: [
-                                                                          Row(
-                                                                            children: [],
-                                                                          ),
-                                                                          Text(
-                                                                              "ha")
-                                                                        ],
-                                                                      ),
-                                                                    ),
-                                                                    Container(
-                                                                      height:
-                                                                          96.h,
-                                                                      width:
-                                                                          102.w,
-                                                                      decoration: BoxDecoration(
-                                                                          color: Color(
-                                                                              0xff08083D),
-                                                                          borderRadius:
-                                                                              BorderRadius.all(Radius.circular(13).r)),
-                                                                      child:
-                                                                          Column(
-                                                                        children: [
-                                                                          Row(
-                                                                            children: [],
-                                                                          ),
-                                                                          Text(
-                                                                              "hi")
-                                                                        ],
-                                                                      ),
-                                                                    ),
-                                                                  ],
-                                                                )
+                                                                            FontWeight
+                                                                                .w400),
+                                                                    child: Text(
+                                                                        'Pick a card to continue'))
                                                               ],
                                                             ),
                                                           ),
