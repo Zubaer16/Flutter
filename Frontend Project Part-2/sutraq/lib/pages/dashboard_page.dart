@@ -423,6 +423,7 @@ class _DashboardPageState extends State<DashboardPage> {
                                                                       CustomButton(
                                                                     customFunction:
                                                                         () {
+                                                                      Get.back();
                                                                       Get.toNamed(
                                                                           fund_wallet_page);
                                                                     },
