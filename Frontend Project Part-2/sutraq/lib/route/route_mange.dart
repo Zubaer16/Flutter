@@ -6,6 +6,7 @@ import 'package:sutraq/pages/check_inbox.dart';
 import 'package:sutraq/pages/dashboard_page.dart';
 import 'package:sutraq/pages/dashboard_screen.dart';
 import 'package:sutraq/pages/forgot_password_screen.dart';
+import 'package:sutraq/pages/fund_wallet_page.dart';
 import 'package:sutraq/pages/login_tip.dart';
 import 'package:sutraq/pages/notifications_screen.dart';
 import 'package:sutraq/pages/settings_page.dart';
@@ -26,6 +27,7 @@ const String wallet_page = '/wallet_page';
 const String cards_page = '/cards_page';
 const String settings_page = '/settings_page';
 const String notification_screen = '/notification_screen';
+const String fund_wallet_page = '/fund_wallet_page';
 
 List<GetPage> getPages = [
   GetPage(
@@ -77,4 +79,5 @@ List<GetPage> getPages = [
     name: notification_screen,
     page: () => const NotificationScreen(),
   ),
+  GetPage(name: fund_wallet_page, page: () => const FundWallet()),
 ];
