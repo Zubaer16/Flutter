@@ -16,7 +16,7 @@ class ListViews extends StatelessWidget {
               Container(
                   height: 50 * 50,
                   child: ListView.builder(
-                      physics: NeverScrollableScrollPhysics(),
+                      physics: const NeverScrollableScrollPhysics(),
                       itemCount: 50,
                       itemBuilder: (BuildContext context, int index) {
                         return Container(
