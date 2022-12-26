@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
-import 'package:sutraq/components/custom_button.dart';
 import 'package:sutraq/components/dashboard_dialog.dart';
 import 'package:sutraq/components/sutraq_logo.dart';
 import 'package:sutraq/route/route_mange.dart';
