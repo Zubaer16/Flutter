@@ -79,5 +79,5 @@ List<GetPage> getPages = [
     name: notification_screen,
     page: () => const NotificationScreen(),
   ),
-  GetPage(name: fund_wallet_page, page: () => const FundWallet()),
+  GetPage(name: fund_wallet_page, page: () => FundWallet()),
 ];
