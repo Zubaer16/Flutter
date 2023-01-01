@@ -139,7 +139,7 @@ class WelcomeBackScreen extends StatelessWidget {
                               borderSide: BorderSide(color: focusBlueColor))),
                     ))),
             TextButton(
-                style: TextButton.styleFrom(primary: greenColor),
+                style: TextButton.styleFrom(foregroundColor: greenColor),
                 onPressed: () {
                   Get.toNamed(forgot_password_screen);
                 },
@@ -171,7 +171,7 @@ class WelcomeBackScreen extends StatelessWidget {
                         fontSize: 14.sp,
                         fontWeight: FontWeight.w400)),
                 TextButton(
-                    style: TextButton.styleFrom(primary: greenColor),
+                    style: TextButton.styleFrom(foregroundColor: greenColor),
                     onPressed: () {},
                     child: Text(
                       'Try Sutraq',
