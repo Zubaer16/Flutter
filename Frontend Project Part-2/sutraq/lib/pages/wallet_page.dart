@@ -111,7 +111,7 @@ class _WalletPageState extends State<WalletPage> {
                                                 child: Align(
                                                   alignment: Alignment.center,
                                                   child: Icon(
-                                                    accountBalance,
+                                                    accountBalanceWallet,
                                                     color: Color(0xffDADADA),
                                                     size: 14.w,
                                                   ),

@@ -180,7 +180,7 @@ class _DashboardPageState extends State<DashboardPage> {
                                                   child: Align(
                                                     alignment: Alignment.center,
                                                     child: Icon(
-                                                      accountBalance,
+                                                      accountBalanceWallet,
                                                       color: Color(0xffDADADA),
                                                       size: 24.w,
                                                     ),

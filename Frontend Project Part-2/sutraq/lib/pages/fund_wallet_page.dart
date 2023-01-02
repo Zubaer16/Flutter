@@ -19,7 +19,8 @@ class FundWallet extends StatelessWidget {
     return SafeArea(
         child: Scaffold(
             body: CustomDropdown(
-      buttonTextFuntion: () => {},
+      textButtonVisible: true,
+      textButtonFuntion: () => {Get.back()},
     )));
   }
 }
