@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:sutraq/components/custom_button.dart';
+import 'package:sutraq/components/custom_circle_button.dart';
 import 'package:sutraq/components/sutraq_logo.dart';
 import 'package:sutraq/route/route_mange.dart';
 import 'package:sutraq/storage/color_storage.dart';
@@ -25,21 +26,9 @@ class ForgotPasswordScreen extends StatelessWidget {
             child: Align(
               alignment: Alignment.topLeft,
               child: Padding(
-                padding: const EdgeInsets.only(top: 29, left: 21).r,
-                child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                      shape: const CircleBorder(),
-                      padding: const EdgeInsets.all(8).r,
-                      backgroundColor: greenColor),
-                  onPressed: () {
-                    Get.toNamed(welcome_back_screen);
-                  },
-                  child: Icon(
-                    arrowBackIcon,
-                    size: 25.w,
-                  ),
-                ),
-              ),
+                  padding: const EdgeInsets.only(top: 29, left: 21).r,
+                  child:
+                      CustomCircleButton(customFunction: () => {Get.back()})),
             ),
           ),
           SizedBox(
