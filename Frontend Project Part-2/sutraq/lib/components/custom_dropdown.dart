@@ -11,12 +11,18 @@ class CustomDropdown extends StatelessWidget {
   final String? labelText;
   final bool textButtonVisible;
   final VoidCallback? textButtonFuntion;
+  final bool isPrefixIconImage;
+  final String? prefixIconImageAsset;
+  final IconData? prefixIcon;
 
   const CustomDropdown({
     Key? key,
     this.labelText,
     required this.textButtonVisible,
     this.textButtonFuntion,
+    required this.isPrefixIconImage,
+    this.prefixIconImageAsset,
+    this.prefixIcon,
   }) : super(key: key);
 
   @override
@@ -62,22 +68,33 @@ class CustomDropdown extends StatelessWidget {
                       child: Text(e),
                     ))
                 .toList(),
-            onChanged: (val) => {},
+            onChanged: (value) {},
             decoration: InputDecoration(
                 suffixIcon: Padding(
                   padding: const EdgeInsets.only(right: 15.71).r,
                   child: const Icon(
-                    eyeIcon,
-                    color: Color(0xFFC5C5C5),
-                  ),
-                ),
-                prefixIcon: Padding(
-                  padding: const EdgeInsets.only(left: 15, right: 22).r,
-                  child: const Icon(
-                    passowrdIcon,
+                    expandMore,
                     color: greenColor,
+                    size: 30,
                   ),
                 ),
+                prefixIcon: isPrefixIconImage
+                    ? Padding(
+                        padding: const EdgeInsets.only(left: 15, right: 22).r,
+                        child: ImageIcon(
+                          AssetImage(
+                            prefixIconImageAsset ?? 'images/ngnBankIcon.png',
+                          ),
+                          color: greenColor,
+                        ),
+                      )
+                    : Padding(
+                        padding: const EdgeInsets.only(left: 15, right: 22).r,
+                        child: Icon(
+                          prefixIcon,
+                          color: greenColor,
+                        ),
+                      ),
                 border: const OutlineInputBorder(
                     borderSide: BorderSide(color: Color(0xFFC5C5C5))),
                 focusedBorder: const OutlineInputBorder(

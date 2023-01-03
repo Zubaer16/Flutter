@@ -16,3 +16,4 @@ const driveFileIcon = Icons.drive_file_move_rtl_outlined;
 const cancelIcon = Icons.cancel;
 const trendingIcon = Icons.trending_up;
 const accountBalance = Icons.account_balance;
+const expandMore = Icons.expand_more;
