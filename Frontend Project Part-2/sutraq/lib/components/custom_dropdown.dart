@@ -1,25 +1,31 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
 import 'package:sutraq/storage/color_storage.dart';
 import 'package:sutraq/storage/icon_storage.dart';
 
 class CustomDropdown extends StatelessWidget {
+  final double? topPadding;
+  final double? bottomPadding;
+  final double? leftPadding;
+  final double? rightPadding;
   final String? labelText;
   final bool textButtonVisible;
   final VoidCallback? textButtonFuntion;
+  final bool isPrefixIcon;
   final bool isPrefixIconImage;
   final String? prefixIconImageAsset;
   final IconData? prefixIcon;
 
   const CustomDropdown({
     Key? key,
+    this.topPadding,
+    this.bottomPadding,
+    this.leftPadding,
+    this.rightPadding,
     this.labelText,
     required this.textButtonVisible,
     this.textButtonFuntion,
+    required this.isPrefixIcon,
     required this.isPrefixIconImage,
     this.prefixIconImageAsset,
     this.prefixIcon,
@@ -28,7 +34,12 @@ class CustomDropdown extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: 25, right: 25).r,
+      padding: EdgeInsets.only(
+              top: topPadding ?? 0,
+              bottom: bottomPadding ?? 0,
+              left: leftPadding ?? 25,
+              right: rightPadding ?? 25)
+          .r,
       child: Column(
         children: [
           Padding(
@@ -60,45 +71,52 @@ class CustomDropdown extends StatelessWidget {
               ],
             ),
           ),
-          DropdownButtonFormField(
-            iconSize: 0,
-            items: ['one', 'two', 'three']
-                .map((e) => DropdownMenuItem(
-                      value: e,
-                      child: Text(e),
-                    ))
-                .toList(),
-            onChanged: (value) {},
-            decoration: InputDecoration(
-                suffixIcon: Padding(
-                  padding: const EdgeInsets.only(right: 15.71).r,
-                  child: const Icon(
-                    expandMore,
-                    color: greenColor,
-                    size: 30,
+          SizedBox(
+            height: 57.h,
+            child: DropdownButtonFormField(
+              iconSize: 0,
+              items: ['one', 'two', 'three']
+                  .map((e) => DropdownMenuItem(
+                        value: e,
+                        child: Text(e),
+                      ))
+                  .toList(),
+              onChanged: (value) {},
+              decoration: InputDecoration(
+                  suffixIcon: Padding(
+                    padding: const EdgeInsets.only(right: 15.71).r,
+                    child: const Icon(
+                      expandMore,
+                      color: greenColor,
+                    ),
                   ),
-                ),
-                prefixIcon: isPrefixIconImage
-                    ? Padding(
-                        padding: const EdgeInsets.only(left: 15, right: 22).r,
-                        child: ImageIcon(
-                          AssetImage(
-                            prefixIconImageAsset ?? 'images/ngnBankIcon.png',
-                          ),
-                          color: greenColor,
-                        ),
-                      )
-                    : Padding(
-                        padding: const EdgeInsets.only(left: 15, right: 22).r,
-                        child: Icon(
-                          prefixIcon,
-                          color: greenColor,
-                        ),
-                      ),
-                border: const OutlineInputBorder(
-                    borderSide: BorderSide(color: Color(0xFFC5C5C5))),
-                focusedBorder: const OutlineInputBorder(
-                    borderSide: BorderSide(color: focusBlueColor))),
+                  prefixIcon: isPrefixIcon
+                      ? isPrefixIconImage
+                          ? Padding(
+                              padding:
+                                  const EdgeInsets.only(left: 15, right: 22).r,
+                              child: ImageIcon(
+                                AssetImage(
+                                  prefixIconImageAsset ??
+                                      'images/ngnBankIcon.png',
+                                ),
+                                color: greenColor,
+                              ),
+                            )
+                          : Padding(
+                              padding:
+                                  const EdgeInsets.only(left: 15, right: 22).r,
+                              child: Icon(
+                                prefixIcon,
+                                color: greenColor,
+                              ),
+                            )
+                      : null,
+                  border: const OutlineInputBorder(
+                      borderSide: BorderSide(color: Color(0xFFC5C5C5))),
+                  focusedBorder: const OutlineInputBorder(
+                      borderSide: BorderSide(color: focusBlueColor))),
+            ),
           )
         ],
       ),
