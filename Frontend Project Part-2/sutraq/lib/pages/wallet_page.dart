@@ -977,7 +977,9 @@ class SecondSlider extends StatelessWidget {
 }
 
 class ThirdSlider extends StatelessWidget {
-  const ThirdSlider({Key? key}) : super(key: key);
+  const ThirdSlider({Key? key, this.height}) : super(key: key);
+
+  final double? height;
 
   @override
   Widget build(BuildContext context) {
@@ -985,6 +987,7 @@ class ThirdSlider extends StatelessWidget {
         padding: const EdgeInsets.only(left: 16).r,
         child: Container(
           width: 196.w,
+          height: height,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(10.r),
             color: Color(0xff08083D),
@@ -1031,7 +1034,10 @@ class ThirdSlider extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(left: 16, top: 4).r,
+                padding: EdgeInsets.only(
+                  left: 16,
+                  top: 4,
+                ).r,
                 child: SizedBox(
                   width: 196.w,
                   child: Row(

@@ -20,7 +20,7 @@ class CustomCircleButton extends StatelessWidget {
       },
       child: Icon(
         arrowBackIcon,
-        size: 25.w,
+        size: 20.w,
       ),
     );
   }
