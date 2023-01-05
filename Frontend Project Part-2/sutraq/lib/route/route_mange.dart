@@ -1,6 +1,7 @@
 // ignore_for_file: constant_identifier_names
 
 import 'package:get/get.dart';
+import 'package:sutraq/pages/add_new_bank_account.dart';
 import 'package:sutraq/pages/cards_page.dart';
 import 'package:sutraq/pages/check_inbox.dart';
 import 'package:sutraq/pages/dashboard_page.dart';
@@ -28,6 +29,7 @@ const String cards_page = '/cards_page';
 const String settings_page = '/settings_page';
 const String notification_screen = '/notification_screen';
 const String fund_wallet_page = '/fund_wallet_page';
+const String add_new_bank_account = '/add_new_bank_account';
 
 List<GetPage> getPages = [
   GetPage(
@@ -79,5 +81,6 @@ List<GetPage> getPages = [
     name: notification_screen,
     page: () => const NotificationScreen(),
   ),
-  GetPage(name: fund_wallet_page, page: () => FundWallet()),
+  GetPage(name: fund_wallet_page, page: () => const FundWalletPage()),
+  GetPage(name: add_new_bank_account, page: () => const AddNewBankAccount()),
 ];

@@ -1,11 +1,7 @@
-// ignore_for_file: prefer_const_constructors
-
 import 'package:flutter/material.dart';
-
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:sutraq/components/custom_button.dart';
-import 'package:sutraq/components/custom_circle_button.dart';
 import 'package:sutraq/components/custom_dropdown.dart';
 import 'package:sutraq/components/custom_input.dart';
 import 'package:sutraq/pages/wallet_page.dart';
@@ -13,8 +9,10 @@ import 'package:sutraq/route/route_mange.dart';
 import 'package:sutraq/storage/color_storage.dart';
 import 'package:sutraq/storage/icon_storage.dart';
 
-class FundWalletPage extends StatelessWidget {
-  const FundWalletPage({super.key});
+import '../components/custom_circle_button.dart';
+
+class AddNewBankAccount extends StatelessWidget {
+  const AddNewBankAccount({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -35,12 +33,12 @@ class FundWalletPage extends StatelessWidget {
                     child: SizedBox(
                       width: MediaQuery.of(context).size.width,
                       child: Text(
-                        'Fund Wallet',
+                        'Add New \n Bank Account',
                         style: TextStyle(
-                          color: Color(0xff08083d),
-                          fontSize: 20.sp,
-                          fontWeight: FontWeight.w600,
-                        ),
+                            color: Color(0xff08083d),
+                            fontSize: 20.sp,
+                            fontWeight: FontWeight.w600,
+                            height: 1.4),
                         textAlign: TextAlign.center,
                       ),
                     ),
@@ -54,7 +52,7 @@ class FundWalletPage extends StatelessWidget {
               ),
               Padding(
                 padding: const EdgeInsets.only(
-                  top: 5,
+                  top: 20,
                 ).r,
                 child: SizedBox(
                     height: 48.h,
@@ -69,7 +67,7 @@ class FundWalletPage extends StatelessWidget {
                     )),
               ),
               SizedBox(
-                height: 75.h,
+                height: 47.h,
               ),
               Padding(
                 padding: const EdgeInsets.only(
@@ -86,38 +84,34 @@ class FundWalletPage extends StatelessWidget {
                           topRight: Radius.circular(10).r)),
                   child: Stack(clipBehavior: Clip.none, children: [
                     Padding(
-                      padding: const EdgeInsets.only(top: 69).r,
+                      padding: const EdgeInsets.only(top: 25).r,
                       child: Form(
                           child: Align(
                         alignment: Alignment.center,
                         child: Column(
                           children: [
-                            CustomInput(
-                                labelText: 'Amount',
-                                bottomPadding: 23.r,
-                                isPrefixIcon: true,
-                                isPrefixIconImage: true,
-                                prefixIconImageAsset: 'images/N.png',
-                                isSuffixIcon: false,
-                                placeholder: false),
                             CustomDropdown(
                               bottomPadding: 23.r,
                               textButtonVisible: false,
-                              isPrefixIcon: true,
-                              isPrefixIconImage: false,
-                              labelText: 'Payment Option',
-                              prefixIcon: accountBalance,
-                            ),
-                            CustomDropdown(
-                              bottomPadding: 23.r,
-                              textButtonVisible: true,
-                              textButtonFuntion: () =>
-                                  {Get.toNamed(add_new_bank_account)},
                               isPrefixIcon: false,
                               isPrefixIconImage: false,
-                              labelText: 'Select Account',
+                              labelText: 'Select Bank',
                               prefixIcon: accountBalance,
                             ),
+                            CustomInput(
+                                labelText: 'Account Number',
+                                bottomPadding: 23.r,
+                                isPrefixIcon: true,
+                                isPrefixIconImage: false,
+                                isSuffixIcon: false,
+                                placeholder: false),
+                            CustomInput(
+                                labelText: 'Registered Phone Number',
+                                bottomPadding: 76.r,
+                                isPrefixIcon: true,
+                                isPrefixIconImage: false,
+                                isSuffixIcon: false,
+                                placeholder: false),
                             CustomButton(
                               customFunction: () => {},
                               buttonWidth: 300.w,
@@ -130,13 +124,6 @@ class FundWalletPage extends StatelessWidget {
                           ],
                         ),
                       )),
-                    ),
-                    Positioned(
-                      top: -45.h,
-                      left: 59.w,
-                      child: ThirdSlider(
-                        height: 89.h,
-                      ),
                     ),
                   ]),
                 ),
