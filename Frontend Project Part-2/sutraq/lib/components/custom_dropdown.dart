@@ -10,7 +10,7 @@ class CustomDropdown extends StatelessWidget {
   final double? rightPadding;
   final String? labelText;
   final bool textButtonVisible;
-  final Function()? textButtonOnpressed;
+  final Function() textButtonOnpressed;
   final bool isPrefixIcon;
   final bool isPrefixIconImage;
   final String? prefixIconImageAsset;
@@ -24,7 +24,7 @@ class CustomDropdown extends StatelessWidget {
     this.rightPadding,
     this.labelText,
     required this.textButtonVisible,
-    this.textButtonOnpressed,
+    required this.textButtonOnpressed,
     required this.isPrefixIcon,
     required this.isPrefixIconImage,
     this.prefixIconImageAsset,

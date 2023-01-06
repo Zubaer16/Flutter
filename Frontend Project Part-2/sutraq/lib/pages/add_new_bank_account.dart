@@ -96,6 +96,7 @@ class AddNewBankAccount extends StatelessWidget {
                               isPrefixIconImage: false,
                               labelText: 'Select Bank',
                               prefixIcon: accountBalance,
+                              textButtonOnpressed: () => {},
                             ),
                             CustomInput(
                                 labelText: 'Account Number',

@@ -63,6 +63,7 @@ class CheckInboxScreen extends StatelessWidget {
                         height: 25.h,
                       ),
                       CustomButton(
+                        onPressed: () => {},
                         buttonText: 'CHECK MAIL',
                         buttonColor: greenColor,
                         buttonFontSize: 16.sp,

@@ -106,6 +106,7 @@ class FundWalletPage extends StatelessWidget {
                               isPrefixIconImage: false,
                               labelText: 'Payment Option',
                               prefixIcon: accountBalance,
+                              textButtonOnpressed: () => {},
                             ),
                             CustomDropdown(
                               bottomPadding: 23.r,
@@ -118,6 +119,7 @@ class FundWalletPage extends StatelessWidget {
                               prefixIcon: accountBalance,
                             ),
                             CustomButton(
+                              onPressed: () => {},
                               buttonWidth: 300.w,
                               buttonHeight: 61.h,
                               buttonColor: greenColor,
