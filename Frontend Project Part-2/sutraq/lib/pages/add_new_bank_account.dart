@@ -45,8 +45,7 @@ class AddNewBankAccount extends StatelessWidget {
                   ),
                   Padding(
                     padding: const EdgeInsets.only(top: 20, left: 20).r,
-                    child:
-                        CustomCircleButton(customFunction: () => {Get.back()}),
+                    child: CustomCircleButton(onPressed: () => {Get.back()}),
                   ),
                 ],
               ),
@@ -113,7 +112,7 @@ class AddNewBankAccount extends StatelessWidget {
                                 isSuffixIcon: false,
                                 placeholder: false),
                             CustomButton(
-                              customFunction: () => {},
+                              onPressed: () => {},
                               buttonWidth: 300.w,
                               buttonHeight: 61.h,
                               buttonColor: greenColor,

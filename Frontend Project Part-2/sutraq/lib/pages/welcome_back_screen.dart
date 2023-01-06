@@ -154,7 +154,7 @@ class WelcomeBackScreen extends StatelessWidget {
                   ),
                 )),
             CustomButton(
-              customFunction: () {
+              onPressed: () {
                 Get.toNamed(login_tip_screen);
               },
               buttonColor: greenColor,

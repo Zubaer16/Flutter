@@ -247,7 +247,7 @@ Future<dynamic> dashboardDialog(
                   Padding(
                     padding: const EdgeInsets.only(top: 38).r,
                     child: CustomButton(
-                      customFunction: () {
+                      onPressed: () {
                         customFunctionButton();
                       },
                       buttonHeight: 61.h,

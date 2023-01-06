@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 import 'package:sutraq/components/custom_button.dart';
 import 'package:sutraq/storage/color_storage.dart';
 
@@ -62,7 +63,6 @@ class CheckInboxScreen extends StatelessWidget {
                         height: 25.h,
                       ),
                       CustomButton(
-                        customFunction: () {},
                         buttonText: 'CHECK MAIL',
                         buttonColor: greenColor,
                         buttonFontSize: 16.sp,

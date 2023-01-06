@@ -47,8 +47,7 @@ class FundWalletPage extends StatelessWidget {
                   ),
                   Padding(
                     padding: const EdgeInsets.only(top: 20, left: 20).r,
-                    child:
-                        CustomCircleButton(customFunction: () => {Get.back()}),
+                    child: CustomCircleButton(onPressed: () => {Get.back()}),
                   ),
                 ],
               ),
@@ -111,7 +110,7 @@ class FundWalletPage extends StatelessWidget {
                             CustomDropdown(
                               bottomPadding: 23.r,
                               textButtonVisible: true,
-                              textButtonFuntion: () =>
+                              textButtonOnpressed: () =>
                                   {Get.toNamed(add_new_bank_account)},
                               isPrefixIcon: false,
                               isPrefixIconImage: false,
@@ -119,7 +118,6 @@ class FundWalletPage extends StatelessWidget {
                               prefixIcon: accountBalance,
                             ),
                             CustomButton(
-                              customFunction: () => {},
                               buttonWidth: 300.w,
                               buttonHeight: 61.h,
                               buttonColor: greenColor,

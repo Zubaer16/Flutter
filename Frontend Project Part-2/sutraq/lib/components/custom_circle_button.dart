@@ -4,8 +4,8 @@ import 'package:sutraq/storage/color_storage.dart';
 import 'package:sutraq/storage/icon_storage.dart';
 
 class CustomCircleButton extends StatelessWidget {
-  final VoidCallback customFunction;
-  const CustomCircleButton({Key? key, required this.customFunction})
+  final Function() onPressed;
+  const CustomCircleButton({Key? key, required this.onPressed})
       : super(key: key);
 
   @override
@@ -15,9 +15,7 @@ class CustomCircleButton extends StatelessWidget {
           shape: const CircleBorder(),
           padding: const EdgeInsets.all(8).r,
           backgroundColor: greenColor),
-      onPressed: () {
-        customFunction();
-      },
+      onPressed: onPressed,
       child: Icon(
         arrowBackIcon,
         size: 20.w,

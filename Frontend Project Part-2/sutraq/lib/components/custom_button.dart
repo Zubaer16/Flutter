@@ -6,23 +6,23 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:sutraq/storage/color_storage.dart';
 
 class CustomButton extends StatelessWidget {
-  final VoidCallback customFunction;
   final double? buttonHeight;
   final double? buttonWidth;
   final String? buttonText;
   final Color? buttonColor;
   final FontWeight? buttonTextWeight;
   final double? buttonFontSize;
-  const CustomButton(
-      {Key? key,
-      required this.customFunction,
-      this.buttonHeight,
-      this.buttonWidth,
-      this.buttonText,
-      this.buttonColor,
-      this.buttonTextWeight,
-      this.buttonFontSize})
-      : super(key: key);
+  final Function()? onPressed;
+  const CustomButton({
+    Key? key,
+    this.buttonHeight,
+    this.buttonWidth,
+    this.buttonText,
+    this.buttonColor,
+    this.buttonTextWeight,
+    this.buttonFontSize,
+    this.onPressed,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -30,9 +30,7 @@ class CustomButton extends StatelessWidget {
       height: buttonHeight ?? 61.h,
       width: buttonWidth ?? 307.w,
       child: ElevatedButton(
-        onPressed: () {
-          customFunction();
-        },
+        onPressed: onPressed,
         style: ButtonStyle(
           backgroundColor:
               MaterialStateProperty.all(buttonColor ?? buttonBlackColor),

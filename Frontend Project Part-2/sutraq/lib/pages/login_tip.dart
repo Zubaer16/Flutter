@@ -24,7 +24,7 @@ class LoginTipScreen extends StatelessWidget {
             height: 374.h,
           ),
           CustomButton(
-            customFunction: () {
+            onPressed: () {
               Get.toNamed(dashboard_screen);
             },
             buttonText: 'Got It!',

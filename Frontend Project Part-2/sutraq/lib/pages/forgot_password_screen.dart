@@ -27,8 +27,7 @@ class ForgotPasswordScreen extends StatelessWidget {
               alignment: Alignment.topLeft,
               child: Padding(
                   padding: const EdgeInsets.only(top: 29, left: 21).r,
-                  child:
-                      CustomCircleButton(customFunction: () => {Get.back()})),
+                  child: CustomCircleButton(onPressed: () => {Get.back()})),
             ),
           ),
           SizedBox(
@@ -106,7 +105,7 @@ class ForgotPasswordScreen extends StatelessWidget {
                     ))),
           ),
           CustomButton(
-            customFunction: () {
+            onPressed: () {
               Get.toNamed(check_inbox_screen);
             },
             buttonColor: greenColor,
