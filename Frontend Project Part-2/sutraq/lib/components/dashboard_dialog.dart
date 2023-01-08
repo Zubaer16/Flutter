@@ -44,7 +44,7 @@ Future<dynamic> dashboardDialog(
                     padding: const EdgeInsets.only(bottom: 20).r,
                     child: DefaultTextStyle(
                       style: TextStyle(
-                          color: Color(0xff000000),
+                          color: Color(0xff000000).withOpacity(0.5),
                           fontSize: 12.sp,
                           fontWeight: FontWeight.w400),
                       child: Text('Pick a card to continue'),

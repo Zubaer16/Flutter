@@ -46,7 +46,7 @@ class FundWalletPage extends StatelessWidget {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(top: 20, left: 20).r,
+                    padding: const EdgeInsets.only(top: 20, left: 10).r,
                     child: CustomCircleButton(onPressed: () => {Get.back()}),
                   ),
                 ],
@@ -61,7 +61,7 @@ class FundWalletPage extends StatelessWidget {
                     child: Text(
                       'Ensure to fill in the neccessary details of the recipient in order to continue',
                       style: TextStyle(
-                          color: Color(0xff000000),
+                          color: Color(0xff000000).withOpacity(.5),
                           fontSize: 12.sp,
                           fontWeight: FontWeight.w400),
                       textAlign: TextAlign.center,
@@ -116,7 +116,6 @@ class FundWalletPage extends StatelessWidget {
                               isPrefixIcon: false,
                               isPrefixIconImage: false,
                               labelText: 'Select Account',
-                              prefixIcon: accountBalance,
                             ),
                             CustomButton(
                               onPressed: () => {},

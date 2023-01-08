@@ -2,6 +2,7 @@
 
 import 'package:get/get.dart';
 import 'package:sutraq/pages/add_new_bank_account.dart';
+import 'package:sutraq/pages/bank_transfer.dart';
 import 'package:sutraq/pages/cards_page.dart';
 import 'package:sutraq/pages/check_inbox.dart';
 import 'package:sutraq/pages/dashboard_page.dart';
@@ -10,7 +11,9 @@ import 'package:sutraq/pages/forgot_password_screen.dart';
 import 'package:sutraq/pages/fund_wallet_page.dart';
 import 'package:sutraq/pages/login_tip.dart';
 import 'package:sutraq/pages/notifications_screen.dart';
+import 'package:sutraq/pages/send_money.dart';
 import 'package:sutraq/pages/settings_page.dart';
+import 'package:sutraq/pages/sutraq_transfer.dart';
 import 'package:sutraq/pages/wallet_page.dart';
 import 'package:sutraq/pages/welcome_back_screen.dart';
 import 'package:sutraq/pages/walkthrough_screen.dart';
@@ -30,6 +33,9 @@ const String settings_page = '/settings_page';
 const String notification_screen = '/notification_screen';
 const String fund_wallet_page = '/fund_wallet_page';
 const String add_new_bank_account = '/add_new_bank_account';
+const String send_money = '/send_money';
+const String bank_transfer = '/bank_transfer';
+const String sutraq_transfer = '/sutraq_transfer';
 
 List<GetPage> getPages = [
   GetPage(
@@ -83,4 +89,7 @@ List<GetPage> getPages = [
   ),
   GetPage(name: fund_wallet_page, page: () => const FundWalletPage()),
   GetPage(name: add_new_bank_account, page: () => const AddNewBankAccount()),
+  GetPage(name: send_money, page: () => const SendMoney()),
+  GetPage(name: bank_transfer, page: () => const BankTransfer()),
+  GetPage(name: sutraq_transfer, page: () => const SutraqTransfer()),
 ];

@@ -44,7 +44,7 @@ class AddNewBankAccount extends StatelessWidget {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(top: 20, left: 20).r,
+                    padding: const EdgeInsets.only(top: 20, left: 10).r,
                     child: CustomCircleButton(onPressed: () => {Get.back()}),
                   ),
                 ],
@@ -59,7 +59,7 @@ class AddNewBankAccount extends StatelessWidget {
                     child: Text(
                       'Ensure to fill in the neccessary details of the recipient in order to continue',
                       style: TextStyle(
-                          color: Color(0xff000000),
+                          color: Color(0xff000000).withOpacity(0.5),
                           fontSize: 12.sp,
                           fontWeight: FontWeight.w400),
                       textAlign: TextAlign.center,
@@ -95,20 +95,19 @@ class AddNewBankAccount extends StatelessWidget {
                               isPrefixIcon: false,
                               isPrefixIconImage: false,
                               labelText: 'Select Bank',
-                              prefixIcon: accountBalance,
                               textButtonOnpressed: () => {},
                             ),
                             CustomInput(
                                 labelText: 'Account Number',
                                 bottomPadding: 23.r,
-                                isPrefixIcon: true,
+                                isPrefixIcon: false,
                                 isPrefixIconImage: false,
                                 isSuffixIcon: false,
                                 placeholder: false),
                             CustomInput(
                                 labelText: 'Registered Phone Number',
                                 bottomPadding: 76.r,
-                                isPrefixIcon: true,
+                                isPrefixIcon: false,
                                 isPrefixIconImage: false,
                                 isSuffixIcon: false,
                                 placeholder: false),
