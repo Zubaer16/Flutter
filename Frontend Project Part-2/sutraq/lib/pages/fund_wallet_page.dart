@@ -92,6 +92,7 @@ class FundWalletPage extends StatelessWidget {
                         child: Column(
                           children: [
                             CustomInput(
+                                width: 300.w,
                                 labelText: 'Amount',
                                 bottomPadding: 23.r,
                                 isPrefixIcon: true,
@@ -100,6 +101,7 @@ class FundWalletPage extends StatelessWidget {
                                 isSuffixIcon: false,
                                 placeholder: false),
                             CustomDropdown(
+                              widht: 300.w,
                               bottomPadding: 23.r,
                               textButtonVisible: false,
                               isPrefixIcon: true,
@@ -109,6 +111,7 @@ class FundWalletPage extends StatelessWidget {
                               textButtonOnpressed: () => {},
                             ),
                             CustomDropdown(
+                              widht: 300.w,
                               bottomPadding: 23.r,
                               textButtonVisible: true,
                               textButtonOnpressed: () =>

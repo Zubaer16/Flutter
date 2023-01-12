@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:sutraq/components/custom_button.dart';
@@ -23,7 +20,7 @@ class BankTransfer extends StatelessWidget {
       onTap: () => {FocusScope.of(context).unfocus()},
       child: Scaffold(
           resizeToAvoidBottomInset: false,
-          backgroundColor: Color(0xffe5e5e5),
+          backgroundColor: const Color(0xffe5e5e5),
           body: SingleChildScrollView(
             child: Column(
               children: [
@@ -38,7 +35,7 @@ class BankTransfer extends StatelessWidget {
                         child: Text(
                           'Bank Transfer',
                           style: TextStyle(
-                              color: Color(0xff08083d),
+                              color: const Color(0xff08083d),
                               fontSize: 20.sp,
                               fontWeight: FontWeight.w600,
                               height: 1.4),
@@ -93,15 +90,19 @@ class BankTransfer extends StatelessWidget {
                           child: Column(
                             children: [
                               CustomDropdown(
+                                widht: 300.w,
                                 bottomPadding: 23.r,
                                 textButtonVisible: true,
                                 isPrefixIcon: true,
                                 isPrefixIconImage: false,
                                 labelText: 'Select Your Account',
                                 prefixIcon: accountBalance,
-                                textButtonOnpressed: () => {},
+                                textButtonOnpressed: () => {
+                                  Get.toNamed(add_new_bank_transfer_account)
+                                },
                               ),
                               CustomDropdown(
+                                widht: 300.w,
                                 bottomPadding: 23.r,
                                 textButtonVisible: false,
                                 isPrefixIcon: true,
@@ -111,6 +112,7 @@ class BankTransfer extends StatelessWidget {
                                 textButtonOnpressed: () => {},
                               ),
                               CustomDropdown(
+                                widht: 300.w,
                                 bottomPadding: 23.r,
                                 textButtonVisible: false,
                                 isPrefixIcon: true,
@@ -120,6 +122,7 @@ class BankTransfer extends StatelessWidget {
                                 textButtonOnpressed: () => {},
                               ),
                               CustomInput(
+                                width: 300.w,
                                 labelText: 'Recipients Account Name',
                                 bottomPadding: 23.r,
                                 isPrefixIcon: true,
@@ -130,6 +133,7 @@ class BankTransfer extends StatelessWidget {
                                 placeholderText: 'Enter Account Name',
                               ),
                               CustomInput(
+                                width: 300.w,
                                 labelText: 'Account Number',
                                 bottomPadding: 23.r,
                                 isPrefixIcon: true,
@@ -140,6 +144,7 @@ class BankTransfer extends StatelessWidget {
                                 placeholderText: 'Enter Account Number',
                               ),
                               CustomInput(
+                                  width: 300.w,
                                   labelText: 'Amount',
                                   bottomPadding: 23.r,
                                   isPrefixIcon: true,
@@ -148,7 +153,8 @@ class BankTransfer extends StatelessWidget {
                                   isSuffixIcon: false,
                                   placeholder: false),
                               CustomButton(
-                                onPressed: () => {},
+                                onPressed: () =>
+                                    {Get.toNamed(transfer_summery)},
                                 buttonWidth: 300.w,
                                 buttonHeight: 61.h,
                                 buttonColor: greenColor,
@@ -167,6 +173,5 @@ class BankTransfer extends StatelessWidget {
             ),
           )),
     ));
-    ;
   }
 }

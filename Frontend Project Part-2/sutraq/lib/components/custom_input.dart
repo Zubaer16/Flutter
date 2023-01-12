@@ -4,6 +4,7 @@ import 'package:sutraq/storage/color_storage.dart';
 import 'package:sutraq/storage/icon_storage.dart';
 
 class CustomInput extends StatelessWidget {
+  final double? width;
   final double? topPadding;
   final double? bottomPadding;
   final double? leftPadding;
@@ -21,6 +22,7 @@ class CustomInput extends StatelessWidget {
 
   const CustomInput(
       {Key? key,
+      this.width,
       this.topPadding,
       this.bottomPadding,
       this.leftPadding,
@@ -47,7 +49,7 @@ class CustomInput extends StatelessWidget {
               right: rightPadding ?? 0)
           .r,
       child: SizedBox(
-        width: 300.w,
+        width: width,
         child: Column(
           children: [
             Padding(

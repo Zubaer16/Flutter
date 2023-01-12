@@ -90,6 +90,7 @@ class AddNewBankAccount extends StatelessWidget {
                         child: Column(
                           children: [
                             CustomDropdown(
+                              widht: 307.w,
                               bottomPadding: 23.r,
                               textButtonVisible: false,
                               isPrefixIcon: false,
@@ -98,6 +99,7 @@ class AddNewBankAccount extends StatelessWidget {
                               textButtonOnpressed: () => {},
                             ),
                             CustomInput(
+                                width: 307.w,
                                 labelText: 'Account Number',
                                 bottomPadding: 23.r,
                                 isPrefixIcon: false,
@@ -105,6 +107,7 @@ class AddNewBankAccount extends StatelessWidget {
                                 isSuffixIcon: false,
                                 placeholder: false),
                             CustomInput(
+                                width: 307.w,
                                 labelText: 'Registered Phone Number',
                                 bottomPadding: 76.r,
                                 isPrefixIcon: false,
@@ -113,7 +116,7 @@ class AddNewBankAccount extends StatelessWidget {
                                 placeholder: false),
                             CustomButton(
                               onPressed: () => {},
-                              buttonWidth: 300.w,
+                              buttonWidth: 307.w,
                               buttonHeight: 61.h,
                               buttonColor: greenColor,
                               buttonText: 'PROCEED',
