@@ -1,4 +1,4 @@
-// ignore_for_file: constant_identifier_names
+// ignore_for_file: constant_identifier_names, prefer_const_constructors
 
 import 'package:get/get.dart';
 import 'package:sutraq/pages/add_new_bank_account.dart';
@@ -8,6 +8,7 @@ import 'package:sutraq/pages/cards_page.dart';
 import 'package:sutraq/pages/check_inbox.dart';
 import 'package:sutraq/pages/dashboard_page.dart';
 import 'package:sutraq/pages/dashboard_screen.dart';
+import 'package:sutraq/pages/enter_transaction_pin.dart';
 import 'package:sutraq/pages/forgot_password_screen.dart';
 import 'package:sutraq/pages/fund_wallet_page.dart';
 import 'package:sutraq/pages/login_tip.dart';
@@ -15,6 +16,7 @@ import 'package:sutraq/pages/notifications_screen.dart';
 import 'package:sutraq/pages/send_money.dart';
 import 'package:sutraq/pages/settings_page.dart';
 import 'package:sutraq/pages/sutraq_transfer.dart';
+import 'package:sutraq/pages/transaction_success.dart';
 import 'package:sutraq/pages/transfer_summery.dart';
 import 'package:sutraq/pages/wallet_page.dart';
 import 'package:sutraq/pages/welcome_back_screen.dart';
@@ -40,6 +42,8 @@ const String bank_transfer = '/bank_transfer';
 const String sutraq_transfer = '/sutraq_transfer';
 const String add_new_bank_transfer_account = '/add_new_bank_transfer_account';
 const String transfer_summery = '/transfer_summery';
+const String enter_transaction_pin = '/enter_transaction_pin';
+const String transaction_success = '/transaction_success';
 
 List<GetPage> getPages = [
   GetPage(
@@ -91,13 +95,15 @@ List<GetPage> getPages = [
     name: notification_screen,
     page: () => const NotificationScreen(),
   ),
-  GetPage(name: fund_wallet_page, page: () => const FundWalletPage()),
-  GetPage(name: add_new_bank_account, page: () => const AddNewBankAccount()),
-  GetPage(name: send_money, page: () => const SendMoney()),
-  GetPage(name: bank_transfer, page: () => const BankTransfer()),
-  GetPage(name: sutraq_transfer, page: () => const SutraqTransfer()),
+  GetPage(name: fund_wallet_page, page: () => FundWalletPage()),
+  GetPage(name: add_new_bank_account, page: () => AddNewBankAccount()),
+  GetPage(name: send_money, page: () => SendMoney()),
+  GetPage(name: bank_transfer, page: () => BankTransfer()),
+  GetPage(name: sutraq_transfer, page: () => SutraqTransfer()),
   GetPage(
       name: add_new_bank_transfer_account,
       page: () => const AddNewBankTransferAccount()),
-  GetPage(name: transfer_summery, page: () => const TransferSummery()),
+  GetPage(name: transfer_summery, page: () => TransferSummery()),
+  GetPage(name: enter_transaction_pin, page: () => EnterTransactionPin()),
+  GetPage(name: transaction_success, page: () => TransactionSuccess()),
 ];

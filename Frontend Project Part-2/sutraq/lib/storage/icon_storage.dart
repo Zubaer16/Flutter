@@ -22,3 +22,4 @@ const supervisorAccount = Icons.supervisor_account;
 const locationOnOutlined = Icons.location_on_outlined;
 const accountBoxOutlined = Icons.account_box_outlined;
 const dialPad = Icons.dialpad;
+const verifiedUser = Icons.verified_user_outlined;

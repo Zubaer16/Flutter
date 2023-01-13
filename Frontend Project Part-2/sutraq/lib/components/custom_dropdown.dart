@@ -74,7 +74,7 @@ class CustomDropdown extends StatelessWidget {
               ),
             ),
             SizedBox(
-              height: 61.h,
+              height: 57.h,
               child: DropdownButtonFormField(
                 iconSize: 0,
                 items: ['one', 'two', 'three']

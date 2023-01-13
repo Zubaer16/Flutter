@@ -33,6 +33,7 @@ dependencies:
   get: ^4.6.5
   smooth_page_indicator: ^1.0.0+2
   visibility_detector: ^0.3.3
+  pin_code_fields: ^7.4.0
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.

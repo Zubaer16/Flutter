@@ -68,7 +68,7 @@ class CustomInput extends StatelessWidget {
               ),
             ),
             SizedBox(
-              height: 61.h,
+              height: 57.h,
               child: TextFormField(
                 keyboardType: inputFieldType,
                 decoration: InputDecoration(
@@ -78,7 +78,8 @@ class CustomInput extends StatelessWidget {
                     hintStyle: TextStyle(
                         color: Color(0xff969696).withOpacity(.5),
                         fontSize: 12.sp,
-                        fontWeight: FontWeight.w500),
+                        fontWeight: FontWeight.w500,
+                        height: 1.7),
                     suffixIcon: isSuffixIcon
                         ? Padding(
                             padding: const EdgeInsets.only(right: 15.71).r,

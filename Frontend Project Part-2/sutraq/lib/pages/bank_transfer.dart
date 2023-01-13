@@ -75,7 +75,7 @@ class BankTransfer extends StatelessWidget {
                   ).r,
                   child: Container(
                     width: MediaQuery.of(context).size.width,
-                    height: 770.h,
+                    height: 759.h,
                     decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.only(
@@ -83,7 +83,7 @@ class BankTransfer extends StatelessWidget {
                             topRight: Radius.circular(10).r)),
                     child: Stack(clipBehavior: Clip.none, children: [
                       Padding(
-                        padding: const EdgeInsets.only(top: 25).r,
+                        padding: const EdgeInsets.only(top: 33).r,
                         child: Form(
                             child: Align(
                           alignment: Alignment.center,

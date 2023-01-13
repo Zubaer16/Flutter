@@ -1,16 +1,13 @@
-// ignore_for_file: prefer_const_constructors
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:sutraq/components/custom_button.dart';
-import 'package:sutraq/components/custom_circle_button.dart';
 import 'package:sutraq/route/route_mange.dart';
-import '../storage/color_storage.dart';
-import '../storage/icon_storage.dart';
+import 'package:sutraq/storage/color_storage.dart';
+import 'package:sutraq/storage/icon_storage.dart';
 
-class TransferSummery extends StatelessWidget {
-  const TransferSummery({super.key});
+class TransactionSuccess extends StatelessWidget {
+  const TransactionSuccess({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -37,10 +34,6 @@ class TransferSummery extends StatelessWidget {
                           textAlign: TextAlign.center,
                         ),
                       ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(top: 20, left: 10).r,
-                      child: CustomCircleButton(onPressed: () => {Get.back()}),
                     ),
                   ],
                 ),
