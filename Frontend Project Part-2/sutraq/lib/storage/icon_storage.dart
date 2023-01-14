@@ -25,3 +25,4 @@ const dialPad = Icons.dialpad;
 const verifiedUser = Icons.verified_user_outlined;
 const done = Icons.done;
 const receiptLong = Icons.receipt_long_sharp;
+const personOutlined = Icons.person_outlined;

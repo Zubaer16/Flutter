@@ -4,7 +4,6 @@ import 'package:get/get.dart';
 import 'package:sutraq/components/custom_button.dart';
 import 'package:sutraq/components/custom_circle_button.dart';
 import 'package:sutraq/components/custom_dropdown.dart';
-import 'package:sutraq/route/route_mange.dart';
 import 'package:sutraq/storage/color_storage.dart';
 
 class AddNewBankTransferAccount extends StatelessWidget {
