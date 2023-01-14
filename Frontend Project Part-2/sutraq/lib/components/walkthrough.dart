@@ -19,27 +19,22 @@ class Walkthrough extends StatelessWidget {
   final String? stack_2nd_image;
   final String? big_text;
   final String? small_text;
-  final Color? color_1;
-  final Color? color_2;
-  final Color? color_3;
 
-  const Walkthrough(
-      {this.padding_left,
-      this.padding_top,
-      this.container_height,
-      required this.stack_1st_image,
-      this.stack_1st_image_top,
-      this.stack_1st_image_height,
-      required this.stack_2nd_image,
-      this.stack_2nd_image_top,
-      this.stack_2nd_image_left,
-      this.stack_2nd_image_height,
-      this.stack_2nd_image_width,
-      this.big_text,
-      this.small_text,
-      this.color_1,
-      this.color_2,
-      this.color_3});
+  const Walkthrough({
+    this.padding_left,
+    this.padding_top,
+    this.container_height,
+    required this.stack_1st_image,
+    this.stack_1st_image_top,
+    this.stack_1st_image_height,
+    required this.stack_2nd_image,
+    this.stack_2nd_image_top,
+    this.stack_2nd_image_left,
+    this.stack_2nd_image_height,
+    this.stack_2nd_image_width,
+    this.big_text,
+    this.small_text,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -77,40 +72,8 @@ class Walkthrough extends StatelessWidget {
             ),
           ),
         ),
-        Padding(
-          padding: const EdgeInsets.only(bottom: 27.5, top: 27.5).r,
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Container(
-                margin: EdgeInsets.only(right: 10),
-                height: 6.h,
-                width: 6.h,
-                decoration: BoxDecoration(
-                  color: this.color_1 ?? greenColor,
-                  borderRadius: BorderRadius.circular(3.r),
-                ),
-              ),
-              Container(
-                margin: EdgeInsets.only(right: 10),
-                height: 6.h,
-                width: 6.h,
-                decoration: BoxDecoration(
-                  color: this.color_2 ?? greenColor,
-                  borderRadius: BorderRadius.circular(3.r),
-                ),
-              ),
-              Container(
-                margin: EdgeInsets.only(right: 10).r,
-                height: 6.h,
-                width: 6.w,
-                decoration: BoxDecoration(
-                  color: this.color_3 ?? greenColor,
-                  borderRadius: BorderRadius.circular(3.r),
-                ),
-              ),
-            ],
-          ),
+        SizedBox(
+          height: 61.h,
         ),
         Container(
           decoration: BoxDecoration(

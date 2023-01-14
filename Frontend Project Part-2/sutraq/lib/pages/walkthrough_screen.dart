@@ -8,8 +8,28 @@ import 'package:sutraq/components/custom_button.dart';
 import 'package:sutraq/components/walkthrough.dart';
 import 'package:sutraq/route/route_mange.dart';
 
-class WalkthroughScreen extends StatelessWidget {
+class WalkthroughScreen extends StatefulWidget {
   WalkthroughScreen({Key? key}) : super(key: key);
+
+  @override
+  State<WalkthroughScreen> createState() => _WalkthroughScreenState();
+}
+
+class _WalkthroughScreenState extends State<WalkthroughScreen> {
+  late PageController _pageController;
+
+  int _pageIndex = 0;
+
+  @override
+  void initState() {
+    _pageController = PageController(initialPage: 0);
+  }
+
+  @override
+  void dispose() {
+    _pageController.dispose();
+    super.dispose();
+  }
 
   final List<Widget> pic = [
     Walkthrough(
@@ -27,7 +47,6 @@ class WalkthroughScreen extends StatelessWidget {
       big_text: 'Send Money Anywhere',
       small_text:
           'With our unique technology, you can get money anywhere in the world.',
-      color_1: dotWhiteColor,
     ),
     Walkthrough(
       padding_left: 0.r,
@@ -44,7 +63,6 @@ class WalkthroughScreen extends StatelessWidget {
       big_text: 'Safe & Secured',
       small_text:
           "Safety of your funds is guaranteed. We've got you covered 24/7.",
-      color_2: dotWhiteColor,
     ),
     Walkthrough(
       padding_left: 0,
@@ -61,7 +79,6 @@ class WalkthroughScreen extends StatelessWidget {
       big_text: 'Unbeatable Support',
       small_text:
           'Send money to other sutraq users free of charge, with no additional fee.',
-      color_3: dotWhiteColor,
     ),
   ];
 
@@ -71,12 +88,38 @@ class WalkthroughScreen extends StatelessWidget {
         body: Column(
       children: [
         Expanded(
-          flex: 2,
-          child: PageView.builder(
-              itemCount: pic.length,
-              itemBuilder: (context, index) {
-                return pic[index];
-              }),
+          child: Stack(
+            clipBehavior: Clip.none,
+            children: [
+              PageView.builder(
+                  controller: _pageController,
+                  itemCount: pic.length,
+                  onPageChanged: (index) => {
+                        setState(() {
+                          _pageIndex = index;
+                        })
+                      },
+                  itemBuilder: (context, index) {
+                    return pic[index];
+                  }),
+              Positioned(
+                top: 418.h,
+                child: SizedBox(
+                  width: MediaQuery.of(context).size.width,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      ...List.generate(
+                          pic.length,
+                          (index) => DotIndicator(
+                                isActive: index == _pageIndex,
+                              ))
+                    ],
+                  ),
+                ),
+              )
+            ],
+          ),
         ),
         Container(
           color: greenColor,
@@ -104,5 +147,27 @@ class WalkthroughScreen extends StatelessWidget {
         )
       ],
     ));
+  }
+}
+
+class DotIndicator extends StatelessWidget {
+  const DotIndicator({Key? key, required this.isActive}) : super(key: key);
+
+  final bool isActive;
+
+  @override
+  Widget build(BuildContext context) {
+    return AnimatedContainer(
+      duration: Duration(milliseconds: 300),
+      child: Container(
+        margin: EdgeInsets.only(right: 10),
+        height: 6.h,
+        width: 6.h,
+        decoration: BoxDecoration(
+          color: isActive ? Color.fromARGB(29, 0, 0, 0) : greenColor,
+          borderRadius: BorderRadius.circular(3.r),
+        ),
+      ),
+    );
   }
 }

@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -13,306 +15,320 @@ class TransactionSuccess extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
-            backgroundColor: const Color(0xffe5e5e5),
-            body: Column(
-              children: [
-                Stack(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(
-                        top: 30,
-                      ).r,
-                      child: SizedBox(
-                        width: MediaQuery.of(context).size.width,
-                        child: Text(
-                          'Transfer Summary',
-                          style: TextStyle(
-                              color: const Color(0xff08083d),
-                              fontSize: 20.sp,
-                              fontWeight: FontWeight.w600,
-                              height: 1.4),
-                          textAlign: TextAlign.center,
-                        ),
+            backgroundColor: const Color(0xff090232),
+            body: Center(
+              child: Container(
+                height: 632.h,
+                width: 325.w,
+                decoration: BoxDecoration(
+                    color: Color(0xffffffff),
+                    borderRadius: BorderRadius.all(Radius.circular(15).r)),
+                child: Column(children: [
+                  SizedBox(
+                    height: 35.h,
+                  ),
+                  Container(
+                    height: 86.h,
+                    width: 86.w,
+                    decoration: BoxDecoration(
+                        color: Color(0xff47D187).withOpacity(.15),
+                        shape: BoxShape.circle),
+                    child: Center(
+                      child: Icon(
+                        done,
+                        size: 60.h,
+                        color: Color(0xff47D187),
                       ),
                     ),
-                  ],
-                ),
-                SizedBox(
-                  height: 64.h,
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(
-                    left: 15,
-                    right: 15,
-                  ).r,
-                  child: Container(
-                    width: MediaQuery.of(context).size.width,
-                    height: 486.h,
-                    decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.all(Radius.circular(10).r)),
-                    child: Stack(clipBehavior: Clip.none, children: [
-                      Padding(
-                        padding: const EdgeInsets.only(top: 40).r,
-                        child: Column(
+                  ),
+                  SizedBox(
+                    height: 15.h,
+                  ),
+                  Text(
+                    'Success',
+                    style: TextStyle(
+                        color: Color(0xff002251),
+                        fontSize: 24.sp,
+                        fontWeight: FontWeight.w700),
+                  ),
+                  SizedBox(
+                    height: 9.h,
+                  ),
+                  Text(
+                    'You’ve successfully transferred money.',
+                    style: TextStyle(
+                        color: Color(0xff7A869A),
+                        fontSize: 14.sp,
+                        fontWeight: FontWeight.w400),
+                  ),
+                  SizedBox(
+                    height: 33.h,
+                  ),
+                  SizedBox(
+                    width: 250.w,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Container(
-                              height: 65.h,
-                              width: 294.w,
-                              padding: EdgeInsets.fromLTRB(7.r, 0, 7.r, 0),
-                              decoration: BoxDecoration(
-                                  border: Border(
-                                      bottom: BorderSide(
-                                          color: Color(0xffdadada)
-                                              .withOpacity(.6)))),
-                              child: Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Column(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Padding(
-                                        padding:
-                                            const EdgeInsets.only(bottom: 4).r,
-                                        child: Text(
-                                          'RECIPIENT',
-                                          style: TextStyle(
-                                              color: Color(0xff969696),
-                                              fontSize: 11.sp,
-                                              fontWeight: FontWeight.w500),
-                                        ),
-                                      ),
-                                      Text(
-                                        'Tobi Hassan',
-                                        style: TextStyle(
-                                            color: Color(0xff000000),
-                                            fontSize: 17.sp,
-                                            fontWeight: FontWeight.w700),
-                                      ),
-                                    ],
-                                  ),
-                                  const Icon(
-                                    accountBoxOutlined,
-                                    color: greenColor,
-                                  ),
-                                ],
-                              ),
-                            ),
-                            Container(
-                              height: 65.h,
-                              width: 294.w,
-                              padding: EdgeInsets.fromLTRB(7.r, 0, 7.r, 0),
-                              decoration: BoxDecoration(
-                                  border: Border(
-                                      bottom: BorderSide(
-                                          color: Color(0xffdadada)
-                                              .withOpacity(.6)))),
-                              child: Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Column(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Padding(
-                                        padding:
-                                            const EdgeInsets.only(bottom: 4).r,
-                                        child: Text(
-                                          'RECIPIENTS COUNTRY',
-                                          style: TextStyle(
-                                              color: Color(0xff969696),
-                                              fontSize: 11.sp,
-                                              fontWeight: FontWeight.w500),
-                                        ),
-                                      ),
-                                      Text(
-                                        'Nigeria',
-                                        style: TextStyle(
-                                            color: Color(0xff000000),
-                                            fontSize: 17.sp,
-                                            fontWeight: FontWeight.w700),
-                                      ),
-                                    ],
-                                  ),
-                                  const Icon(
-                                    locationOnOutlined,
-                                    color: greenColor,
-                                  ),
-                                ],
-                              ),
-                            ),
-                            Container(
-                              height: 65.h,
-                              width: 294.w,
-                              padding: EdgeInsets.fromLTRB(7.r, 0, 7.r, 0),
-                              decoration: BoxDecoration(
-                                  border: Border(
-                                      bottom: BorderSide(
-                                          color: Color(0xffdadada)
-                                              .withOpacity(.6)))),
-                              child: Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Column(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Padding(
-                                        padding:
-                                            const EdgeInsets.only(bottom: 4).r,
-                                        child: Text(
-                                          'BANK',
-                                          style: TextStyle(
-                                              color: Color(0xff969696),
-                                              fontSize: 11.sp,
-                                              fontWeight: FontWeight.w500),
-                                        ),
-                                      ),
-                                      Text(
-                                        'Access Bank',
-                                        style: TextStyle(
-                                            color: Color(0xff000000),
-                                            fontSize: 17.sp,
-                                            fontWeight: FontWeight.w700),
-                                      ),
-                                    ],
-                                  ),
-                                  const Icon(
-                                    accountBalance,
-                                    color: greenColor,
-                                  ),
-                                ],
-                              ),
-                            ),
-                            Container(
-                              height: 65.h,
-                              width: 294.w,
-                              padding: EdgeInsets.fromLTRB(7.r, 0, 7.r, 0),
-                              decoration: BoxDecoration(
-                                  border: Border(
-                                      bottom: BorderSide(
-                                          color: Color(0xffdadada)
-                                              .withOpacity(.6)))),
-                              child: Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Column(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Padding(
-                                        padding:
-                                            const EdgeInsets.only(bottom: 4).r,
-                                        child: Text(
-                                          'ACCOUNT NUMBER',
-                                          style: TextStyle(
-                                              color: Color(0xff969696),
-                                              fontSize: 11.sp,
-                                              fontWeight: FontWeight.w500),
-                                        ),
-                                      ),
-                                      Text(
-                                        '0127890013',
-                                        style: TextStyle(
-                                            color: Color(0xff000000),
-                                            fontSize: 17.sp,
-                                            fontWeight: FontWeight.w700),
-                                      ),
-                                    ],
-                                  ),
-                                  const Icon(
-                                    dialPad,
-                                    color: greenColor,
-                                  ),
-                                ],
-                              ),
+                            Text(
+                              'From:',
+                              style: TextStyle(
+                                  color: Color(0xff002251),
+                                  fontSize: 13.sp,
+                                  fontWeight: FontWeight.w500),
                             ),
                             SizedBox(
-                              height: 19.h,
+                              height: 5.h,
                             ),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Padding(
-                                      padding:
-                                          const EdgeInsets.only(bottom: 2).r,
-                                      child: Text(
-                                        'Amount to send',
-                                        style: TextStyle(
-                                            color: Color(0xff969696),
-                                            fontSize: 12.sp,
-                                            fontWeight: FontWeight.w500),
-                                      ),
-                                    ),
-                                    Text(
-                                      'N20,000',
-                                      style: TextStyle(
-                                          color: Color(0xff000000),
-                                          fontSize: 21.sp,
-                                          fontWeight: FontWeight.w700),
-                                    ),
-                                  ],
-                                ),
-                                SizedBox(
-                                  width: 42.w,
-                                ),
-                                Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Padding(
-                                      padding:
-                                          const EdgeInsets.only(bottom: 2).r,
-                                      child: Text(
-                                        'Service Fee',
-                                        style: TextStyle(
-                                            color: Color(0xff969696),
-                                            fontSize: 12.sp,
-                                            fontWeight: FontWeight.w500),
-                                      ),
-                                    ),
-                                    Text(
-                                      'N50',
-                                      style: TextStyle(
-                                          color: Color(0xff000000),
-                                          fontSize: 21.sp,
-                                          fontWeight: FontWeight.w700),
-                                    ),
-                                  ],
-                                ),
-                              ],
+                            Text(
+                              'Credit Card',
+                              style: TextStyle(
+                                  color: Color(0xff7A869A),
+                                  fontSize: 12.sp,
+                                  fontWeight: FontWeight.w400),
                             ),
-                            SizedBox(
-                              height: 25.h,
-                            ),
-                            CustomButton(
-                              onPressed: () =>
-                                  {Get.toNamed(enter_transaction_pin)},
-                              buttonHeight: 61.h,
-                              buttonWidth: 297.w,
-                              buttonColor: greenColor,
-                              buttonText: 'SEND N20,050',
-                              buttonFontSize: 16.sp,
-                              buttonTextWeight: FontWeight.w500,
-                            )
                           ],
                         ),
-                      ),
-                    ]),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.end,
+                          children: [
+                            Text(
+                              'Precious Ogar',
+                              style: TextStyle(
+                                  color: Color(0xff002251),
+                                  fontSize: 13.sp,
+                                  fontWeight: FontWeight.w500),
+                            ),
+                            SizedBox(
+                              height: 5.h,
+                            ),
+                            Text(
+                              'VISA *8064',
+                              style: TextStyle(
+                                  color: Color(0xff7A869A),
+                                  fontSize: 12.sp,
+                                  fontWeight: FontWeight.w400),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
                   ),
-                ),
-              ],
+                  SizedBox(
+                    height: 13.h,
+                  ),
+                  Container(
+                    height: 1.h,
+                    width: 250.w,
+                    color: Color(0xffF5F7F9),
+                  ),
+                  SizedBox(
+                    height: 15.h,
+                  ),
+                  SizedBox(
+                    width: 250.w,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              'To:',
+                              style: TextStyle(
+                                  color: Color(0xff002251),
+                                  fontSize: 13.sp,
+                                  fontWeight: FontWeight.w500),
+                            ),
+                            SizedBox(
+                              height: 5.h,
+                            ),
+                            Text(
+                              'Bank Account',
+                              style: TextStyle(
+                                  color: Color(0xff7A869A),
+                                  fontSize: 12.sp,
+                                  fontWeight: FontWeight.w400),
+                            ),
+                            SizedBox(
+                              height: 5.h,
+                            ),
+                            Text(
+                              'Bank Name',
+                              style: TextStyle(
+                                  color: Color(0xff7A869A),
+                                  fontSize: 12.sp,
+                                  fontWeight: FontWeight.w400),
+                            ),
+                          ],
+                        ),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.end,
+                          children: [
+                            Text(
+                              'Idris Lawal',
+                              style: TextStyle(
+                                  color: Color(0xff002251),
+                                  fontSize: 13.sp,
+                                  fontWeight: FontWeight.w500),
+                            ),
+                            SizedBox(
+                              height: 5.h,
+                            ),
+                            Text(
+                              '0273829134',
+                              style: TextStyle(
+                                  color: Color(0xff7A869A),
+                                  fontSize: 12.sp,
+                                  fontWeight: FontWeight.w400),
+                            ),
+                            SizedBox(
+                              height: 5.h,
+                            ),
+                            Text(
+                              'Stanbic IBTC',
+                              style: TextStyle(
+                                  color: Color(0xff7A869A),
+                                  fontSize: 12.sp,
+                                  fontWeight: FontWeight.w400),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                  SizedBox(
+                    height: 15.h,
+                  ),
+                  Container(
+                    height: 1.h,
+                    width: 250.w,
+                    color: Color(0xffF5F7F9),
+                  ),
+                  SizedBox(
+                    height: 17.h,
+                  ),
+                  SizedBox(
+                    width: 250.w,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Date:',
+                          style: TextStyle(
+                            color: Color(0xff002251),
+                            fontSize: 13.sp,
+                            fontWeight: FontWeight.w500,
+                          ),
+                        ),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.end,
+                          children: [
+                            Text(
+                              '26 Apr, 2019',
+                              style: TextStyle(
+                                  color: Color(0xff002251),
+                                  fontSize: 13.sp,
+                                  fontWeight: FontWeight.w500),
+                            ),
+                            SizedBox(
+                              height: 5.h,
+                            ),
+                            Text(
+                              '12:48 PM',
+                              style: TextStyle(
+                                  color: Color(0xff7A869A),
+                                  fontSize: 12.sp,
+                                  fontWeight: FontWeight.w400),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                  SizedBox(
+                    height: 14.h,
+                  ),
+                  Container(
+                    height: 1.h,
+                    width: 250.w,
+                    color: Color(0xffF5F7F9),
+                  ),
+                  SizedBox(
+                    height: 15.h,
+                  ),
+                  SizedBox(
+                    width: 250.w,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          'Total',
+                          style: TextStyle(
+                            color: Color(0xff002251),
+                            fontSize: 13.sp,
+                            fontWeight: FontWeight.w500,
+                          ),
+                        ),
+                        Text(
+                          '\$4,800',
+                          style: TextStyle(
+                              color: Color(0xff002251),
+                              fontSize: 13.sp,
+                              fontWeight: FontWeight.w500),
+                        ),
+                      ],
+                    ),
+                  ),
+                  SizedBox(
+                    height: 27.h,
+                  ),
+                  SizedBox(
+                    width: 250.w,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Icon(
+                          receiptLong,
+                          color: Color(0xff7A869A),
+                          size: 17.h,
+                        ),
+                        SizedBox(
+                          width: 9.5.w,
+                        ),
+                        TextButton(
+                            onPressed: () => {},
+                            style: TextButton.styleFrom(
+                                padding: EdgeInsets.zero,
+                                tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                                minimumSize: Size.zero),
+                            child: Text(
+                              'Download Receipt',
+                              style: TextStyle(
+                                  fontSize: 14.sp,
+                                  fontWeight: FontWeight.w400,
+                                  color: Color(0xff7A869A)),
+                            )),
+                      ],
+                    ),
+                  ),
+                  SizedBox(
+                    height: 22.h,
+                  ),
+                  CustomButton(
+                    onPressed: () => {Get.toNamed(dashboard_screen)},
+                    buttonHeight: 53.h,
+                    buttonWidth: 250.w,
+                    buttonColor: greenColor,
+                    buttonText: 'DONE',
+                    buttonFontSize: 16.sp,
+                    buttonTextWeight: FontWeight.w500,
+                  )
+                ]),
+              ),
             )));
   }
 }

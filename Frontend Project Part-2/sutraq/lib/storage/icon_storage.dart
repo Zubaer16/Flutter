@@ -23,3 +23,5 @@ const locationOnOutlined = Icons.location_on_outlined;
 const accountBoxOutlined = Icons.account_box_outlined;
 const dialPad = Icons.dialpad;
 const verifiedUser = Icons.verified_user_outlined;
+const done = Icons.done;
+const receiptLong = Icons.receipt_long_sharp;
