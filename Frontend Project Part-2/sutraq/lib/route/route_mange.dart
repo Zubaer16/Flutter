@@ -21,6 +21,7 @@ import 'package:sutraq/pages/sutraq_transfer.dart';
 import 'package:sutraq/pages/transaction_success.dart';
 import 'package:sutraq/pages/transaction_success_sutraq_transfer.dart';
 import 'package:sutraq/pages/transfer_summery.dart';
+import 'package:sutraq/pages/view_all_transactions.dart';
 import 'package:sutraq/pages/wallet_page.dart';
 import 'package:sutraq/pages/welcome_back_screen.dart';
 import 'package:sutraq/pages/walkthrough_screen.dart';
@@ -54,6 +55,7 @@ const String enter_transaction_pin_sutraq = '/enter_transaction_pin_sutraq';
 const String transaction_success_sutraq_transfer =
     '/transaction_success_sutraq_transfer';
 const String withdraw_fund = '/withdraw_fund';
+const String view_all_transactions = '/view_all_transactions';
 
 List<GetPage> getPages = [
   GetPage(
@@ -126,4 +128,5 @@ List<GetPage> getPages = [
       name: transaction_success_sutraq_transfer,
       page: () => TransactionSuccessSutraqTransfer()),
   GetPage(name: withdraw_fund, page: () => WithdrawFund()),
+  GetPage(name: view_all_transactions, page: () => ViewAllTransactions()),
 ];
