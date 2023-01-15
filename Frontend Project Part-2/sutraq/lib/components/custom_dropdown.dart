@@ -76,6 +76,7 @@ class CustomDropdown extends StatelessWidget {
             SizedBox(
               height: 57.h,
               child: DropdownButtonFormField(
+                style: TextStyle(fontSize: 16.sp, color: Colors.black),
                 iconSize: 0,
                 items: ['one', 'two', 'three']
                     .map((e) => DropdownMenuItem(
