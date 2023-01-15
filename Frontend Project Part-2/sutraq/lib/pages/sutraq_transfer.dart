@@ -95,7 +95,7 @@ class SutraqTransfer extends StatelessWidget {
                                 labelText: 'Select Your Account',
                                 prefixIcon: accountBalance,
                                 textButtonOnpressed: () => {
-                                  Get.toNamed(add_new_bank_transfer_account)
+                                  Get.toNamed(add_new_sutraq_transfer_account)
                                 },
                               ),
                               CustomInput(
@@ -133,7 +133,7 @@ class SutraqTransfer extends StatelessWidget {
                               ),
                               CustomButton(
                                 onPressed: () =>
-                                    {Get.toNamed(transfer_summery)},
+                                    {Get.toNamed(enter_transaction_pin_sutraq)},
                                 buttonWidth: 300.w,
                                 buttonHeight: 61.h,
                                 buttonColor: greenColor,

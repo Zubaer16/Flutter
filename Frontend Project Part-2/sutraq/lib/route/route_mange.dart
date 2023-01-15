@@ -3,12 +3,14 @@
 import 'package:get/get.dart';
 import 'package:sutraq/pages/add_new_bank_account.dart';
 import 'package:sutraq/pages/add_new_bank_transfer_account.dart';
+import 'package:sutraq/pages/add_new_sutraq_transfer_account.dart';
 import 'package:sutraq/pages/bank_transfer.dart';
 import 'package:sutraq/pages/cards_page.dart';
 import 'package:sutraq/pages/check_inbox.dart';
 import 'package:sutraq/pages/dashboard_page.dart';
 import 'package:sutraq/pages/dashboard_screen.dart';
 import 'package:sutraq/pages/enter_transaction_pin.dart';
+import 'package:sutraq/pages/enter_transaction_pin_sutraq.dart';
 import 'package:sutraq/pages/forgot_password_screen.dart';
 import 'package:sutraq/pages/fund_wallet_page.dart';
 import 'package:sutraq/pages/login_tip.dart';
@@ -17,11 +19,13 @@ import 'package:sutraq/pages/send_money.dart';
 import 'package:sutraq/pages/settings_page.dart';
 import 'package:sutraq/pages/sutraq_transfer.dart';
 import 'package:sutraq/pages/transaction_success.dart';
+import 'package:sutraq/pages/transaction_success_sutraq_transfer.dart';
 import 'package:sutraq/pages/transfer_summery.dart';
 import 'package:sutraq/pages/wallet_page.dart';
 import 'package:sutraq/pages/welcome_back_screen.dart';
 import 'package:sutraq/pages/walkthrough_screen.dart';
 import 'package:sutraq/pages/splash_screen.dart';
+import 'package:sutraq/pages/withdraw_fund.dart';
 
 const String splash_screen = '/splash_screen';
 const String walkthrough_screen = '/walkthrough_screen';
@@ -44,6 +48,12 @@ const String add_new_bank_transfer_account = '/add_new_bank_transfer_account';
 const String transfer_summery = '/transfer_summery';
 const String enter_transaction_pin = '/enter_transaction_pin';
 const String transaction_success = '/transaction_success';
+const String add_new_sutraq_transfer_account =
+    '/add_new_sutraq_transfer_account';
+const String enter_transaction_pin_sutraq = '/enter_transaction_pin_sutraq';
+const String transaction_success_sutraq_transfer =
+    '/transaction_success_sutraq_transfer';
+const String withdraw_fund = '/withdraw_fund';
 
 List<GetPage> getPages = [
   GetPage(
@@ -106,4 +116,14 @@ List<GetPage> getPages = [
   GetPage(name: transfer_summery, page: () => TransferSummery()),
   GetPage(name: enter_transaction_pin, page: () => EnterTransactionPin()),
   GetPage(name: transaction_success, page: () => TransactionSuccess()),
+  GetPage(
+      name: add_new_sutraq_transfer_account,
+      page: () => AddNewSutraqTransferAccount()),
+  GetPage(
+      name: enter_transaction_pin_sutraq,
+      page: () => EnterTransactionPinSutraq()),
+  GetPage(
+      name: transaction_success_sutraq_transfer,
+      page: () => TransactionSuccessSutraqTransfer()),
+  GetPage(name: withdraw_fund, page: () => WithdrawFund()),
 ];

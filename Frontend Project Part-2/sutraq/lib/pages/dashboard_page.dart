@@ -244,8 +244,14 @@ class _DashboardPageState extends State<DashboardPage> {
                                           children: [
                                             GestureDetector(
                                               onTap: () {
-                                                dashboardDialog(context,
-                                                    'WITHDRAW FUNDS', () => {});
+                                                dashboardDialog(
+                                                    context,
+                                                    'WITHDRAW FUNDS',
+                                                    () => {
+                                                          Get.back(),
+                                                          Get.toNamed(
+                                                              withdraw_fund)
+                                                        });
                                               },
                                               child: Padding(
                                                 padding: const EdgeInsets.only(
