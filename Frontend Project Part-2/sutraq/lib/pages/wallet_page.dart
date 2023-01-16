@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+import 'package:sutraq/components/dashboard_dialog.dart';
+import 'package:sutraq/components/recent_transactions.dart';
 import 'package:sutraq/components/sutraq_logo.dart';
 import 'package:sutraq/route/route_mange.dart';
 import 'package:sutraq/storage/color_storage.dart';
@@ -98,22 +100,34 @@ class _WalletPageState extends State<WalletPage> {
                                       children: [
                                         Column(
                                           children: [
-                                            Padding(
-                                              padding: const EdgeInsets.only(
-                                                      bottom: 11)
-                                                  .r,
-                                              child: Container(
-                                                height: 43.h,
-                                                width: 43.w,
-                                                decoration: BoxDecoration(
-                                                    color: greenColor1,
-                                                    shape: BoxShape.circle),
-                                                child: Align(
-                                                  alignment: Alignment.center,
-                                                  child: Icon(
-                                                    accountBalanceWallet,
-                                                    color: Color(0xffDADADA),
-                                                    size: 14.w,
+                                            GestureDetector(
+                                              onTap: () => {
+                                                dashboardDialog(
+                                                    context,
+                                                    'FUND WALLET',
+                                                    () => {
+                                                          Get.back(),
+                                                          Get.toNamed(
+                                                              fund_wallet_page)
+                                                        })
+                                              },
+                                              child: Padding(
+                                                padding: const EdgeInsets.only(
+                                                        bottom: 11)
+                                                    .r,
+                                                child: Container(
+                                                  height: 43.h,
+                                                  width: 43.w,
+                                                  decoration: BoxDecoration(
+                                                      color: greenColor1,
+                                                      shape: BoxShape.circle),
+                                                  child: Align(
+                                                    alignment: Alignment.center,
+                                                    child: Icon(
+                                                      accountBalanceWallet,
+                                                      color: Color(0xffDADADA),
+                                                      size: 14.w,
+                                                    ),
                                                   ),
                                                 ),
                                               ),
@@ -129,22 +143,34 @@ class _WalletPageState extends State<WalletPage> {
                                         ),
                                         Column(
                                           children: [
-                                            Padding(
-                                              padding: const EdgeInsets.only(
-                                                      bottom: 11)
-                                                  .r,
-                                              child: Container(
-                                                height: 43.h,
-                                                width: 43.w,
-                                                decoration: BoxDecoration(
-                                                    color: greenColor1,
-                                                    shape: BoxShape.circle),
-                                                child: Align(
-                                                  alignment: Alignment.center,
-                                                  child: Icon(
-                                                    trendingIcon,
-                                                    color: Color(0xffDADADA),
-                                                    size: 14.w,
+                                            GestureDetector(
+                                              onTap: () => {
+                                                dashboardDialog(
+                                                    context,
+                                                    'SEND MONEY',
+                                                    () => {
+                                                          Get.back(),
+                                                          Get.toNamed(
+                                                              send_money)
+                                                        })
+                                              },
+                                              child: Padding(
+                                                padding: const EdgeInsets.only(
+                                                        bottom: 11)
+                                                    .r,
+                                                child: Container(
+                                                  height: 43.h,
+                                                  width: 43.w,
+                                                  decoration: BoxDecoration(
+                                                      color: greenColor1,
+                                                      shape: BoxShape.circle),
+                                                  child: Align(
+                                                    alignment: Alignment.center,
+                                                    child: Icon(
+                                                      trendingIcon,
+                                                      color: Color(0xffDADADA),
+                                                      size: 14.w,
+                                                    ),
                                                   ),
                                                 ),
                                               ),
@@ -160,22 +186,34 @@ class _WalletPageState extends State<WalletPage> {
                                         ),
                                         Column(
                                           children: [
-                                            Padding(
-                                              padding: const EdgeInsets.only(
-                                                      bottom: 11)
-                                                  .r,
-                                              child: Container(
-                                                height: 43.h,
-                                                width: 43.w,
-                                                decoration: BoxDecoration(
-                                                    color: greenColor1,
-                                                    shape: BoxShape.circle),
-                                                child: Align(
-                                                  alignment: Alignment.center,
-                                                  child: Icon(
-                                                    inputIcon,
-                                                    color: Color(0xffDADADA),
-                                                    size: 14.w,
+                                            GestureDetector(
+                                              onTap: () => {
+                                                dashboardDialog(
+                                                    context,
+                                                    'WITHDRAW FUNDS',
+                                                    () => {
+                                                          Get.back(),
+                                                          Get.toNamed(
+                                                              withdraw_fund)
+                                                        })
+                                              },
+                                              child: Padding(
+                                                padding: const EdgeInsets.only(
+                                                        bottom: 11)
+                                                    .r,
+                                                child: Container(
+                                                  height: 43.h,
+                                                  width: 43.w,
+                                                  decoration: BoxDecoration(
+                                                      color: greenColor1,
+                                                      shape: BoxShape.circle),
+                                                  child: Align(
+                                                    alignment: Alignment.center,
+                                                    child: Icon(
+                                                      inputIcon,
+                                                      color: Color(0xffDADADA),
+                                                      size: 14.w,
+                                                    ),
                                                   ),
                                                 ),
                                               ),
@@ -201,602 +239,56 @@ class _WalletPageState extends State<WalletPage> {
                                 child: Column(
                                   children: [
                                     Padding(
-                                      padding:
-                                          const EdgeInsets.only(bottom: 16).r,
+                                      padding: const EdgeInsets.only(
+                                              bottom: 16, top: 28)
+                                          .r,
                                       child: SizedBox(
-                                        width:
-                                            MediaQuery.of(context).size.width,
-                                        child: Padding(
-                                          padding: const EdgeInsets.only(
-                                                  left: 35, top: 22)
-                                              .r,
-                                          child: Text(
-                                            'Recent Transactions',
-                                            style: TextStyle(
-                                                color: Color(0xff333333),
-                                                fontSize: 17.sp,
-                                                fontWeight: FontWeight.w700),
-                                          ),
+                                        width: 303.w,
+                                        child: Text(
+                                          'Recent Transactions',
+                                          style: TextStyle(
+                                              color: Color(0xff333333),
+                                              fontSize: 17.sp,
+                                              fontWeight: FontWeight.w700),
                                         ),
                                       ),
                                     ),
-                                    Padding(
-                                      padding: const EdgeInsets.only(
-                                              left: 35, right: 37)
-                                          .r,
-                                      child: SizedBox(
-                                        height: 56.h,
-                                        child: Container(
-                                          decoration: BoxDecoration(
-                                              border: Border(
-                                                  top: BorderSide(
-                                            color: Color(0xffDEDEDE)
-                                                .withOpacity(.4),
-                                          ))),
-                                          child: Row(
-                                            children: [
-                                              SizedBox(
-                                                height: 24.h,
-                                                width: 24.w,
-                                                child: Stack(children: [
-                                                  Image.asset(
-                                                    'images/incomingBackground.png',
-                                                    height: 24.h,
-                                                    width: 24.w,
-                                                  ),
-                                                  Align(
-                                                    alignment: Alignment.center,
-                                                    child: Image.asset(
-                                                      'images/incoming.png',
-                                                      height: 8.75.h,
-                                                      width: 8.75.w,
-                                                    ),
-                                                  )
-                                                ]),
-                                              ),
-                                              Padding(
-                                                padding: const EdgeInsets.only(
-                                                        left: 13, top: 11)
-                                                    .r,
-                                                child: SizedBox(
-                                                  width: 98.w,
-                                                  child: Column(
-                                                    crossAxisAlignment:
-                                                        CrossAxisAlignment
-                                                            .start,
-                                                    children: [
-                                                      Padding(
-                                                        padding:
-                                                            const EdgeInsets
-                                                                        .only(
-                                                                    bottom: 4)
-                                                                .r,
-                                                        child: Text(
-                                                          'Access Bank',
-                                                          style: TextStyle(
-                                                              color: Color(
-                                                                  0xff0A004A),
-                                                              fontSize: 14.sp,
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .w500),
-                                                        ),
-                                                      ),
-                                                      Text(
-                                                        '28, Jan 2020',
-                                                        textAlign:
-                                                            TextAlign.left,
-                                                        style: TextStyle(
-                                                            color: Color(
-                                                                    0xff929292)
-                                                                .withOpacity(
-                                                                    .7),
-                                                            fontSize: 10.sp,
-                                                            fontWeight:
-                                                                FontWeight
-                                                                    .w400),
-                                                      ),
-                                                    ],
-                                                  ),
-                                                ),
-                                              ),
-                                              SizedBox(
-                                                width: 145.w,
-                                                child: Text(
-                                                  '\$2400',
-                                                  textAlign: TextAlign.end,
-                                                  style: TextStyle(
-                                                      color: Color(0xff0A004A),
-                                                      fontSize: 16.sp,
-                                                      fontWeight:
-                                                          FontWeight.w600),
-                                                ),
-                                              ),
-                                            ],
-                                          ),
-                                        ),
-                                      ),
+                                    RecentTransactions(
+                                      islineThrough: false,
+                                      isReceived: true,
+                                      isDollar: true,
                                     ),
-                                    Padding(
-                                      padding: const EdgeInsets.only(
-                                              left: 35, right: 37)
-                                          .r,
-                                      child: SizedBox(
-                                        height: 56.h,
-                                        child: Container(
-                                          decoration: BoxDecoration(
-                                              border: Border(
-                                                  top: BorderSide(
-                                            color: Color(0xffDEDEDE)
-                                                .withOpacity(.4),
-                                          ))),
-                                          child: Row(
-                                            children: [
-                                              SizedBox(
-                                                height: 24.h,
-                                                width: 24.w,
-                                                child: Stack(children: [
-                                                  Image.asset(
-                                                    'images/outgoingBackground.png',
-                                                    height: 24.h,
-                                                    width: 24.w,
-                                                  ),
-                                                  Align(
-                                                    alignment: Alignment.center,
-                                                    child: Image.asset(
-                                                      'images/outgoing.png',
-                                                      height: 8.75.h,
-                                                      width: 8.75.w,
-                                                    ),
-                                                  )
-                                                ]),
-                                              ),
-                                              Padding(
-                                                padding: const EdgeInsets.only(
-                                                        left: 13, top: 11)
-                                                    .r,
-                                                child: SizedBox(
-                                                  width: 98.w,
-                                                  child: Column(
-                                                    crossAxisAlignment:
-                                                        CrossAxisAlignment
-                                                            .start,
-                                                    children: [
-                                                      Padding(
-                                                        padding:
-                                                            const EdgeInsets
-                                                                        .only(
-                                                                    bottom: 4)
-                                                                .r,
-                                                        child: Text(
-                                                          'Alpha Loans',
-                                                          style: TextStyle(
-                                                              color: Color(
-                                                                  0xff0A004A),
-                                                              fontSize: 14.sp,
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .w500),
-                                                        ),
-                                                      ),
-                                                      Text(
-                                                        '28, Jan 2020',
-                                                        textAlign:
-                                                            TextAlign.left,
-                                                        style: TextStyle(
-                                                            color: Color(
-                                                                    0xff929292)
-                                                                .withOpacity(
-                                                                    .7),
-                                                            fontSize: 10.sp,
-                                                            fontWeight:
-                                                                FontWeight
-                                                                    .w400),
-                                                      ),
-                                                    ],
-                                                  ),
-                                                ),
-                                              ),
-                                              SizedBox(
-                                                width: 145.w,
-                                                child: Row(
-                                                  mainAxisAlignment:
-                                                      MainAxisAlignment.end,
-                                                  children: [
-                                                    Text(
-                                                      'N',
-                                                      style: TextStyle(
-                                                          decoration:
-                                                              TextDecoration
-                                                                  .lineThrough,
-                                                          decorationColor:
-                                                              Color(0xff0A004A),
-                                                          decorationThickness:
-                                                              2,
-                                                          color:
-                                                              Color(0xff0A004A),
-                                                          fontSize: 16.sp,
-                                                          fontWeight:
-                                                              FontWeight.w600),
-                                                    ),
-                                                    Text(
-                                                      '10000',
-                                                      style: TextStyle(
-                                                          color:
-                                                              Color(0xff0A004A),
-                                                          fontSize: 16.sp,
-                                                          fontWeight:
-                                                              FontWeight.w600),
-                                                    ),
-                                                  ],
-                                                ),
-                                              ),
-                                            ],
-                                          ),
-                                        ),
-                                      ),
+                                    RecentTransactions(
+                                      islineThrough: true,
+                                      isReceived: false,
+                                      isDollar: false,
+                                      amount: '10,000',
                                     ),
-                                    Padding(
-                                      padding: const EdgeInsets.only(
-                                              left: 35, right: 37)
-                                          .r,
-                                      child: SizedBox(
-                                        height: 56.h,
-                                        child: Container(
-                                          decoration: BoxDecoration(
-                                              border: Border(
-                                                  top: BorderSide(
-                                            color: Color(0xffDEDEDE)
-                                                .withOpacity(.4),
-                                          ))),
-                                          child: Row(
-                                            children: [
-                                              SizedBox(
-                                                height: 24.h,
-                                                width: 24.w,
-                                                child: Stack(children: [
-                                                  Image.asset(
-                                                    'images/incomingBackground.png',
-                                                    height: 24.h,
-                                                    width: 24.w,
-                                                  ),
-                                                  Align(
-                                                    alignment: Alignment.center,
-                                                    child: Image.asset(
-                                                      'images/incoming.png',
-                                                      height: 8.75.h,
-                                                      width: 8.75.w,
-                                                    ),
-                                                  )
-                                                ]),
-                                              ),
-                                              Padding(
-                                                padding: const EdgeInsets.only(
-                                                        left: 13, top: 11)
-                                                    .r,
-                                                child: SizedBox(
-                                                  width: 98.w,
-                                                  child: Column(
-                                                    crossAxisAlignment:
-                                                        CrossAxisAlignment
-                                                            .start,
-                                                    children: [
-                                                      Padding(
-                                                        padding:
-                                                            const EdgeInsets
-                                                                        .only(
-                                                                    bottom: 4)
-                                                                .r,
-                                                        child: Text(
-                                                          'Access Bank',
-                                                          style: TextStyle(
-                                                              color: Color(
-                                                                  0xff0A004A),
-                                                              fontSize: 14.sp,
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .w500),
-                                                        ),
-                                                      ),
-                                                      Text(
-                                                        '28, Jan 2020',
-                                                        textAlign:
-                                                            TextAlign.left,
-                                                        style: TextStyle(
-                                                            color: Color(
-                                                                    0xff929292)
-                                                                .withOpacity(
-                                                                    .7),
-                                                            fontSize: 10.sp,
-                                                            fontWeight:
-                                                                FontWeight
-                                                                    .w400),
-                                                      ),
-                                                    ],
-                                                  ),
-                                                ),
-                                              ),
-                                              SizedBox(
-                                                width: 145.w,
-                                                child: Row(
-                                                  mainAxisAlignment:
-                                                      MainAxisAlignment.end,
-                                                  children: [
-                                                    Text('N4',
-                                                        style: TextStyle(
-                                                            color: Color(
-                                                                0xff0A004A),
-                                                            fontSize: 16.sp,
-                                                            fontWeight:
-                                                                FontWeight.w600,
-                                                            decoration:
-                                                                TextDecoration
-                                                                    .lineThrough,
-                                                            decorationColor:
-                                                                Color(
-                                                                    0xff0a004a),
-                                                            decorationThickness:
-                                                                2)),
-                                                    Text(
-                                                      ',500,000',
-                                                      style: TextStyle(
-                                                          color:
-                                                              Color(0xff0A004A),
-                                                          fontSize: 16.sp,
-                                                          fontWeight:
-                                                              FontWeight.w600),
-                                                    ),
-                                                  ],
-                                                ),
-                                              ),
-                                            ],
-                                          ),
-                                        ),
-                                      ),
+                                    RecentTransactions(
+                                      islineThrough: true,
+                                      isReceived: true,
+                                      isDollar: false,
+                                      amount: '4,500,000',
                                     ),
-                                    Padding(
-                                      padding: const EdgeInsets.only(
-                                              left: 35, right: 37)
-                                          .r,
-                                      child: SizedBox(
-                                        height: 56.h,
-                                        child: Container(
-                                          decoration: BoxDecoration(
-                                              border: Border(
-                                                  top: BorderSide(
-                                            color: Color(0xffDEDEDE)
-                                                .withOpacity(.4),
-                                          ))),
-                                          child: Row(
-                                            children: [
-                                              SizedBox(
-                                                height: 24.h,
-                                                width: 24.w,
-                                                child: Stack(children: [
-                                                  Image.asset(
-                                                    'images/outgoingBackground.png',
-                                                    height: 24.h,
-                                                    width: 24.w,
-                                                  ),
-                                                  Align(
-                                                    alignment: Alignment.center,
-                                                    child: Image.asset(
-                                                      'images/outgoing.png',
-                                                      height: 8.75.h,
-                                                      width: 8.75.w,
-                                                    ),
-                                                  )
-                                                ]),
-                                              ),
-                                              Padding(
-                                                padding: const EdgeInsets.only(
-                                                        left: 13, top: 11)
-                                                    .r,
-                                                child: SizedBox(
-                                                  width: 98.w,
-                                                  child: Column(
-                                                    crossAxisAlignment:
-                                                        CrossAxisAlignment
-                                                            .start,
-                                                    children: [
-                                                      Padding(
-                                                        padding:
-                                                            const EdgeInsets
-                                                                        .only(
-                                                                    bottom: 4)
-                                                                .r,
-                                                        child: Text(
-                                                          'Alpha Loans',
-                                                          style: TextStyle(
-                                                              color: Color(
-                                                                  0xff0A004A),
-                                                              fontSize: 14.sp,
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .w500),
-                                                        ),
-                                                      ),
-                                                      Text(
-                                                        '28, Jan 2020',
-                                                        textAlign:
-                                                            TextAlign.left,
-                                                        style: TextStyle(
-                                                            color: Color(
-                                                                    0xff929292)
-                                                                .withOpacity(
-                                                                    .7),
-                                                            fontSize: 10.sp,
-                                                            fontWeight:
-                                                                FontWeight
-                                                                    .w400),
-                                                      ),
-                                                    ],
-                                                  ),
-                                                ),
-                                              ),
-                                              SizedBox(
-                                                  width: 145.w,
-                                                  child: Row(
-                                                    mainAxisAlignment:
-                                                        MainAxisAlignment.end,
-                                                    children: [
-                                                      Text('N',
-                                                          style: TextStyle(
-                                                              color: Color(
-                                                                  0xff0A004A),
-                                                              fontSize: 16.sp,
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .w600,
-                                                              decorationColor:
-                                                                  Color(
-                                                                      0xff0A004A),
-                                                              decorationThickness:
-                                                                  2,
-                                                              decoration:
-                                                                  TextDecoration
-                                                                      .lineThrough)),
-                                                      Text(
-                                                        '10000',
-                                                        style: TextStyle(
-                                                            color: Color(
-                                                                0xff0A004A),
-                                                            fontSize: 16.sp,
-                                                            fontWeight:
-                                                                FontWeight
-                                                                    .w600),
-                                                      ),
-                                                    ],
-                                                  )),
-                                            ],
-                                          ),
-                                        ),
-                                      ),
+                                    RecentTransactions(
+                                      islineThrough: true,
+                                      isReceived: false,
+                                      isDollar: false,
+                                      amount: '10,000',
                                     ),
-                                    Padding(
-                                      padding: const EdgeInsets.only(
-                                              left: 35, right: 37, bottom: 15)
-                                          .r,
-                                      child: SizedBox(
-                                        //height: 50.h,
-                                        child: Container(
-                                          decoration: BoxDecoration(
-                                              border: Border(
-                                                  top: BorderSide(
-                                            color: Color(0xffDEDEDE)
-                                                .withOpacity(.4),
-                                          ))),
-                                          child: Row(
-                                            children: [
-                                              SizedBox(
-                                                height: 24.h,
-                                                width: 24.w,
-                                                child: Stack(children: [
-                                                  Image.asset(
-                                                    'images/incomingBackground.png',
-                                                    height: 24.h,
-                                                    width: 24.w,
-                                                  ),
-                                                  Align(
-                                                    alignment: Alignment.center,
-                                                    child: Image.asset(
-                                                      'images/incoming.png',
-                                                      height: 8.75.h,
-                                                      width: 8.75.w,
-                                                    ),
-                                                  )
-                                                ]),
-                                              ),
-                                              Padding(
-                                                padding: const EdgeInsets.only(
-                                                        left: 13, top: 11)
-                                                    .r,
-                                                child: SizedBox(
-                                                  width: 98.w,
-                                                  child: Column(
-                                                    crossAxisAlignment:
-                                                        CrossAxisAlignment
-                                                            .start,
-                                                    children: [
-                                                      Padding(
-                                                        padding:
-                                                            const EdgeInsets
-                                                                        .only(
-                                                                    bottom: 4)
-                                                                .r,
-                                                        child: Text(
-                                                          'Access Bank',
-                                                          style: TextStyle(
-                                                              color: Color(
-                                                                  0xff0A004A),
-                                                              fontSize: 14.sp,
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .w500),
-                                                        ),
-                                                      ),
-                                                      Text(
-                                                        '28, Jan 2020',
-                                                        textAlign:
-                                                            TextAlign.left,
-                                                        style: TextStyle(
-                                                            color: Color(
-                                                                    0xff929292)
-                                                                .withOpacity(
-                                                                    .7),
-                                                            fontSize: 10.sp,
-                                                            fontWeight:
-                                                                FontWeight
-                                                                    .w400),
-                                                      ),
-                                                    ],
-                                                  ),
-                                                ),
-                                              ),
-                                              SizedBox(
-                                                width: 145.w,
-                                                child: Row(
-                                                  mainAxisAlignment:
-                                                      MainAxisAlignment.end,
-                                                  children: [
-                                                    Text(
-                                                      'N',
-                                                      style: TextStyle(
-                                                          color:
-                                                              Color(0xff0A004A),
-                                                          fontSize: 16.sp,
-                                                          fontWeight:
-                                                              FontWeight.w600,
-                                                          decoration:
-                                                              TextDecoration
-                                                                  .lineThrough,
-                                                          decorationColor:
-                                                              Color(0xff0A004A),
-                                                          decorationThickness:
-                                                              2),
-                                                    ),
-                                                    Text(
-                                                      '2000',
-                                                      style: TextStyle(
-                                                          color:
-                                                              Color(0xff0A004A),
-                                                          fontSize: 16.sp,
-                                                          fontWeight:
-                                                              FontWeight.w600),
-                                                    ),
-                                                  ],
-                                                ),
-                                              ),
-                                            ],
-                                          ),
-                                        ),
-                                      ),
+                                    RecentTransactions(
+                                      islineThrough: true,
+                                      isReceived: true,
+                                      isDollar: false,
+                                      amount: '2,000',
                                     ),
                                     Padding(
                                       padding:
                                           const EdgeInsets.only(bottom: 12).r,
                                       child: TextButton(
-                                          onPressed: () {},
+                                          onPressed: () {
+                                            Get.toNamed(refer_a_freind);
+                                          },
                                           child: Text(
                                             'View All',
                                             style: TextStyle(
