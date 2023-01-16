@@ -15,6 +15,7 @@ import 'package:sutraq/pages/forgot_password_screen.dart';
 import 'package:sutraq/pages/fund_wallet_page.dart';
 import 'package:sutraq/pages/login_tip.dart';
 import 'package:sutraq/pages/notifications_screen.dart';
+import 'package:sutraq/pages/refer_a_friend.dart';
 import 'package:sutraq/pages/send_money.dart';
 import 'package:sutraq/pages/settings_page.dart';
 import 'package:sutraq/pages/sutraq_transfer.dart';
@@ -56,6 +57,7 @@ const String transaction_success_sutraq_transfer =
     '/transaction_success_sutraq_transfer';
 const String withdraw_fund = '/withdraw_fund';
 const String view_all_transactions = '/view_all_transactions';
+const String refer_a_freind = '/refer_a_freind';
 
 List<GetPage> getPages = [
   GetPage(
@@ -129,4 +131,5 @@ List<GetPage> getPages = [
       page: () => TransactionSuccessSutraqTransfer()),
   GetPage(name: withdraw_fund, page: () => WithdrawFund()),
   GetPage(name: view_all_transactions, page: () => ViewAllTransactions()),
+  GetPage(name: refer_a_freind, page: () => ReferAFriend()),
 ];

@@ -361,9 +361,16 @@ class _DashboardPageState extends State<DashboardPage> {
                                               fontSize: 14.sp,
                                               fontWeight: FontWeight.w700),
                                         )),
-                                    Image.asset(
-                                      'images/refer.png',
-                                      width: 360.w,
+                                    SizedBox(
+                                      height: 10.h,
+                                    ),
+                                    InkWell(
+                                      onTap: () =>
+                                          {Get.toNamed(refer_a_freind)},
+                                      child: Image.asset(
+                                        'images/refer.png',
+                                        width: 360.w,
+                                      ),
                                     )
                                   ],
                                 ),

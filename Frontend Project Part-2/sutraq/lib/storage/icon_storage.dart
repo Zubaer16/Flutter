@@ -26,3 +26,4 @@ const verifiedUser = Icons.verified_user_outlined;
 const done = Icons.done;
 const receiptLong = Icons.receipt_long_sharp;
 const personOutlined = Icons.person_outlined;
+const contentCopy = Icons.content_copy;

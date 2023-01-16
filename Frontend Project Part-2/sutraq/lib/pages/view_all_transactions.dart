@@ -150,7 +150,37 @@ class ViewAllTransactions extends StatelessWidget {
             },
             body: TabBarView(
               // These are the contents of the tab views, below the tabs.
-              children: [Text('hi1'), Text('hi2'), Text('hi3')],
+              children: [
+                ListView.builder(
+                    padding: EdgeInsets.fromLTRB(20, 0, 20, 0).r,
+                    itemCount: 20,
+                    itemBuilder: (_, index) {
+                      if (index == 0 || index == 1) {
+                        return RecentTransactions(
+                          islineThrough: true,
+                          isReceived: true,
+                          isDollar: false,
+                          amount: '240,000',
+                        );
+                      } else if (index % 2 == 1) {
+                        return RecentTransactions(
+                            islineThrough: true,
+                            isReceived: true,
+                            isDollar: false,
+                            amount: '240,000');
+                      } else if (index % 2 == 0) {
+                        return RecentTransactions(
+                            islineThrough: true,
+                            isReceived: false,
+                            isDollar: false,
+                            amount: '240,000');
+                      } else {
+                        return Container();
+                      }
+                    }),
+                Text('Debit Tab'),
+                Text('Credit Tab')
+              ],
             ),
           ),
         ),
