@@ -70,6 +70,10 @@ class CustomInput extends StatelessWidget {
             SizedBox(
               height: 57.h,
               child: TextFormField(
+                style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 14.sp,
+                    fontWeight: FontWeight.w500),
                 keyboardType: inputFieldType,
                 decoration: InputDecoration(
                     hintText: placeholder

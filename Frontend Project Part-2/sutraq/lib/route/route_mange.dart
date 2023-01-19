@@ -3,6 +3,7 @@
 import 'package:get/get.dart';
 import 'package:sutraq/pages/add_new_bank_account.dart';
 import 'package:sutraq/pages/add_new_bank_transfer_account.dart';
+import 'package:sutraq/pages/add_new_card_bank_account.dart';
 import 'package:sutraq/pages/add_new_sutraq_transfer_account.dart';
 import 'package:sutraq/pages/bank_transfer.dart';
 import 'package:sutraq/pages/cards_page.dart';
@@ -58,6 +59,7 @@ const String transaction_success_sutraq_transfer =
 const String withdraw_fund = '/withdraw_fund';
 const String view_all_transactions = '/view_all_transactions';
 const String refer_a_freind = '/refer_a_freind';
+const String add_new_card_bank_account = '/add_new_card_bank_account';
 
 List<GetPage> getPages = [
   GetPage(
@@ -132,4 +134,5 @@ List<GetPage> getPages = [
   GetPage(name: withdraw_fund, page: () => WithdrawFund()),
   GetPage(name: view_all_transactions, page: () => ViewAllTransactions()),
   GetPage(name: refer_a_freind, page: () => ReferAFriend()),
+  GetPage(name: add_new_card_bank_account, page: () => AddNewCardBankAccount()),
 ];

@@ -26,7 +26,9 @@ class ForgotPasswordScreen extends StatelessWidget {
             child: Align(
               alignment: Alignment.topLeft,
               child: Padding(
-                  padding: const EdgeInsets.only(top: 29, left: 10).r,
+                  padding: const EdgeInsets.only(
+                    top: 29,
+                  ).r,
                   child: CustomCircleButton(onPressed: () => {Get.back()})),
             ),
           ),

@@ -28,6 +28,14 @@ class _WalletPageState extends State<WalletPage> {
     return SafeArea(
         child: Scaffold(
             backgroundColor: splashBackgroundColor,
+            floatingActionButton: FloatingActionButton(
+              onPressed: () => {Get.toNamed(add_new_bank_transfer_account)},
+              backgroundColor: Color(0xff046AE1),
+              child: Icon(
+                add,
+                color: Colors.white,
+              ),
+            ),
             body: SingleChildScrollView(
               child: Column(
                 children: [

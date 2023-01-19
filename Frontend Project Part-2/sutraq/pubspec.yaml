@@ -35,6 +35,7 @@ dependencies:
   visibility_detector: ^0.3.3
   pin_code_fields: ^7.4.0
   fluttertoast: ^8.1.2
+  intl: ^0.18.0
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.

@@ -7,8 +7,8 @@ import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:sutraq/components/custom_cards.dart';
 import 'package:sutraq/route/route_mange.dart';
 import 'package:sutraq/storage/color_storage.dart';
+import 'package:sutraq/storage/icon_storage.dart';
 import 'package:visibility_detector/visibility_detector.dart';
-
 import '../components/recent_transactions.dart';
 
 class CardsPage extends StatefulWidget {
@@ -33,6 +33,14 @@ class _CardsPageState extends State<CardsPage> {
     return SafeArea(
         child: Scaffold(
             backgroundColor: Color(0xffF1F3F4),
+            floatingActionButton: FloatingActionButton(
+              onPressed: () => {Get.toNamed(add_new_card_bank_account)},
+              backgroundColor: Color(0xff046AE1),
+              child: Icon(
+                add,
+                color: Colors.white,
+              ),
+            ),
             body: Column(
               children: [
                 SizedBox(
@@ -94,7 +102,6 @@ class _CardsPageState extends State<CardsPage> {
                 ),
                 Container(
                   width: 351.w,
-                  height: 413.h,
                   decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.all(Radius.circular(10).r)),
@@ -146,14 +153,13 @@ class _CardsPageState extends State<CardsPage> {
                         amount: '2,000',
                       ),
                       SizedBox(
-                        height: 29.h,
+                        height: 49.h,
                       ),
                       TextButton(
                           onPressed: () {
                             Get.toNamed(view_all_transactions);
                           },
                           style: TextButton.styleFrom(
-                              // padding: EdgeInsets.zero,
                               tapTargetSize: MaterialTapTargetSize.shrinkWrap,
                               minimumSize: Size.zero),
                           child: Text(
@@ -164,8 +170,8 @@ class _CardsPageState extends State<CardsPage> {
                                 fontWeight: FontWeight.w700),
                           )),
                       SizedBox(
-                        height: 10.h,
-                      ),
+                        height: 15.h,
+                      )
                     ],
                   ),
                 )

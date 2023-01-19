@@ -38,7 +38,9 @@ class SendMoney extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(top: 20, left: 10).r,
+                padding: const EdgeInsets.only(
+                  top: 20,
+                ).r,
                 child: CustomCircleButton(onPressed: () => {Get.back()}),
               ),
             ],
