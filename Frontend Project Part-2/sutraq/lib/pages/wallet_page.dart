@@ -287,7 +287,7 @@ class _WalletPageState extends State<WalletPage> {
                                           const EdgeInsets.only(bottom: 12).r,
                                       child: TextButton(
                                           onPressed: () {
-                                            Get.toNamed(refer_a_freind);
+                                            Get.toNamed(view_all_transactions);
                                           },
                                           child: Text(
                                             'View All',
@@ -296,7 +296,6 @@ class _WalletPageState extends State<WalletPage> {
                                                 fontSize: 14.sp,
                                                 fontWeight: FontWeight.w700),
                                           )),
-                                      
                                     ),
                                   ],
                                 ),
