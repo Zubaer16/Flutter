@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -19,9 +21,9 @@ class BankTransfer extends StatelessWidget {
         child: GestureDetector(
       onTap: () => {FocusScope.of(context).unfocus()},
       child: Scaffold(
-          resizeToAvoidBottomInset: false,
           backgroundColor: const Color(0xffe5e5e5),
           body: SingleChildScrollView(
+            physics: BouncingScrollPhysics(),
             child: Column(
               children: [
                 Stack(
