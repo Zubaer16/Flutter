@@ -7,8 +7,8 @@ import 'package:sutraq/components/custom_button.dart';
 import 'package:sutraq/route/route_mange.dart';
 import 'package:sutraq/storage/color_storage.dart';
 
-class LoginTipScreen extends StatelessWidget {
-  const LoginTipScreen({Key? key}) : super(key: key);
+class OpenSutraqAccount extends StatelessWidget {
+  const OpenSutraqAccount({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -22,19 +22,36 @@ class LoginTipScreen extends StatelessWidget {
         child: Column(
           children: [
             SizedBox(
-              height: 85.h,
+              height: 156.h,
             ),
             Align(
                 alignment: Alignment.topCenter,
                 child: Image.asset('images/tip.png')),
+            Text(
+              'Welcome to Sutraq!',
+              style: TextStyle(
+                  color: greenColor,
+                  fontSize: 25.sp,
+                  fontWeight: FontWeight.w600),
+            ),
             SizedBox(
-              height: 374.h,
+              height: 20.h,
+            ),
+            Text(
+              'Let’s start by opening a new sutraq account',
+              style: TextStyle(
+                  color: Color(0xffF0F0F0),
+                  fontSize: 12.sp,
+                  fontWeight: FontWeight.w400),
+            ),
+            SizedBox(
+              height: 170.h,
             ),
             CustomButton(
               onPressed: () {
-                Get.toNamed(dashboard_screen);
+                Get.toNamed(try_sutraq_add_new_account);
               },
-              buttonText: 'Got It!',
+              buttonText: 'Open Account'.toUpperCase(),
               buttonWidth: 295.w,
               buttonFontSize: 16.sp,
               buttonTextWeight: FontWeight.w500,
@@ -44,5 +61,6 @@ class LoginTipScreen extends StatelessWidget {
         ),
       ),
     );
+    ;
   }
 }

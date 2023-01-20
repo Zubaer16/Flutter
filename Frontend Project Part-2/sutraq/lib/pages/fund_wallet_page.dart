@@ -34,15 +34,13 @@ class FundWalletPage extends StatelessWidget {
                     ).r,
                     child: SizedBox(
                       width: MediaQuery.of(context).size.width,
-                      child: Text(
-                        'Fund Wallet',
-                        style: TextStyle(
-                          color: Color(0xff08083d),
-                          fontSize: 20.sp,
-                          fontWeight: FontWeight.w600,
-                        ),
-                        textAlign: TextAlign.center,
-                      ),
+                      child: Text('Fund Wallet',
+                          style: TextStyle(
+                            color: Color(0xff08083d),
+                            fontSize: 20.sp,
+                            fontWeight: FontWeight.w600,
+                          ),
+                          textAlign: TextAlign.center),
                     ),
                   ),
                   Padding(

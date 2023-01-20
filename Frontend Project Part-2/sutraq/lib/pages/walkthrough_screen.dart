@@ -133,15 +133,22 @@ class _WalkthroughScreenState extends State<WalkthroughScreen> {
                     Get.toNamed(welcome_back_screen);
                   }),
               SizedBox(
-                height: 18.h,
+                height: 2.h,
               ),
-              Text(
-                'TRY SUTRAQ',
-                style: TextStyle(
-                    fontWeight: FontWeight.w700,
-                    fontSize: 16.sp,
-                    color: Colors.white),
-              )
+              TextButton(
+                  onPressed: () => {Get.toNamed(open_sutraq_account)},
+                  style: TextButton.styleFrom(
+                      // padding: EdgeInsets.zero,
+                      // tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                      // minimumSize: Size.zero
+                      ),
+                  child: Text(
+                    'Try Sutraq'.toUpperCase(),
+                    style: TextStyle(
+                        fontWeight: FontWeight.w700,
+                        fontSize: 16.sp,
+                        color: Colors.white),
+                  ))
             ],
           ),
         )
