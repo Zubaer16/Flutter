@@ -55,7 +55,7 @@ class _CardsPageState extends State<CardsPage> {
                   height: 31.h,
                 ),
                 SizedBox(
-                  height: 150.h,
+                  height: 151.h,
                   child: ListView.builder(
                     shrinkWrap: true,
                     scrollDirection: Axis.horizontal,
