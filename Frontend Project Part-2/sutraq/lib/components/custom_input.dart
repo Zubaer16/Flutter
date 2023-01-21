@@ -75,6 +75,8 @@ class CustomInput extends StatelessWidget {
                     fontSize: 14.sp,
                     fontWeight: FontWeight.w500),
                 keyboardType: inputFieldType,
+                obscureText: inputFieldType == TextInputType.visiblePassword,
+                obscuringCharacter: '*',
                 decoration: InputDecoration(
                     hintText: placeholder
                         ? placeholderText ?? 'Please Enter Placeholder'

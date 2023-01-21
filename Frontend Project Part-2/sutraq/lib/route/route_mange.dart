@@ -8,13 +8,14 @@ import 'package:sutraq/pages/add_new_sutraq_transfer_account.dart';
 import 'package:sutraq/pages/bank_transfer.dart';
 import 'package:sutraq/pages/cards_page.dart';
 import 'package:sutraq/pages/check_inbox.dart';
+import 'package:sutraq/pages/create_sutraq_account.dart';
 import 'package:sutraq/pages/dashboard_page.dart';
 import 'package:sutraq/pages/dashboard_screen.dart';
 import 'package:sutraq/pages/enter_transaction_pin.dart';
 import 'package:sutraq/pages/enter_transaction_pin_sutraq.dart';
 import 'package:sutraq/pages/forgot_password_screen.dart';
 import 'package:sutraq/pages/fund_wallet_page.dart';
-import 'package:sutraq/pages/good_job.dart';
+import 'package:sutraq/pages/good.dart';
 import 'package:sutraq/pages/login_tip.dart';
 import 'package:sutraq/pages/notifications_screen.dart';
 import 'package:sutraq/pages/open_sutraq_account.dart';
@@ -25,7 +26,6 @@ import 'package:sutraq/pages/sutraq_transfer.dart';
 import 'package:sutraq/pages/transaction_success.dart';
 import 'package:sutraq/pages/transaction_success_sutraq_transfer.dart';
 import 'package:sutraq/pages/transfer_summery.dart';
-import 'package:sutraq/pages/try_sutraq_add_new_account.dart';
 import 'package:sutraq/pages/view_all_transactions.dart';
 import 'package:sutraq/pages/wallet_page.dart';
 import 'package:sutraq/pages/welcome_back_screen.dart';
@@ -64,8 +64,8 @@ const String view_all_transactions = '/view_all_transactions';
 const String refer_a_freind = '/refer_a_freind';
 const String add_new_card_bank_account = '/add_new_card_bank_account';
 const String open_sutraq_account = '/open_sutraq_account';
-const String try_sutraq_add_new_account = '/try_sutraq_add_new_account';
-const String good_job = '/good_job';
+const String create_sutraq_account = '/create_sutraq_account';
+const String good = '/good';
 
 List<GetPage> getPages = [
   GetPage(
@@ -142,7 +142,6 @@ List<GetPage> getPages = [
   GetPage(name: refer_a_freind, page: () => ReferAFriend()),
   GetPage(name: add_new_card_bank_account, page: () => AddNewCardBankAccount()),
   GetPage(name: open_sutraq_account, page: () => OpenSutraqAccount()),
-  GetPage(
-      name: try_sutraq_add_new_account, page: () => TrySutraqAddNewAccount()),
-  GetPage(name: good_job, page: () => GoodJob()),
+  GetPage(name: create_sutraq_account, page: () => CreateSutraqAccount()),
+  GetPage(name: good, page: () => Good()),
 ];

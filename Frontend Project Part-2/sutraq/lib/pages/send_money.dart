@@ -27,7 +27,7 @@ class SendMoney extends StatelessWidget {
                 child: SizedBox(
                   width: MediaQuery.of(context).size.width,
                   child: Text(
-                    'Fund Wallet',
+                    'Bank Transfer',
                     style: TextStyle(
                       color: const Color(0xff08083d),
                       fontSize: 20.sp,

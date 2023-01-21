@@ -7,8 +7,8 @@ import 'package:sutraq/components/custom_button.dart';
 import 'package:sutraq/route/route_mange.dart';
 import 'package:sutraq/storage/color_storage.dart';
 
-class OpenSutraqAccount extends StatelessWidget {
-  const OpenSutraqAccount({super.key});
+class Good extends StatelessWidget {
+  const Good({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +28,7 @@ class OpenSutraqAccount extends StatelessWidget {
                 alignment: Alignment.topCenter,
                 child: Image.asset('images/tip.png')),
             Text(
-              'Welcome to Sutraq!',
+              'Good!',
               style: TextStyle(
                   color: greenColor,
                   fontSize: 25.sp,
@@ -38,7 +38,7 @@ class OpenSutraqAccount extends StatelessWidget {
               height: 20.h,
             ),
             Text(
-              'Let’s start by opening a new sutraq account',
+              'Now tell us a bit about yourself',
               style: TextStyle(
                   color: Color(0xffF0F0F0),
                   fontSize: 12.sp,
@@ -48,10 +48,8 @@ class OpenSutraqAccount extends StatelessWidget {
               height: 170.h,
             ),
             CustomButton(
-              onPressed: () {
-                Get.toNamed(create_sutraq_account);
-              },
-              buttonText: 'Open Account'.toUpperCase(),
+              onPressed: () {},
+              buttonText: 'KYC'.toUpperCase(),
               buttonWidth: 295.w,
               buttonFontSize: 16.sp,
               buttonTextWeight: FontWeight.w500,

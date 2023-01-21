@@ -1,9 +1,13 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:sutraq/components/custom_button.dart';
 import 'package:sutraq/components/custom_circle_button.dart';
 import 'package:sutraq/components/custom_dropdown.dart';
+import 'package:sutraq/pages/good.dart';
+import 'package:sutraq/route/route_mange.dart';
 import 'package:sutraq/storage/color_storage.dart';
 
 class AddNewBankTransferAccount extends StatelessWidget {
