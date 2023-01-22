@@ -26,6 +26,7 @@ import 'package:sutraq/pages/sutraq_transfer.dart';
 import 'package:sutraq/pages/transaction_success.dart';
 import 'package:sutraq/pages/transaction_success_sutraq_transfer.dart';
 import 'package:sutraq/pages/transfer_summery.dart';
+import 'package:sutraq/pages/upload_photo.dart';
 import 'package:sutraq/pages/view_all_transactions.dart';
 import 'package:sutraq/pages/wallet_page.dart';
 import 'package:sutraq/pages/welcome_back_screen.dart';
@@ -66,6 +67,7 @@ const String add_new_card_bank_account = '/add_new_card_bank_account';
 const String open_sutraq_account = '/open_sutraq_account';
 const String create_sutraq_account = '/create_sutraq_account';
 const String good = '/good';
+const String upload_photo = '/upload_photo';
 
 List<GetPage> getPages = [
   GetPage(
@@ -144,4 +146,5 @@ List<GetPage> getPages = [
   GetPage(name: open_sutraq_account, page: () => OpenSutraqAccount()),
   GetPage(name: create_sutraq_account, page: () => CreateSutraqAccount()),
   GetPage(name: good, page: () => Good()),
+  GetPage(name: upload_photo, page: () => UploadPhoto()),
 ];

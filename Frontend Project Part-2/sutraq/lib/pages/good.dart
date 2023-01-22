@@ -48,7 +48,9 @@ class Good extends StatelessWidget {
               height: 170.h,
             ),
             CustomButton(
-              onPressed: () {},
+              onPressed: () {
+                Get.toNamed(upload_photo);
+              },
               buttonText: 'KYC'.toUpperCase(),
               buttonWidth: 295.w,
               buttonFontSize: 16.sp,

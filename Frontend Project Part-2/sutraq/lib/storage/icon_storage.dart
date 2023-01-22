@@ -28,3 +28,4 @@ const receiptLong = Icons.receipt_long_sharp;
 const personOutlined = Icons.person_outlined;
 const contentCopy = Icons.content_copy;
 const add = Icons.add;
+const image_outlined = Icons.image_outlined;
