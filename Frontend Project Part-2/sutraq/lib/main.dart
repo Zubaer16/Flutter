@@ -1,11 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:provider/provider.dart';
 import 'package:sutraq/pages/splash_screen.dart';
+import 'package:sutraq/provider/walkthrough_screen_class.dart';
+import 'package:sutraq/provider/walkthrough_screen_provider.dart';
 import 'package:sutraq/route/route_mange.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (_) => WalkthroughScreenProvider())
+      ],
+      child: MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {

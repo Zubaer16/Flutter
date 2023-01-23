@@ -7,7 +7,6 @@ import 'package:dotted_border/dotted_border.dart';
 import 'package:sutraq/components/custom_button.dart';
 import 'package:sutraq/storage/color_storage.dart';
 import 'package:sutraq/storage/icon_storage.dart';
-import 'package:dotted_border/dotted_border.dart';
 
 class UploadPhoto extends StatelessWidget {
   const UploadPhoto({super.key});
