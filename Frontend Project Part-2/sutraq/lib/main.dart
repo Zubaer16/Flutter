@@ -3,7 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:provider/provider.dart';
 import 'package:sutraq/pages/splash_screen.dart';
-import 'package:sutraq/provider/walkthrough_screen_class.dart';
+import 'package:sutraq/provider/dashboard_page_indicator_provider.dart';
+import 'package:sutraq/provider/page_change_provider.dart';
 import 'package:sutraq/provider/walkthrough_screen_provider.dart';
 import 'package:sutraq/route/route_mange.dart';
 
@@ -11,7 +12,9 @@ void main() {
   runApp(
     MultiProvider(
       providers: [
-        ChangeNotifierProvider(create: (_) => WalkthroughScreenProvider())
+        ChangeNotifierProvider(create: (_) => WalkthroughScreenProvider()),
+        ChangeNotifierProvider(create: (_) => PageChangeProvider()),
+        ChangeNotifierProvider(create: (_) => DashboardPageIndicatorProvider()),
       ],
       child: MyApp(),
     ),

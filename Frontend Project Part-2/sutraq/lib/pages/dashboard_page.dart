@@ -2,28 +2,28 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:provider/provider.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:sutraq/components/dashboard_dialog.dart';
 import 'package:sutraq/components/recent_transactions.dart';
 import 'package:sutraq/components/sutraq_logo.dart';
+import 'package:sutraq/provider/dashboard_page_indicator_provider.dart';
+import 'package:sutraq/provider/page_change_provider.dart';
 import 'package:sutraq/route/route_mange.dart';
 import 'package:sutraq/storage/color_storage.dart';
 import 'package:sutraq/storage/icon_storage.dart';
 import 'package:visibility_detector/visibility_detector.dart';
 
-class DashboardPage extends StatefulWidget {
+final slider = [const FirstSlider(), const SecondSlider(), const ThirdSlider()];
+
+class DashboardPage extends StatelessWidget {
   const DashboardPage({Key? key}) : super(key: key);
 
   @override
-  State<DashboardPage> createState() => _DashboardPageState();
-}
-
-final slider = [const FirstSlider(), const SecondSlider(), const ThirdSlider()];
-int _currentItem = 0;
-
-class _DashboardPageState extends State<DashboardPage> {
-  @override
   Widget build(BuildContext context) {
+    final dashboardPageIndicator =
+        Provider.of<DashboardPageIndicatorProvider>(context, listen: false);
+    print('build');
     return SafeArea(
         child: Scaffold(
             backgroundColor: Color(0xff051F0E),
@@ -113,9 +113,10 @@ class _DashboardPageState extends State<DashboardPage> {
                                 child: slider[index],
                                 onVisibilityChanged: (VisibilityInfo info) {
                                   if (info.visibleFraction == 1) {
-                                    setState(() {
-                                      _currentItem = index;
-                                    });
+                                    // setState(() {
+                                    //   _currentItem = index;
+                                    // });
+                                    dashboardPageIndicator.changeIndex(index);
                                   }
                                 });
                           },
@@ -123,15 +124,18 @@ class _DashboardPageState extends State<DashboardPage> {
                       ),
                       Padding(
                         padding: const EdgeInsets.only(top: 24).r,
-                        child: AnimatedSmoothIndicator(
-                          duration: const Duration(milliseconds: 300),
-                          activeIndex: _currentItem,
-                          count: 3,
-                          effect: SlideEffect(
-                              dotWidth: 16.67.w,
-                              dotHeight: 2.h,
-                              dotColor: greenColor1.withOpacity(.5),
-                              activeDotColor: greenColor1),
+                        child: Consumer<DashboardPageIndicatorProvider>(
+                          builder: (context, value, child) =>
+                              AnimatedSmoothIndicator(
+                            duration: const Duration(milliseconds: 300),
+                            activeIndex: value.pageviewIndex,
+                            count: 3,
+                            effect: SlideEffect(
+                                dotWidth: 16.67.w,
+                                dotHeight: 2.h,
+                                dotColor: greenColor1.withOpacity(.5),
+                                activeDotColor: greenColor1),
+                          ),
                         ),
                       ),
                       Padding(
@@ -392,11 +396,14 @@ class FirstSlider extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final pageChangeProvider =
+        Provider.of<PageChangeProvider>(context, listen: false);
     return Padding(
       padding: const EdgeInsets.only(left: 16).r,
       child: GestureDetector(
         onTap: () {
-          Get.toNamed(wallet_page);
+          pageChangeProvider.changePage(1);
+          Get.toNamed(dashboard_screen);
         },
         child: Container(
           width: 196.w,
