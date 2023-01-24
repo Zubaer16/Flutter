@@ -3,6 +3,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:provider/provider.dart';
+import 'package:sutraq/provider/walkthrough_screen_provider.dart';
 import 'package:sutraq/storage/color_storage.dart';
 import 'package:sutraq/components/custom_button.dart';
 import 'package:sutraq/components/walkthrough.dart';
@@ -84,6 +86,8 @@ class _WalkthroughScreenState extends State<WalkthroughScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final pageview = Provider.of<WalkthroughScreenProvider>(context);
+    print('build true');
     return Scaffold(
         body: Column(
       children: [
@@ -95,9 +99,13 @@ class _WalkthroughScreenState extends State<WalkthroughScreen> {
                   controller: _pageController,
                   itemCount: pic.length,
                   onPageChanged: (index) => {
-                        setState(() {
-                          _pageIndex = index;
-                        })
+                        // setState(() {
+                        //   _pageIndex = index;
+                        // }),
+                        context
+                            .read<WalkthroughScreenProvider>()
+                            .changeIndex(index),
+                        print(pageview.pageviewIndex)
                       },
                   itemBuilder: (context, index) {
                     return pic[index];
@@ -112,8 +120,7 @@ class _WalkthroughScreenState extends State<WalkthroughScreen> {
                       ...List.generate(
                           pic.length,
                           (index) => DotIndicator(
-                                isActive: index == _pageIndex,
-                              ))
+                              isActive: index == pageview.pageviewIndex))
                     ],
                   ),
                 ),
