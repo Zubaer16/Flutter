@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:provider/provider.dart';
 import 'package:sutraq/pages/splash_screen.dart';
+import 'package:sutraq/provider/cards_page_indicator_provider.dart';
 import 'package:sutraq/provider/dashboard_page_indicator_provider.dart';
 import 'package:sutraq/provider/page_change_provider.dart';
 import 'package:sutraq/provider/walkthrough_screen_provider.dart';
@@ -17,6 +18,7 @@ void main() {
         ChangeNotifierProvider(create: (_) => PageChangeProvider()),
         ChangeNotifierProvider(create: (_) => DashboardPageIndicatorProvider()),
         ChangeNotifierProvider(create: (_) => WalletPageIndicatorProvider()),
+        ChangeNotifierProvider(create: (_) => CardsPageIndicatorProvider()),
       ],
       child: MyApp(),
     ),

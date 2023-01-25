@@ -102,7 +102,9 @@ class WelcomeBackScreen extends StatelessWidget {
                         fontWeight: FontWeight.w400)),
                 TextButton(
                     style: TextButton.styleFrom(foregroundColor: greenColor),
-                    onPressed: () {},
+                    onPressed: () {
+                      Get.toNamed(open_sutraq_account);
+                    },
                     child: Text(
                       'Try Sutraq',
                       style: TextStyle(

@@ -3,20 +3,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:provider/provider.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:sutraq/components/custom_cards.dart';
+import 'package:sutraq/provider/cards_page_indicator_provider.dart';
 import 'package:sutraq/route/route_mange.dart';
 import 'package:sutraq/storage/color_storage.dart';
 import 'package:sutraq/storage/icon_storage.dart';
 import 'package:visibility_detector/visibility_detector.dart';
 import '../components/recent_transactions.dart';
-
-class CardsPage extends StatefulWidget {
-  const CardsPage({Key? key}) : super(key: key);
-
-  @override
-  State<CardsPage> createState() => _CardsPageState();
-}
 
 final slider = [
   CustomCards(dots: true),
@@ -25,11 +20,14 @@ final slider = [
     color: Color(0xff330693),
   )
 ];
-int _currentItem = 0;
 
-class _CardsPageState extends State<CardsPage> {
+class CardsPage extends StatelessWidget {
+  const CardsPage({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
+    final cardsPageIncdicatorProvider =
+        Provider.of<CardsPageIndicatorProvider>(context, listen: false);
     return SafeArea(
         child: Scaffold(
             backgroundColor: Color(0xffF1F3F4),
@@ -76,9 +74,7 @@ class _CardsPageState extends State<CardsPage> {
                                 ),
                           onVisibilityChanged: (VisibilityInfo info) {
                             if (info.visibleFraction == 1) {
-                              setState(() {
-                                _currentItem = index;
-                              });
+                              cardsPageIncdicatorProvider.changeIndex(index);
                             }
                           });
                     },
@@ -87,15 +83,17 @@ class _CardsPageState extends State<CardsPage> {
                 SizedBox(
                   height: 17.h,
                 ),
-                AnimatedSmoothIndicator(
-                  duration: const Duration(milliseconds: 0),
-                  activeIndex: _currentItem,
-                  count: slider.length,
-                  effect: SlideEffect(
-                      dotWidth: 16.67.w,
-                      dotHeight: 2.h,
-                      dotColor: Color(0xff8E8E8E),
-                      activeDotColor: Color(0xff046AE1)),
+                Consumer<CardsPageIndicatorProvider>(
+                  builder: (context, value, child) => AnimatedSmoothIndicator(
+                    duration: const Duration(milliseconds: 0),
+                    activeIndex: value.pageviewIndex,
+                    count: slider.length,
+                    effect: SlideEffect(
+                        dotWidth: 16.67.w,
+                        dotHeight: 2.h,
+                        dotColor: Color(0xff8E8E8E),
+                        activeDotColor: Color(0xff046AE1)),
+                  ),
                 ),
                 SizedBox(
                   height: 17.h,
@@ -179,3 +177,5 @@ class _CardsPageState extends State<CardsPage> {
             )));
   }
 }
+
+int _currentItem = 0;

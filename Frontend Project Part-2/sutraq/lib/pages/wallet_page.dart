@@ -14,17 +14,9 @@ import 'package:sutraq/storage/color_storage.dart';
 import 'package:sutraq/storage/icon_storage.dart';
 import 'package:visibility_detector/visibility_detector.dart';
 
-class WalletPage extends StatefulWidget {
+class WalletPage extends StatelessWidget {
   const WalletPage({Key? key}) : super(key: key);
 
-  @override
-  State<WalletPage> createState() => _WalletPageState();
-}
-
-final slider = [const ThirdSlider(), const SecondSlider(), const FirstSlider()];
-int _currentItem = 0;
-
-class _WalletPageState extends State<WalletPage> {
   @override
   Widget build(BuildContext context) {
     final walletPageIndicatorProvider =
@@ -68,9 +60,8 @@ class _WalletPageState extends State<WalletPage> {
                                 child: slider[index],
                                 onVisibilityChanged: (VisibilityInfo info) {
                                   if (info.visibleFraction == 1) {
-                                    setState(() {
-                                      _currentItem = index;
-                                    });
+                                    walletPageIndicatorProvider
+                                        .changeIndex(index);
                                   }
                                 });
                           },
@@ -78,15 +69,18 @@ class _WalletPageState extends State<WalletPage> {
                       ),
                       Padding(
                         padding: const EdgeInsets.only(top: 24).r,
-                        child: AnimatedSmoothIndicator(
-                          duration: const Duration(milliseconds: 300),
-                          activeIndex: _currentItem,
-                          count: 3,
-                          effect: SlideEffect(
-                              dotWidth: 16.67.w,
-                              dotHeight: 2.h,
-                              dotColor: Colors.white,
-                              activeDotColor: Color(0xff046AE1)),
+                        child: Consumer<WalletPageIndicatorProvider>(
+                          builder: (context, value, child) =>
+                              AnimatedSmoothIndicator(
+                            duration: const Duration(milliseconds: 300),
+                            activeIndex: value.pageviewIndex,
+                            count: 3,
+                            effect: SlideEffect(
+                                dotWidth: 16.67.w,
+                                dotHeight: 2.h,
+                                dotColor: Colors.white,
+                                activeDotColor: Color(0xff046AE1)),
+                          ),
                         ),
                       ),
                       Padding(
@@ -323,6 +317,8 @@ class _WalletPageState extends State<WalletPage> {
             )));
   }
 }
+
+final slider = [const ThirdSlider(), const SecondSlider(), const FirstSlider()];
 
 class FirstSlider extends StatelessWidget {
   const FirstSlider({Key? key}) : super(key: key);
