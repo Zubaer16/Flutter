@@ -6,6 +6,7 @@ import 'package:sutraq/pages/splash_screen.dart';
 import 'package:sutraq/provider/cards_page_indicator_provider.dart';
 import 'package:sutraq/provider/dashboard_page_indicator_provider.dart';
 import 'package:sutraq/provider/page_change_provider.dart';
+import 'package:sutraq/provider/switch_provider.dart';
 import 'package:sutraq/provider/walkthrough_screen_provider.dart';
 import 'package:sutraq/provider/wallet_page_indicator_provider.dart';
 import 'package:sutraq/route/route_mange.dart';
@@ -19,6 +20,7 @@ void main() {
         ChangeNotifierProvider(create: (_) => DashboardPageIndicatorProvider()),
         ChangeNotifierProvider(create: (_) => WalletPageIndicatorProvider()),
         ChangeNotifierProvider(create: (_) => CardsPageIndicatorProvider()),
+        ChangeNotifierProvider(create: (_) => SwitchProvider()),
       ],
       child: MyApp(),
     ),

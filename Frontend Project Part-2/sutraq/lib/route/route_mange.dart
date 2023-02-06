@@ -5,6 +5,7 @@ import 'package:sutraq/pages/add_new_bank_account.dart';
 import 'package:sutraq/pages/add_new_bank_transfer_account.dart';
 import 'package:sutraq/pages/add_new_card_bank_account.dart';
 import 'package:sutraq/pages/add_new_sutraq_transfer_account.dart';
+import 'package:sutraq/pages/bank_accounts.dart';
 import 'package:sutraq/pages/bank_transfer.dart';
 import 'package:sutraq/pages/cards_page.dart';
 import 'package:sutraq/pages/check_inbox.dart';
@@ -68,6 +69,7 @@ const String open_sutraq_account = '/open_sutraq_account';
 const String create_sutraq_account = '/create_sutraq_account';
 const String good = '/good';
 const String upload_photo = '/upload_photo';
+const String bank_accounts = '/bank_accounts';
 
 List<GetPage> getPages = [
   GetPage(
@@ -147,4 +149,5 @@ List<GetPage> getPages = [
   GetPage(name: create_sutraq_account, page: () => CreateSutraqAccount()),
   GetPage(name: good, page: () => Good()),
   GetPage(name: upload_photo, page: () => UploadPhoto()),
+  GetPage(name: bank_accounts, page: () => BankAccounts()),
 ];

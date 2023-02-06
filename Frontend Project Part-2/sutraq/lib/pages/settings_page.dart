@@ -3,7 +3,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:provider/provider.dart';
 import 'package:sutraq/components/setting_options.dart';
+import 'package:sutraq/provider/switch_provider.dart';
 import 'package:sutraq/route/route_mange.dart';
 import 'package:sutraq/storage/color_storage.dart';
 import 'package:sutraq/storage/icon_storage.dart';
@@ -13,6 +15,7 @@ class SettingsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final switchProvider = Provider.of<SwitchProvider>(context, listen: false);
     return SafeArea(
         child: Scaffold(
             backgroundColor: Color(0xff08083d),
@@ -113,7 +116,8 @@ class SettingsPage extends StatelessWidget {
                           height: 9.h,
                         ),
                         SettingOptions(
-                            text: 'Bank Accounts', onPressed: () => {}),
+                            text: 'Bank Accounts',
+                            onPressed: () => {Get.toNamed(bank_accounts)}),
                         SettingOptions(text: 'My Cards', onPressed: () => {}),
                         SettingOptions(
                             text: 'Change Transaction Pin',
@@ -180,11 +184,18 @@ class SettingsPage extends StatelessWidget {
                                     fontSize: 14.sp,
                                     fontWeight: FontWeight.w500),
                               ),
-                              Switch(
-                                value: true,
-                                onChanged: (value) => {},
-                                activeColor: greenColor,
-                              )
+                              Consumer<SwitchProvider>(
+                                builder: (context, val, child) => Switch(
+                                  value: val.switchValue,
+                                  onChanged: (value) => {
+                                    switchProvider.changeSwitchValue(value),
+                                  },
+                                  // activeColor: greenColor,
+                                  activeTrackColor: greenColor,
+                                  inactiveThumbColor: Colors.white,
+                                  activeColor: Colors.white,
+                                ),
+                              ),
                             ],
                           ),
                         ),
