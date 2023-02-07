@@ -36,7 +36,7 @@ class BankAccounts extends StatelessWidget {
                               color: Color(0xff08083d),
                               fontSize: 20.sp,
                               fontWeight: FontWeight.w600,
-                              height: 1.4),
+                              height: 1.4.h),
                           textAlign: TextAlign.center,
                         ),
                       ),
@@ -63,17 +63,16 @@ class BankAccounts extends StatelessWidget {
                   child: Stack(clipBehavior: Clip.none, children: [
                     Padding(
                       padding: const EdgeInsets.only(top: 18).r,
-                      child: Form(
-                          child: Align(
+                      child: Align(
                         alignment: Alignment.center,
                         child: Column(
                           children: [
                             Padding(
-                              padding: const EdgeInsets.only(left: 19).r,
+                              padding: const EdgeInsets.only(left: 18.88).r,
                               child: Align(
                                 alignment: Alignment.topLeft,
                                 child: Text(
-                                  'Check the radio button to set bank \n as default',
+                                  'Check the radio button to set bank\nas default',
                                   style: TextStyle(
                                       color: Color(0xff000000).withOpacity(0.5),
                                       fontSize: 12.sp,
@@ -94,7 +93,7 @@ class BankAccounts extends StatelessWidget {
                             )
                           ],
                         ),
-                      )),
+                      ),
                     ),
                   ]),
                 ),

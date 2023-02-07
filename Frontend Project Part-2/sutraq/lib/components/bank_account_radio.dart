@@ -18,13 +18,54 @@ class BankAccountRadio extends StatelessWidget {
       child: Row(
         children: [
           SizedBox(
-            width: 19.w,
+            width: 18.88.w,
           ),
           Icon(
             accountBalance,
             color: greenColor,
             // size: 30.w,
           ),
+          SizedBox(
+            width: 20.88.w,
+          ),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              SizedBox(
+                height: 18.h,
+              ),
+              Text(
+                '9381053802',
+                style: TextStyle(
+                    color: Color(0xff000000),
+                    fontSize: 14.sp,
+                    fontWeight: FontWeight.w500,
+                    height: 2.447.h),
+              ),
+              Text(
+                '(Access Bank - Precious Ogar)',
+                style: TextStyle(
+                    color: Color(0xff595959),
+                    fontSize: 14.sp,
+                    fontWeight: FontWeight.w500,
+                    height: 2.307.h),
+              ),
+              TextButton(
+                  onPressed: () => {},
+                  style: TextButton.styleFrom(
+                      padding: EdgeInsets.fromLTRB(0, 10, 10, 10),
+                      tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                      minimumSize: Size.zero),
+                  child: Text(
+                    'Remove',
+                    style: TextStyle(
+                        color: Color(0xffEC615B),
+                        fontSize: 10.sp,
+                        fontWeight: FontWeight.w500,
+                        decoration: TextDecoration.underline),
+                  ))
+            ],
+          )
         ],
       ),
     );
