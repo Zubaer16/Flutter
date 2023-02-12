@@ -23,7 +23,6 @@ class DashboardPage extends StatelessWidget {
   Widget build(BuildContext context) {
     final dashboardPageIndicator =
         Provider.of<DashboardPageIndicatorProvider>(context, listen: false);
-    print('build');
     return SafeArea(
         child: Scaffold(
             backgroundColor: Color(0xff051F0E),

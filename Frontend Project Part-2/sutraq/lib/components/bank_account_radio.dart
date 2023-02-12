@@ -56,7 +56,7 @@ class BankAccountRadio extends StatelessWidget {
                       padding: EdgeInsets.fromLTRB(0, 10, 10, 10),
                       tapTargetSize: MaterialTapTargetSize.shrinkWrap,
                       minimumSize: Size.zero),
-                  //
+                  
                   child: Text(
                     'Remove',
                     style: TextStyle(
