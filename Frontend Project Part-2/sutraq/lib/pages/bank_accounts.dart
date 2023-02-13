@@ -12,16 +12,9 @@ import 'package:sutraq/storage/icon_storage.dart';
 
 import '../components/custom_circle_button.dart';
 
-class BankAccounts extends StatefulWidget {
+class BankAccounts extends StatelessWidget {
   const BankAccounts({super.key});
 
-  @override
-  State<BankAccounts> createState() => _BankAccountsState();
-}
-
-String gender = 'Male';
-
-class _BankAccountsState extends State<BankAccounts> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -101,40 +94,6 @@ class _BankAccountsState extends State<BankAccounts> {
                               buttonFontSize: 16.sp,
                               buttonTextWeight: FontWeight.w500,
                             ),
-                            Column(
-                              children: [
-                                RadioListTile(
-                                  title: Text("Male"),
-                                  value: "male",
-                                  groupValue: gender,
-                                  onChanged: (value) {
-                                    setState(() {
-                                      gender = value.toString();
-                                    });
-                                  },
-                                ),
-                                RadioListTile(
-                                  title: Text("Female"),
-                                  value: "female",
-                                  groupValue: gender,
-                                  onChanged: (value) {
-                                    setState(() {
-                                      gender = value.toString();
-                                    });
-                                  },
-                                ),
-                                RadioListTile(
-                                  title: Text("Other"),
-                                  value: "other",
-                                  groupValue: gender,
-                                  onChanged: (value) {
-                                    setState(() {
-                                      gender = value.toString();
-                                    });
-                                  },
-                                )
-                              ],
-                            )
                           ],
                         ),
                       ),
