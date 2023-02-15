@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -7,7 +9,12 @@ import 'package:sutraq/storage/color_storage.dart';
 import 'package:sutraq/storage/icon_storage.dart';
 
 class BankAccountRadio extends StatelessWidget {
-  const BankAccountRadio({super.key});
+  BankAccountRadio({Key? key, this.value, this.groupValue, this.onChanged})
+      : super(key: key);
+
+  final int? value;
+  final int? groupValue;
+  final void Function(int?)? onChanged;
 
   @override
   Widget build(BuildContext context) {
@@ -25,11 +32,10 @@ class BankAccountRadio extends StatelessWidget {
             child: Icon(
               accountBalance,
               color: greenColor,
-              // size: 30.w,
             ),
           ),
           Positioned(
-            left: 54.w,
+            left: 57.w,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -78,11 +84,17 @@ class BankAccountRadio extends StatelessWidget {
             child: GestureDetector(
               onTap: () => {},
               child: Container(
+                alignment: Alignment.center,
                 height: 20.h,
                 width: 20.h,
                 decoration: BoxDecoration(
                   border: Border.all(color: Color(0xff666666)),
                   shape: BoxShape.circle,
+                ),
+                child: Icon(
+                  check,
+                  color: greenColor,
+                  size: 17.w,
                 ),
               ),
             ),

@@ -79,7 +79,7 @@ class UploadPhoto extends StatelessWidget {
                           height: 56.h,
                         ),
                         Icon(
-                          image_outlined,
+                          imageOutlined,
                           size: 38.w,
                           color: Color(0xffdadada),
                         ),
