@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:provider/provider.dart';
 import 'package:sutraq/pages/splash_screen.dart';
+import 'package:sutraq/provider/bank_account_radio_provider.dart';
 import 'package:sutraq/provider/cards_page_indicator_provider.dart';
 import 'package:sutraq/provider/dashboard_page_indicator_provider.dart';
 import 'package:sutraq/provider/page_change_provider.dart';
@@ -21,6 +22,7 @@ void main() {
         ChangeNotifierProvider(create: (_) => WalletPageIndicatorProvider()),
         ChangeNotifierProvider(create: (_) => CardsPageIndicatorProvider()),
         ChangeNotifierProvider(create: (_) => SwitchProvider()),
+        ChangeNotifierProvider(create: (_) => BankAccountRadioProvider()),
       ],
       child: MyApp(),
     ),

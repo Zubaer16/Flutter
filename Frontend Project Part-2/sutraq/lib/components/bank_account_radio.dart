@@ -1,5 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -9,12 +11,16 @@ import 'package:sutraq/storage/color_storage.dart';
 import 'package:sutraq/storage/icon_storage.dart';
 
 class BankAccountRadio extends StatelessWidget {
-  BankAccountRadio({Key? key, this.value, this.groupValue, this.onChanged})
+  BankAccountRadio(
+      {Key? key,
+      required this.value,
+      required this.groupValue,
+      required this.onChanged})
       : super(key: key);
 
-  final int? value;
-  final int? groupValue;
-  final void Function(int?)? onChanged;
+  final String value;
+  final String groupValue;
+  final void Function(String) onChanged;
 
   @override
   Widget build(BuildContext context) {
@@ -82,18 +88,23 @@ class BankAccountRadio extends StatelessWidget {
             top: 37.h,
             right: 18.87.w,
             child: GestureDetector(
-              onTap: () => {},
+              onTap: () => {
+                if (value != groupValue) {onChanged(value)}
+              },
+              behavior: HitTestBehavior.translucent,
               child: Container(
                 alignment: Alignment.center,
                 height: 20.h,
                 width: 20.h,
                 decoration: BoxDecoration(
-                  border: Border.all(color: Color(0xff666666)),
+                  border: Border.all(
+                      color:
+                          value != groupValue ? Color(0xff666666) : greenColor),
                   shape: BoxShape.circle,
                 ),
                 child: Icon(
                   check,
-                  color: greenColor,
+                  color: value != groupValue ? Colors.white : greenColor,
                   size: 17.w,
                 ),
               ),

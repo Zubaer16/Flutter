@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:provider/provider.dart';
 import 'package:sutraq/components/bank_account_radio.dart';
 import 'package:sutraq/components/custom_button.dart';
 import 'package:sutraq/components/custom_dropdown.dart';
 import 'package:sutraq/components/custom_input.dart';
 import 'package:sutraq/pages/wallet_page.dart';
+import 'package:sutraq/provider/bank_account_radio_provider.dart';
 import 'package:sutraq/route/route_mange.dart';
 import 'package:sutraq/storage/color_storage.dart';
 import 'package:sutraq/storage/icon_storage.dart';
@@ -17,6 +19,9 @@ class BankAccounts extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final radioProvider =
+        Provider.of<BankAccountRadioProvider>(context, listen: false);
+    print('build');
     return SafeArea(
         child: Scaffold(
             backgroundColor: Color(0xfff1f3f4),
@@ -84,7 +89,36 @@ class BankAccounts extends StatelessWidget {
                             SizedBox(
                               height: 2.h,
                             ),
-                            BankAccountRadio(),
+                            Consumer<BankAccountRadioProvider>(
+                              builder: (context, value, child) =>
+                                  BankAccountRadio(
+                                value: 'one',
+                                groupValue: radioProvider.radioValue,
+                                onChanged: (value) {
+                                  radioProvider.changeValue(value);
+                                },
+                              ),
+                            ),
+                            Consumer<BankAccountRadioProvider>(
+                              builder: (context, value, child) =>
+                                  BankAccountRadio(
+                                value: 'two',
+                                groupValue: radioProvider.radioValue,
+                                onChanged: (value) {
+                                  radioProvider.changeValue(value);
+                                },
+                              ),
+                            ),
+                            Consumer<BankAccountRadioProvider>(
+                              builder: (context, value, child) =>
+                                  BankAccountRadio(
+                                value: 'three',
+                                groupValue: radioProvider.radioValue,
+                                onChanged: (value) {
+                                  radioProvider.changeValue(value);
+                                },
+                              ),
+                            ),
                             CustomButton(
                               onPressed: () => {},
                               buttonWidth: 300.w,
