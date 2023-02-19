@@ -21,7 +21,7 @@ class BankAccounts extends StatelessWidget {
   Widget build(BuildContext context) {
     final radioProvider =
         Provider.of<BankAccountRadioProvider>(context, listen: false);
-    print('build');
+
     return SafeArea(
         child: Scaffold(
             backgroundColor: Color(0xfff1f3f4),
@@ -50,7 +50,9 @@ class BankAccounts extends StatelessWidget {
                       padding: const EdgeInsets.only(
                         top: 20,
                       ).r,
-                      child: CustomCircleButton(onPressed: () => {Get.back()}),
+                      child: CustomCircleButton(
+                          onPressed: () =>
+                              {Get.back(), radioProvider.changeValue('')}),
                     ),
                   ],
                 ),
@@ -62,9 +64,7 @@ class BankAccounts extends StatelessWidget {
                   height: 509.h,
                   decoration: BoxDecoration(
                       color: Colors.white,
-                      borderRadius: BorderRadius.only(
-                          topLeft: Radius.circular(10).r,
-                          topRight: Radius.circular(10).r)),
+                      borderRadius: BorderRadius.all(Radius.circular(10)).r),
                   child: Stack(clipBehavior: Clip.none, children: [
                     Padding(
                       padding: const EdgeInsets.only(top: 18).r,
@@ -87,7 +87,7 @@ class BankAccounts extends StatelessWidget {
                               ),
                             ),
                             SizedBox(
-                              height: 2.h,
+                              height: 4.h,
                             ),
                             Consumer<BankAccountRadioProvider>(
                               builder: (context, value, child) =>
@@ -119,8 +119,12 @@ class BankAccounts extends StatelessWidget {
                                 },
                               ),
                             ),
+                            SizedBox(
+                              height: 38.h,
+                            ),
                             CustomButton(
-                              onPressed: () => {},
+                              onPressed: () =>
+                                  {Get.toNamed(add_new_bank_account)},
                               buttonWidth: 300.w,
                               buttonHeight: 61.h,
                               buttonColor: greenColor,
