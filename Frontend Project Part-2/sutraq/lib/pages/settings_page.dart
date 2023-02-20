@@ -118,7 +118,9 @@ class SettingsPage extends StatelessWidget {
                         SettingOptions(
                             text: 'Bank Accounts',
                             onPressed: () => {Get.toNamed(bank_accounts)}),
-                        SettingOptions(text: 'My Cards', onPressed: () => {}),
+                        SettingOptions(
+                            text: 'My Cards',
+                            onPressed: () => {Get.toNamed(debit_credit_card)}),
                         SettingOptions(
                             text: 'Change Transaction Pin',
                             onPressed: () => {}),

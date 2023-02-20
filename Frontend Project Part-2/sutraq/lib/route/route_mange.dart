@@ -12,6 +12,7 @@ import 'package:sutraq/pages/check_inbox.dart';
 import 'package:sutraq/pages/create_sutraq_account.dart';
 import 'package:sutraq/pages/dashboard_page.dart';
 import 'package:sutraq/pages/dashboard_screen.dart';
+import 'package:sutraq/pages/debit_credit_card.dart';
 import 'package:sutraq/pages/enter_transaction_pin.dart';
 import 'package:sutraq/pages/enter_transaction_pin_sutraq.dart';
 import 'package:sutraq/pages/forgot_password_screen.dart';
@@ -70,6 +71,7 @@ const String create_sutraq_account = '/create_sutraq_account';
 const String good = '/good';
 const String upload_photo = '/upload_photo';
 const String bank_accounts = '/bank_accounts';
+const String debit_credit_card = '/debit_credit_card';
 
 List<GetPage> getPages = [
   GetPage(
@@ -150,4 +152,5 @@ List<GetPage> getPages = [
   GetPage(name: good, page: () => Good()),
   GetPage(name: upload_photo, page: () => UploadPhoto()),
   GetPage(name: bank_accounts, page: () => BankAccounts()),
+  GetPage(name: debit_credit_card, page: () => DebitCreditCard()),
 ];
