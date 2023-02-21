@@ -6,6 +6,7 @@ import 'package:sutraq/pages/splash_screen.dart';
 import 'package:sutraq/provider/bank_account_radio_provider.dart';
 import 'package:sutraq/provider/cards_page_indicator_provider.dart';
 import 'package:sutraq/provider/dashboard_page_indicator_provider.dart';
+import 'package:sutraq/provider/debit_credit_card_radio_provider.dart';
 import 'package:sutraq/provider/page_change_provider.dart';
 import 'package:sutraq/provider/switch_provider.dart';
 import 'package:sutraq/provider/walkthrough_screen_provider.dart';
@@ -23,6 +24,7 @@ void main() {
         ChangeNotifierProvider(create: (_) => CardsPageIndicatorProvider()),
         ChangeNotifierProvider(create: (_) => SwitchProvider()),
         ChangeNotifierProvider(create: (_) => BankAccountRadioProvider()),
+        ChangeNotifierProvider(create: (_) => DebitCreditCardRadioProvider()),
       ],
       child: MyApp(),
     ),

@@ -2,10 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:provider/provider.dart';
-import 'package:sutraq/components/bank_account_radio.dart';
 import 'package:sutraq/components/custom_button.dart';
 import 'package:sutraq/components/debit_credit_card_radio.dart';
-import 'package:sutraq/provider/bank_account_radio_provider.dart';
+import 'package:sutraq/provider/debit_credit_card_radio_provider.dart';
 import 'package:sutraq/route/route_mange.dart';
 import 'package:sutraq/storage/color_storage.dart';
 
@@ -15,6 +14,9 @@ class DebitCreditCard extends StatelessWidget {
   DebitCreditCard({super.key});
   @override
   Widget build(BuildContext context) {
+    final debitCreditCardRadioProvider =
+        Provider.of<DebitCreditCardRadioProvider>(context, listen: false);
+
     return SafeArea(
         child: Scaffold(
             backgroundColor: Color(0xfff1f3f4),
@@ -61,8 +63,25 @@ class DebitCreditCard extends StatelessWidget {
                         SizedBox(
                           height: 30.h,
                         ),
-                        DebitCredidCardRadio(),
-                        DebitCredidCardRadio(cardColor: Color(0xff330693)),
+                        Consumer<DebitCreditCardRadioProvider>(
+                          builder: (context, value, child) =>
+                              DebitCredidCardRadio(
+                            onChanged: (e) => {value.changeValue(e)},
+                            value: '1st Card',
+                            groupValue: value.radioValue,
+                            isDot: value.radioValue != '1st Card',
+                          ),
+                        ),
+                        Consumer<DebitCreditCardRadioProvider>(
+                          builder: (context, value, child) =>
+                              DebitCredidCardRadio(
+                            onChanged: (e) => {value.changeValue(e)},
+                            value: '2nd Card',
+                            groupValue: value.radioValue,
+                            isDot: value.radioValue != '2nd Card',
+                            cardColor: Color(0xff330693),
+                          ),
+                        ),
                         CustomButton(
                           onPressed: () => {Get.toNamed(add_new_bank_account)},
                           buttonWidth: 300.w,
