@@ -4,13 +4,9 @@ import 'package:get/get.dart';
 import 'package:provider/provider.dart';
 import 'package:sutraq/components/bank_account_radio.dart';
 import 'package:sutraq/components/custom_button.dart';
-import 'package:sutraq/components/custom_dropdown.dart';
-import 'package:sutraq/components/custom_input.dart';
-import 'package:sutraq/pages/wallet_page.dart';
 import 'package:sutraq/provider/bank_account_radio_provider.dart';
 import 'package:sutraq/route/route_mange.dart';
 import 'package:sutraq/storage/color_storage.dart';
-import 'package:sutraq/storage/icon_storage.dart';
 
 import '../components/custom_circle_button.dart';
 
