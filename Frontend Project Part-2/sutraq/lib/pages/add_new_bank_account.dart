@@ -124,7 +124,7 @@ class AddNewBankAccount extends StatelessWidget {
                                 buttonWidth: 307.w,
                                 buttonHeight: 61.h,
                                 buttonColor: greenColor,
-                                buttonText: 'PROCEED',
+                                buttonText: 'Confirm'.toUpperCase(),
                                 buttonFontSize: 16.sp,
                                 buttonTextWeight: FontWeight.w500,
                               )

@@ -8,6 +8,7 @@ import 'package:sutraq/pages/add_new_sutraq_transfer_account.dart';
 import 'package:sutraq/pages/bank_accounts.dart';
 import 'package:sutraq/pages/bank_transfer.dart';
 import 'package:sutraq/pages/cards_page.dart';
+import 'package:sutraq/pages/change_pin.dart';
 import 'package:sutraq/pages/check_inbox.dart';
 import 'package:sutraq/pages/create_sutraq_account.dart';
 import 'package:sutraq/pages/dashboard_page.dart';
@@ -72,6 +73,7 @@ const String good = '/good';
 const String upload_photo = '/upload_photo';
 const String bank_accounts = '/bank_accounts';
 const String debit_credit_card = '/debit_credit_card';
+const String change_pin = '/change_pin';
 
 List<GetPage> getPages = [
   GetPage(
@@ -153,4 +155,5 @@ List<GetPage> getPages = [
   GetPage(name: upload_photo, page: () => UploadPhoto()),
   GetPage(name: bank_accounts, page: () => BankAccounts()),
   GetPage(name: debit_credit_card, page: () => DebitCreditCard()),
+  GetPage(name: change_pin, page: () => ChangePin()),
 ];

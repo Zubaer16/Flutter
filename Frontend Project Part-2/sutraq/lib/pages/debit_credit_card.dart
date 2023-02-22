@@ -45,7 +45,7 @@ class DebitCreditCard extends StatelessWidget {
                       padding: const EdgeInsets.only(
                         top: 20,
                       ).r,
-                      child: CustomCircleButton(onPressed: () => {}),
+                      child: CustomCircleButton(onPressed: () => {Get.back()}),
                     ),
                   ],
                 ),
@@ -83,7 +83,8 @@ class DebitCreditCard extends StatelessWidget {
                           ),
                         ),
                         CustomButton(
-                          onPressed: () => {Get.toNamed(add_new_bank_account)},
+                          onPressed: () =>
+                              {Get.toNamed(add_new_card_bank_account)},
                           buttonWidth: 300.w,
                           buttonHeight: 61.h,
                           buttonColor: greenColor,

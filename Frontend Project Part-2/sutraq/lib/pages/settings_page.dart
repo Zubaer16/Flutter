@@ -123,7 +123,7 @@ class SettingsPage extends StatelessWidget {
                             onPressed: () => {Get.toNamed(debit_credit_card)}),
                         SettingOptions(
                             text: 'Change Transaction Pin',
-                            onPressed: () => {}),
+                            onPressed: () => {Get.toNamed(change_pin)}),
                         SettingOptions(text: 'Security', onPressed: () => {}),
                         SizedBox(
                           height: 27.h,

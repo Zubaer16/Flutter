@@ -48,7 +48,7 @@ class _AddNewCardBankAccountState extends State<AddNewCardBankAccount> {
                   child: SizedBox(
                     width: MediaQuery.of(context).size.width,
                     child: Text(
-                      'Add New Bank Account',
+                      'Add New Bank Card',
                       style: TextStyle(
                           color: const Color(0xff08083d),
                           fontSize: 20.sp,
