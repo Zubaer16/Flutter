@@ -10,7 +10,6 @@ class CustomInput extends StatelessWidget {
   final double? leftPadding;
   final double? rightPadding;
   final String? labelText;
-  final VoidCallback? textButtonFuntion;
   final bool isPrefixIcon;
   final bool isPrefixIconImage;
   final String? prefixIconImageAsset;
@@ -28,7 +27,6 @@ class CustomInput extends StatelessWidget {
       this.leftPadding,
       this.rightPadding,
       this.labelText,
-      this.textButtonFuntion,
       required this.isPrefixIcon,
       required this.isPrefixIconImage,
       this.prefixIconImageAsset,

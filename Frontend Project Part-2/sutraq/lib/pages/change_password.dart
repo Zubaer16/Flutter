@@ -3,11 +3,12 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:sutraq/components/custom_button.dart';
 import 'package:sutraq/components/custom_circle_button.dart';
+import 'package:sutraq/components/custom_input.dart';
 import 'package:sutraq/components/custom_pin.dart';
 import 'package:sutraq/storage/color_storage.dart';
 
-class ChangePin extends StatelessWidget {
-  const ChangePin({super.key});
+class ChangePassword extends StatelessWidget {
+  const ChangePassword({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -78,42 +79,57 @@ class ChangePin extends StatelessWidget {
                               color: Colors.white,
                               borderRadius:
                                   BorderRadius.all(Radius.circular(10)).r),
-                          child: Padding(
-                            padding: const EdgeInsets.only(top: 18).r,
-                            child: Column(
-                              children: [
-                                CustomPin(
-                                  inputText: 'Current Pin',
-                                  onChanged: (value) {},
-                                ),
-                                SizedBox(
-                                  height: 22.h,
-                                ),
-                                CustomPin(
-                                  inputText: 'New Pin',
-                                  onChanged: (value) {},
-                                ),
-                                SizedBox(
-                                  height: 22.h,
-                                ),
-                                CustomPin(
-                                  inputText: 'Confirm New Pin',
-                                  onChanged: (value) {},
-                                ),
-                                SizedBox(
-                                  height: 42.h,
-                                ),
-                                CustomButton(
-                                  onPressed: () => {},
-                                  buttonWidth: 300.w,
-                                  buttonHeight: 61.h,
-                                  buttonColor: greenColor,
-                                  buttonText: 'Change Pin'.toUpperCase(),
-                                  buttonFontSize: 16.sp,
-                                  buttonTextWeight: FontWeight.w500,
-                                ),
-                              ],
-                            ),
+                          child: Column(
+                            children: [
+                              SizedBox(
+                                height: 45.h,
+                              ),
+                              CustomInput(
+                                isPrefixIcon: false,
+                                isPrefixIconImage: false,
+                                isSuffixIcon: false,
+                                placeholder: false,
+                                labelText: 'Current Password',
+                                inputFieldType: TextInputType.visiblePassword,
+                                width: 300.w,
+                              ),
+                              SizedBox(
+                                height: 22.h,
+                              ),
+                              CustomInput(
+                                isPrefixIcon: false,
+                                isPrefixIconImage: false,
+                                isSuffixIcon: false,
+                                placeholder: false,
+                                labelText: 'New Password',
+                                inputFieldType: TextInputType.visiblePassword,
+                                width: 300.w,
+                              ),
+                              SizedBox(
+                                height: 22.h,
+                              ),
+                              CustomInput(
+                                isPrefixIcon: false,
+                                isPrefixIconImage: false,
+                                isSuffixIcon: false,
+                                placeholder: false,
+                                labelText: 'Confirm New Password',
+                                inputFieldType: TextInputType.visiblePassword,
+                                width: 300.w,
+                              ),
+                              SizedBox(
+                                height: 42.h,
+                              ),
+                              CustomButton(
+                                onPressed: () => {},
+                                buttonWidth: 300.w,
+                                buttonHeight: 61.h,
+                                buttonColor: greenColor,
+                                buttonText: 'Change Password'.toUpperCase(),
+                                buttonFontSize: 16.sp,
+                                buttonTextWeight: FontWeight.w500,
+                              ),
+                            ],
                           ),
                         ),
                       ],

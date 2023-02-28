@@ -124,7 +124,9 @@ class SettingsPage extends StatelessWidget {
                         SettingOptions(
                             text: 'Change Transaction Pin',
                             onPressed: () => {Get.toNamed(change_pin)}),
-                        SettingOptions(text: 'Security', onPressed: () => {}),
+                        SettingOptions(
+                            text: 'Security',
+                            onPressed: () => {Get.toNamed(change_password)}),
                         SizedBox(
                           height: 27.h,
                         ),
