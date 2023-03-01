@@ -20,6 +20,7 @@ import 'package:sutraq/pages/enter_transaction_pin_sutraq.dart';
 import 'package:sutraq/pages/forgot_password_screen.dart';
 import 'package:sutraq/pages/fund_wallet_page.dart';
 import 'package:sutraq/pages/good.dart';
+import 'package:sutraq/pages/id_upload.dart';
 import 'package:sutraq/pages/login_tip.dart';
 import 'package:sutraq/pages/notifications_screen.dart';
 import 'package:sutraq/pages/open_sutraq_account.dart';
@@ -32,6 +33,7 @@ import 'package:sutraq/pages/transaction_success_sutraq_transfer.dart';
 import 'package:sutraq/pages/transfer_summery.dart';
 import 'package:sutraq/pages/upload_photo.dart';
 import 'package:sutraq/pages/view_all_transactions.dart';
+import 'package:sutraq/pages/view_dashboard.dart';
 import 'package:sutraq/pages/wallet_page.dart';
 import 'package:sutraq/pages/welcome_back_screen.dart';
 import 'package:sutraq/pages/walkthrough_screen.dart';
@@ -76,6 +78,8 @@ const String bank_accounts = '/bank_accounts';
 const String debit_credit_card = '/debit_credit_card';
 const String change_pin = '/change_pin';
 const String change_password = '/change_password';
+const String id_upload = '/id_upload';
+const String view_dashboard = '/view_dashboard';
 
 List<GetPage> getPages = [
   GetPage(
@@ -159,4 +163,6 @@ List<GetPage> getPages = [
   GetPage(name: debit_credit_card, page: () => DebitCreditCard()),
   GetPage(name: change_pin, page: () => ChangePin()),
   GetPage(name: change_password, page: () => ChangePassword()),
+  GetPage(name: id_upload, page: () => IdUpload()),
+  GetPage(name: view_dashboard, page: () => ViewDashboard()),
 ];

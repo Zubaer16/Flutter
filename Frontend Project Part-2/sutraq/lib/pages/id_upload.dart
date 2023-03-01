@@ -1,17 +1,16 @@
-// ignore_for_file: prefer_const_constructors
-
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:dotted_border/dotted_border.dart';
 import 'package:get/get.dart';
 import 'package:sutraq/components/custom_button.dart';
+import 'package:sutraq/components/custom_circle_button.dart';
 import 'package:sutraq/route/route_mange.dart';
 import 'package:sutraq/storage/color_storage.dart';
 import 'package:sutraq/storage/icon_storage.dart';
 
-class UploadPhoto extends StatelessWidget {
-  const UploadPhoto({super.key});
+class IdUpload extends StatelessWidget {
+  const IdUpload({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -21,22 +20,36 @@ class UploadPhoto extends StatelessWidget {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          SizedBox(
-            height: 33.h,
-            width: MediaQuery.of(context).size.width,
-          ),
-          Text(
-            'Upload Photo',
-            style: TextStyle(
-                color: Color(0xff08083D),
-                fontSize: 20.sp,
-                fontWeight: FontWeight.w600),
+          Stack(
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(
+                  top: 52,
+                ).r,
+                child: SizedBox(
+                  width: MediaQuery.of(context).size.width,
+                  child: Text('I.D Upload',
+                      style: TextStyle(
+                        color: Color(0xff08083d),
+                        fontSize: 20.sp,
+                        fontWeight: FontWeight.w600,
+                      ),
+                      textAlign: TextAlign.center),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(
+                  top: 20,
+                ).r,
+                child: CustomCircleButton(onPressed: () => {Get.back()}),
+              ),
+            ],
           ),
           SizedBox(
             height: 11.h,
           ),
           Text(
-            'Upload a photo of yourself. A picture showing \n your face properly is recommended',
+            'We need a valid government issued I.D to \n continue.',
             style: TextStyle(
                 color: Color(0xff000000).withOpacity(.5),
                 fontSize: 12.sp,
@@ -44,7 +57,7 @@ class UploadPhoto extends StatelessWidget {
             textAlign: TextAlign.center,
           ),
           SizedBox(
-            height: 59.h,
+            height: 38.h,
           ),
           Container(
             height: 524.h,
@@ -61,7 +74,7 @@ class UploadPhoto extends StatelessWidget {
                   final result = await FilePicker.platform.pickFiles(
                     allowMultiple: true,
                     type: FileType.custom,
-                    allowedExtensions: ['png', 'jpeg'],
+                    allowedExtensions: ['docx', 'doc', 'pdf', 'jpeg', 'png'],
                   );
                   if (result == null) return;
                 },
@@ -105,17 +118,18 @@ class UploadPhoto extends StatelessWidget {
                 height: 18.h,
               ),
               Text(
-                'Allows png, jpeg formats',
+                'Allows .docx, .doc, .pdf, jpeg, png \n formats',
                 style: TextStyle(
                     color: Color(0xff000000).withOpacity(.5),
                     fontSize: 12.sp,
                     fontWeight: FontWeight.w400),
+                textAlign: TextAlign.center,
               ),
               SizedBox(
-                height: 120.h,
+                height: 104.h,
               ),
               CustomButton(
-                onPressed: () => {Get.toNamed(id_upload)},
+                onPressed: () => {Get.toNamed(view_dashboard)},
                 buttonColor: greenColor,
                 buttonHeight: 61.h,
                 buttonWidth: 307.w,
@@ -127,7 +141,7 @@ class UploadPhoto extends StatelessWidget {
                 height: 26.h,
               ),
               Text(
-                'Step 1/2',
+                'Step 2/2',
                 style: TextStyle(
                     color: Color(0xff666666),
                     fontSize: 16.sp,

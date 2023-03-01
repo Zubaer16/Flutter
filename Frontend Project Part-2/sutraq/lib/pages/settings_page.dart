@@ -147,7 +147,8 @@ class SettingsPage extends StatelessWidget {
                           height: 9.h,
                         ),
                         SettingOptions(
-                            text: 'Invite Your Friends', onPressed: () => {}),
+                            text: 'Invite Your Friends',
+                            onPressed: () => {Get.toNamed(refer_a_freind)}),
                         SettingOptions(
                             text: 'Report a Bug', onPressed: () => {}),
                         SizedBox(
