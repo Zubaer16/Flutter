@@ -6,7 +6,7 @@ import 'package:sutraq/storage/color_storage.dart';
 import 'package:sutraq/storage/icon_storage.dart';
 
 class BankAccountRadio extends StatelessWidget {
-  const BankAccountRadio(
+  BankAccountRadio(
       {Key? key,
       required this.value,
       required this.groupValue,
