@@ -39,7 +39,8 @@ class CustomButton extends StatelessWidget {
           buttonText ?? 'Custom button',
           style: TextStyle(
               fontSize: buttonFontSize ?? 17.sp,
-              fontWeight: buttonTextWeight ?? FontWeight.w700),
+              fontWeight: buttonTextWeight ?? FontWeight.w700,
+              fontFamily: 'Circular Std'),
         ),
       ),
     );

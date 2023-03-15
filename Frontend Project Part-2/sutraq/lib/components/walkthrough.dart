@@ -93,7 +93,8 @@ class Walkthrough extends StatelessWidget {
                   style: TextStyle(
                       color: Colors.white,
                       fontSize: 27.sp,
-                      fontWeight: FontWeight.w600),
+                      fontWeight: FontWeight.w600,
+                      fontFamily: 'Gelion'),
                 ),
                 SizedBox(
                   height: 30.h,
@@ -105,7 +106,8 @@ class Walkthrough extends StatelessWidget {
                     style: TextStyle(
                         color: Colors.white,
                         fontSize: 16.sp,
-                        fontWeight: FontWeight.w400),
+                        fontWeight: FontWeight.w400,
+                        fontFamily: 'Circular Std'),
                     textAlign: TextAlign.center,
                   ),
                 )

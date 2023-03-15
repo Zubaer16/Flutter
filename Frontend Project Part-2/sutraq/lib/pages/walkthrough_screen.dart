@@ -150,7 +150,8 @@ class _WalkthroughScreenState extends State<WalkthroughScreen> {
                     style: TextStyle(
                         fontWeight: FontWeight.w700,
                         fontSize: 16.sp,
-                        color: Colors.white),
+                        color: Colors.white,
+                        fontFamily: 'Circular Std'),
                   ))
             ],
           ),

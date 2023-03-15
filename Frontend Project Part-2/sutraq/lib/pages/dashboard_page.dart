@@ -55,7 +55,8 @@ class DashboardPage extends StatelessWidget {
                                   style: TextStyle(
                                       color: Colors.white,
                                       fontSize: 10.sp,
-                                      fontWeight: FontWeight.w600),
+                                      fontWeight: FontWeight.w600,
+                                      fontFamily: 'SF Pro Text'),
                                 ),
                               ),
                             ),
@@ -64,13 +65,15 @@ class DashboardPage extends StatelessWidget {
                               style: TextStyle(
                                   fontSize: 16.sp,
                                   fontWeight: FontWeight.w600,
-                                  color: Colors.white)),
+                                  color: Colors.white,
+                                  fontFamily: 'Gelion')),
                           subtitle: Text(
                             'Su/Pre123',
                             style: TextStyle(
                                 fontSize: 9.sp,
                                 fontWeight: FontWeight.w700,
-                                color: Colors.white.withOpacity(0.5)),
+                                color: Colors.white.withOpacity(0.5),
+                                fontFamily: 'Circular Std'),
                           ),
                           trailing: GestureDetector(
                             onTap: () {
@@ -197,7 +200,8 @@ class DashboardPage extends StatelessWidget {
                                               style: TextStyle(
                                                   color: Colors.white,
                                                   fontSize: 14.sp,
-                                                  fontWeight: FontWeight.w700),
+                                                  fontWeight: FontWeight.w700,
+                                                  fontFamily: 'Circular Std'),
                                             ),
                                           ],
                                         ),
@@ -240,7 +244,8 @@ class DashboardPage extends StatelessWidget {
                                               style: TextStyle(
                                                   color: Colors.white,
                                                   fontSize: 14.sp,
-                                                  fontWeight: FontWeight.w700),
+                                                  fontWeight: FontWeight.w700,
+                                                  fontFamily: 'Circular Std'),
                                             ),
                                           ],
                                         ),
@@ -283,7 +288,8 @@ class DashboardPage extends StatelessWidget {
                                               style: TextStyle(
                                                   color: Colors.white,
                                                   fontSize: 14.sp,
-                                                  fontWeight: FontWeight.w700),
+                                                  fontWeight: FontWeight.w700,
+                                                  fontFamily: 'Circular Std'),
                                             ),
                                           ],
                                         )
@@ -314,7 +320,9 @@ class DashboardPage extends StatelessWidget {
                                             style: TextStyle(
                                                 color: Color(0xff333333),
                                                 fontSize: 17.sp,
-                                                fontWeight: FontWeight.w700),
+                                                fontWeight: FontWeight.w700,
+                                                fontFamily:
+                                                    'Gelion'), //ends here
                                           ),
                                         ),
                                       ),
@@ -429,7 +437,8 @@ class FirstSlider extends StatelessWidget {
                           style: TextStyle(
                               color: const Color(0xff0A004A),
                               fontSize: 10.sp,
-                              fontWeight: FontWeight.w700),
+                              fontWeight: FontWeight.w700,
+                              fontFamily: 'DM Sans'),
                         ),
                       ),
                       Icon(
@@ -449,7 +458,8 @@ class FirstSlider extends StatelessWidget {
                     style: TextStyle(
                         color: const Color(0xff0A004A).withOpacity(.4),
                         fontSize: 7.sp,
-                        fontWeight: FontWeight.w700),
+                        fontWeight: FontWeight.w700,
+                        fontFamily: 'Circular Std'),
                   ),
                 ),
               ),
@@ -466,7 +476,8 @@ class FirstSlider extends StatelessWidget {
                           style: TextStyle(
                               color: greenColor1,
                               fontSize: 22.sp,
-                              fontWeight: FontWeight.w700),
+                              fontWeight: FontWeight.w700,
+                              fontFamily: 'Gelion'),
                         ),
                       ),
                       Icon(
@@ -517,7 +528,8 @@ class SecondSlider extends StatelessWidget {
                           style: TextStyle(
                               color: Color(0xff0A004A),
                               fontSize: 10,
-                              fontWeight: FontWeight.w700)),
+                              fontWeight: FontWeight.w700,
+                              fontFamily: 'DM Sans')),
                     )
                   ]),
                 ),
@@ -531,7 +543,8 @@ class SecondSlider extends StatelessWidget {
                     style: TextStyle(
                         color: const Color(0xff0A004A).withOpacity(.4),
                         fontSize: 7.sp,
-                        fontWeight: FontWeight.w700),
+                        fontWeight: FontWeight.w700,
+                        fontFamily: 'Circular Std'),
                   ),
                 ),
               ),
@@ -544,7 +557,8 @@ class SecondSlider extends StatelessWidget {
                     style: TextStyle(
                         color: greenColor1,
                         fontSize: 22.sp,
-                        fontWeight: FontWeight.w700),
+                        fontWeight: FontWeight.w700,
+                        fontFamily: 'Gelion'),
                   ),
                 ),
               ),
@@ -585,7 +599,8 @@ class ThirdSlider extends StatelessWidget {
                           style: TextStyle(
                               color: Color(0xff0A004A),
                               fontSize: 10,
-                              fontWeight: FontWeight.w700)),
+                              fontWeight: FontWeight.w700,
+                              fontFamily: 'DM Sans')),
                     )
                   ]),
                 ),
@@ -599,7 +614,8 @@ class ThirdSlider extends StatelessWidget {
                     style: TextStyle(
                         color: const Color(0xff0A004A).withOpacity(.4),
                         fontSize: 7.sp,
-                        fontWeight: FontWeight.w700),
+                        fontWeight: FontWeight.w700,
+                        fontFamily: 'Circular Std'),
                   ),
                 ),
               ),
@@ -612,7 +628,8 @@ class ThirdSlider extends StatelessWidget {
                     style: TextStyle(
                         color: greenColor1,
                         fontSize: 22.sp,
-                        fontWeight: FontWeight.w700),
+                        fontWeight: FontWeight.w700,
+                        fontFamily: 'Gelion'),
                   ),
                 ),
               ),

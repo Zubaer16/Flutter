@@ -60,7 +60,8 @@ class CustomInput extends StatelessWidget {
                     style: TextStyle(
                         color: lightBalckColor,
                         fontSize: 14.sp,
-                        fontWeight: FontWeight.w500),
+                        fontWeight: FontWeight.w500,
+                        fontFamily: 'Circular Std'),
                   ),
                 ],
               ),
@@ -71,7 +72,8 @@ class CustomInput extends StatelessWidget {
                 style: TextStyle(
                     color: Colors.black,
                     fontSize: 14.sp,
-                    fontWeight: FontWeight.w500),
+                    fontWeight: FontWeight.w500,
+                    fontFamily: 'Circular Std'),
                 keyboardType: inputFieldType,
                 obscureText: inputFieldType == TextInputType.visiblePassword,
                 obscuringCharacter: '*',

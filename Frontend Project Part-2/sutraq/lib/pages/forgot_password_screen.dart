@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:sutraq/components/custom_button.dart';
 import 'package:sutraq/components/custom_circle_button.dart';
+import 'package:sutraq/components/custom_input.dart';
 import 'package:sutraq/components/sutraq_logo.dart';
 import 'package:sutraq/route/route_mange.dart';
 import 'package:sutraq/storage/color_storage.dart';
@@ -49,7 +50,8 @@ class ForgotPasswordScreen extends StatelessWidget {
               style: TextStyle(
                   fontSize: 27.sp,
                   fontWeight: FontWeight.w600,
-                  color: welcomeBalckColor),
+                  color: welcomeBalckColor,
+                  fontFamily: 'Gelion'),
             ),
           ),
           SizedBox(
@@ -60,51 +62,24 @@ class ForgotPasswordScreen extends StatelessWidget {
               style: TextStyle(
                   fontSize: 16.sp,
                   fontWeight: FontWeight.w400,
-                  color: lightBalckColor),
+                  color: lightBalckColor,
+                  fontFamily: 'Circular Std'),
             ),
           ),
           SizedBox(
             height: 40.h,
           ),
-          SizedBox(
-            width: MediaQuery.of(context).size.width,
-            child: Padding(
-              padding: const EdgeInsets.only(left: 35, bottom: 7).r,
-              child: Text(
-                'Email Address',
-                style: TextStyle(
-                  fontSize: 14.sp,
-                  fontWeight: FontWeight.w500,
-                  color: lightBalckColor,
-                ),
-                textAlign: TextAlign.left,
-              ),
-            ),
+          CustomInput(
+            isPrefixIcon: true,
+            prefixIcon: emailIcon,
+            isPrefixIconImage: false,
+            isSuffixIcon: false,
+            placeholder: false,
+            labelText: 'Email Address',
+            width: 307.w,
           ),
-          Padding(
-            padding: const EdgeInsets.only(bottom: 23).r,
-            child: Theme(
-                data: ThemeData(
-                    inputDecorationTheme: const InputDecorationTheme(
-                        border: OutlineInputBorder(
-                            borderSide: BorderSide(color: Color(0xFFC5C5C5))))),
-                child: SizedBox(
-                    width: 307.w,
-                    height: 57.h,
-                    child: TextFormField(
-                      keyboardType: TextInputType.emailAddress,
-                      decoration: InputDecoration(
-                          prefixIcon: Padding(
-                            padding:
-                                const EdgeInsets.only(left: 15, right: 22).r,
-                            child: const Icon(
-                              emailIcon,
-                              color: greenColor,
-                            ),
-                          ),
-                          focusedBorder: const OutlineInputBorder(
-                              borderSide: BorderSide(color: focusBlueColor))),
-                    ))),
+          SizedBox(
+            height: 23.h,
           ),
           CustomButton(
             onPressed: () {
