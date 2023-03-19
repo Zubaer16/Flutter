@@ -11,6 +11,7 @@ import 'package:sutraq/components/sutraq_logo.dart';
 import 'package:sutraq/provider/wallet_page_indicator_provider.dart';
 import 'package:sutraq/route/route_mange.dart';
 import 'package:sutraq/storage/color_storage.dart';
+import 'package:sutraq/storage/font_storage.dart';
 import 'package:sutraq/storage/icon_storage.dart';
 import 'package:visibility_detector/visibility_detector.dart';
 
@@ -515,7 +516,8 @@ class ThirdSlider extends StatelessWidget {
                           style: TextStyle(
                               color: Color(0xffF1F3F4),
                               fontSize: 10,
-                              fontWeight: FontWeight.w700)),
+                              fontWeight: FontWeight.w700,
+                              fontFamily: dmSans)),
                     )
                   ]),
                 ),
@@ -529,7 +531,8 @@ class ThirdSlider extends StatelessWidget {
                     style: TextStyle(
                         color: const Color(0xffF1F3F4).withOpacity(.4),
                         fontSize: 7.sp,
-                        fontWeight: FontWeight.w700),
+                        fontWeight: FontWeight.w700,
+                        fontFamily: circularStd),
                   ),
                 ),
               ),
@@ -550,7 +553,8 @@ class ThirdSlider extends StatelessWidget {
                             fontWeight: FontWeight.w700,
                             decoration: TextDecoration.lineThrough,
                             decorationColor: Colors.white,
-                            decorationThickness: 2),
+                            decorationThickness: 2,
+                            fontFamily: gelion),
                       ),
                       Padding(
                         padding: const EdgeInsets.only(right: 57).r,
@@ -559,7 +563,8 @@ class ThirdSlider extends StatelessWidget {
                           style: TextStyle(
                               color: Colors.white,
                               fontSize: 22.sp,
-                              fontWeight: FontWeight.w700),
+                              fontWeight: FontWeight.w700,
+                              fontFamily: gelion),
                         ),
                       ),
                       Icon(

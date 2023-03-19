@@ -5,6 +5,7 @@ import 'package:sutraq/pages/dashboard_page.dart';
 import 'package:sutraq/pages/settings_page.dart';
 import 'package:sutraq/pages/wallet_page.dart';
 import 'package:sutraq/provider/page_change_provider.dart';
+import 'package:sutraq/storage/font_storage.dart';
 
 import 'package:sutraq/storage/icon_storage.dart';
 
@@ -31,13 +32,19 @@ class DashboardScreen extends StatelessWidget {
           selectedItemColor: const Color(0xFF0DBE53),
           unselectedItemColor: const Color(0xFFDADADA),
           backgroundColor: Colors.white,
+          selectedLabelStyle: TextStyle(fontFamily: circularStd),
+          unselectedLabelStyle: TextStyle(fontFamily: circularStd),
           items: const [
             BottomNavigationBarItem(
-                icon: Icon(dashboardIcon), label: 'Dashboard'),
+              icon: Icon(dashboardIcon),
+              label: 'Dashboard',
+            ),
             BottomNavigationBarItem(icon: Icon(walletIcon), label: 'Wallet'),
             BottomNavigationBarItem(icon: Icon(cardsIcon), label: 'Cards'),
             BottomNavigationBarItem(
-                icon: Icon(settingsIcon), label: 'Settings'),
+              icon: Icon(settingsIcon),
+              label: 'Settings',
+            ),
           ],
           currentIndex: value.pageValue,
           onTap: (int index) {

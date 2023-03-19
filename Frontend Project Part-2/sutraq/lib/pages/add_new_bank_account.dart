@@ -9,6 +9,7 @@ import 'package:sutraq/components/custom_input.dart';
 import 'package:sutraq/pages/wallet_page.dart';
 import 'package:sutraq/route/route_mange.dart';
 import 'package:sutraq/storage/color_storage.dart';
+import 'package:sutraq/storage/font_storage.dart';
 import 'package:sutraq/storage/icon_storage.dart';
 
 import '../components/custom_circle_button.dart';
@@ -41,7 +42,8 @@ class AddNewBankAccount extends StatelessWidget {
                               color: Color(0xff08083d),
                               fontSize: 20.sp,
                               fontWeight: FontWeight.w600,
-                              height: 1.4),
+                              height: 1.4,
+                              fontFamily: gelion),
                           textAlign: TextAlign.center,
                         ),
                       ),
@@ -66,7 +68,8 @@ class AddNewBankAccount extends StatelessWidget {
                         style: TextStyle(
                             color: Color(0xff000000).withOpacity(0.5),
                             fontSize: 12.sp,
-                            fontWeight: FontWeight.w400),
+                            fontWeight: FontWeight.w400,
+                            fontFamily: circularStd),
                         textAlign: TextAlign.center,
                       )),
                 ),

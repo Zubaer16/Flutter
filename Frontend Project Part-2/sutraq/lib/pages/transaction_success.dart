@@ -6,6 +6,7 @@ import 'package:get/get.dart';
 import 'package:sutraq/components/custom_button.dart';
 import 'package:sutraq/route/route_mange.dart';
 import 'package:sutraq/storage/color_storage.dart';
+import 'package:sutraq/storage/font_storage.dart';
 import 'package:sutraq/storage/icon_storage.dart';
 
 class TransactionSuccess extends StatelessWidget {
@@ -49,7 +50,8 @@ class TransactionSuccess extends StatelessWidget {
                     style: TextStyle(
                         color: Color(0xff002251),
                         fontSize: 24.sp,
-                        fontWeight: FontWeight.w700),
+                        fontWeight: FontWeight.w700,
+                        fontFamily: gelion),
                   ),
                   SizedBox(
                     height: 9.h,
@@ -59,7 +61,8 @@ class TransactionSuccess extends StatelessWidget {
                     style: TextStyle(
                         color: Color(0xff7A869A),
                         fontSize: 14.sp,
-                        fontWeight: FontWeight.w400),
+                        fontWeight: FontWeight.w400,
+                        fontFamily: circularStd),
                   ),
                   SizedBox(
                     height: 33.h,
@@ -77,7 +80,8 @@ class TransactionSuccess extends StatelessWidget {
                               style: TextStyle(
                                   color: Color(0xff002251),
                                   fontSize: 13.sp,
-                                  fontWeight: FontWeight.w500),
+                                  fontWeight: FontWeight.w500,
+                                  fontFamily: circularStd),
                             ),
                             SizedBox(
                               height: 5.h,
@@ -87,7 +91,8 @@ class TransactionSuccess extends StatelessWidget {
                               style: TextStyle(
                                   color: Color(0xff7A869A),
                                   fontSize: 12.sp,
-                                  fontWeight: FontWeight.w400),
+                                  fontWeight: FontWeight.w400,
+                                  fontFamily: circularStd),
                             ),
                           ],
                         ),
@@ -99,7 +104,8 @@ class TransactionSuccess extends StatelessWidget {
                               style: TextStyle(
                                   color: Color(0xff002251),
                                   fontSize: 13.sp,
-                                  fontWeight: FontWeight.w500),
+                                  fontWeight: FontWeight.w500,
+                                  fontFamily: circularStd),
                             ),
                             SizedBox(
                               height: 5.h,
@@ -109,7 +115,8 @@ class TransactionSuccess extends StatelessWidget {
                               style: TextStyle(
                                   color: Color(0xff7A869A),
                                   fontSize: 12.sp,
-                                  fontWeight: FontWeight.w400),
+                                  fontWeight: FontWeight.w400,
+                                  fontFamily: circularStd),
                             ),
                           ],
                         ),
@@ -140,7 +147,8 @@ class TransactionSuccess extends StatelessWidget {
                               style: TextStyle(
                                   color: Color(0xff002251),
                                   fontSize: 13.sp,
-                                  fontWeight: FontWeight.w500),
+                                  fontWeight: FontWeight.w500,
+                                  fontFamily: circularStd),
                             ),
                             SizedBox(
                               height: 5.h,
@@ -150,7 +158,8 @@ class TransactionSuccess extends StatelessWidget {
                               style: TextStyle(
                                   color: Color(0xff7A869A),
                                   fontSize: 12.sp,
-                                  fontWeight: FontWeight.w400),
+                                  fontWeight: FontWeight.w400,
+                                  fontFamily: circularStd),
                             ),
                             SizedBox(
                               height: 5.h,
@@ -160,7 +169,8 @@ class TransactionSuccess extends StatelessWidget {
                               style: TextStyle(
                                   color: Color(0xff7A869A),
                                   fontSize: 12.sp,
-                                  fontWeight: FontWeight.w400),
+                                  fontWeight: FontWeight.w400,
+                                  fontFamily: circularStd),
                             ),
                           ],
                         ),
@@ -172,7 +182,8 @@ class TransactionSuccess extends StatelessWidget {
                               style: TextStyle(
                                   color: Color(0xff002251),
                                   fontSize: 13.sp,
-                                  fontWeight: FontWeight.w500),
+                                  fontWeight: FontWeight.w500,
+                                  fontFamily: circularStd),
                             ),
                             SizedBox(
                               height: 5.h,
@@ -182,7 +193,8 @@ class TransactionSuccess extends StatelessWidget {
                               style: TextStyle(
                                   color: Color(0xff7A869A),
                                   fontSize: 12.sp,
-                                  fontWeight: FontWeight.w400),
+                                  fontWeight: FontWeight.w400,
+                                  fontFamily: circularStd),
                             ),
                             SizedBox(
                               height: 5.h,
@@ -192,7 +204,8 @@ class TransactionSuccess extends StatelessWidget {
                               style: TextStyle(
                                   color: Color(0xff7A869A),
                                   fontSize: 12.sp,
-                                  fontWeight: FontWeight.w400),
+                                  fontWeight: FontWeight.w400,
+                                  fontFamily: circularStd),
                             ),
                           ],
                         ),
@@ -219,10 +232,10 @@ class TransactionSuccess extends StatelessWidget {
                         Text(
                           'Date:',
                           style: TextStyle(
-                            color: Color(0xff002251),
-                            fontSize: 13.sp,
-                            fontWeight: FontWeight.w500,
-                          ),
+                              color: Color(0xff002251),
+                              fontSize: 13.sp,
+                              fontWeight: FontWeight.w500,
+                              fontFamily: circularStd),
                         ),
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.end,
@@ -232,7 +245,8 @@ class TransactionSuccess extends StatelessWidget {
                               style: TextStyle(
                                   color: Color(0xff002251),
                                   fontSize: 13.sp,
-                                  fontWeight: FontWeight.w500),
+                                  fontWeight: FontWeight.w500,
+                                  fontFamily: circularStd),
                             ),
                             SizedBox(
                               height: 5.h,
@@ -242,7 +256,8 @@ class TransactionSuccess extends StatelessWidget {
                               style: TextStyle(
                                   color: Color(0xff7A869A),
                                   fontSize: 12.sp,
-                                  fontWeight: FontWeight.w400),
+                                  fontWeight: FontWeight.w400,
+                                  fontFamily: circularStd),
                             ),
                           ],
                         ),
@@ -268,17 +283,18 @@ class TransactionSuccess extends StatelessWidget {
                         Text(
                           'Total',
                           style: TextStyle(
-                            color: Color(0xff002251),
-                            fontSize: 13.sp,
-                            fontWeight: FontWeight.w500,
-                          ),
+                              color: Color(0xff002251),
+                              fontSize: 13.sp,
+                              fontWeight: FontWeight.w500,
+                              fontFamily: circularStd),
                         ),
                         Text(
                           '\$4,800',
                           style: TextStyle(
                               color: Color(0xff002251),
                               fontSize: 13.sp,
-                              fontWeight: FontWeight.w500),
+                              fontWeight: FontWeight.w500,
+                              fontFamily: circularStd),
                         ),
                       ],
                     ),
@@ -310,7 +326,8 @@ class TransactionSuccess extends StatelessWidget {
                               style: TextStyle(
                                   fontSize: 14.sp,
                                   fontWeight: FontWeight.w400,
-                                  color: Color(0xff7A869A)),
+                                  color: Color(0xff7A869A),
+                                  fontFamily: circularStd),
                             )),
                       ],
                     ),

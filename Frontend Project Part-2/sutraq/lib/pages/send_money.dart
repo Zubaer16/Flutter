@@ -6,6 +6,7 @@ import 'package:get/get.dart';
 import 'package:sutraq/components/custom_circle_button.dart';
 import 'package:sutraq/route/route_mange.dart';
 import 'package:sutraq/storage/color_storage.dart';
+import 'package:sutraq/storage/font_storage.dart';
 import 'package:sutraq/storage/icon_storage.dart';
 
 class SendMoney extends StatelessWidget {
@@ -27,12 +28,12 @@ class SendMoney extends StatelessWidget {
                 child: SizedBox(
                   width: MediaQuery.of(context).size.width,
                   child: Text(
-                    'Bank Transfer',
+                    'Send Money',
                     style: TextStyle(
-                      color: const Color(0xff08083d),
-                      fontSize: 20.sp,
-                      fontWeight: FontWeight.w600,
-                    ),
+                        color: const Color(0xff08083d),
+                        fontSize: 20.sp,
+                        fontWeight: FontWeight.w600,
+                        fontFamily: gelion),
                     textAlign: TextAlign.center,
                   ),
                 ),
@@ -57,7 +58,8 @@ class SendMoney extends StatelessWidget {
                   style: TextStyle(
                       color: const Color(0xff000000).withOpacity(0.5),
                       fontSize: 14.sp,
-                      fontWeight: FontWeight.w400),
+                      fontWeight: FontWeight.w400,
+                      fontFamily: dmSans),
                   textAlign: TextAlign.center,
                 )),
           ),
@@ -101,7 +103,8 @@ class SendMoney extends StatelessWidget {
                             style: TextStyle(
                                 color: Color(0xff2f2f2f),
                                 fontSize: 14.sp,
-                                fontWeight: FontWeight.w500),
+                                fontWeight: FontWeight.w500,
+                                fontFamily: circularStd),
                           ),
                           SizedBox(
                             height: 7.h,
@@ -111,7 +114,8 @@ class SendMoney extends StatelessWidget {
                             style: TextStyle(
                                 color: Color(0xff2f2f2f).withOpacity(.5),
                                 fontSize: 12.sp,
-                                fontWeight: FontWeight.w400),
+                                fontWeight: FontWeight.w400,
+                                fontFamily: dmSans),
                           )
                         ],
                       ),
@@ -164,7 +168,8 @@ class SendMoney extends StatelessWidget {
                             style: TextStyle(
                                 color: Color(0xff2f2f2f),
                                 fontSize: 14.sp,
-                                fontWeight: FontWeight.w500),
+                                fontWeight: FontWeight.w500,
+                                fontFamily: circularStd),
                           ),
                           SizedBox(
                             height: 7.h,
@@ -174,7 +179,8 @@ class SendMoney extends StatelessWidget {
                             style: TextStyle(
                                 color: Color(0xff2f2f2f).withOpacity(.5),
                                 fontSize: 12.sp,
-                                fontWeight: FontWeight.w400),
+                                fontWeight: FontWeight.w400,
+                                fontFamily: dmSans),
                           )
                         ],
                       ),

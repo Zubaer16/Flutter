@@ -81,6 +81,12 @@ flutter:
     - family: SF Pro Text
       fonts:
         - asset: custom_fonts/SfProText.ttf
+    - family: Helvetica Neue
+      fonts:
+        - asset: custom_fonts/helveticaNeue.ttf
+    - family: SF Compact Display
+      fonts:
+        - asset: custom_fonts/sfCompactDisplay.ttf
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

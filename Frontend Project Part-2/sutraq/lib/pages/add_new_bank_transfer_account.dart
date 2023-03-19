@@ -9,6 +9,7 @@ import 'package:sutraq/components/custom_dropdown.dart';
 import 'package:sutraq/pages/good.dart';
 import 'package:sutraq/route/route_mange.dart';
 import 'package:sutraq/storage/color_storage.dart';
+import 'package:sutraq/storage/font_storage.dart';
 
 class AddNewBankTransferAccount extends StatelessWidget {
   const AddNewBankTransferAccount({super.key});
@@ -38,7 +39,8 @@ class AddNewBankTransferAccount extends StatelessWidget {
                                 color: const Color(0xff08083d),
                                 fontSize: 20.sp,
                                 fontWeight: FontWeight.w600,
-                                height: 1.4),
+                                height: 1.4,
+                                fontFamily: circularStd),
                             textAlign: TextAlign.center,
                           ),
                         ),
@@ -65,7 +67,8 @@ class AddNewBankTransferAccount extends StatelessWidget {
                               color: Color(0xff000000).withOpacity(0.5),
                               fontSize: 12.sp,
                               fontWeight: FontWeight.w400,
-                              height: 1.6),
+                              height: 1.6,
+                              fontFamily: circularStd),
                           textAlign: TextAlign.center,
                         )),
                   ),

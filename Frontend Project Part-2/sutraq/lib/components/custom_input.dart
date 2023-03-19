@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:sutraq/storage/color_storage.dart';
+import 'package:sutraq/storage/font_storage.dart';
 import 'package:sutraq/storage/icon_storage.dart';
 
 class CustomInput extends StatelessWidget {
@@ -61,7 +62,7 @@ class CustomInput extends StatelessWidget {
                         color: lightBalckColor,
                         fontSize: 14.sp,
                         fontWeight: FontWeight.w500,
-                        fontFamily: 'Circular Std'),
+                        fontFamily: circularStd),
                   ),
                 ],
               ),
@@ -73,7 +74,7 @@ class CustomInput extends StatelessWidget {
                     color: Colors.black,
                     fontSize: 14.sp,
                     fontWeight: FontWeight.w500,
-                    fontFamily: 'Circular Std'),
+                    fontFamily: circularStd),
                 keyboardType: inputFieldType,
                 obscureText: inputFieldType == TextInputType.visiblePassword,
                 obscuringCharacter: '*',

@@ -8,6 +8,7 @@ import 'package:sutraq/components/custom_circle_button.dart';
 import 'package:sutraq/components/custom_dropdown.dart';
 import 'package:sutraq/components/custom_input.dart';
 import 'package:sutraq/storage/color_storage.dart';
+import 'package:sutraq/storage/font_storage.dart';
 
 import '../route/route_mange.dart';
 import '../storage/icon_storage.dart';
@@ -40,7 +41,8 @@ class BankTransfer extends StatelessWidget {
                               color: const Color(0xff08083d),
                               fontSize: 20.sp,
                               fontWeight: FontWeight.w600,
-                              height: 1.4),
+                              height: 1.4,
+                              fontFamily: gelion),
                           textAlign: TextAlign.center,
                         ),
                       ),
@@ -65,7 +67,8 @@ class BankTransfer extends StatelessWidget {
                         style: TextStyle(
                             color: Color(0xff000000).withOpacity(0.5),
                             fontSize: 12.sp,
-                            fontWeight: FontWeight.w400),
+                            fontWeight: FontWeight.w400,
+                            fontFamily: dmSans),
                         textAlign: TextAlign.center,
                       )),
                 ),

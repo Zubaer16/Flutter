@@ -370,7 +370,8 @@ class DashboardPage extends StatelessWidget {
                                           style: TextStyle(
                                               color: greenColor1,
                                               fontSize: 14.sp,
-                                              fontWeight: FontWeight.w700),
+                                              fontWeight: FontWeight.w700,
+                                              fontFamily: circularStd),
                                         )),
                                     SizedBox(
                                       height: 10.h,

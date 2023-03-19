@@ -6,6 +6,7 @@ import 'package:get/get.dart';
 import 'package:sutraq/components/custom_circle_button.dart';
 import 'package:sutraq/route/route_mange.dart';
 import 'package:sutraq/storage/color_storage.dart';
+import 'package:sutraq/storage/font_storage.dart';
 import 'package:sutraq/storage/icon_storage.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 
@@ -43,6 +44,7 @@ class EnterTransactionPin extends StatelessWidget {
                       color: const Color(0xff08083d),
                       fontSize: 20.sp,
                       fontWeight: FontWeight.w600,
+                      fontFamily: gelion,
                       height: 1.4),
                   textAlign: TextAlign.center,
                 ),
@@ -55,7 +57,8 @@ class EnterTransactionPin extends StatelessWidget {
                       color: const Color(0xff7A869A),
                       fontSize: 14.sp,
                       fontWeight: FontWeight.w400,
-                      height: 1.4),
+                      height: 1.4,
+                      fontFamily: circularStd),
                   textAlign: TextAlign.center,
                 ),
                 SizedBox(

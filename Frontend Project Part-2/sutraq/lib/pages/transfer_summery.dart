@@ -6,6 +6,7 @@ import 'package:get/get.dart';
 import 'package:sutraq/components/custom_button.dart';
 import 'package:sutraq/components/custom_circle_button.dart';
 import 'package:sutraq/route/route_mange.dart';
+import 'package:sutraq/storage/font_storage.dart';
 import '../storage/color_storage.dart';
 import '../storage/icon_storage.dart';
 
@@ -33,7 +34,8 @@ class TransferSummery extends StatelessWidget {
                               color: const Color(0xff08083d),
                               fontSize: 20.sp,
                               fontWeight: FontWeight.w600,
-                              height: 1.4),
+                              height: 1.4,
+                              fontFamily: gelion),
                           textAlign: TextAlign.center,
                         ),
                       ),
@@ -89,7 +91,8 @@ class TransferSummery extends StatelessWidget {
                                           style: TextStyle(
                                               color: Color(0xff969696),
                                               fontSize: 11.sp,
-                                              fontWeight: FontWeight.w500),
+                                              fontWeight: FontWeight.w500,
+                                              fontFamily: circularStd),
                                         ),
                                       ),
                                       Text(
@@ -97,7 +100,8 @@ class TransferSummery extends StatelessWidget {
                                         style: TextStyle(
                                             color: Color(0xff000000),
                                             fontSize: 17.sp,
-                                            fontWeight: FontWeight.w700),
+                                            fontWeight: FontWeight.w700,
+                                            fontFamily: dmSans),
                                       ),
                                     ],
                                   ),
@@ -134,7 +138,8 @@ class TransferSummery extends StatelessWidget {
                                           style: TextStyle(
                                               color: Color(0xff969696),
                                               fontSize: 11.sp,
-                                              fontWeight: FontWeight.w500),
+                                              fontWeight: FontWeight.w500,
+                                              fontFamily: circularStd),
                                         ),
                                       ),
                                       Text(
@@ -142,7 +147,8 @@ class TransferSummery extends StatelessWidget {
                                         style: TextStyle(
                                             color: Color(0xff000000),
                                             fontSize: 17.sp,
-                                            fontWeight: FontWeight.w700),
+                                            fontWeight: FontWeight.w700,
+                                            fontFamily: dmSans),
                                       ),
                                     ],
                                   ),
@@ -179,7 +185,8 @@ class TransferSummery extends StatelessWidget {
                                           style: TextStyle(
                                               color: Color(0xff969696),
                                               fontSize: 11.sp,
-                                              fontWeight: FontWeight.w500),
+                                              fontWeight: FontWeight.w500,
+                                              fontFamily: circularStd),
                                         ),
                                       ),
                                       Text(
@@ -187,7 +194,8 @@ class TransferSummery extends StatelessWidget {
                                         style: TextStyle(
                                             color: Color(0xff000000),
                                             fontSize: 17.sp,
-                                            fontWeight: FontWeight.w700),
+                                            fontWeight: FontWeight.w700,
+                                            fontFamily: dmSans),
                                       ),
                                     ],
                                   ),
@@ -224,7 +232,8 @@ class TransferSummery extends StatelessWidget {
                                           style: TextStyle(
                                               color: Color(0xff969696),
                                               fontSize: 11.sp,
-                                              fontWeight: FontWeight.w500),
+                                              fontWeight: FontWeight.w500,
+                                              fontFamily: circularStd),
                                         ),
                                       ),
                                       Text(
@@ -232,7 +241,8 @@ class TransferSummery extends StatelessWidget {
                                         style: TextStyle(
                                             color: Color(0xff000000),
                                             fontSize: 17.sp,
-                                            fontWeight: FontWeight.w700),
+                                            fontWeight: FontWeight.w700,
+                                            fontFamily: dmSans),
                                       ),
                                     ],
                                   ),
@@ -260,7 +270,8 @@ class TransferSummery extends StatelessWidget {
                                         style: TextStyle(
                                             color: Color(0xff969696),
                                             fontSize: 12.sp,
-                                            fontWeight: FontWeight.w500),
+                                            fontWeight: FontWeight.w500,
+                                            fontFamily: dmSans),
                                       ),
                                     ),
                                     Text(
@@ -268,7 +279,8 @@ class TransferSummery extends StatelessWidget {
                                       style: TextStyle(
                                           color: Color(0xff000000),
                                           fontSize: 21.sp,
-                                          fontWeight: FontWeight.w700),
+                                          fontWeight: FontWeight.w700,
+                                          fontFamily: dmSans),
                                     ),
                                   ],
                                 ),
@@ -286,7 +298,8 @@ class TransferSummery extends StatelessWidget {
                                         style: TextStyle(
                                             color: Color(0xff969696),
                                             fontSize: 12.sp,
-                                            fontWeight: FontWeight.w500),
+                                            fontWeight: FontWeight.w500,
+                                            fontFamily: dmSans),
                                       ),
                                     ),
                                     Text(
@@ -294,7 +307,8 @@ class TransferSummery extends StatelessWidget {
                                       style: TextStyle(
                                           color: Color(0xff000000),
                                           fontSize: 21.sp,
-                                          fontWeight: FontWeight.w700),
+                                          fontWeight: FontWeight.w700,
+                                          fontFamily: dmSans),
                                     ),
                                   ],
                                 ),

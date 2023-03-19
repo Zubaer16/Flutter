@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:sutraq/storage/color_storage.dart';
+import 'package:sutraq/storage/font_storage.dart';
 import 'package:sutraq/storage/icon_storage.dart';
 
 class NotificationScreen extends StatelessWidget {
@@ -29,7 +30,8 @@ class NotificationScreen extends StatelessWidget {
                       style: TextStyle(
                           color: Color(0xff08083D),
                           fontSize: 20.sp,
-                          fontWeight: FontWeight.w600),
+                          fontWeight: FontWeight.w600,
+                          fontFamily: gelion),
                     ),
                   ),
                   Padding(
@@ -86,7 +88,8 @@ class NotificationScreen extends StatelessWidget {
                               style: TextStyle(
                                   color: Color(0xff4D4949),
                                   fontSize: 14.sp,
-                                  fontWeight: FontWeight.w500),
+                                  fontWeight: FontWeight.w500,
+                                  fontFamily: gelion),
                             ),
                           ),
                           Padding(
@@ -96,7 +99,8 @@ class NotificationScreen extends StatelessWidget {
                               style: TextStyle(
                                   color: greenColor.withOpacity(.6),
                                   fontSize: 14.sp,
-                                  fontWeight: FontWeight.w500),
+                                  fontWeight: FontWeight.w500,
+                                  fontFamily: gelion),
                             ),
                           )
                         ],
@@ -112,7 +116,8 @@ class NotificationScreen extends StatelessWidget {
                             style: TextStyle(
                                 color: Color(0xff4D4949),
                                 fontSize: 14.sp,
-                                fontWeight: FontWeight.w500),
+                                fontWeight: FontWeight.w500,
+                                fontFamily: gelion),
                           ),
                         ),
                       ),
@@ -155,7 +160,8 @@ class NotificationScreen extends StatelessWidget {
                               style: TextStyle(
                                   color: Color(0xff4D4949).withOpacity(.5),
                                   fontSize: 14.sp,
-                                  fontWeight: FontWeight.w500),
+                                  fontWeight: FontWeight.w500,
+                                  fontFamily: gelion),
                             ),
                           ),
                           Padding(
@@ -165,7 +171,8 @@ class NotificationScreen extends StatelessWidget {
                               style: TextStyle(
                                   color: greenColor.withOpacity(.5),
                                   fontSize: 14.sp,
-                                  fontWeight: FontWeight.w500),
+                                  fontWeight: FontWeight.w500,
+                                  fontFamily: gelion),
                             ),
                           )
                         ],
@@ -181,7 +188,8 @@ class NotificationScreen extends StatelessWidget {
                             style: TextStyle(
                                 color: Color(0xff4D4949).withOpacity(.5),
                                 fontSize: 14.sp,
-                                fontWeight: FontWeight.w500),
+                                fontWeight: FontWeight.w500,
+                                fontFamily: gelion),
                           ),
                         ),
                       ),

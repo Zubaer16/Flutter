@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:sutraq/components/custom_button.dart';
 import 'package:sutraq/route/route_mange.dart';
 import 'package:sutraq/storage/color_storage.dart';
+import 'package:sutraq/storage/font_storage.dart';
 import 'package:sutraq/storage/icon_storage.dart';
 
 // String? dialogButtonText;
@@ -37,8 +38,11 @@ Future<dynamic> dashboardDialog(
                         style: TextStyle(
                             color: Color(0xff636363),
                             fontSize: 18.sp,
-                            fontWeight: FontWeight.w500),
-                        child: Text('Choose Option')),
+                            fontWeight: FontWeight.w500,
+                            fontFamily: sfCompactDisplay),
+                        child: Text(
+                          'Choose Option',
+                        )),
                   ),
                   Padding(
                     padding: const EdgeInsets.only(bottom: 20).r,
@@ -46,7 +50,8 @@ Future<dynamic> dashboardDialog(
                       style: TextStyle(
                           color: Color(0xff000000).withOpacity(0.5),
                           fontSize: 12.sp,
-                          fontWeight: FontWeight.w400),
+                          fontWeight: FontWeight.w400,
+                          fontFamily: helveticaNeue),
                       child: Text('Pick a card to continue'),
                     ),
                   ),
@@ -82,7 +87,8 @@ Future<dynamic> dashboardDialog(
                                           style: TextStyle(
                                               color: Color(0xffF1F3F4),
                                               fontSize: 12.sp,
-                                              fontWeight: FontWeight.w700),
+                                              fontWeight: FontWeight.w700,
+                                              fontFamily: sfCompactDisplay),
                                           child: Text('NGN')),
                                     )
                                   ]),
@@ -99,14 +105,15 @@ Future<dynamic> dashboardDialog(
                                               decoration:
                                                   TextDecoration.lineThrough,
                                               decorationColor: Colors.white,
-                                              decorationThickness: 2),
+                                              decorationThickness: 2,
+                                              fontFamily: gelion),
                                           child: Text('N')),
                                       DefaultTextStyle(
                                           style: TextStyle(
-                                            color: Colors.white,
-                                            fontSize: 16.sp,
-                                            fontWeight: FontWeight.w600,
-                                          ),
+                                              color: Colors.white,
+                                              fontSize: 16.sp,
+                                              fontWeight: FontWeight.w600,
+                                              fontFamily: gelion),
                                           child: Text('12,000'))
                                     ],
                                   ),

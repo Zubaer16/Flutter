@@ -11,6 +11,7 @@ import 'package:sutraq/components/custom_input.dart';
 import 'package:sutraq/pages/wallet_page.dart';
 import 'package:sutraq/route/route_mange.dart';
 import 'package:sutraq/storage/color_storage.dart';
+import 'package:sutraq/storage/font_storage.dart';
 import 'package:sutraq/storage/icon_storage.dart';
 
 class FundWalletPage extends StatelessWidget {
@@ -36,10 +37,10 @@ class FundWalletPage extends StatelessWidget {
                       width: MediaQuery.of(context).size.width,
                       child: Text('Fund Wallet',
                           style: TextStyle(
-                            color: Color(0xff08083d),
-                            fontSize: 20.sp,
-                            fontWeight: FontWeight.w600,
-                          ),
+                              color: Color(0xff08083d),
+                              fontSize: 20.sp,
+                              fontWeight: FontWeight.w600,
+                              fontFamily: gelion),
                           textAlign: TextAlign.center),
                     ),
                   ),
@@ -63,7 +64,8 @@ class FundWalletPage extends StatelessWidget {
                       style: TextStyle(
                           color: Color(0xff000000).withOpacity(.5),
                           fontSize: 12.sp,
-                          fontWeight: FontWeight.w400),
+                          fontWeight: FontWeight.w400,
+                          fontFamily: circularStd),
                       textAlign: TextAlign.center,
                     )),
               ),

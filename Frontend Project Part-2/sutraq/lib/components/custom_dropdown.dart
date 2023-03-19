@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:sutraq/storage/color_storage.dart';
+import 'package:sutraq/storage/font_storage.dart';
 import 'package:sutraq/storage/icon_storage.dart';
 
 class CustomDropdown extends StatelessWidget {
@@ -56,7 +57,8 @@ class CustomDropdown extends StatelessWidget {
                     style: TextStyle(
                         color: lightBalckColor,
                         fontSize: 14.sp,
-                        fontWeight: FontWeight.w500),
+                        fontWeight: FontWeight.w500,
+                        fontFamily: circularStd),
                   ),
                   if (textButtonVisible == true)
                     TextButton(
@@ -68,7 +70,9 @@ class CustomDropdown extends StatelessWidget {
                         child: Text(
                           '+ Add New',
                           style: TextStyle(
-                              fontSize: 12.sp, fontWeight: FontWeight.w400),
+                              fontSize: 12.sp,
+                              fontWeight: FontWeight.w400,
+                              fontFamily: circularStd),
                         )),
                 ],
               ),
@@ -81,7 +85,10 @@ class CustomDropdown extends StatelessWidget {
                 items: ['one', 'two', 'three']
                     .map((e) => DropdownMenuItem(
                           value: e,
-                          child: Text(e),
+                          child: Text(
+                            e,
+                            style: TextStyle(fontFamily: circularStd),
+                          ),
                         ))
                     .toList(),
                 onChanged: (value) {},
