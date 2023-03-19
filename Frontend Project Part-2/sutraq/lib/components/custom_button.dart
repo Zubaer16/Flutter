@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:sutraq/storage/color_storage.dart';
+import 'package:sutraq/storage/font_storage.dart';
 
 class CustomButton extends StatelessWidget {
   final double? buttonHeight;
@@ -40,7 +41,7 @@ class CustomButton extends StatelessWidget {
           style: TextStyle(
               fontSize: buttonFontSize ?? 17.sp,
               fontWeight: buttonTextWeight ?? FontWeight.w700,
-              fontFamily: 'Circular Std'),
+              fontFamily: circularStd),
         ),
       ),
     );

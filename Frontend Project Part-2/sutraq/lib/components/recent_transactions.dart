@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:sutraq/storage/font_storage.dart';
 
 class RecentTransactions extends StatelessWidget {
   const RecentTransactions(
@@ -67,7 +68,8 @@ class RecentTransactions extends StatelessWidget {
                           style: TextStyle(
                               color: Color(0xff0A004A),
                               fontSize: 14.sp,
-                              fontWeight: FontWeight.w500),
+                              fontWeight: FontWeight.w500,
+                              fontFamily: circularStd),
                         ),
                       ),
                       Text(
@@ -76,7 +78,8 @@ class RecentTransactions extends StatelessWidget {
                         style: TextStyle(
                             color: Color(0xff929292).withOpacity(.7),
                             fontSize: 10.sp,
-                            fontWeight: FontWeight.w400),
+                            fontWeight: FontWeight.w400,
+                            fontFamily: circularStd),
                       ),
                     ],
                   ),
@@ -95,14 +98,16 @@ class RecentTransactions extends StatelessWidget {
                     decorationThickness: 2,
                     color: Color(0xff0A004A),
                     fontSize: 16.sp,
-                    fontWeight: FontWeight.w600),
+                    fontWeight: FontWeight.w600,
+                    fontFamily: gelion),
               ),
               Text(
                 amount ?? '2400',
                 style: TextStyle(
                     color: Color(0xff0A004A),
                     fontSize: 16.sp,
-                    fontWeight: FontWeight.w600),
+                    fontWeight: FontWeight.w600,
+                    fontFamily: gelion),
               ),
             ],
           ),

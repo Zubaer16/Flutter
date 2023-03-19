@@ -9,6 +9,7 @@ import 'package:sutraq/storage/color_storage.dart';
 import 'package:sutraq/components/custom_button.dart';
 import 'package:sutraq/components/walkthrough.dart';
 import 'package:sutraq/route/route_mange.dart';
+import 'package:sutraq/storage/font_storage.dart';
 
 final List<Widget> pic = [
   Walkthrough(
@@ -151,7 +152,7 @@ class _WalkthroughScreenState extends State<WalkthroughScreen> {
                         fontWeight: FontWeight.w700,
                         fontSize: 16.sp,
                         color: Colors.white,
-                        fontFamily: 'Circular Std'),
+                        fontFamily: circularStd),
                   ))
             ],
           ),

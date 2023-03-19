@@ -6,6 +6,7 @@ import 'package:sutraq/components/custom_input.dart';
 import 'package:sutraq/components/sutraq_logo.dart';
 import 'package:sutraq/route/route_mange.dart';
 import 'package:sutraq/storage/color_storage.dart';
+import 'package:sutraq/storage/font_storage.dart';
 import 'package:sutraq/storage/icon_storage.dart';
 
 class WelcomeBackScreen extends StatelessWidget {
@@ -39,7 +40,7 @@ class WelcomeBackScreen extends StatelessWidget {
                     fontSize: 30.sp,
                     fontWeight: FontWeight.w600,
                     color: welcomeBalckColor,
-                    fontFamily: 'Gelion'),
+                    fontFamily: gelion),
               ),
             ),
             Text(
@@ -48,7 +49,7 @@ class WelcomeBackScreen extends StatelessWidget {
                   fontSize: 16.sp,
                   fontWeight: FontWeight.w400,
                   color: lightBalckColor,
-                  fontFamily: 'Circular Std'),
+                  fontFamily: circularStd),
             ),
             SizedBox(
               height: 43.h,
@@ -81,7 +82,7 @@ class WelcomeBackScreen extends StatelessWidget {
                     alignment: Alignment.topRight,
                     child: Text(
                       'Forgot Password?',
-                      style: TextStyle(fontSize: 11.sp, fontFamily: 'DM Sans'),
+                      style: TextStyle(fontSize: 11.sp, fontFamily: dmSans),
                     ),
                   ),
                 )),
@@ -102,7 +103,7 @@ class WelcomeBackScreen extends StatelessWidget {
                         color: lightBalckColor,
                         fontSize: 14.sp,
                         fontWeight: FontWeight.w400,
-                        fontFamily: 'DM Sans')),
+                        fontFamily: dmSans)),
                 TextButton(
                     style: TextButton.styleFrom(foregroundColor: greenColor),
                     onPressed: () {
@@ -113,7 +114,7 @@ class WelcomeBackScreen extends StatelessWidget {
                       style: TextStyle(
                           fontSize: 14.sp,
                           fontWeight: FontWeight.w400,
-                          fontFamily: 'DM Sans'),
+                          fontFamily: dmSans),
                     ))
               ],
             ),
@@ -133,7 +134,7 @@ class WelcomeBackScreen extends StatelessWidget {
                     color: greenColor,
                     fontSize: 14.sp,
                     fontWeight: FontWeight.w500,
-                    fontFamily: 'DM Sans'),
+                    fontFamily: dmSans),
               ),
             )
           ]),

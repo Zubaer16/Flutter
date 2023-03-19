@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:sutraq/storage/color_storage.dart';
+import 'package:sutraq/storage/font_storage.dart';
 
 class Walkthrough extends StatelessWidget {
   final double? padding_left;
@@ -94,7 +95,7 @@ class Walkthrough extends StatelessWidget {
                       color: Colors.white,
                       fontSize: 27.sp,
                       fontWeight: FontWeight.w600,
-                      fontFamily: 'Gelion'),
+                      fontFamily: gelion),
                 ),
                 SizedBox(
                   height: 30.h,
@@ -107,7 +108,7 @@ class Walkthrough extends StatelessWidget {
                         color: Colors.white,
                         fontSize: 16.sp,
                         fontWeight: FontWeight.w400,
-                        fontFamily: 'Circular Std'),
+                        fontFamily: circularStd),
                     textAlign: TextAlign.center,
                   ),
                 )
