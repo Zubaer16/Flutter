@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
+import 'package:sutraq/storage/font_storage.dart';
 
 class CustomPin extends StatelessWidget {
   const CustomPin({Key? key, required this.inputText, required this.onChanged})
@@ -18,11 +19,12 @@ class CustomPin extends StatelessWidget {
           child: Text(
             inputText,
             style: TextStyle(
-                color: Color(
+                color: const Color(
                   0xff969696,
                 ),
                 fontSize: 14.sp,
-                fontWeight: FontWeight.w500),
+                fontWeight: FontWeight.w500,
+                fontFamily: circularStd),
           ),
         ),
         SizedBox(
@@ -33,8 +35,8 @@ class CustomPin extends StatelessWidget {
           height: 57.h,
           alignment: Alignment.center,
           decoration: BoxDecoration(
-              border: Border.all(color: Color(0xffc5c5c5)),
-              borderRadius: BorderRadius.all(Radius.circular(2).r)),
+              border: Border.all(color: const Color(0xffc5c5c5)),
+              borderRadius: BorderRadius.all(const Radius.circular(2).r)),
           child: SizedBox(
             width: 197.w,
             child: PinCodeTextField(
@@ -50,13 +52,13 @@ class CustomPin extends StatelessWidget {
               obscuringCharacter: '*',
               pinTheme: PinTheme(
                   shape: PinCodeFieldShape.underline,
-                  borderRadius: BorderRadius.all(Radius.circular(4).r),
+                  borderRadius: BorderRadius.all(const Radius.circular(4).r),
                   fieldWidth: 41.w,
                   fieldHeight: 45.h,
                   activeFillColor: Colors.white,
-                  activeColor: Color(0xff000000),
-                  inactiveColor: Color(0xff000000),
-                  selectedColor: Color(0xff000000)),
+                  activeColor: const Color(0xff000000),
+                  inactiveColor: const Color(0xff000000),
+                  selectedColor: const Color(0xff000000)),
             ),
           ),
         ),

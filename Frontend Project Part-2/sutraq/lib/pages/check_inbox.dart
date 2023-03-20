@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:get/get.dart';
 import 'package:sutraq/components/custom_button.dart';
 import 'package:sutraq/storage/color_storage.dart';
+import 'package:sutraq/storage/font_storage.dart';
 
 class CheckInboxScreen extends StatelessWidget {
   const CheckInboxScreen({Key? key}) : super(key: key);
@@ -40,7 +40,8 @@ class CheckInboxScreen extends StatelessWidget {
                           style: TextStyle(
                               fontSize: 27.sp,
                               fontWeight: FontWeight.w600,
-                              color: welcomeBalckColor),
+                              color: welcomeBalckColor,
+                              fontFamily: gelion),
                         ),
                       ),
                       SizedBox(
@@ -55,7 +56,8 @@ class CheckInboxScreen extends StatelessWidget {
                             style: TextStyle(
                                 fontSize: 16.sp,
                                 fontWeight: FontWeight.w400,
-                                color: lightBalckColor),
+                                color: lightBalckColor,
+                                fontFamily: circularStd),
                           ),
                         ),
                       ),

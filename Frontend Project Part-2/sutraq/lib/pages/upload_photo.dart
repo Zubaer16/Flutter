@@ -1,5 +1,3 @@
-// ignore_for_file: prefer_const_constructors
-
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -8,6 +6,7 @@ import 'package:get/get.dart';
 import 'package:sutraq/components/custom_button.dart';
 import 'package:sutraq/route/route_mange.dart';
 import 'package:sutraq/storage/color_storage.dart';
+import 'package:sutraq/storage/font_storage.dart';
 import 'package:sutraq/storage/icon_storage.dart';
 
 class UploadPhoto extends StatelessWidget {
@@ -30,7 +29,8 @@ class UploadPhoto extends StatelessWidget {
             style: TextStyle(
                 color: Color(0xff08083D),
                 fontSize: 20.sp,
-                fontWeight: FontWeight.w600),
+                fontWeight: FontWeight.w600,
+                fontFamily: gelion),
           ),
           SizedBox(
             height: 11.h,
@@ -40,7 +40,8 @@ class UploadPhoto extends StatelessWidget {
             style: TextStyle(
                 color: Color(0xff000000).withOpacity(.5),
                 fontSize: 12.sp,
-                fontWeight: FontWeight.w400),
+                fontWeight: FontWeight.w400,
+                fontFamily: circularStd),
             textAlign: TextAlign.center,
           ),
           SizedBox(
@@ -91,10 +92,10 @@ class UploadPhoto extends StatelessWidget {
                         Text(
                           'Tap to select photo',
                           style: TextStyle(
-                            color: Color(0xff666666),
-                            fontSize: 16.sp,
-                            fontWeight: FontWeight.w500,
-                          ),
+                              color: Color(0xff666666),
+                              fontSize: 16.sp,
+                              fontWeight: FontWeight.w500,
+                              fontFamily: circularStd),
                         )
                       ],
                     ),
@@ -109,7 +110,8 @@ class UploadPhoto extends StatelessWidget {
                 style: TextStyle(
                     color: Color(0xff000000).withOpacity(.5),
                     fontSize: 12.sp,
-                    fontWeight: FontWeight.w400),
+                    fontWeight: FontWeight.w400,
+                    fontFamily: circularStd),
               ),
               SizedBox(
                 height: 120.h,
@@ -131,7 +133,8 @@ class UploadPhoto extends StatelessWidget {
                 style: TextStyle(
                     color: Color(0xff666666),
                     fontSize: 16.sp,
-                    fontWeight: FontWeight.w500),
+                    fontWeight: FontWeight.w500,
+                    fontFamily: circularStd),
               ),
             ]),
           )

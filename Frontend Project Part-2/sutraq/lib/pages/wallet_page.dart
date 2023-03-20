@@ -1,5 +1,3 @@
-// ignore_for_file: prefer_const_constructors
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -45,7 +43,8 @@ class WalletPage extends StatelessWidget {
                           style: TextStyle(
                               color: Colors.black,
                               fontSize: 20.sp,
-                              fontWeight: FontWeight.w700),
+                              fontWeight: FontWeight.w700,
+                              fontFamily: gelion),
                         ),
                       ),
                       SizedBox(
@@ -144,7 +143,8 @@ class WalletPage extends StatelessWidget {
                                               style: TextStyle(
                                                   color: Color(0xff333333),
                                                   fontSize: 14.sp,
-                                                  fontWeight: FontWeight.w700),
+                                                  fontWeight: FontWeight.w700,
+                                                  fontFamily: circularStd),
                                             ),
                                           ],
                                         ),
@@ -187,7 +187,8 @@ class WalletPage extends StatelessWidget {
                                               style: TextStyle(
                                                   color: Color(0xff333333),
                                                   fontSize: 14.sp,
-                                                  fontWeight: FontWeight.w700),
+                                                  fontWeight: FontWeight.w700,
+                                                  fontFamily: circularStd),
                                             ),
                                           ],
                                         ),
@@ -230,7 +231,8 @@ class WalletPage extends StatelessWidget {
                                               style: TextStyle(
                                                   color: Color(0xff333333),
                                                   fontSize: 14.sp,
-                                                  fontWeight: FontWeight.w700),
+                                                  fontWeight: FontWeight.w700,
+                                                  fontFamily: circularStd),
                                             ),
                                           ],
                                         )
@@ -256,7 +258,8 @@ class WalletPage extends StatelessWidget {
                                           style: TextStyle(
                                               color: Color(0xff333333),
                                               fontSize: 17.sp,
-                                              fontWeight: FontWeight.w700),
+                                              fontWeight: FontWeight.w700,
+                                              fontFamily: gelion),
                                         ),
                                       ),
                                     ),
@@ -301,7 +304,8 @@ class WalletPage extends StatelessWidget {
                                             style: TextStyle(
                                                 color: greenColor1,
                                                 fontSize: 14.sp,
-                                                fontWeight: FontWeight.w700),
+                                                fontWeight: FontWeight.w700,
+                                                fontFamily: circularStd),
                                           )),
                                     ),
                                   ],
@@ -353,7 +357,8 @@ class FirstSlider extends StatelessWidget {
                         style: TextStyle(
                             color: const Color(0xff0A004A),
                             fontSize: 10.sp,
-                            fontWeight: FontWeight.w700),
+                            fontWeight: FontWeight.w700,
+                            fontFamily: dmSans),
                       ),
                     ),
                     Icon(
@@ -373,7 +378,8 @@ class FirstSlider extends StatelessWidget {
                   style: TextStyle(
                       color: const Color(0xff0A004A).withOpacity(.4),
                       fontSize: 7.sp,
-                      fontWeight: FontWeight.w700),
+                      fontWeight: FontWeight.w700,
+                      fontFamily: circularStd),
                 ),
               ),
             ),
@@ -390,7 +396,8 @@ class FirstSlider extends StatelessWidget {
                         style: TextStyle(
                             color: greenColor1,
                             fontSize: 22.sp,
-                            fontWeight: FontWeight.w700),
+                            fontWeight: FontWeight.w700,
+                            fontFamily: gelion),
                       ),
                     ),
                     Icon(
@@ -440,7 +447,8 @@ class SecondSlider extends StatelessWidget {
                           style: TextStyle(
                               color: Color(0xff0A004A),
                               fontSize: 10,
-                              fontWeight: FontWeight.w700)),
+                              fontWeight: FontWeight.w700,
+                              fontFamily: dmSans)),
                     )
                   ]),
                 ),
@@ -454,7 +462,8 @@ class SecondSlider extends StatelessWidget {
                     style: TextStyle(
                         color: const Color(0xff0A004A).withOpacity(.4),
                         fontSize: 7.sp,
-                        fontWeight: FontWeight.w700),
+                        fontWeight: FontWeight.w700,
+                        fontFamily: circularStd),
                   ),
                 ),
               ),
@@ -467,7 +476,8 @@ class SecondSlider extends StatelessWidget {
                     style: TextStyle(
                         color: greenColor1,
                         fontSize: 22.sp,
-                        fontWeight: FontWeight.w700),
+                        fontWeight: FontWeight.w700,
+                        fontFamily: gelion),
                   ),
                 ),
               ),

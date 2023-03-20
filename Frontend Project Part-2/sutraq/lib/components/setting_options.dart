@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:sutraq/storage/font_storage.dart';
 import 'package:sutraq/storage/icon_storage.dart';
 
 class SettingOptions extends StatelessWidget {
@@ -31,7 +32,8 @@ class SettingOptions extends StatelessWidget {
               style: TextStyle(
                   color: Color(0xff111111),
                   fontSize: 14.sp,
-                  fontWeight: FontWeight.w500),
+                  fontWeight: FontWeight.w500,
+                  fontFamily: circularStd),
             ),
             Icon(
               navigatNext,

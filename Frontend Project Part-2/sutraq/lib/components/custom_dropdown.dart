@@ -87,7 +87,7 @@ class CustomDropdown extends StatelessWidget {
                           value: e,
                           child: Text(
                             e,
-                            style: TextStyle(fontFamily: circularStd),
+                            style: const TextStyle(fontFamily: circularStd),
                           ),
                         ))
                     .toList(),

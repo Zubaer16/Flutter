@@ -1,5 +1,3 @@
-// ignore_for_file: constant_identifier_names, prefer_const_constructors
-
 import 'package:get/get.dart';
 import 'package:sutraq/pages/add_new_bank_account.dart';
 import 'package:sutraq/pages/add_new_bank_transfer_account.dart';

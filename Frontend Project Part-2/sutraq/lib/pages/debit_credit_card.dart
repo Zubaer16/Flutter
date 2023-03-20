@@ -7,6 +7,7 @@ import 'package:sutraq/components/debit_credit_card_radio.dart';
 import 'package:sutraq/provider/debit_credit_card_radio_provider.dart';
 import 'package:sutraq/route/route_mange.dart';
 import 'package:sutraq/storage/color_storage.dart';
+import 'package:sutraq/storage/font_storage.dart';
 
 import '../components/custom_circle_button.dart';
 
@@ -14,9 +15,6 @@ class DebitCreditCard extends StatelessWidget {
   DebitCreditCard({super.key});
   @override
   Widget build(BuildContext context) {
-    final debitCreditCardRadioProvider =
-        Provider.of<DebitCreditCardRadioProvider>(context, listen: false);
-
     return SafeArea(
         child: Scaffold(
             backgroundColor: Color(0xfff1f3f4),
@@ -36,7 +34,8 @@ class DebitCreditCard extends StatelessWidget {
                               color: Color(0xff08083d),
                               fontSize: 20.sp,
                               fontWeight: FontWeight.w600,
-                              height: 1.4.h),
+                              height: 1.4.h,
+                              fontFamily: gelion),
                           textAlign: TextAlign.center,
                         ),
                       ),

@@ -1,11 +1,10 @@
-// ignore_for_file: prefer_const_constructors
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:sutraq/components/custom_button.dart';
 import 'package:sutraq/route/route_mange.dart';
 import 'package:sutraq/storage/color_storage.dart';
+import 'package:sutraq/storage/font_storage.dart';
 
 class OpenSutraqAccount extends StatelessWidget {
   const OpenSutraqAccount({super.key});
@@ -32,7 +31,8 @@ class OpenSutraqAccount extends StatelessWidget {
               style: TextStyle(
                   color: greenColor,
                   fontSize: 25.sp,
-                  fontWeight: FontWeight.w600),
+                  fontWeight: FontWeight.w600,
+                  fontFamily: gelion),
             ),
             SizedBox(
               height: 20.h,
@@ -42,7 +42,8 @@ class OpenSutraqAccount extends StatelessWidget {
               style: TextStyle(
                   color: Color(0xffF0F0F0),
                   fontSize: 12.sp,
-                  fontWeight: FontWeight.w400),
+                  fontWeight: FontWeight.w400,
+                  fontFamily: dmSans),
             ),
             SizedBox(
               height: 170.h,
@@ -61,6 +62,5 @@ class OpenSutraqAccount extends StatelessWidget {
         ),
       ),
     );
-    ;
   }
 }

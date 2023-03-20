@@ -1,5 +1,3 @@
-// ignore_for_file: prefer_const_constructors
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -9,6 +7,7 @@ import 'package:sutraq/components/custom_circle_button.dart';
 import 'package:sutraq/components/custom_input.dart';
 import 'package:sutraq/storage/color_storage.dart';
 import 'package:intl/intl.dart';
+import 'package:sutraq/storage/font_storage.dart';
 
 class AddNewCardBankAccount extends StatefulWidget {
   const AddNewCardBankAccount({super.key});
@@ -53,7 +52,8 @@ class _AddNewCardBankAccountState extends State<AddNewCardBankAccount> {
                           color: const Color(0xff08083d),
                           fontSize: 20.sp,
                           fontWeight: FontWeight.w600,
-                          height: 1.4),
+                          height: 1.4,
+                          fontFamily: gelion),
                       textAlign: TextAlign.center,
                     ),
                   ),
@@ -77,7 +77,8 @@ class _AddNewCardBankAccountState extends State<AddNewCardBankAccount> {
                         color: Color(0xff000000).withOpacity(0.5),
                         fontSize: 12.sp,
                         fontWeight: FontWeight.w400,
-                        height: 1.6),
+                        height: 1.6,
+                        fontFamily: circularStd),
                     textAlign: TextAlign.center,
                   )),
             ),
@@ -131,7 +132,8 @@ class _AddNewCardBankAccountState extends State<AddNewCardBankAccount> {
                                               style: TextStyle(
                                                   color: lightBalckColor,
                                                   fontSize: 14.sp,
-                                                  fontWeight: FontWeight.w500),
+                                                  fontWeight: FontWeight.w500,
+                                                  fontFamily: circularStd),
                                             ),
                                           ],
                                         ),
@@ -142,7 +144,8 @@ class _AddNewCardBankAccountState extends State<AddNewCardBankAccount> {
                                           style: TextStyle(
                                               color: Colors.black,
                                               fontSize: 14.sp,
-                                              fontWeight: FontWeight.w500),
+                                              fontWeight: FontWeight.w500,
+                                              fontFamily: circularStd),
                                           readOnly: true,
                                           controller: dateController,
                                           onTap: () async {

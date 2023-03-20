@@ -1,5 +1,3 @@
-// ignore_for_file: prefer_const_constructors
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -58,7 +56,7 @@ class EnterTransactionPinSutraq extends StatelessWidget {
                       fontSize: 14.sp,
                       fontWeight: FontWeight.w400,
                       height: 1.4,
-                      fontFamily: circularStd), //ends here
+                      fontFamily: circularStd),
                   textAlign: TextAlign.center,
                 ),
                 SizedBox(
@@ -92,6 +90,5 @@ class EnterTransactionPinSutraq extends StatelessWidget {
                 )
               ],
             )));
-    ;
   }
 }

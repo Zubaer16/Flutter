@@ -95,6 +95,5 @@ class AddNewSutraqTransferAccount extends StatelessWidget {
             )),
       ),
     );
-    ;
   }
 }

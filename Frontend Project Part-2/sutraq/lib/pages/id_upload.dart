@@ -7,6 +7,7 @@ import 'package:sutraq/components/custom_button.dart';
 import 'package:sutraq/components/custom_circle_button.dart';
 import 'package:sutraq/route/route_mange.dart';
 import 'package:sutraq/storage/color_storage.dart';
+import 'package:sutraq/storage/font_storage.dart';
 import 'package:sutraq/storage/icon_storage.dart';
 
 class IdUpload extends StatelessWidget {
@@ -30,10 +31,10 @@ class IdUpload extends StatelessWidget {
                   width: MediaQuery.of(context).size.width,
                   child: Text('I.D Upload',
                       style: TextStyle(
-                        color: Color(0xff08083d),
-                        fontSize: 20.sp,
-                        fontWeight: FontWeight.w600,
-                      ),
+                          color: Color(0xff08083d),
+                          fontSize: 20.sp,
+                          fontWeight: FontWeight.w600,
+                          fontFamily: gelion),
                       textAlign: TextAlign.center),
                 ),
               ),
@@ -53,7 +54,8 @@ class IdUpload extends StatelessWidget {
             style: TextStyle(
                 color: Color(0xff000000).withOpacity(.5),
                 fontSize: 12.sp,
-                fontWeight: FontWeight.w400),
+                fontWeight: FontWeight.w400,
+                fontFamily: circularStd),
             textAlign: TextAlign.center,
           ),
           SizedBox(
@@ -104,10 +106,10 @@ class IdUpload extends StatelessWidget {
                         Text(
                           'Tap to select photo',
                           style: TextStyle(
-                            color: Color(0xff666666),
-                            fontSize: 16.sp,
-                            fontWeight: FontWeight.w500,
-                          ),
+                              color: Color(0xff666666),
+                              fontSize: 16.sp,
+                              fontWeight: FontWeight.w500,
+                              fontFamily: circularStd),
                         )
                       ],
                     ),
@@ -122,7 +124,8 @@ class IdUpload extends StatelessWidget {
                 style: TextStyle(
                     color: Color(0xff000000).withOpacity(.5),
                     fontSize: 12.sp,
-                    fontWeight: FontWeight.w400),
+                    fontWeight: FontWeight.w400,
+                    fontFamily: circularStd),
                 textAlign: TextAlign.center,
               ),
               SizedBox(
@@ -145,7 +148,8 @@ class IdUpload extends StatelessWidget {
                 style: TextStyle(
                     color: Color(0xff666666),
                     fontSize: 16.sp,
-                    fontWeight: FontWeight.w500),
+                    fontWeight: FontWeight.w500,
+                    fontFamily: circularStd),
               ),
             ]),
           )

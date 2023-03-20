@@ -1,5 +1,3 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables,
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -74,6 +72,7 @@ class _WalkthroughScreenState extends State<WalkthroughScreen> {
 
   @override
   void initState() {
+    super.initState();
     _pageController = PageController(initialPage: 0);
   }
 
@@ -83,82 +82,90 @@ class _WalkthroughScreenState extends State<WalkthroughScreen> {
     super.dispose();
   }
 
+  Future<bool> _onWillPop() async {
+    return false; //<-- SEE HERE
+  }
+
   // @override
   @override
   Widget build(BuildContext context) {
     final pageview =
         Provider.of<WalkthroughScreenProvider>(context, listen: false);
-    return Scaffold(
-        body: Column(
-      children: [
-        Expanded(
-          child: Stack(
-            clipBehavior: Clip.none,
-            children: [
-              PageView.builder(
-                  controller: _pageController,
-                  itemCount: pic.length,
-                  onPageChanged: (index) => {
-                        pageview.changeIndex(index),
-                      },
-                  itemBuilder: (context, index) {
-                    return pic[index];
-                  }),
-              Positioned(
-                top: 418.h,
-                child: SizedBox(
-                  width: MediaQuery.of(context).size.width,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      ...List.generate(
-                          pic.length,
-                          (index) => Consumer<WalkthroughScreenProvider>(
-                                builder: (context, value, child) =>
-                                    DotIndicator(
-                                        isActive: index == value.pageviewIndex),
-                              ))
-                    ],
+    return WillPopScope(
+      onWillPop: _onWillPop,
+      child: Scaffold(
+          body: Column(
+        children: [
+          Expanded(
+            child: Stack(
+              clipBehavior: Clip.none,
+              children: [
+                PageView.builder(
+                    controller: _pageController,
+                    itemCount: pic.length,
+                    onPageChanged: (index) => {
+                          pageview.changeIndex(index),
+                        },
+                    itemBuilder: (context, index) {
+                      return pic[index];
+                    }),
+                Positioned(
+                  top: 418.h,
+                  child: SizedBox(
+                    width: MediaQuery.of(context).size.width,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        ...List.generate(
+                            pic.length,
+                            (index) => Consumer<WalkthroughScreenProvider>(
+                                  builder: (context, value, child) =>
+                                      DotIndicator(
+                                          isActive:
+                                              index == value.pageviewIndex),
+                                ))
+                      ],
+                    ),
                   ),
+                )
+              ],
+            ),
+          ),
+          Container(
+            color: greenColor,
+            height: 140.h,
+            width: MediaQuery.of(context).size.width,
+            child: Column(
+              children: [
+                CustomButton(
+                    buttonText: 'LOGIN',
+                    onPressed: () {
+                      Get.toNamed(welcome_back_screen);
+                    }),
+                SizedBox(
+                  height: 2.h,
                 ),
-              )
-            ],
-          ),
-        ),
-        Container(
-          color: greenColor,
-          height: 140.h,
-          width: MediaQuery.of(context).size.width,
-          child: Column(
-            children: [
-              CustomButton(
-                  buttonText: 'LOGIN',
-                  onPressed: () {
-                    Get.toNamed(welcome_back_screen);
-                  }),
-              SizedBox(
-                height: 2.h,
-              ),
-              TextButton(
-                  onPressed: () => {Get.toNamed(open_sutraq_account)},
-                  style: TextButton.styleFrom(
-                      // padding: EdgeInsets.zero,
-                      // tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-                      // minimumSize: Size.zero
-                      ),
-                  child: Text(
-                    'Try Sutraq'.toUpperCase(),
-                    style: TextStyle(
-                        fontWeight: FontWeight.w700,
-                        fontSize: 16.sp,
-                        color: Colors.white,
-                        fontFamily: circularStd),
-                  ))
-            ],
-          ),
-        )
-      ],
-    ));
+                TextButton(
+                    onPressed: () => {Get.toNamed(open_sutraq_account)},
+                    style: TextButton.styleFrom(
+                        // padding: EdgeInsets.zero,
+                        // tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                        // minimumSize: Size.zero
+                        ),
+                    child: Text(
+                      'Try Sutraq'.toUpperCase(),
+                      style: TextStyle(
+                          fontWeight: FontWeight.w700,
+                          fontSize: 16.sp,
+                          color: Colors.white,
+                          fontFamily: circularStd),
+                    ))
+              ],
+            ),
+          )
+        ],
+      )),
+    );
   }
 }
 

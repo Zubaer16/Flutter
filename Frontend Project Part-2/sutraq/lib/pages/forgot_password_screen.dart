@@ -7,6 +7,7 @@ import 'package:sutraq/components/custom_input.dart';
 import 'package:sutraq/components/sutraq_logo.dart';
 import 'package:sutraq/route/route_mange.dart';
 import 'package:sutraq/storage/color_storage.dart';
+import 'package:sutraq/storage/font_storage.dart';
 import 'package:sutraq/storage/icon_storage.dart';
 
 class ForgotPasswordScreen extends StatelessWidget {
@@ -51,7 +52,7 @@ class ForgotPasswordScreen extends StatelessWidget {
                   fontSize: 27.sp,
                   fontWeight: FontWeight.w600,
                   color: welcomeBalckColor,
-                  fontFamily: 'Gelion'),
+                  fontFamily: gelion),
             ),
           ),
           SizedBox(
@@ -63,7 +64,7 @@ class ForgotPasswordScreen extends StatelessWidget {
                   fontSize: 16.sp,
                   fontWeight: FontWeight.w400,
                   color: lightBalckColor,
-                  fontFamily: 'Circular Std'),
+                  fontFamily: circularStd),
             ),
           ),
           SizedBox(

@@ -83,10 +83,11 @@ class CustomInput extends StatelessWidget {
                         ? placeholderText ?? 'Please Enter Placeholder'
                         : null,
                     hintStyle: TextStyle(
-                        color: Color(0xff969696).withOpacity(.5),
+                        color: const Color(0xff969696).withOpacity(.5),
                         fontSize: 12.sp,
                         fontWeight: FontWeight.w500,
-                        height: 1.7),
+                        height: 1.7,
+                        fontFamily: circularStd),
                     suffixIcon: isSuffixIcon
                         ? Padding(
                             padding: const EdgeInsets.only(right: 15.71).r,

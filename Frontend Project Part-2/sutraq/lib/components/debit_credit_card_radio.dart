@@ -1,9 +1,10 @@
-// ignore_for_file: prefer_typing_uninitialized_variables
+// ignore_for_file: must_be_immutable
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:sutraq/components/custom_cards.dart';
 import 'package:sutraq/storage/color_storage.dart';
+import 'package:sutraq/storage/font_storage.dart';
 import 'package:sutraq/storage/icon_storage.dart';
 
 class DebitCredidCardRadio extends StatelessWidget {
@@ -57,10 +58,10 @@ class DebitCredidCardRadio extends StatelessWidget {
                   Text(
                     'Set as default',
                     style: TextStyle(
-                      color: Color(0xff000000).withOpacity(.5),
-                      fontSize: 12.sp,
-                      fontWeight: FontWeight.w400,
-                    ),
+                        color: Color(0xff000000).withOpacity(.5),
+                        fontSize: 12.sp,
+                        fontWeight: FontWeight.w400,
+                        fontFamily: circularStd),
                   ),
                 ],
               ),
@@ -83,7 +84,8 @@ class DebitCredidCardRadio extends StatelessWidget {
                   color: Color(0xffEC615B),
                   fontSize: 10.sp,
                   fontWeight: FontWeight.w500,
-                  decoration: TextDecoration.underline),
+                  decoration: TextDecoration.underline,
+                  fontFamily: circularStd),
             )),
       ],
     );

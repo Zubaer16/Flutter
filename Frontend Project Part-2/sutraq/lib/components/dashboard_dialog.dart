@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:get/get.dart';
 import 'package:sutraq/components/custom_button.dart';
-import 'package:sutraq/route/route_mange.dart';
 import 'package:sutraq/storage/color_storage.dart';
 import 'package:sutraq/storage/font_storage.dart';
-import 'package:sutraq/storage/icon_storage.dart';
 
 // String? dialogButtonText;
 // VoidCallback? customFunction;
@@ -16,7 +13,7 @@ Future<dynamic> dashboardDialog(
       barrierDismissible: true,
       barrierLabel: MaterialLocalizations.of(context).modalBarrierDismissLabel,
       barrierColor: Colors.black.withOpacity(.5),
-      transitionDuration: Duration(microseconds: 200),
+      transitionDuration: const Duration(microseconds: 200),
       pageBuilder: (BuildContext context, Animation first, Animation second) {
         return Center(
           child: Padding(
@@ -26,7 +23,7 @@ Future<dynamic> dashboardDialog(
               height: 304.h,
               decoration: BoxDecoration(
                   color: Colors.white,
-                  borderRadius: BorderRadius.all(Radius.circular(10).r)),
+                  borderRadius: BorderRadius.all(const Radius.circular(10).r)),
               child: Column(
                 children: [
                   Padding(
@@ -36,11 +33,11 @@ Future<dynamic> dashboardDialog(
                     ).r,
                     child: DefaultTextStyle(
                         style: TextStyle(
-                            color: Color(0xff636363),
+                            color: const Color(0xff636363),
                             fontSize: 18.sp,
                             fontWeight: FontWeight.w500,
                             fontFamily: sfCompactDisplay),
-                        child: Text(
+                        child: const Text(
                           'Choose Option',
                         )),
                   ),
@@ -48,11 +45,11 @@ Future<dynamic> dashboardDialog(
                     padding: const EdgeInsets.only(bottom: 20).r,
                     child: DefaultTextStyle(
                       style: TextStyle(
-                          color: Color(0xff000000).withOpacity(0.5),
+                          color: const Color(0xff000000).withOpacity(0.5),
                           fontSize: 12.sp,
                           fontWeight: FontWeight.w400,
                           fontFamily: helveticaNeue),
-                      child: Text('Pick a card to continue'),
+                      child: const Text('Pick a card to continue'),
                     ),
                   ),
                   Row(
@@ -65,9 +62,9 @@ Future<dynamic> dashboardDialog(
                             height: 96.h,
                             width: 102.w,
                             decoration: BoxDecoration(
-                                color: Color(0xff08083D),
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(13).r)),
+                                color: const Color(0xff08083D),
+                                borderRadius: BorderRadius.all(
+                                    const Radius.circular(13).r)),
                             child: Column(
                               children: [
                                 Padding(
@@ -85,7 +82,7 @@ Future<dynamic> dashboardDialog(
                                           const EdgeInsets.only(left: 4.67).r,
                                       child: DefaultTextStyle(
                                           style: TextStyle(
-                                              color: Color(0xffF1F3F4),
+                                              color: const Color(0xffF1F3F4),
                                               fontSize: 12.sp,
                                               fontWeight: FontWeight.w700,
                                               fontFamily: sfCompactDisplay),

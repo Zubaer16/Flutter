@@ -1,8 +1,7 @@
-// ignore_for_file: prefer_const_constructors
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:sutraq/storage/color_storage.dart';
+import 'package:sutraq/storage/font_storage.dart';
 import 'package:sutraq/storage/icon_storage.dart';
 
 class BankAccountRadio extends StatelessWidget {
@@ -29,7 +28,7 @@ class BankAccountRadio extends StatelessWidget {
           child: Container(
             width: 339.w,
             height: 62.h,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
                 border: Border(top: BorderSide(color: Color(0xffdedede)))),
             child: Stack(
               clipBehavior: Clip.none,
@@ -54,10 +53,10 @@ class BankAccountRadio extends StatelessWidget {
                       Text(
                         '9381053802',
                         style: TextStyle(
-                          color: Color(0xff000000),
-                          fontSize: 14.sp,
-                          fontWeight: FontWeight.w500,
-                        ),
+                            color: const Color(0xff000000),
+                            fontSize: 14.sp,
+                            fontWeight: FontWeight.w500,
+                            fontFamily: circularStd),
                       ),
                       SizedBox(
                         height: 10.h,
@@ -65,10 +64,10 @@ class BankAccountRadio extends StatelessWidget {
                       Text(
                         '(Access Bank - Precious Ogar)',
                         style: TextStyle(
-                          color: Color(0xff595959),
-                          fontSize: 14.sp,
-                          fontWeight: FontWeight.w500,
-                        ),
+                            color: const Color(0xff595959),
+                            fontSize: 14.sp,
+                            fontWeight: FontWeight.w500,
+                            fontFamily: circularStd),
                       ),
                     ],
                   ),
@@ -83,7 +82,7 @@ class BankAccountRadio extends StatelessWidget {
                     decoration: BoxDecoration(
                       border: Border.all(
                           color: value != groupValue
-                              ? Color(0xff666666)
+                              ? const Color(0xff666666)
                               : greenColor),
                       shape: BoxShape.circle,
                     ),
@@ -103,16 +102,17 @@ class BankAccountRadio extends StatelessWidget {
           child: TextButton(
               onPressed: () => {},
               style: TextButton.styleFrom(
-                  padding: EdgeInsets.fromLTRB(0, 10, 10, 10),
+                  padding: const EdgeInsets.fromLTRB(0, 10, 10, 10),
                   tapTargetSize: MaterialTapTargetSize.shrinkWrap,
                   minimumSize: Size.zero),
               child: Text(
                 'Remove',
                 style: TextStyle(
-                    color: Color(0xffEC615B),
+                    color: const Color(0xffEC615B),
                     fontSize: 10.sp,
                     fontWeight: FontWeight.w500,
-                    decoration: TextDecoration.underline),
+                    decoration: TextDecoration.underline,
+                    fontFamily: circularStd),
               )),
         )
       ],

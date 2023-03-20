@@ -7,6 +7,7 @@ import 'package:sutraq/components/custom_button.dart';
 import 'package:sutraq/provider/bank_account_radio_provider.dart';
 import 'package:sutraq/route/route_mange.dart';
 import 'package:sutraq/storage/color_storage.dart';
+import 'package:sutraq/storage/font_storage.dart';
 
 import '../components/custom_circle_button.dart';
 
@@ -37,7 +38,8 @@ class BankAccounts extends StatelessWidget {
                               color: Color(0xff08083d),
                               fontSize: 20.sp,
                               fontWeight: FontWeight.w600,
-                              height: 1.4.h),
+                              height: 1.4.h,
+                              fontFamily: gelion),
                           textAlign: TextAlign.center,
                         ),
                       ),
@@ -78,7 +80,8 @@ class BankAccounts extends StatelessWidget {
                                       color: Color(0xff000000).withOpacity(0.5),
                                       fontSize: 12.sp,
                                       fontWeight: FontWeight.w400,
-                                      height: 1.6),
+                                      height: 1.6,
+                                      fontFamily: circularStd),
                                 ),
                               ),
                             ),

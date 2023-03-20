@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:sutraq/components/custom_button.dart';
 import 'package:sutraq/route/route_mange.dart';
 import 'package:sutraq/storage/color_storage.dart';
+import 'package:sutraq/storage/font_storage.dart';
 
 class ViewDashboard extends StatelessWidget {
   const ViewDashboard({super.key});
@@ -33,7 +34,8 @@ class ViewDashboard extends StatelessWidget {
               style: TextStyle(
                   color: Color(0xffF0F0F0),
                   fontSize: 12.sp,
-                  fontWeight: FontWeight.w400),
+                  fontWeight: FontWeight.w400,
+                  fontFamily: dmSans),
             ),
             SizedBox(
               height: 170.h,
@@ -52,6 +54,5 @@ class ViewDashboard extends StatelessWidget {
         ),
       ),
     );
-    ;
   }
 }

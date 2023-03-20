@@ -5,6 +5,7 @@ import 'package:sutraq/components/custom_button.dart';
 import 'package:sutraq/components/custom_circle_button.dart';
 import 'package:sutraq/components/custom_input.dart';
 import 'package:sutraq/storage/color_storage.dart';
+import 'package:sutraq/storage/font_storage.dart';
 
 class ChangePassword extends StatelessWidget {
   const ChangePassword({super.key});
@@ -29,12 +30,13 @@ class ChangePassword extends StatelessWidget {
                               child: SizedBox(
                                 width: MediaQuery.of(context).size.width,
                                 child: Text(
-                                  'Change Pin',
+                                  'Change Password',
                                   style: TextStyle(
                                       color: Color(0xff08083d),
                                       fontSize: 20.sp,
                                       fontWeight: FontWeight.w600,
-                                      height: 1.4.h),
+                                      height: 1.4.h,
+                                      fontFamily: gelion),
                                   textAlign: TextAlign.center,
                                 ),
                               ),
@@ -63,7 +65,8 @@ class ChangePassword extends StatelessWidget {
                                     color: Color(0xff000000).withOpacity(0.5),
                                     fontSize: 12.sp,
                                     fontWeight: FontWeight.w400,
-                                    height: 1.3),
+                                    height: 1.3,
+                                    fontFamily: circularStd),
                                 textAlign: TextAlign.center,
                               )),
                         ),

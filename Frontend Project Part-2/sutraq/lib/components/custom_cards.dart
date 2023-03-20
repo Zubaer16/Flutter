@@ -1,6 +1,6 @@
-// ignore_for_file: prefer_const_constructors
 import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:sutraq/storage/font_storage.dart';
 
 class CustomCards extends StatelessWidget {
   const CustomCards({Key? key, required this.dots, this.color})
@@ -13,12 +13,12 @@ class CustomCards extends StatelessWidget {
     return Container(
       height: 151.h,
       width: 270.w,
-      padding: EdgeInsets.fromLTRB(20, 23, 20, 23).r,
+      padding: const EdgeInsets.fromLTRB(20, 23, 20, 22).r,
       decoration: BoxDecoration(
-          image: DecorationImage(
+          image: const DecorationImage(
               image: AssetImage('images/path5.png'), fit: BoxFit.fill),
-          color: color ?? Color(0xff063593),
-          borderRadius: BorderRadius.all(Radius.circular(15).r)),
+          color: color ?? const Color(0xff063593),
+          borderRadius: BorderRadius.all(const Radius.circular(15).r)),
       child: SizedBox(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -44,17 +44,19 @@ class CustomCards extends StatelessWidget {
             ),
             Text('CARD NUMBER',
                 style: TextStyle(
-                    color: Color(0xffFEFEFE).withOpacity(0.5),
+                    color: const Color(0xffFEFEFE).withOpacity(0.5),
                     fontSize: 7.sp,
-                    fontWeight: FontWeight.w500)),
+                    fontWeight: FontWeight.w500,
+                    fontFamily: circularStd)),
             SizedBox(
               height: 2.h,
             ),
             Text('**** **** **** *379',
                 style: TextStyle(
-                    color: Color(0xffFEFEFE),
+                    color: const Color(0xffFEFEFE),
                     fontSize: 15.sp,
-                    fontWeight: FontWeight.w500)),
+                    fontWeight: FontWeight.w500,
+                    fontFamily: circularStd)),
             SizedBox(
               height: 16.h,
             ),
@@ -63,14 +65,16 @@ class CustomCards extends StatelessWidget {
               children: [
                 Text('CARD HOLDER NAME',
                     style: TextStyle(
-                        color: Color(0xffFEFEFE).withOpacity(0.5),
+                        color: const Color(0xffFEFEFE).withOpacity(0.5),
                         fontSize: 7.sp,
-                        fontWeight: FontWeight.w500)),
+                        fontWeight: FontWeight.w500,
+                        fontFamily: circularStd)),
                 Text('EXPIRE DATE',
                     style: TextStyle(
-                        color: Color(0xffFEFEFE).withOpacity(0.5),
+                        color: const Color(0xffFEFEFE).withOpacity(0.5),
                         fontSize: 7.sp,
-                        fontWeight: FontWeight.w500)),
+                        fontWeight: FontWeight.w500,
+                        fontFamily: circularStd)),
               ],
             ),
             SizedBox(
@@ -81,14 +85,16 @@ class CustomCards extends StatelessWidget {
               children: [
                 Text('Precious Ogar',
                     style: TextStyle(
-                        color: Color(0xffFEFEFE),
+                        color: const Color(0xffFEFEFE),
                         fontSize: 13.sp,
-                        fontWeight: FontWeight.w500)),
+                        fontWeight: FontWeight.w500,
+                        fontFamily: circularStd)),
                 Text('02/25',
                     style: TextStyle(
-                        color: Color(0xffFEFEFE),
+                        color: const Color(0xffFEFEFE),
                         fontSize: 13.sp,
-                        fontWeight: FontWeight.w500)),
+                        fontWeight: FontWeight.w500,
+                        fontFamily: circularStd)),
               ],
             )
           ],
