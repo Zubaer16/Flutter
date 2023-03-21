@@ -30,7 +30,7 @@ void main() async {
         ChangeNotifierProvider(create: (_) => BankAccountRadioProvider()),
         ChangeNotifierProvider(create: (_) => DebitCreditCardRadioProvider()),
       ],
-      child: MyApp(),
+      child: const MyApp(),
     ),
   );
 }

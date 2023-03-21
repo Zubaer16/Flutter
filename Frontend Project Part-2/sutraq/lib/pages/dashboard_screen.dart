@@ -32,8 +32,8 @@ class DashboardScreen extends StatelessWidget {
           selectedItemColor: const Color(0xFF0DBE53),
           unselectedItemColor: const Color(0xFFDADADA),
           backgroundColor: Colors.white,
-          selectedLabelStyle: TextStyle(fontFamily: circularStd),
-          unselectedLabelStyle: TextStyle(fontFamily: circularStd),
+          selectedLabelStyle: const TextStyle(fontFamily: circularStd),
+          unselectedLabelStyle: const TextStyle(fontFamily: circularStd),
           items: const [
             BottomNavigationBarItem(
               icon: Icon(dashboardIcon),

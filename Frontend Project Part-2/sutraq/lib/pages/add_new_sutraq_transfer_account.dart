@@ -60,7 +60,7 @@ class AddNewSutraqTransferAccount extends StatelessWidget {
                         child: Text(
                           'Ensure to fill in the neccessary details of the recipient in order to continue',
                           style: TextStyle(
-                              color: Color(0xff000000).withOpacity(0.5),
+                              color: const Color(0xff000000).withOpacity(0.5),
                               fontSize: 12.sp,
                               fontWeight: FontWeight.w400,
                               height: 1.6,

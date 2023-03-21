@@ -34,9 +34,9 @@ class _AddNewCardBankAccountState extends State<AddNewCardBankAccount> {
       },
       child: Scaffold(
         // resizeToAvoidBottomInset: false,
-        backgroundColor: Color(0xffE5E5E5),
+        backgroundColor: const Color(0xffE5E5E5),
         body: SingleChildScrollView(
-          physics: BouncingScrollPhysics(),
+          physics: const BouncingScrollPhysics(),
           child: Column(children: [
             Stack(
               children: [
@@ -74,7 +74,7 @@ class _AddNewCardBankAccountState extends State<AddNewCardBankAccount> {
                   child: Text(
                     'Ensure to fill in the neccessary \n details of the recipient in order to \n continue',
                     style: TextStyle(
-                        color: Color(0xff000000).withOpacity(0.5),
+                        color: const Color(0xff000000).withOpacity(0.5),
                         fontSize: 12.sp,
                         fontWeight: FontWeight.w400,
                         height: 1.6,
@@ -90,10 +90,12 @@ class _AddNewCardBankAccountState extends State<AddNewCardBankAccount> {
               width: 344.w,
               decoration: BoxDecoration(
                   color: Colors.white,
-                  borderRadius: BorderRadius.all(Radius.circular(10).r)),
+                  borderRadius: BorderRadius.all(const Radius.circular(10).r)),
               child: Stack(clipBehavior: Clip.none, children: [
                 Positioned(
-                    left: 37.w, top: -75.h, child: CustomCards(dots: false)),
+                    left: 37.w,
+                    top: -75.h,
+                    child: const CustomCards(dots: false)),
                 Positioned(
                     top: 91.h,
                     child: SizedBox(
@@ -168,16 +170,14 @@ class _AddNewCardBankAccountState extends State<AddNewCardBankAccount> {
                                               });
                                             }
                                           },
-                                          decoration: InputDecoration(
-                                              border: const OutlineInputBorder(
+                                          decoration: const InputDecoration(
+                                              border: OutlineInputBorder(
                                                   borderSide: BorderSide(
                                                       color:
                                                           Color(0xFFC5C5C5))),
-                                              focusedBorder:
-                                                  const OutlineInputBorder(
-                                                      borderSide: BorderSide(
-                                                          color:
-                                                              focusBlueColor))),
+                                              focusedBorder: OutlineInputBorder(
+                                                  borderSide: BorderSide(
+                                                      color: focusBlueColor))),
                                         ),
                                       ),
                                     ],

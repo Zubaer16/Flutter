@@ -25,7 +25,7 @@ class DashboardPage extends StatelessWidget {
         Provider.of<DashboardPageIndicatorProvider>(context, listen: false);
     return SafeArea(
         child: Scaffold(
-            backgroundColor: Color(0xff051F0E),
+            backgroundColor: const Color(0xff051F0E),
             body: SingleChildScrollView(
               child: Column(
                 children: [
@@ -147,8 +147,8 @@ class DashboardPage extends StatelessWidget {
                           decoration: BoxDecoration(
                               color: greenColor1,
                               borderRadius: BorderRadius.only(
-                                  topLeft: Radius.circular(20).r,
-                                  topRight: Radius.circular(20).r)),
+                                  topLeft: const Radius.circular(20).r,
+                                  topRight: const Radius.circular(20).r)),
                           child: Column(
                             children: [
                               SizedBox(
@@ -181,14 +181,18 @@ class DashboardPage extends StatelessWidget {
                                                 child: Container(
                                                   height: 56.h,
                                                   width: 56.w,
-                                                  decoration: BoxDecoration(
-                                                      color: Color(0xff051F0E),
-                                                      shape: BoxShape.circle),
+                                                  decoration:
+                                                      const BoxDecoration(
+                                                          color:
+                                                              Color(0xff051F0E),
+                                                          shape:
+                                                              BoxShape.circle),
                                                   child: Align(
                                                     alignment: Alignment.center,
                                                     child: Icon(
                                                       accountBalanceWallet,
-                                                      color: Color(0xffDADADA),
+                                                      color: const Color(
+                                                          0xffDADADA),
                                                       size: 24.w,
                                                     ),
                                                   ),
@@ -225,14 +229,18 @@ class DashboardPage extends StatelessWidget {
                                                 child: Container(
                                                   height: 56.h,
                                                   width: 56.w,
-                                                  decoration: BoxDecoration(
-                                                      color: Color(0xff051F0E),
-                                                      shape: BoxShape.circle),
+                                                  decoration:
+                                                      const BoxDecoration(
+                                                          color:
+                                                              Color(0xff051F0E),
+                                                          shape:
+                                                              BoxShape.circle),
                                                   child: Align(
                                                     alignment: Alignment.center,
                                                     child: Icon(
                                                       inputIcon,
-                                                      color: Color(0xffDADADA),
+                                                      color: const Color(
+                                                          0xffDADADA),
                                                       size: 24.w,
                                                     ),
                                                   ),
@@ -269,14 +277,18 @@ class DashboardPage extends StatelessWidget {
                                                 child: Container(
                                                   height: 56.h,
                                                   width: 56.w,
-                                                  decoration: BoxDecoration(
-                                                      color: Color(0xff051F0E),
-                                                      shape: BoxShape.circle),
+                                                  decoration:
+                                                      const BoxDecoration(
+                                                          color:
+                                                              Color(0xff051F0E),
+                                                          shape:
+                                                              BoxShape.circle),
                                                   child: Align(
                                                     alignment: Alignment.center,
                                                     child: Icon(
                                                       driveFileIcon,
-                                                      color: Color(0xffDADADA),
+                                                      color: const Color(
+                                                          0xffDADADA),
                                                       size: 24.w,
                                                     ),
                                                   ),
@@ -301,8 +313,8 @@ class DashboardPage extends StatelessWidget {
                                 decoration: BoxDecoration(
                                     color: Colors.white,
                                     borderRadius: BorderRadius.only(
-                                        topLeft: Radius.circular(20).r,
-                                        topRight: Radius.circular(20).r)),
+                                        topLeft: const Radius.circular(20).r,
+                                        topRight: const Radius.circular(20).r)),
                                 child: Column(
                                   children: [
                                     Padding(
@@ -318,7 +330,7 @@ class DashboardPage extends StatelessWidget {
                                           child: Text(
                                             'Recent Transactions',
                                             style: TextStyle(
-                                                color: Color(0xff333333),
+                                                color: const Color(0xff333333),
                                                 fontSize: 17.sp,
                                                 fontWeight: FontWeight.w700,
                                                 fontFamily: gelion),
@@ -326,30 +338,30 @@ class DashboardPage extends StatelessWidget {
                                         ),
                                       ),
                                     ),
-                                    RecentTransactions(
+                                    const RecentTransactions(
                                       islineThrough: false,
                                       isReceived: true,
                                       isDollar: true,
                                     ),
-                                    RecentTransactions(
+                                    const RecentTransactions(
                                       islineThrough: true,
                                       isReceived: false,
                                       isDollar: false,
                                       amount: '10,000',
                                     ),
-                                    RecentTransactions(
+                                    const RecentTransactions(
                                       islineThrough: true,
                                       isReceived: true,
                                       isDollar: false,
                                       amount: '4,500,000',
                                     ),
-                                    RecentTransactions(
+                                    const RecentTransactions(
                                       islineThrough: true,
                                       isReceived: false,
                                       isDollar: false,
                                       amount: '10,000',
                                     ),
-                                    RecentTransactions(
+                                    const RecentTransactions(
                                       islineThrough: true,
                                       isReceived: true,
                                       isDollar: false,

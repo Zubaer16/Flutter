@@ -25,8 +25,8 @@ class WalletPage extends StatelessWidget {
             backgroundColor: splashBackgroundColor,
             floatingActionButton: FloatingActionButton(
               onPressed: () => {Get.toNamed(add_new_bank_transfer_account)},
-              backgroundColor: Color(0xff046AE1),
-              child: Icon(
+              backgroundColor: const Color(0xff046AE1),
+              child: const Icon(
                 add,
                 color: Colors.white,
               ),
@@ -79,7 +79,7 @@ class WalletPage extends StatelessWidget {
                                 dotWidth: 16.67.w,
                                 dotHeight: 2.h,
                                 dotColor: Colors.white,
-                                activeDotColor: Color(0xff046AE1)),
+                                activeDotColor: const Color(0xff046AE1)),
                           ),
                         ),
                       ),
@@ -124,14 +124,17 @@ class WalletPage extends StatelessWidget {
                                                 child: Container(
                                                   height: 43.h,
                                                   width: 43.w,
-                                                  decoration: BoxDecoration(
-                                                      color: greenColor1,
-                                                      shape: BoxShape.circle),
+                                                  decoration:
+                                                      const BoxDecoration(
+                                                          color: greenColor1,
+                                                          shape:
+                                                              BoxShape.circle),
                                                   child: Align(
                                                     alignment: Alignment.center,
                                                     child: Icon(
                                                       accountBalanceWallet,
-                                                      color: Color(0xffDADADA),
+                                                      color: const Color(
+                                                          0xffDADADA),
                                                       size: 14.w,
                                                     ),
                                                   ),
@@ -141,7 +144,8 @@ class WalletPage extends StatelessWidget {
                                             Text(
                                               'Fund Wallet',
                                               style: TextStyle(
-                                                  color: Color(0xff333333),
+                                                  color:
+                                                      const Color(0xff333333),
                                                   fontSize: 14.sp,
                                                   fontWeight: FontWeight.w700,
                                                   fontFamily: circularStd),
@@ -168,14 +172,17 @@ class WalletPage extends StatelessWidget {
                                                 child: Container(
                                                   height: 43.h,
                                                   width: 43.w,
-                                                  decoration: BoxDecoration(
-                                                      color: greenColor1,
-                                                      shape: BoxShape.circle),
+                                                  decoration:
+                                                      const BoxDecoration(
+                                                          color: greenColor1,
+                                                          shape:
+                                                              BoxShape.circle),
                                                   child: Align(
                                                     alignment: Alignment.center,
                                                     child: Icon(
                                                       trendingIcon,
-                                                      color: Color(0xffDADADA),
+                                                      color: const Color(
+                                                          0xffDADADA),
                                                       size: 14.w,
                                                     ),
                                                   ),
@@ -185,7 +192,8 @@ class WalletPage extends StatelessWidget {
                                             Text(
                                               'Send Money',
                                               style: TextStyle(
-                                                  color: Color(0xff333333),
+                                                  color:
+                                                      const Color(0xff333333),
                                                   fontSize: 14.sp,
                                                   fontWeight: FontWeight.w700,
                                                   fontFamily: circularStd),
@@ -212,14 +220,17 @@ class WalletPage extends StatelessWidget {
                                                 child: Container(
                                                   height: 43.h,
                                                   width: 43.w,
-                                                  decoration: BoxDecoration(
-                                                      color: greenColor1,
-                                                      shape: BoxShape.circle),
+                                                  decoration:
+                                                      const BoxDecoration(
+                                                          color: greenColor1,
+                                                          shape:
+                                                              BoxShape.circle),
                                                   child: Align(
                                                     alignment: Alignment.center,
                                                     child: Icon(
                                                       inputIcon,
-                                                      color: Color(0xffDADADA),
+                                                      color: const Color(
+                                                          0xffDADADA),
                                                       size: 14.w,
                                                     ),
                                                   ),
@@ -229,7 +240,8 @@ class WalletPage extends StatelessWidget {
                                             Text(
                                               'Withdraw',
                                               style: TextStyle(
-                                                  color: Color(0xff333333),
+                                                  color:
+                                                      const Color(0xff333333),
                                                   fontSize: 14.sp,
                                                   fontWeight: FontWeight.w700,
                                                   fontFamily: circularStd),
@@ -241,7 +253,7 @@ class WalletPage extends StatelessWidget {
                                   )),
                               Container(
                                 width: MediaQuery.of(context).size.width,
-                                decoration: BoxDecoration(
+                                decoration: const BoxDecoration(
                                     color: Colors.white,
                                     borderRadius: BorderRadius.vertical(
                                         bottom: Radius.circular(10))),
@@ -256,37 +268,37 @@ class WalletPage extends StatelessWidget {
                                         child: Text(
                                           'Recent Transactions',
                                           style: TextStyle(
-                                              color: Color(0xff333333),
+                                              color: const Color(0xff333333),
                                               fontSize: 17.sp,
                                               fontWeight: FontWeight.w700,
                                               fontFamily: gelion),
                                         ),
                                       ),
                                     ),
-                                    RecentTransactions(
+                                    const RecentTransactions(
                                       islineThrough: false,
                                       isReceived: true,
                                       isDollar: true,
                                     ),
-                                    RecentTransactions(
+                                    const RecentTransactions(
                                       islineThrough: true,
                                       isReceived: false,
                                       isDollar: false,
                                       amount: '10,000',
                                     ),
-                                    RecentTransactions(
+                                    const RecentTransactions(
                                       islineThrough: true,
                                       isReceived: true,
                                       isDollar: false,
                                       amount: '4,500,000',
                                     ),
-                                    RecentTransactions(
+                                    const RecentTransactions(
                                       islineThrough: true,
                                       isReceived: false,
                                       isDollar: false,
                                       amount: '10,000',
                                     ),
-                                    RecentTransactions(
+                                    const RecentTransactions(
                                       islineThrough: true,
                                       isReceived: true,
                                       isDollar: false,
@@ -501,7 +513,7 @@ class ThirdSlider extends StatelessWidget {
           height: height,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(10.r),
-            color: Color(0xff08083D),
+            color: const Color(0xff08083D),
           ),
           child: Column(
             children: [
@@ -547,7 +559,7 @@ class ThirdSlider extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding: EdgeInsets.only(
+                padding: const EdgeInsets.only(
                   left: 16,
                   top: 4,
                 ).r,

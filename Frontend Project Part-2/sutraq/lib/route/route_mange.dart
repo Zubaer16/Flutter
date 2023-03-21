@@ -1,3 +1,5 @@
+// ignore_for_file: constant_identifier_names
+
 import 'package:get/get.dart';
 import 'package:sutraq/pages/add_new_bank_account.dart';
 import 'package:sutraq/pages/add_new_bank_transfer_account.dart';
@@ -86,7 +88,7 @@ List<GetPage> getPages = [
   ),
   GetPage(
     name: walkthrough_screen,
-    page: () => WalkthroughScreen(),
+    page: () => const WalkthroughScreen(),
     transition: Transition.rightToLeft,
   ),
   GetPage(
@@ -129,38 +131,40 @@ List<GetPage> getPages = [
     name: notification_screen,
     page: () => const NotificationScreen(),
   ),
-  GetPage(name: fund_wallet_page, page: () => FundWalletPage()),
-  GetPage(name: add_new_bank_account, page: () => AddNewBankAccount()),
-  GetPage(name: send_money, page: () => SendMoney()),
-  GetPage(name: bank_transfer, page: () => BankTransfer()),
-  GetPage(name: sutraq_transfer, page: () => SutraqTransfer()),
+  GetPage(name: fund_wallet_page, page: () => const FundWalletPage()),
+  GetPage(name: add_new_bank_account, page: () => const AddNewBankAccount()),
+  GetPage(name: send_money, page: () => const SendMoney()),
+  GetPage(name: bank_transfer, page: () => const BankTransfer()),
+  GetPage(name: sutraq_transfer, page: () => const SutraqTransfer()),
   GetPage(
       name: add_new_bank_transfer_account,
       page: () => const AddNewBankTransferAccount()),
-  GetPage(name: transfer_summery, page: () => TransferSummery()),
-  GetPage(name: enter_transaction_pin, page: () => EnterTransactionPin()),
-  GetPage(name: transaction_success, page: () => TransactionSuccess()),
+  GetPage(name: transfer_summery, page: () => const TransferSummery()),
+  GetPage(name: enter_transaction_pin, page: () => const EnterTransactionPin()),
+  GetPage(name: transaction_success, page: () => const TransactionSuccess()),
   GetPage(
       name: add_new_sutraq_transfer_account,
-      page: () => AddNewSutraqTransferAccount()),
+      page: () => const AddNewSutraqTransferAccount()),
   GetPage(
       name: enter_transaction_pin_sutraq,
-      page: () => EnterTransactionPinSutraq()),
+      page: () => const EnterTransactionPinSutraq()),
   GetPage(
       name: transaction_success_sutraq_transfer,
-      page: () => TransactionSuccessSutraqTransfer()),
-  GetPage(name: withdraw_fund, page: () => WithdrawFund()),
-  GetPage(name: view_all_transactions, page: () => ViewAllTransactions()),
-  GetPage(name: refer_a_freind, page: () => ReferAFriend()),
-  GetPage(name: add_new_card_bank_account, page: () => AddNewCardBankAccount()),
-  GetPage(name: open_sutraq_account, page: () => OpenSutraqAccount()),
-  GetPage(name: create_sutraq_account, page: () => CreateSutraqAccount()),
-  GetPage(name: good, page: () => Good()),
-  GetPage(name: upload_photo, page: () => UploadPhoto()),
-  GetPage(name: bank_accounts, page: () => BankAccounts()),
-  GetPage(name: debit_credit_card, page: () => DebitCreditCard()),
-  GetPage(name: change_pin, page: () => ChangePin()),
-  GetPage(name: change_password, page: () => ChangePassword()),
-  GetPage(name: id_upload, page: () => IdUpload()),
-  GetPage(name: view_dashboard, page: () => ViewDashboard()),
+      page: () => const TransactionSuccessSutraqTransfer()),
+  GetPage(name: withdraw_fund, page: () => const WithdrawFund()),
+  GetPage(name: view_all_transactions, page: () => const ViewAllTransactions()),
+  GetPage(name: refer_a_freind, page: () => const ReferAFriend()),
+  GetPage(
+      name: add_new_card_bank_account,
+      page: () => const AddNewCardBankAccount()),
+  GetPage(name: open_sutraq_account, page: () => const OpenSutraqAccount()),
+  GetPage(name: create_sutraq_account, page: () => const CreateSutraqAccount()),
+  GetPage(name: good, page: () => const Good()),
+  GetPage(name: upload_photo, page: () => const UploadPhoto()),
+  GetPage(name: bank_accounts, page: () => const BankAccounts()),
+  GetPage(name: debit_credit_card, page: () => const DebitCreditCard()),
+  GetPage(name: change_pin, page: () => const ChangePin()),
+  GetPage(name: change_password, page: () => const ChangePassword()),
+  GetPage(name: id_upload, page: () => const IdUpload()),
+  GetPage(name: view_dashboard, page: () => const ViewDashboard()),
 ];

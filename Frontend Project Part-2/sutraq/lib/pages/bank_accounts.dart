@@ -21,7 +21,7 @@ class BankAccounts extends StatelessWidget {
 
     return SafeArea(
         child: Scaffold(
-            backgroundColor: Color(0xfff1f3f4),
+            backgroundColor: const Color(0xfff1f3f4),
             body: Column(
               children: [
                 Stack(
@@ -35,7 +35,7 @@ class BankAccounts extends StatelessWidget {
                         child: Text(
                           'Bank Accounts',
                           style: TextStyle(
-                              color: Color(0xff08083d),
+                              color: const Color(0xff08083d),
                               fontSize: 20.sp,
                               fontWeight: FontWeight.w600,
                               height: 1.4.h,
@@ -62,7 +62,8 @@ class BankAccounts extends StatelessWidget {
                   height: 509.h,
                   decoration: BoxDecoration(
                       color: Colors.white,
-                      borderRadius: BorderRadius.all(Radius.circular(10)).r),
+                      borderRadius:
+                          const BorderRadius.all(Radius.circular(10)).r),
                   child: Stack(clipBehavior: Clip.none, children: [
                     Padding(
                       padding: const EdgeInsets.only(top: 18).r,
@@ -77,7 +78,8 @@ class BankAccounts extends StatelessWidget {
                                 child: Text(
                                   'Check the radio button to set bank\nas default',
                                   style: TextStyle(
-                                      color: Color(0xff000000).withOpacity(0.5),
+                                      color: const Color(0xff000000)
+                                          .withOpacity(0.5),
                                       fontSize: 12.sp,
                                       fontWeight: FontWeight.w400,
                                       height: 1.6,

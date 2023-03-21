@@ -86,7 +86,7 @@ Future<dynamic> dashboardDialog(
                                               fontSize: 12.sp,
                                               fontWeight: FontWeight.w700,
                                               fontFamily: sfCompactDisplay),
-                                          child: Text('NGN')),
+                                          child: const Text('NGN')),
                                     )
                                   ]),
                                 ),
@@ -104,14 +104,14 @@ Future<dynamic> dashboardDialog(
                                               decorationColor: Colors.white,
                                               decorationThickness: 2,
                                               fontFamily: gelion),
-                                          child: Text('N')),
+                                          child: const Text('N')),
                                       DefaultTextStyle(
                                           style: TextStyle(
                                               color: Colors.white,
                                               fontSize: 16.sp,
                                               fontWeight: FontWeight.w600,
                                               fontFamily: gelion),
-                                          child: Text('12,000'))
+                                          child: const Text('12,000'))
                                     ],
                                   ),
                                 )
@@ -131,7 +131,7 @@ Future<dynamic> dashboardDialog(
                                       BoxShadow(
                                         color: Colors.black.withOpacity(0.25),
                                         blurRadius: 2.r,
-                                        offset: Offset(0, 1),
+                                        offset: const Offset(0, 1),
                                       )
                                     ]),
                                 child: Image.asset('images/check_24px.png'),
@@ -144,7 +144,7 @@ Future<dynamic> dashboardDialog(
                         decoration: BoxDecoration(
                             color: Colors.white,
                             borderRadius:
-                                BorderRadius.all(Radius.circular(13).r),
+                                BorderRadius.all(const Radius.circular(13).r),
                             boxShadow: [
                               BoxShadow(
                                 color: Colors.black.withOpacity(0.1),
@@ -168,10 +168,10 @@ Future<dynamic> dashboardDialog(
                                   padding: const EdgeInsets.only(left: 4.67).r,
                                   child: DefaultTextStyle(
                                       style: TextStyle(
-                                          color: Color(0xff08083D),
+                                          color: const Color(0xff08083D),
                                           fontSize: 12.sp,
                                           fontWeight: FontWeight.w700),
-                                      child: Text('GBP')),
+                                      child: const Text('GBP')),
                                 )
                               ]),
                             ),
@@ -181,11 +181,11 @@ Future<dynamic> dashboardDialog(
                                 children: [
                                   DefaultTextStyle(
                                       style: TextStyle(
-                                        color: Color(0xff08083D),
+                                        color: const Color(0xff08083D),
                                         fontSize: 16.sp,
                                         fontWeight: FontWeight.w600,
                                       ),
-                                      child: Text('£500'))
+                                      child: const Text('£500'))
                                 ],
                               ),
                             )
@@ -198,7 +198,7 @@ Future<dynamic> dashboardDialog(
                         decoration: BoxDecoration(
                             color: Colors.white,
                             borderRadius:
-                                BorderRadius.all(Radius.circular(13).r),
+                                BorderRadius.all(const Radius.circular(13).r),
                             boxShadow: [
                               BoxShadow(
                                 color: Colors.black.withOpacity(0.1),
@@ -222,10 +222,10 @@ Future<dynamic> dashboardDialog(
                                   padding: const EdgeInsets.only(left: 4.67).r,
                                   child: DefaultTextStyle(
                                       style: TextStyle(
-                                          color: Color(0xff08083D),
+                                          color: const Color(0xff08083D),
                                           fontSize: 12.sp,
                                           fontWeight: FontWeight.w700),
-                                      child: Text('USD')),
+                                      child: const Text('USD')),
                                 )
                               ]),
                             ),
@@ -235,11 +235,11 @@ Future<dynamic> dashboardDialog(
                                 children: [
                                   DefaultTextStyle(
                                       style: TextStyle(
-                                        color: Color(0xff08083D),
+                                        color: const Color(0xff08083D),
                                         fontSize: 16.sp,
                                         fontWeight: FontWeight.w600,
                                       ),
-                                      child: Text('\$500'))
+                                      child: const Text('\$500'))
                                 ],
                               ),
                             )

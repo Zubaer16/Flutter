@@ -61,7 +61,7 @@ final List<Widget> pic = [
 ];
 
 class WalkthroughScreen extends StatefulWidget {
-  WalkthroughScreen({Key? key}) : super(key: key);
+  const WalkthroughScreen({Key? key}) : super(key: key);
 
   @override
   State<WalkthroughScreen> createState() => _WalkthroughScreenState();
@@ -177,13 +177,13 @@ class DotIndicator extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AnimatedContainer(
-      duration: Duration(milliseconds: 300),
+      duration: const Duration(milliseconds: 300),
       child: Container(
-        margin: EdgeInsets.only(right: 10),
+        margin: const EdgeInsets.only(right: 10),
         height: 6.h,
         width: 6.h,
         decoration: BoxDecoration(
-          color: isActive ? Color.fromARGB(29, 0, 0, 0) : greenColor,
+          color: isActive ? const Color.fromARGB(29, 0, 0, 0) : greenColor,
           borderRadius: BorderRadius.circular(3.r),
         ),
       ),

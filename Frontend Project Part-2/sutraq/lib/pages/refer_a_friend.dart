@@ -14,7 +14,7 @@ class ReferAFriend extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
-      backgroundColor: Color(0xffF1F3F4),
+      backgroundColor: const Color(0xffF1F3F4),
       body: Column(
         children: [
           Stack(
@@ -28,7 +28,7 @@ class ReferAFriend extends StatelessWidget {
                   child: Text(
                     'Refer a Friend',
                     style: TextStyle(
-                        color: Color(0xff08083d),
+                        color: const Color(0xff08083d),
                         fontSize: 20.sp,
                         fontWeight: FontWeight.w600,
                         fontFamily: gelion),
@@ -52,7 +52,7 @@ class ReferAFriend extends StatelessWidget {
             width: 325.w,
             decoration: BoxDecoration(
                 color: Colors.white,
-                borderRadius: BorderRadius.all(Radius.circular(15).r)),
+                borderRadius: BorderRadius.all(const Radius.circular(15).r)),
             child: Column(children: [
               SizedBox(
                 height: 38.h,
@@ -68,7 +68,7 @@ class ReferAFriend extends StatelessWidget {
               Text(
                 'Earn cash reward when your friends \n signup and use your referral link or \n code',
                 style: TextStyle(
-                    color: Color(0xff000000).withOpacity(.5),
+                    color: const Color(0xff000000).withOpacity(.5),
                     fontSize: 12.sp,
                     fontWeight: FontWeight.w400,
                     height: 1.6.h,
@@ -82,24 +82,25 @@ class ReferAFriend extends StatelessWidget {
                 height: 74.h,
                 width: 227.w,
                 decoration: BoxDecoration(
-                    borderRadius: BorderRadius.all(Radius.circular(20).r),
+                    borderRadius: BorderRadius.all(const Radius.circular(20).r),
                     gradient: LinearGradient(
                         begin: Alignment.bottomLeft,
                         end: Alignment.topLeft,
-                        stops: [
+                        stops: const [
                           1,
                           0
                         ],
                         colors: [
-                          Color(0xffF2F8FF).withOpacity(1),
-                          Color(0xffD7E9FF00).withOpacity(0)
+                          const Color(0xffF2F8FF).withOpacity(1),
+                          // ignore: use_full_hex_values_for_flutter_colors
+                          const Color(0xffd7e9ff00).withOpacity(0)
                         ])),
                 child:
                     Row(mainAxisAlignment: MainAxisAlignment.center, children: [
                   Text(
                     'SU12344',
                     style: TextStyle(
-                        color: Color(0xff0A004A).withOpacity(.9),
+                        color: const Color(0xff0A004A).withOpacity(.9),
                         fontSize: 21.sp,
                         fontWeight: FontWeight.w500,
                         fontFamily: circularStd),
@@ -109,13 +110,14 @@ class ReferAFriend extends StatelessWidget {
                   ),
                   InkWell(
                     onTap: () async {
-                      await Clipboard.setData(ClipboardData(text: "SU12344"));
+                      await Clipboard.setData(
+                          const ClipboardData(text: "SU12344"));
                       Fluttertoast.showToast(
                           msg: "Text Copied",
                           gravity: ToastGravity.CENTER,
                           fontSize: 16.0);
                     },
-                    child: Icon(
+                    child: const Icon(
                       contentCopy,
                       color: Color(0xff6681F0),
                     ),
@@ -136,7 +138,7 @@ class ReferAFriend extends StatelessWidget {
                         Text(
                           'Accepted',
                           style: TextStyle(
-                              color: Color(0xff000000).withOpacity(.5),
+                              color: const Color(0xff000000).withOpacity(.5),
                               fontSize: 12.sp,
                               fontWeight: FontWeight.w400,
                               fontFamily: circularStd),
@@ -144,7 +146,7 @@ class ReferAFriend extends StatelessWidget {
                         Text(
                           '2',
                           style: TextStyle(
-                              color: Color(0xff0A004A).withOpacity(.9),
+                              color: const Color(0xff0A004A).withOpacity(.9),
                               fontSize: 21.sp,
                               fontWeight: FontWeight.w500,
                               fontFamily: circularStd),
@@ -157,7 +159,7 @@ class ReferAFriend extends StatelessWidget {
                         Text(
                           'Amount Earned',
                           style: TextStyle(
-                              color: Color(0xff000000).withOpacity(.5),
+                              color: const Color(0xff000000).withOpacity(.5),
                               fontSize: 12.sp,
                               fontWeight: FontWeight.w400,
                               fontFamily: circularStd),
@@ -165,7 +167,7 @@ class ReferAFriend extends StatelessWidget {
                         Text(
                           'N200',
                           style: TextStyle(
-                              color: Color(0xff0A004A).withOpacity(.9),
+                              color: const Color(0xff0A004A).withOpacity(.9),
                               fontSize: 21.sp,
                               fontWeight: FontWeight.w500,
                               fontFamily: circularStd),

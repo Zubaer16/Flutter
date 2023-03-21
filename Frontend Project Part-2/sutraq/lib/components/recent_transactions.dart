@@ -24,7 +24,7 @@ class RecentTransactions extends StatelessWidget {
       decoration: BoxDecoration(
           border: Border(
               top: BorderSide(
-        color: Color(0xffDEDEDE).withOpacity(.4),
+        color: const Color(0xffDEDEDE).withOpacity(.4),
       ))),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -66,7 +66,7 @@ class RecentTransactions extends StatelessWidget {
                         child: Text(
                           isReceived ? 'Access Bank' : 'Alpha Loans',
                           style: TextStyle(
-                              color: Color(0xff0A004A),
+                              color: const Color(0xff0A004A),
                               fontSize: 14.sp,
                               fontWeight: FontWeight.w500,
                               fontFamily: circularStd),
@@ -76,7 +76,7 @@ class RecentTransactions extends StatelessWidget {
                         '28, Jan 2020',
                         textAlign: TextAlign.left,
                         style: TextStyle(
-                            color: Color(0xff929292).withOpacity(.7),
+                            color: const Color(0xff929292).withOpacity(.7),
                             fontSize: 10.sp,
                             fontWeight: FontWeight.w400,
                             fontFamily: circularStd),
@@ -94,9 +94,9 @@ class RecentTransactions extends StatelessWidget {
                 style: TextStyle(
                     decoration:
                         islineThrough ? TextDecoration.lineThrough : null,
-                    decorationColor: Color(0xff0A004A),
+                    decorationColor: const Color(0xff0A004A),
                     decorationThickness: 2,
-                    color: Color(0xff0A004A),
+                    color: const Color(0xff0A004A),
                     fontSize: 16.sp,
                     fontWeight: FontWeight.w600,
                     fontFamily: gelion),
@@ -104,7 +104,7 @@ class RecentTransactions extends StatelessWidget {
               Text(
                 amount ?? '2400',
                 style: TextStyle(
-                    color: Color(0xff0A004A),
+                    color: const Color(0xff0A004A),
                     fontSize: 16.sp,
                     fontWeight: FontWeight.w600,
                     fontFamily: gelion),

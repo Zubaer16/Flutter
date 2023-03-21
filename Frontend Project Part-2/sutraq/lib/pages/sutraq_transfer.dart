@@ -20,7 +20,7 @@ class SutraqTransfer extends StatelessWidget {
       child: Scaffold(
           backgroundColor: const Color(0xffe5e5e5),
           body: SingleChildScrollView(
-            physics: BouncingScrollPhysics(),
+            physics: const BouncingScrollPhysics(),
             child: Column(
               children: [
                 Stack(
@@ -58,7 +58,7 @@ class SutraqTransfer extends StatelessWidget {
                       child: Text(
                         'Ensure to fill in the neccessary details of the \n recipient in order to continue',
                         style: TextStyle(
-                            color: Color(0xff000000).withOpacity(0.5),
+                            color: const Color(0xff000000).withOpacity(0.5),
                             fontSize: 12.sp,
                             fontWeight: FontWeight.w400),
                         textAlign: TextAlign.center,
@@ -77,7 +77,8 @@ class SutraqTransfer extends StatelessWidget {
                     height: 550.h,
                     decoration: BoxDecoration(
                         color: Colors.white,
-                        borderRadius: BorderRadius.all(Radius.circular(10).r)),
+                        borderRadius:
+                            BorderRadius.all(const Radius.circular(10).r)),
                     child: Stack(clipBehavior: Clip.none, children: [
                       Padding(
                         padding: const EdgeInsets.only(top: 33).r,

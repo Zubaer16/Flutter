@@ -14,7 +14,7 @@ class Good extends StatelessWidget {
     return Scaffold(
       backgroundColor: tipBackgroundColor,
       body: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
             image: DecorationImage(
                 image: AssetImage('images/tipBackground.png'),
                 fit: BoxFit.fill)),
@@ -40,7 +40,7 @@ class Good extends StatelessWidget {
             Text(
               'Now tell us a bit about yourself',
               style: TextStyle(
-                  color: Color(0xffF0F0F0),
+                  color: const Color(0xffF0F0F0),
                   fontSize: 12.sp,
                   fontWeight: FontWeight.w400,
                   fontFamily: dmSans),

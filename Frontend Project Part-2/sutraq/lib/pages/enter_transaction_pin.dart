@@ -28,7 +28,7 @@ class EnterTransactionPin extends StatelessWidget {
                 SizedBox(
                   height: 85.h,
                 ),
-                Icon(
+                const Icon(
                   verifiedUser,
                   size: 40,
                   color: greenColor,
@@ -79,7 +79,8 @@ class EnterTransactionPin extends StatelessWidget {
                     obscuringCharacter: '*',
                     pinTheme: PinTheme(
                         shape: PinCodeFieldShape.box,
-                        borderRadius: BorderRadius.all(Radius.circular(4).r),
+                        borderRadius:
+                            BorderRadius.all(const Radius.circular(4).r),
                         fieldHeight: 48.h,
                         fieldWidth: 50.w,
                         activeFillColor: Colors.white,

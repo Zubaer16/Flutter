@@ -12,7 +12,7 @@ class NotificationScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
-      backgroundColor: Color(0xffF1F3F4),
+      backgroundColor: const Color(0xffF1F3F4),
       body: Column(
         children: [
           Padding(
@@ -27,7 +27,7 @@ class NotificationScreen extends StatelessWidget {
                     child: Text(
                       'Notifications',
                       style: TextStyle(
-                          color: Color(0xff08083D),
+                          color: const Color(0xff08083D),
                           fontSize: 20.sp,
                           fontWeight: FontWeight.w600,
                           fontFamily: gelion),
@@ -55,8 +55,8 @@ class NotificationScreen extends StatelessWidget {
             decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(10).r,
-                    topRight: Radius.circular(10).r)),
+                    topLeft: const Radius.circular(10).r,
+                    topRight: const Radius.circular(10).r)),
             child: Column(children: [
               SizedBox(
                   width: MediaQuery.of(context).size.width,
@@ -85,7 +85,7 @@ class NotificationScreen extends StatelessWidget {
                             child: Text(
                               'Got a minute to help us out?',
                               style: TextStyle(
-                                  color: Color(0xff4D4949),
+                                  color: const Color(0xff4D4949),
                                   fontSize: 14.sp,
                                   fontWeight: FontWeight.w500,
                                   fontFamily: gelion),
@@ -113,7 +113,7 @@ class NotificationScreen extends StatelessWidget {
                           child: Text(
                             "We’d like to know how you heard about Sutraq.It’s so we can better share our mission with the world. Tap to take the survey.",
                             style: TextStyle(
-                                color: Color(0xff4D4949),
+                                color: const Color(0xff4D4949),
                                 fontSize: 14.sp,
                                 fontWeight: FontWeight.w500,
                                 fontFamily: gelion),
@@ -125,7 +125,7 @@ class NotificationScreen extends StatelessWidget {
                         child: Container(
                           width: 340.w,
                           height: .5.h,
-                          color: Color(0xffDEDEDE),
+                          color: const Color(0xffDEDEDE),
                         ),
                       )
                     ],
@@ -157,7 +157,8 @@ class NotificationScreen extends StatelessWidget {
                             child: Text(
                               'Got a minute to help us out?',
                               style: TextStyle(
-                                  color: Color(0xff4D4949).withOpacity(.5),
+                                  color:
+                                      const Color(0xff4D4949).withOpacity(.5),
                                   fontSize: 14.sp,
                                   fontWeight: FontWeight.w500,
                                   fontFamily: gelion),
@@ -185,7 +186,7 @@ class NotificationScreen extends StatelessWidget {
                           child: Text(
                             "We’d like to know how you heard about Sutraq.It’s so we can better share our mission with the world. Tap to take the survey.",
                             style: TextStyle(
-                                color: Color(0xff4D4949).withOpacity(.5),
+                                color: const Color(0xff4D4949).withOpacity(.5),
                                 fontSize: 14.sp,
                                 fontWeight: FontWeight.w500,
                                 fontFamily: gelion),
@@ -197,7 +198,7 @@ class NotificationScreen extends StatelessWidget {
                         child: Container(
                           width: 340.w,
                           height: .5.h,
-                          color: Color(0xffDEDEDE).withOpacity(.5),
+                          color: const Color(0xffDEDEDE).withOpacity(.5),
                         ),
                       )
                     ],

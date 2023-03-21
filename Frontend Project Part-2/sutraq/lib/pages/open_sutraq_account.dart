@@ -14,7 +14,7 @@ class OpenSutraqAccount extends StatelessWidget {
     return Scaffold(
       backgroundColor: tipBackgroundColor,
       body: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
             image: DecorationImage(
                 image: AssetImage('images/tipBackground.png'),
                 fit: BoxFit.fill)),
@@ -40,7 +40,7 @@ class OpenSutraqAccount extends StatelessWidget {
             Text(
               'Let’s start by opening a new sutraq account',
               style: TextStyle(
-                  color: Color(0xffF0F0F0),
+                  color: const Color(0xffF0F0F0),
                   fontSize: 12.sp,
                   fontWeight: FontWeight.w400,
                   fontFamily: dmSans),

@@ -57,7 +57,8 @@ class TransferSummery extends StatelessWidget {
                     height: 486.h,
                     decoration: BoxDecoration(
                         color: Colors.white,
-                        borderRadius: BorderRadius.all(Radius.circular(10).r)),
+                        borderRadius:
+                            BorderRadius.all(const Radius.circular(10).r)),
                     child: Stack(clipBehavior: Clip.none, children: [
                       Padding(
                         padding: const EdgeInsets.only(top: 40).r,
@@ -70,7 +71,7 @@ class TransferSummery extends StatelessWidget {
                               decoration: BoxDecoration(
                                   border: Border(
                                       bottom: BorderSide(
-                                          color: Color(0xffdadada)
+                                          color: const Color(0xffdadada)
                                               .withOpacity(.6)))),
                               child: Row(
                                 mainAxisAlignment:
@@ -87,7 +88,7 @@ class TransferSummery extends StatelessWidget {
                                         child: Text(
                                           'RECIPIENT',
                                           style: TextStyle(
-                                              color: Color(0xff969696),
+                                              color: const Color(0xff969696),
                                               fontSize: 11.sp,
                                               fontWeight: FontWeight.w500,
                                               fontFamily: circularStd),
@@ -96,7 +97,7 @@ class TransferSummery extends StatelessWidget {
                                       Text(
                                         'Tobi Hassan',
                                         style: TextStyle(
-                                            color: Color(0xff000000),
+                                            color: const Color(0xff000000),
                                             fontSize: 17.sp,
                                             fontWeight: FontWeight.w700,
                                             fontFamily: dmSans),
@@ -117,7 +118,7 @@ class TransferSummery extends StatelessWidget {
                               decoration: BoxDecoration(
                                   border: Border(
                                       bottom: BorderSide(
-                                          color: Color(0xffdadada)
+                                          color: const Color(0xffdadada)
                                               .withOpacity(.6)))),
                               child: Row(
                                 mainAxisAlignment:
@@ -134,7 +135,7 @@ class TransferSummery extends StatelessWidget {
                                         child: Text(
                                           'RECIPIENTS COUNTRY',
                                           style: TextStyle(
-                                              color: Color(0xff969696),
+                                              color: const Color(0xff969696),
                                               fontSize: 11.sp,
                                               fontWeight: FontWeight.w500,
                                               fontFamily: circularStd),
@@ -143,7 +144,7 @@ class TransferSummery extends StatelessWidget {
                                       Text(
                                         'Nigeria',
                                         style: TextStyle(
-                                            color: Color(0xff000000),
+                                            color: const Color(0xff000000),
                                             fontSize: 17.sp,
                                             fontWeight: FontWeight.w700,
                                             fontFamily: dmSans),
@@ -164,7 +165,7 @@ class TransferSummery extends StatelessWidget {
                               decoration: BoxDecoration(
                                   border: Border(
                                       bottom: BorderSide(
-                                          color: Color(0xffdadada)
+                                          color: const Color(0xffdadada)
                                               .withOpacity(.6)))),
                               child: Row(
                                 mainAxisAlignment:
@@ -181,7 +182,7 @@ class TransferSummery extends StatelessWidget {
                                         child: Text(
                                           'BANK',
                                           style: TextStyle(
-                                              color: Color(0xff969696),
+                                              color: const Color(0xff969696),
                                               fontSize: 11.sp,
                                               fontWeight: FontWeight.w500,
                                               fontFamily: circularStd),
@@ -190,7 +191,7 @@ class TransferSummery extends StatelessWidget {
                                       Text(
                                         'Access Bank',
                                         style: TextStyle(
-                                            color: Color(0xff000000),
+                                            color: const Color(0xff000000),
                                             fontSize: 17.sp,
                                             fontWeight: FontWeight.w700,
                                             fontFamily: dmSans),
@@ -211,7 +212,7 @@ class TransferSummery extends StatelessWidget {
                               decoration: BoxDecoration(
                                   border: Border(
                                       bottom: BorderSide(
-                                          color: Color(0xffdadada)
+                                          color: const Color(0xffdadada)
                                               .withOpacity(.6)))),
                               child: Row(
                                 mainAxisAlignment:
@@ -228,7 +229,7 @@ class TransferSummery extends StatelessWidget {
                                         child: Text(
                                           'ACCOUNT NUMBER',
                                           style: TextStyle(
-                                              color: Color(0xff969696),
+                                              color: const Color(0xff969696),
                                               fontSize: 11.sp,
                                               fontWeight: FontWeight.w500,
                                               fontFamily: circularStd),
@@ -237,7 +238,7 @@ class TransferSummery extends StatelessWidget {
                                       Text(
                                         '0127890013',
                                         style: TextStyle(
-                                            color: Color(0xff000000),
+                                            color: const Color(0xff000000),
                                             fontSize: 17.sp,
                                             fontWeight: FontWeight.w700,
                                             fontFamily: dmSans),
@@ -266,7 +267,7 @@ class TransferSummery extends StatelessWidget {
                                       child: Text(
                                         'Amount to send',
                                         style: TextStyle(
-                                            color: Color(0xff969696),
+                                            color: const Color(0xff969696),
                                             fontSize: 12.sp,
                                             fontWeight: FontWeight.w500,
                                             fontFamily: dmSans),
@@ -275,7 +276,7 @@ class TransferSummery extends StatelessWidget {
                                     Text(
                                       'N20,000',
                                       style: TextStyle(
-                                          color: Color(0xff000000),
+                                          color: const Color(0xff000000),
                                           fontSize: 21.sp,
                                           fontWeight: FontWeight.w700,
                                           fontFamily: dmSans),
@@ -294,7 +295,7 @@ class TransferSummery extends StatelessWidget {
                                       child: Text(
                                         'Service Fee',
                                         style: TextStyle(
-                                            color: Color(0xff969696),
+                                            color: const Color(0xff969696),
                                             fontSize: 12.sp,
                                             fontWeight: FontWeight.w500,
                                             fontFamily: dmSans),
@@ -303,7 +304,7 @@ class TransferSummery extends StatelessWidget {
                                     Text(
                                       'N50',
                                       style: TextStyle(
-                                          color: Color(0xff000000),
+                                          color: const Color(0xff000000),
                                           fontSize: 21.sp,
                                           fontWeight: FontWeight.w700,
                                           fontFamily: dmSans),

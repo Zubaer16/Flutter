@@ -22,7 +22,7 @@ class BankTransfer extends StatelessWidget {
       child: Scaffold(
           backgroundColor: const Color(0xffe5e5e5),
           body: SingleChildScrollView(
-            physics: BouncingScrollPhysics(),
+            physics: const BouncingScrollPhysics(),
             child: Column(
               children: [
                 Stack(
@@ -63,7 +63,7 @@ class BankTransfer extends StatelessWidget {
                       child: Text(
                         'Ensure to fill in the neccessary details of the \n recipient in order to continue',
                         style: TextStyle(
-                            color: Color(0xff000000).withOpacity(0.5),
+                            color: const Color(0xff000000).withOpacity(0.5),
                             fontSize: 12.sp,
                             fontWeight: FontWeight.w400,
                             fontFamily: dmSans),
@@ -84,8 +84,8 @@ class BankTransfer extends StatelessWidget {
                     decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(10).r,
-                            topRight: Radius.circular(10).r)),
+                            topLeft: const Radius.circular(10).r,
+                            topRight: const Radius.circular(10).r)),
                     child: Stack(clipBehavior: Clip.none, children: [
                       Padding(
                         padding: const EdgeInsets.only(top: 33).r,

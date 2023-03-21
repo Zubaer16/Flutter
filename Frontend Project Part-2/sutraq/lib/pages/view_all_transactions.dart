@@ -46,7 +46,7 @@ class ViewAllTransactions extends StatelessWidget {
                                   child: Text(
                                     'Transaction History',
                                     style: TextStyle(
-                                      color: Color(0xff000000),
+                                      color: const Color(0xff000000),
                                       fontSize: 20.sp,
                                       fontWeight: FontWeight.w600,
                                     ),
@@ -107,13 +107,13 @@ class ViewAllTransactions extends StatelessWidget {
                     // pinned: true,
                     automaticallyImplyLeading: false,
                     expandedHeight: 150.0,
-                    backgroundColor: Color(0xffF1F3F4),
+                    backgroundColor: const Color(0xffF1F3F4),
 
                     forceElevated: innerBoxIsScrolled,
                     bottom: TabBar(
-                      indicatorColor: Color(0xff046AE1),
-                      labelColor: Color(0xff046AE1),
-                      unselectedLabelColor: Color(0xff969696),
+                      indicatorColor: const Color(0xff046AE1),
+                      labelColor: const Color(0xff046AE1),
+                      unselectedLabelColor: const Color(0xff969696),
                       isScrollable: true,
                       labelStyle: TextStyle(
                         fontSize: 12.sp,
@@ -149,24 +149,24 @@ class ViewAllTransactions extends StatelessWidget {
               // These are the contents of the tab views, below the tabs.
               children: [
                 ListView.builder(
-                    padding: EdgeInsets.fromLTRB(20, 0, 20, 0).r,
+                    padding: const EdgeInsets.fromLTRB(20, 0, 20, 0).r,
                     itemCount: 20,
                     itemBuilder: (_, index) {
                       if (index == 0 || index == 1) {
-                        return RecentTransactions(
+                        return const RecentTransactions(
                           islineThrough: true,
                           isReceived: true,
                           isDollar: false,
                           amount: '240,000',
                         );
                       } else if (index % 2 == 1) {
-                        return RecentTransactions(
+                        return const RecentTransactions(
                             islineThrough: true,
                             isReceived: true,
                             isDollar: false,
                             amount: '240,000');
                       } else if (index % 2 == 0) {
-                        return RecentTransactions(
+                        return const RecentTransactions(
                             islineThrough: true,
                             isReceived: false,
                             isDollar: false,
@@ -175,8 +175,8 @@ class ViewAllTransactions extends StatelessWidget {
                         return Container();
                       }
                     }),
-                Text('Debit Tab'),
-                Text('Credit Tab')
+                const Text('Debit Tab'),
+                const Text('Credit Tab')
               ],
             ),
           ),

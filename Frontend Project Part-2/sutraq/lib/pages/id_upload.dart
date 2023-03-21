@@ -17,7 +17,7 @@ class IdUpload extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
-      backgroundColor: Color(0xffe5e5e5),
+      backgroundColor: const Color(0xffe5e5e5),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
@@ -31,7 +31,7 @@ class IdUpload extends StatelessWidget {
                   width: MediaQuery.of(context).size.width,
                   child: Text('I.D Upload',
                       style: TextStyle(
-                          color: Color(0xff08083d),
+                          color: const Color(0xff08083d),
                           fontSize: 20.sp,
                           fontWeight: FontWeight.w600,
                           fontFamily: gelion),
@@ -52,7 +52,7 @@ class IdUpload extends StatelessWidget {
           Text(
             'We need a valid government issued I.D to \n continue.',
             style: TextStyle(
-                color: Color(0xff000000).withOpacity(.5),
+                color: const Color(0xff000000).withOpacity(.5),
                 fontSize: 12.sp,
                 fontWeight: FontWeight.w400,
                 fontFamily: circularStd),
@@ -66,7 +66,7 @@ class IdUpload extends StatelessWidget {
             width: 344.w,
             decoration: BoxDecoration(
                 color: Colors.white,
-                borderRadius: BorderRadius.all(Radius.circular(10).r)),
+                borderRadius: BorderRadius.all(const Radius.circular(10).r)),
             child: Column(children: [
               SizedBox(
                 height: 69.h,
@@ -81,12 +81,12 @@ class IdUpload extends StatelessWidget {
                   if (result == null) return;
                 },
                 child: DottedBorder(
-                  dashPattern: [8, 3],
-                  color: Color(0xff666666),
+                  dashPattern: const [8, 3],
+                  color: const Color(0xff666666),
                   strokeWidth: 1,
                   strokeCap: StrokeCap.butt,
                   borderType: BorderType.RRect,
-                  radius: Radius.circular(10).r,
+                  radius: const Radius.circular(10).r,
                   child: SizedBox(
                     height: 172.h,
                     width: 203.w,
@@ -98,7 +98,7 @@ class IdUpload extends StatelessWidget {
                         Icon(
                           imageOutlined,
                           size: 38.w,
-                          color: Color(0xffdadada),
+                          color: const Color(0xffdadada),
                         ),
                         SizedBox(
                           height: 19.h,
@@ -106,7 +106,7 @@ class IdUpload extends StatelessWidget {
                         Text(
                           'Tap to select photo',
                           style: TextStyle(
-                              color: Color(0xff666666),
+                              color: const Color(0xff666666),
                               fontSize: 16.sp,
                               fontWeight: FontWeight.w500,
                               fontFamily: circularStd),
@@ -122,7 +122,7 @@ class IdUpload extends StatelessWidget {
               Text(
                 'Allows .docx, .doc, .pdf, jpeg, png \n formats',
                 style: TextStyle(
-                    color: Color(0xff000000).withOpacity(.5),
+                    color: const Color(0xff000000).withOpacity(.5),
                     fontSize: 12.sp,
                     fontWeight: FontWeight.w400,
                     fontFamily: circularStd),
@@ -146,7 +146,7 @@ class IdUpload extends StatelessWidget {
               Text(
                 'Step 2/2',
                 style: TextStyle(
-                    color: Color(0xff666666),
+                    color: const Color(0xff666666),
                     fontSize: 16.sp,
                     fontWeight: FontWeight.w500,
                     fontFamily: circularStd),

@@ -20,7 +20,7 @@ class CreateSutraqAccount extends StatelessWidget {
       onTap: () => {FocusScope.of(context).unfocus()},
       child: Scaffold(
         body: SingleChildScrollView(
-          physics: BouncingScrollPhysics(),
+          physics: const BouncingScrollPhysics(),
           child: Column(
             children: [
               SizedBox(
@@ -36,7 +36,7 @@ class CreateSutraqAccount extends StatelessWidget {
               Text(
                 'Create your Sutraq account & \n start transacting!',
                 style: TextStyle(
-                    color: Color(0xff08083D),
+                    color: const Color(0xff08083D),
                     fontSize: 20.sp,
                     fontWeight: FontWeight.w600,
                     fontFamily: gelion),
@@ -48,7 +48,7 @@ class CreateSutraqAccount extends StatelessWidget {
               Text(
                 'Enter your details to begin',
                 style: TextStyle(
-                    color: Color(0xff000000).withOpacity(.5),
+                    color: const Color(0xff000000).withOpacity(.5),
                     fontSize: 12.sp,
                     fontWeight: FontWeight.w400,
                     fontFamily: circularStd),
@@ -120,7 +120,7 @@ class CreateSutraqAccount extends StatelessWidget {
                 child: Text(
                   'Password must have at least 8 letters, a number, capital letter.',
                   style: TextStyle(
-                      color: Color(0xff000000).withOpacity(.5),
+                      color: const Color(0xff000000).withOpacity(.5),
                       fontSize: 10.sp,
                       fontWeight: FontWeight.w400,
                       fontFamily: dmSans),
@@ -157,7 +157,7 @@ class CreateSutraqAccount extends StatelessWidget {
                 child: Text(
                   'By signing up, you agree to our Terms of Use and \n Privacy Policy',
                   style: TextStyle(
-                      color: Color(0xff000000).withOpacity(.3),
+                      color: const Color(0xff000000).withOpacity(.3),
                       fontSize: 12.sp,
                       fontWeight: FontWeight.w400,
                       fontFamily: dmSans),

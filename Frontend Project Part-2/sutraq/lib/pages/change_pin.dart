@@ -18,7 +18,7 @@ class ChangePin extends StatelessWidget {
             child: Scaffold(
                 backgroundColor: const Color(0xffe5e5e5),
                 body: SingleChildScrollView(
-                    physics: BouncingScrollPhysics(),
+                    physics: const BouncingScrollPhysics(),
                     child: Column(
                       children: [
                         Stack(
@@ -32,7 +32,7 @@ class ChangePin extends StatelessWidget {
                                 child: Text(
                                   'Change Pin',
                                   style: TextStyle(
-                                      color: Color(0xff08083d),
+                                      color: const Color(0xff08083d),
                                       fontSize: 20.sp,
                                       fontWeight: FontWeight.w600,
                                       height: 1.4.h,
@@ -62,7 +62,8 @@ class ChangePin extends StatelessWidget {
                               child: Text(
                                 'Your pin is your personal authentication \n pin for performing trasanctions within \n sutraq',
                                 style: TextStyle(
-                                    color: Color(0xff000000).withOpacity(0.5),
+                                    color: const Color(0xff000000)
+                                        .withOpacity(0.5),
                                     fontSize: 12.sp,
                                     fontWeight: FontWeight.w400,
                                     height: 1.3,
@@ -80,7 +81,8 @@ class ChangePin extends StatelessWidget {
                           decoration: BoxDecoration(
                               color: Colors.white,
                               borderRadius:
-                                  BorderRadius.all(Radius.circular(10)).r),
+                                  const BorderRadius.all(Radius.circular(10))
+                                      .r),
                           child: Padding(
                             padding: const EdgeInsets.only(top: 18).r,
                             child: Column(

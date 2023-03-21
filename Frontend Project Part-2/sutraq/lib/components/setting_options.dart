@@ -20,17 +20,18 @@ class SettingOptions extends StatelessWidget {
       child: Container(
         height: 54.h,
         width: 340.w,
-        padding: EdgeInsets.fromLTRB(18, 0, 7, 0).r,
+        padding: const EdgeInsets.fromLTRB(18, 0, 7, 0).r,
         decoration: BoxDecoration(
             border: Border(
-                top: BorderSide(color: Color(0xffdedede).withOpacity(0.4)))),
+                top: BorderSide(
+                    color: const Color(0xffdedede).withOpacity(0.4)))),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text(
               text,
               style: TextStyle(
-                  color: Color(0xff111111),
+                  color: const Color(0xff111111),
                   fontSize: 14.sp,
                   fontWeight: FontWeight.w500,
                   fontFamily: circularStd),

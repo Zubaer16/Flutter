@@ -20,8 +20,9 @@ class TransactionSuccessSutraqTransfer extends StatelessWidget {
                 height: 632.h,
                 width: 325.w,
                 decoration: BoxDecoration(
-                    color: Color(0xffffffff),
-                    borderRadius: BorderRadius.all(Radius.circular(15).r)),
+                    color: const Color(0xffffffff),
+                    borderRadius:
+                        BorderRadius.all(const Radius.circular(15).r)),
                 child: Column(children: [
                   SizedBox(
                     height: 35.h,
@@ -30,13 +31,13 @@ class TransactionSuccessSutraqTransfer extends StatelessWidget {
                     height: 86.h,
                     width: 86.w,
                     decoration: BoxDecoration(
-                        color: Color(0xff47D187).withOpacity(.15),
+                        color: const Color(0xff47D187).withOpacity(.15),
                         shape: BoxShape.circle),
                     child: Center(
                       child: Icon(
                         done,
                         size: 60.h,
-                        color: Color(0xff47D187),
+                        color: const Color(0xff47D187),
                       ),
                     ),
                   ),
@@ -46,7 +47,7 @@ class TransactionSuccessSutraqTransfer extends StatelessWidget {
                   Text(
                     'Success',
                     style: TextStyle(
-                        color: Color(0xff002251),
+                        color: const Color(0xff002251),
                         fontSize: 24.sp,
                         fontWeight: FontWeight.w700,
                         fontFamily: gelion),
@@ -57,7 +58,7 @@ class TransactionSuccessSutraqTransfer extends StatelessWidget {
                   Text(
                     'You’ve successfully transferred money.',
                     style: TextStyle(
-                        color: Color(0xff7A869A),
+                        color: const Color(0xff7A869A),
                         fontSize: 14.sp,
                         fontWeight: FontWeight.w400,
                         fontFamily: circularStd),
@@ -76,7 +77,7 @@ class TransactionSuccessSutraqTransfer extends StatelessWidget {
                             Text(
                               'From:',
                               style: TextStyle(
-                                  color: Color(0xff002251),
+                                  color: const Color(0xff002251),
                                   fontSize: 13.sp,
                                   fontWeight: FontWeight.w500,
                                   fontFamily: circularStd),
@@ -87,7 +88,7 @@ class TransactionSuccessSutraqTransfer extends StatelessWidget {
                             Text(
                               'Credit Card',
                               style: TextStyle(
-                                  color: Color(0xff7A869A),
+                                  color: const Color(0xff7A869A),
                                   fontSize: 12.sp,
                                   fontWeight: FontWeight.w400,
                                   fontFamily: circularStd),
@@ -100,7 +101,7 @@ class TransactionSuccessSutraqTransfer extends StatelessWidget {
                             Text(
                               'Precious Ogar',
                               style: TextStyle(
-                                  color: Color(0xff002251),
+                                  color: const Color(0xff002251),
                                   fontSize: 13.sp,
                                   fontWeight: FontWeight.w500,
                                   fontFamily: circularStd),
@@ -111,7 +112,7 @@ class TransactionSuccessSutraqTransfer extends StatelessWidget {
                             Text(
                               'VISA *8064',
                               style: TextStyle(
-                                  color: Color(0xff7A869A),
+                                  color: const Color(0xff7A869A),
                                   fontSize: 12.sp,
                                   fontWeight: FontWeight.w400,
                                   fontFamily: circularStd),
@@ -127,7 +128,7 @@ class TransactionSuccessSutraqTransfer extends StatelessWidget {
                   Container(
                     height: 1.h,
                     width: 250.w,
-                    color: Color(0xffF5F7F9),
+                    color: const Color(0xffF5F7F9),
                   ),
                   SizedBox(
                     height: 15.h,
@@ -143,7 +144,7 @@ class TransactionSuccessSutraqTransfer extends StatelessWidget {
                             Text(
                               'To:',
                               style: TextStyle(
-                                  color: Color(0xff002251),
+                                  color: const Color(0xff002251),
                                   fontSize: 13.sp,
                                   fontWeight: FontWeight.w500,
                                   fontFamily: circularStd),
@@ -154,7 +155,7 @@ class TransactionSuccessSutraqTransfer extends StatelessWidget {
                             Text(
                               'Sutraq Account',
                               style: TextStyle(
-                                  color: Color(0xff7A869A),
+                                  color: const Color(0xff7A869A),
                                   fontSize: 12.sp,
                                   fontWeight: FontWeight.w400,
                                   fontFamily: circularStd),
@@ -167,7 +168,7 @@ class TransactionSuccessSutraqTransfer extends StatelessWidget {
                             Text(
                               'John Obi',
                               style: TextStyle(
-                                  color: Color(0xff002251),
+                                  color: const Color(0xff002251),
                                   fontSize: 13.sp,
                                   fontWeight: FontWeight.w500,
                                   fontFamily: circularStd),
@@ -178,7 +179,7 @@ class TransactionSuccessSutraqTransfer extends StatelessWidget {
                             Text(
                               'Su/Jobi123',
                               style: TextStyle(
-                                  color: Color(0xff7A869A),
+                                  color: const Color(0xff7A869A),
                                   fontSize: 12.sp,
                                   fontWeight: FontWeight.w400,
                                   fontFamily: circularStd),
@@ -194,7 +195,7 @@ class TransactionSuccessSutraqTransfer extends StatelessWidget {
                   Container(
                     height: 1.h,
                     width: 250.w,
-                    color: Color(0xffF5F7F9),
+                    color: const Color(0xffF5F7F9),
                   ),
                   SizedBox(
                     height: 17.h,
@@ -208,7 +209,7 @@ class TransactionSuccessSutraqTransfer extends StatelessWidget {
                         Text(
                           'Date:',
                           style: TextStyle(
-                              color: Color(0xff002251),
+                              color: const Color(0xff002251),
                               fontSize: 13.sp,
                               fontWeight: FontWeight.w500,
                               fontFamily: circularStd),
@@ -219,7 +220,7 @@ class TransactionSuccessSutraqTransfer extends StatelessWidget {
                             Text(
                               '26 Apr, 2019',
                               style: TextStyle(
-                                  color: Color(0xff002251),
+                                  color: const Color(0xff002251),
                                   fontSize: 13.sp,
                                   fontWeight: FontWeight.w500,
                                   fontFamily: circularStd),
@@ -230,7 +231,7 @@ class TransactionSuccessSutraqTransfer extends StatelessWidget {
                             Text(
                               '12:48 PM',
                               style: TextStyle(
-                                  color: Color(0xff7A869A),
+                                  color: const Color(0xff7A869A),
                                   fontSize: 12.sp,
                                   fontWeight: FontWeight.w400,
                                   fontFamily: circularStd),
@@ -246,7 +247,7 @@ class TransactionSuccessSutraqTransfer extends StatelessWidget {
                   Container(
                     height: 1.h,
                     width: 250.w,
-                    color: Color(0xffF5F7F9),
+                    color: const Color(0xffF5F7F9),
                   ),
                   SizedBox(
                     height: 15.h,
@@ -259,7 +260,7 @@ class TransactionSuccessSutraqTransfer extends StatelessWidget {
                         Text(
                           'Total',
                           style: TextStyle(
-                              color: Color(0xff002251),
+                              color: const Color(0xff002251),
                               fontSize: 13.sp,
                               fontWeight: FontWeight.w500,
                               fontFamily: circularStd),
@@ -267,7 +268,7 @@ class TransactionSuccessSutraqTransfer extends StatelessWidget {
                         Text(
                           '\$4,800',
                           style: TextStyle(
-                              color: Color(0xff002251),
+                              color: const Color(0xff002251),
                               fontSize: 13.sp,
                               fontWeight: FontWeight.w500,
                               fontFamily: circularStd),
@@ -285,7 +286,7 @@ class TransactionSuccessSutraqTransfer extends StatelessWidget {
                       children: [
                         Icon(
                           receiptLong,
-                          color: Color(0xff7A869A),
+                          color: const Color(0xff7A869A),
                           size: 17.h,
                         ),
                         SizedBox(
@@ -302,7 +303,7 @@ class TransactionSuccessSutraqTransfer extends StatelessWidget {
                               style: TextStyle(
                                   fontSize: 14.sp,
                                   fontWeight: FontWeight.w400,
-                                  color: Color(0xff7A869A),
+                                  color: const Color(0xff7A869A),
                                   fontFamily: circularStd),
                             )),
                       ],

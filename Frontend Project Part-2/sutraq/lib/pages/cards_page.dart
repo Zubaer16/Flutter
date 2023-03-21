@@ -13,8 +13,8 @@ import 'package:visibility_detector/visibility_detector.dart';
 import '../components/recent_transactions.dart';
 
 final slider = [
-  CustomCards(dots: true),
-  CustomCards(
+  const CustomCards(dots: true),
+  const CustomCards(
     dots: true,
     color: Color(0xff330693),
   )
@@ -29,11 +29,11 @@ class CardsPage extends StatelessWidget {
         Provider.of<CardsPageIndicatorProvider>(context, listen: false);
     return SafeArea(
         child: Scaffold(
-            backgroundColor: Color(0xffF1F3F4),
+            backgroundColor: const Color(0xffF1F3F4),
             floatingActionButton: FloatingActionButton(
               onPressed: () => {Get.toNamed(add_new_card_bank_account)},
-              backgroundColor: Color(0xff046AE1),
-              child: Icon(
+              backgroundColor: const Color(0xff046AE1),
+              child: const Icon(
                 add,
                 color: Colors.white,
               ),
@@ -46,7 +46,7 @@ class CardsPage extends StatelessWidget {
                   ),
                   Text('My Cards',
                       style: TextStyle(
-                          color: Color(0xff000000),
+                          color: const Color(0xff000000),
                           fontSize: 20.sp,
                           fontWeight: FontWeight.w700,
                           fontFamily: gelion)),
@@ -92,8 +92,8 @@ class CardsPage extends StatelessWidget {
                       effect: SlideEffect(
                           dotWidth: 16.67.w,
                           dotHeight: 2.h,
-                          dotColor: Color(0xff8E8E8E),
-                          activeDotColor: Color(0xff046AE1)),
+                          dotColor: const Color(0xff8E8E8E),
+                          activeDotColor: const Color(0xff046AE1)),
                     ),
                   ),
                   SizedBox(
@@ -103,7 +103,8 @@ class CardsPage extends StatelessWidget {
                     width: 351.w,
                     decoration: BoxDecoration(
                         color: Colors.white,
-                        borderRadius: BorderRadius.all(Radius.circular(10).r)),
+                        borderRadius:
+                            BorderRadius.all(const Radius.circular(10).r)),
                     child: Column(
                       children: [
                         Padding(
@@ -116,7 +117,7 @@ class CardsPage extends StatelessWidget {
                               child: Text(
                                 'Recent Transactions',
                                 style: TextStyle(
-                                    color: Color(0xff333333),
+                                    color: const Color(0xff333333),
                                     fontSize: 17.sp,
                                     fontWeight: FontWeight.w700,
                                     fontFamily: gelion),
@@ -124,30 +125,30 @@ class CardsPage extends StatelessWidget {
                             ),
                           ),
                         ),
-                        RecentTransactions(
+                        const RecentTransactions(
                           islineThrough: false,
                           isReceived: true,
                           isDollar: true,
                         ),
-                        RecentTransactions(
+                        const RecentTransactions(
                           islineThrough: true,
                           isReceived: false,
                           isDollar: false,
                           amount: '10,000',
                         ),
-                        RecentTransactions(
+                        const RecentTransactions(
                           islineThrough: true,
                           isReceived: true,
                           isDollar: false,
                           amount: '4,500,000',
                         ),
-                        RecentTransactions(
+                        const RecentTransactions(
                           islineThrough: true,
                           isReceived: false,
                           isDollar: false,
                           amount: '10,000',
                         ),
-                        RecentTransactions(
+                        const RecentTransactions(
                           islineThrough: true,
                           isReceived: true,
                           isDollar: false,

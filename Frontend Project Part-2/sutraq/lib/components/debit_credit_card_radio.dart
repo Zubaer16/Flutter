@@ -42,7 +42,7 @@ class DebitCredidCardRadio extends StatelessWidget {
                     decoration: BoxDecoration(
                       border: Border.all(
                           color: value != groupValue
-                              ? Color(0xff666666)
+                              ? const Color(0xff666666)
                               : greenColor),
                       shape: BoxShape.circle,
                     ),
@@ -58,7 +58,7 @@ class DebitCredidCardRadio extends StatelessWidget {
                   Text(
                     'Set as default',
                     style: TextStyle(
-                        color: Color(0xff000000).withOpacity(.5),
+                        color: const Color(0xff000000).withOpacity(.5),
                         fontSize: 12.sp,
                         fontWeight: FontWeight.w400,
                         fontFamily: circularStd),
@@ -75,13 +75,13 @@ class DebitCredidCardRadio extends StatelessWidget {
         TextButton(
             onPressed: () => {},
             style: TextButton.styleFrom(
-                padding: EdgeInsets.fromLTRB(10, 12, 10, 24),
+                padding: const EdgeInsets.fromLTRB(10, 12, 10, 24),
                 tapTargetSize: MaterialTapTargetSize.shrinkWrap,
                 minimumSize: Size.zero),
             child: Text(
               'Remove',
               style: TextStyle(
-                  color: Color(0xffEC615B),
+                  color: const Color(0xffEC615B),
                   fontSize: 10.sp,
                   fontWeight: FontWeight.w500,
                   decoration: TextDecoration.underline,

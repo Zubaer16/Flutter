@@ -22,7 +22,7 @@ class FundWalletPage extends StatelessWidget {
       onTap: () => {FocusScope.of(context).unfocus()},
       child: Scaffold(
           resizeToAvoidBottomInset: false,
-          backgroundColor: Color(0xfff1f3f4),
+          backgroundColor: const Color(0xfff1f3f4),
           body: Column(
             children: [
               Stack(
@@ -35,7 +35,7 @@ class FundWalletPage extends StatelessWidget {
                       width: MediaQuery.of(context).size.width,
                       child: Text('Fund Wallet',
                           style: TextStyle(
-                              color: Color(0xff08083d),
+                              color: const Color(0xff08083d),
                               fontSize: 20.sp,
                               fontWeight: FontWeight.w600,
                               fontFamily: gelion),
@@ -60,7 +60,7 @@ class FundWalletPage extends StatelessWidget {
                     child: Text(
                       'Ensure to fill in the neccessary details of the recipient in order to continue',
                       style: TextStyle(
-                          color: Color(0xff000000).withOpacity(.5),
+                          color: const Color(0xff000000).withOpacity(.5),
                           fontSize: 12.sp,
                           fontWeight: FontWeight.w400,
                           fontFamily: circularStd),
@@ -81,8 +81,8 @@ class FundWalletPage extends StatelessWidget {
                   decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.only(
-                          topLeft: Radius.circular(10).r,
-                          topRight: Radius.circular(10).r)),
+                          topLeft: const Radius.circular(10).r,
+                          topRight: const Radius.circular(10).r)),
                   child: Stack(clipBehavior: Clip.none, children: [
                     Padding(
                       padding: const EdgeInsets.only(top: 69).r,

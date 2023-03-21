@@ -18,9 +18,9 @@ class AddNewBankAccount extends StatelessWidget {
         child: GestureDetector(
       onTap: () => {FocusScope.of(context).unfocus()},
       child: Scaffold(
-          backgroundColor: Color(0xfff1f3f4),
+          backgroundColor: const Color(0xfff1f3f4),
           body: SingleChildScrollView(
-            physics: BouncingScrollPhysics(),
+            physics: const BouncingScrollPhysics(),
             child: Column(
               children: [
                 Stack(
@@ -34,7 +34,7 @@ class AddNewBankAccount extends StatelessWidget {
                         child: Text(
                           'Add New \n Bank Account',
                           style: TextStyle(
-                              color: Color(0xff08083d),
+                              color: const Color(0xff08083d),
                               fontSize: 20.sp,
                               fontWeight: FontWeight.w600,
                               height: 1.4,
@@ -61,7 +61,7 @@ class AddNewBankAccount extends StatelessWidget {
                       child: Text(
                         'Ensure to fill in the neccessary details of the recipient in order to continue',
                         style: TextStyle(
-                            color: Color(0xff000000).withOpacity(0.5),
+                            color: const Color(0xff000000).withOpacity(0.5),
                             fontSize: 12.sp,
                             fontWeight: FontWeight.w400,
                             fontFamily: circularStd),
@@ -82,8 +82,8 @@ class AddNewBankAccount extends StatelessWidget {
                     decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(10).r,
-                            topRight: Radius.circular(10).r)),
+                            topLeft: const Radius.circular(10).r,
+                            topRight: const Radius.circular(10).r)),
                     child: Stack(clipBehavior: Clip.none, children: [
                       Padding(
                         padding: const EdgeInsets.only(top: 25).r,

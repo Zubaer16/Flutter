@@ -1,9 +1,12 @@
+// ignore_for_file: non_constant_identifier_names, duplicate_ignore
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:sutraq/storage/color_storage.dart';
 import 'package:sutraq/storage/font_storage.dart';
 
 class Walkthrough extends StatelessWidget {
+  // ignore: non_constant_identifier_names
   final double? padding_left;
   final double? padding_top;
 
@@ -20,6 +23,7 @@ class Walkthrough extends StatelessWidget {
   final String? small_text;
 
   const Walkthrough({
+    super.key,
     this.padding_left,
     this.padding_top,
     this.container_height,
@@ -52,7 +56,7 @@ class Walkthrough extends StatelessWidget {
                 Positioned(
                   top: stack_1st_image_top,
                   child: Image.asset(
-                    '${this.stack_1st_image}',
+                    '$stack_1st_image',
                     height: stack_1st_image_height,
                     width: MediaQuery.of(context).size.width,
                     fit: BoxFit.fitWidth,
@@ -62,7 +66,7 @@ class Walkthrough extends StatelessWidget {
                   top: stack_2nd_image_top,
                   left: stack_2nd_image_left,
                   child: Image.asset(
-                    '${this.stack_2nd_image}',
+                    '$stack_2nd_image',
                     height: stack_2nd_image_height,
                     width: stack_2nd_image_width,
                   ),
@@ -88,7 +92,7 @@ class Walkthrough extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  '${this.big_text}',
+                  '$big_text',
                   style: TextStyle(
                       color: Colors.white,
                       fontSize: 27.sp,
@@ -101,7 +105,7 @@ class Walkthrough extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.only(left: 10, right: 10).r,
                   child: Text(
-                    '${this.small_text}',
+                    '$small_text',
                     style: TextStyle(
                         color: Colors.white,
                         fontSize: 16.sp,

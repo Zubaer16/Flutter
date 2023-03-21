@@ -13,7 +13,7 @@ class LoginTipScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: tipBackgroundColor,
       body: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
             image: DecorationImage(
                 image: AssetImage('images/tipBackground.png'),
                 fit: BoxFit.fill)),

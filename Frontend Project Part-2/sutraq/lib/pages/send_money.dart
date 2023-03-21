@@ -1,3 +1,5 @@
+// ignore_for_file: use_full_hex_values_for_flutter_colors, duplicate_ignore
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -70,13 +72,14 @@ class SendMoney extends StatelessWidget {
               height: 94.h,
               width: 344.w,
               decoration: BoxDecoration(
-                  color: Color(0xffffffff),
-                  borderRadius: BorderRadius.all(Radius.circular(3).r),
+                  color: const Color(0xffffffff),
+                  borderRadius: BorderRadius.all(const Radius.circular(3).r),
                   boxShadow: [
                     BoxShadow(
-                      color: Color(0xff046AE11F).withOpacity(0.12),
+                      // ignore: use_full_hex_values_for_flutter_colors
+                      color: const Color(0xff046ae11f).withOpacity(0.12),
                       blurRadius: 3.r,
-                      offset: Offset(0, 1),
+                      offset: const Offset(0, 1),
                     )
                   ]),
               child: Row(
@@ -84,7 +87,7 @@ class SendMoney extends StatelessWidget {
                   children: [
                     Padding(
                       padding: const EdgeInsets.only(left: 26).r,
-                      child: Icon(
+                      child: const Icon(
                         accountBalance,
                         color: greenColor,
                         size: 28,
@@ -99,7 +102,7 @@ class SendMoney extends StatelessWidget {
                           Text(
                             'Bank Transfer',
                             style: TextStyle(
-                                color: Color(0xff2f2f2f),
+                                color: const Color(0xff2f2f2f),
                                 fontSize: 14.sp,
                                 fontWeight: FontWeight.w500,
                                 fontFamily: circularStd),
@@ -110,7 +113,7 @@ class SendMoney extends StatelessWidget {
                           Text(
                             'Send money from your sutraq accounts to any bank account in the world',
                             style: TextStyle(
-                                color: Color(0xff2f2f2f).withOpacity(.5),
+                                color: const Color(0xff2f2f2f).withOpacity(.5),
                                 fontSize: 12.sp,
                                 fontWeight: FontWeight.w400,
                                 fontFamily: dmSans),
@@ -118,7 +121,7 @@ class SendMoney extends StatelessWidget {
                         ],
                       ),
                     ),
-                    Icon(
+                    const Icon(
                       navigatNext,
                       color: greenColor,
                       size: 30,
@@ -135,13 +138,13 @@ class SendMoney extends StatelessWidget {
               height: 94.h,
               width: 344.w,
               decoration: BoxDecoration(
-                  color: Color(0xffffffff),
-                  borderRadius: BorderRadius.all(Radius.circular(3).r),
+                  color: const Color(0xffffffff),
+                  borderRadius: BorderRadius.all(const Radius.circular(3).r),
                   boxShadow: [
                     BoxShadow(
-                      color: Color(0xff046AE11F).withOpacity(0.12),
+                      color: const Color(0xff046ae11f).withOpacity(0.12),
                       blurRadius: 3.r,
-                      offset: Offset(0, 1),
+                      offset: const Offset(0, 1),
                     )
                   ]),
               child: Row(
@@ -149,7 +152,7 @@ class SendMoney extends StatelessWidget {
                   children: [
                     Padding(
                       padding: const EdgeInsets.only(left: 26).r,
-                      child: Icon(
+                      child: const Icon(
                         supervisorAccount,
                         color: greenColor,
                         size: 28,
@@ -164,7 +167,7 @@ class SendMoney extends StatelessWidget {
                           Text(
                             'Sutraq User',
                             style: TextStyle(
-                                color: Color(0xff2f2f2f),
+                                color: const Color(0xff2f2f2f),
                                 fontSize: 14.sp,
                                 fontWeight: FontWeight.w500,
                                 fontFamily: circularStd),
@@ -175,7 +178,7 @@ class SendMoney extends StatelessWidget {
                           Text(
                             'Send money from your sutraq accounts to other sutraq users',
                             style: TextStyle(
-                                color: Color(0xff2f2f2f).withOpacity(.5),
+                                color: const Color(0xff2f2f2f).withOpacity(.5),
                                 fontSize: 12.sp,
                                 fontWeight: FontWeight.w400,
                                 fontFamily: dmSans),
@@ -183,7 +186,7 @@ class SendMoney extends StatelessWidget {
                         ],
                       ),
                     ),
-                    Icon(
+                    const Icon(
                       navigatNext,
                       color: greenColor,
                       size: 30,

@@ -12,12 +12,12 @@ import 'package:sutraq/storage/font_storage.dart';
 import '../components/custom_circle_button.dart';
 
 class DebitCreditCard extends StatelessWidget {
-  DebitCreditCard({super.key});
+  const DebitCreditCard({super.key});
   @override
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
-            backgroundColor: Color(0xfff1f3f4),
+            backgroundColor: const Color(0xfff1f3f4),
             body: Column(
               children: [
                 Stack(
@@ -31,7 +31,7 @@ class DebitCreditCard extends StatelessWidget {
                         child: Text(
                           'Credit/Debit Cards',
                           style: TextStyle(
-                              color: Color(0xff08083d),
+                              color: const Color(0xff08083d),
                               fontSize: 20.sp,
                               fontWeight: FontWeight.w600,
                               height: 1.4.h,
@@ -55,7 +55,8 @@ class DebitCreditCard extends StatelessWidget {
                   width: 339.w,
                   decoration: BoxDecoration(
                       color: Colors.white,
-                      borderRadius: BorderRadius.all(Radius.circular(10)).r),
+                      borderRadius:
+                          const BorderRadius.all(Radius.circular(10)).r),
                   child: Stack(clipBehavior: Clip.none, children: [
                     Column(
                       children: [
@@ -78,7 +79,7 @@ class DebitCreditCard extends StatelessWidget {
                             value: '2nd Card',
                             groupValue: value.radioValue,
                             isDot: value.radioValue != '2nd Card',
-                            cardColor: Color(0xff330693),
+                            cardColor: const Color(0xff330693),
                           ),
                         ),
                         CustomButton(
