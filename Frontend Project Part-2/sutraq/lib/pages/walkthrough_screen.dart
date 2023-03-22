@@ -60,6 +60,7 @@ final List<Widget> pic = [
   ),
 ];
 
+//
 class WalkthroughScreen extends StatefulWidget {
   const WalkthroughScreen({Key? key}) : super(key: key);
 
