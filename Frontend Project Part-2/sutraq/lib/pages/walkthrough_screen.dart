@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:provider/provider.dart';
@@ -92,21 +93,7 @@ class _WalkthroughScreenState extends State<WalkthroughScreen> {
         Provider.of<WalkthroughScreenProvider>(context, listen: false);
     return WillPopScope(
       onWillPop: () async {
-        DateTime now = DateTime.now();
-
-        if (_currentBackPressTime == null ||
-            now.difference(_currentBackPressTime!) > Duration(seconds: 2)) {
-          _currentBackPressTime = now;
-
-          ScaffoldMessenger.of(context).showSnackBar(
-            const SnackBar(
-              content: Text('Press back button again to exit'),
-            ),
-          );
-
-          return false;
-        }
-        return true;
+        return exit(0);
       },
       child: Scaffold(
           body: Column(
