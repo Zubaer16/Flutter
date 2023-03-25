@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -60,7 +62,6 @@ final List<Widget> pic = [
   ),
 ];
 
-//
 class WalkthroughScreen extends StatefulWidget {
   const WalkthroughScreen({Key? key}) : super(key: key);
 
@@ -70,6 +71,7 @@ class WalkthroughScreen extends StatefulWidget {
 
 class _WalkthroughScreenState extends State<WalkthroughScreen> {
   late PageController _pageController;
+  DateTime? _currentBackPressTime;
 
   @override
   void initState() {
@@ -83,17 +85,29 @@ class _WalkthroughScreenState extends State<WalkthroughScreen> {
     super.dispose();
   }
 
-  Future<bool> _onWillPop() async {
-    return false; //<-- SEE HERE
-  }
-
   // @override
   @override
   Widget build(BuildContext context) {
     final pageview =
         Provider.of<WalkthroughScreenProvider>(context, listen: false);
     return WillPopScope(
-      onWillPop: _onWillPop,
+      onWillPop: () async {
+        DateTime now = DateTime.now();
+
+        if (_currentBackPressTime == null ||
+            now.difference(_currentBackPressTime!) > Duration(seconds: 2)) {
+          _currentBackPressTime = now;
+
+          ScaffoldMessenger.of(context).showSnackBar(
+            const SnackBar(
+              content: Text('Press back button again to exit'),
+            ),
+          );
+
+          return false;
+        }
+        return true;
+      },
       child: Scaffold(
           body: Column(
         children: [
