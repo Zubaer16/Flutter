@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -72,7 +70,6 @@ class WalkthroughScreen extends StatefulWidget {
 
 class _WalkthroughScreenState extends State<WalkthroughScreen> {
   late PageController _pageController;
-  DateTime? _currentBackPressTime;
 
   @override
   void initState() {
@@ -93,7 +90,9 @@ class _WalkthroughScreenState extends State<WalkthroughScreen> {
         Provider.of<WalkthroughScreenProvider>(context, listen: false);
     return WillPopScope(
       onWillPop: () async {
-        return exit(0);
+        SystemChannels.platform.invokeMethod('SystemNavigator.pop');
+        // For ios : -> MinimizeApp.minimizeApp();
+        return false;
       },
       child: Scaffold(
           body: Column(
