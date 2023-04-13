@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/responsive design/aspectratio/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/responsive design/aspectratio/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/responsive design/aspectratio/build" />
+      <excludeFolder url="file://$MODULE_DIR$/animation-part-2/animatedpositioned/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/animation-part-2/animatedpositioned/build" />
+      <excludeFolder url="file://$MODULE_DIR$/animation-part-2/animatedpositioned/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/responsive design/fittedbox/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/responsive design/fittedbox/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/responsive design/fittedbox/build" />
+      <excludeFolder url="file://$MODULE_DIR$/animation-part-2/heroanimation/build" />
+      <excludeFolder url="file://$MODULE_DIR$/animation-part-2/heroanimation/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/animation-part-2/heroanimation/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/theme/build" />
+      <excludeFolder url="file://$MODULE_DIR$/theme/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/theme/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/localization/build" />
+      <excludeFolder url="file://$MODULE_DIR$/localization/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/localization/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/animation-part-2/animatedalign/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/animation-part-2/animatedalign/build" />
+      <excludeFolder url="file://$MODULE_DIR$/animation-part-2/animatedalign/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/responsive design/screenutill/build" />
+      <excludeFolder url="file://$MODULE_DIR$/responsive design/screenutill/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/responsive design/screenutill/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/animation-part-2/animatedcontainer/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/animation-part-2/animatedcontainer/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/animation-part-2/animatedcontainer/build" />
+      <excludeFolder url="file://$MODULE_DIR$/responsive design/mediaquery/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/responsive design/mediaquery/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/responsive design/mediaquery/build" />
+      <excludeFolder url="file://$MODULE_DIR$/animation-part-2/animatedopacity/build" />
+      <excludeFolder url="file://$MODULE_DIR$/animation-part-2/animatedopacity/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/animation-part-2/animatedopacity/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/responsive design/layoutbuilder/build" />
+      <excludeFolder url="file://$MODULE_DIR$/responsive design/layoutbuilder/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/responsive design/layoutbuilder/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/animation-part-1/build" />
+      <excludeFolder url="file://$MODULE_DIR$/animation-part-1/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/animation-part-1/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/responsive design/fractionallysizedbox/build" />
+      <excludeFolder url="file://$MODULE_DIR$/responsive design/fractionallysizedbox/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/responsive design/fractionallysizedbox/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/responsive design/orientationbuilder/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/responsive design/orientationbuilder/build" />
+      <excludeFolder url="file://$MODULE_DIR$/responsive design/orientationbuilder/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/animation-part-2/animateddefaulttextstyle/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/animation-part-2/animateddefaulttextstyle/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/animation-part-2/animateddefaulttextstyle/build" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
