@@ -1,11 +1,12 @@
 import 'package:flutter/foundation.dart';
+import 'package:sutraq/models/switch_model.dart';
 
 class SwitchProvider extends ChangeNotifier {
-  bool _switchValue = false;
-  bool get switchValue => _switchValue;
+  final SwitchModel _switchValue = SwitchModel(value: false);
+  bool get switchValue => _switchValue.value;
 
   changeSwitchValue(e) {
-    _switchValue = e;
+    _switchValue.value = e;
     notifyListeners();
   }
 }

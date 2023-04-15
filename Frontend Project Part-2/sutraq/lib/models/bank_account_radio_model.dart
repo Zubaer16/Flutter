@@ -1,4 +1,4 @@
 class BankAccountRadioModel {
-  String values;
-  BankAccountRadioModel({required this.values});
+  String value;
+  BankAccountRadioModel({required this.value});
 }

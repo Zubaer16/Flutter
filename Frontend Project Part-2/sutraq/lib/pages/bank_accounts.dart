@@ -8,7 +8,6 @@ import 'package:sutraq/provider/bank_account_radio_provider.dart';
 import 'package:sutraq/route/route_mange.dart';
 import 'package:sutraq/storage/color_storage.dart';
 import 'package:sutraq/storage/font_storage.dart';
-
 import '../components/custom_circle_button.dart';
 
 class BankAccounts extends StatelessWidget {
@@ -133,7 +132,6 @@ class BankAccounts extends StatelessWidget {
                               buttonFontSize: 16.sp,
                               buttonTextWeight: FontWeight.w500,
                             ),
-                            Text(radioProvider.myValues)
                           ],
                         ),
                       ),
