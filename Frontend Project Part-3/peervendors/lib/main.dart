@@ -27,6 +27,7 @@ class MyApp extends StatelessWidget {
       designSize: const Size(428, 926),
       builder: (context, child) => GetMaterialApp(
         title: 'Peer Vendors',
+        debugShowCheckedModeBanner: false,
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),

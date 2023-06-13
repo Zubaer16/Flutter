@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:peervendors/extensions/custom_extensions.dart';
+import 'package:peervendors/provider/language_radio_provider.dart';
 import 'package:peervendors/storage/color_storage.dart';
 import 'package:peervendors/storage/font_storage.dart';
+import 'package:peervendors/views/components/language_radio.dart';
+import 'package:provider/provider.dart';
 
 class ChooseLanguageScreen extends StatelessWidget {
   const ChooseLanguageScreen({super.key});
-
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -40,7 +42,28 @@ class ChooseLanguageScreen extends StatelessWidget {
                       fontSize: 20.sp,
                       height: 30.0.toFigmaHeight(20.sp),
                     ),
-                  )
+                  ),
+                  Consumer<LanguageRadioProvider>(
+                    builder: (context, val, child) => LanguageRadio(
+                      value: 'English',
+                      groupValue: val.radioValue,
+                      onChanged: (e) => {val.changeValue = e},
+                    ),
+                  ),
+                  Consumer<LanguageRadioProvider>(
+                    builder: (context, val, child) => LanguageRadio(
+                      value: 'Kiswahili',
+                      groupValue: val.radioValue,
+                      onChanged: (e) => {val.changeValue = e},
+                    ),
+                  ),
+                  Consumer<LanguageRadioProvider>(
+                    builder: (context, val, child) => LanguageRadio(
+                      value: 'Francais',
+                      groupValue: val.radioValue,
+                      onChanged: (e) => {val.changeValue = e},
+                    ),
+                  ),
                 ]),
               ),
               Positioned(
@@ -49,8 +72,8 @@ class ChooseLanguageScreen extends StatelessWidget {
                 child: Container(
                   height: 124.h,
                   width: 124.w,
-                  decoration:
-                      BoxDecoration(color: whiteF4F5F7, shape: BoxShape.circle),
+                  decoration: const BoxDecoration(
+                      color: whiteF4F5F7, shape: BoxShape.circle),
                   child: Center(
                     child: Image.asset(
                       'images/pvLogo.png',
