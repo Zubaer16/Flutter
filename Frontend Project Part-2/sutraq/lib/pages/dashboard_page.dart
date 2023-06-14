@@ -127,10 +127,10 @@ class DashboardPage extends StatelessWidget {
                       Padding(
                         padding: const EdgeInsets.only(top: 24).r,
                         child: Consumer<DashboardPageIndicatorProvider>(
-                          builder: (context, value, child) =>
+                          builder: (context, val, child) =>
                               AnimatedSmoothIndicator(
                             duration: const Duration(milliseconds: 300),
-                            activeIndex: value.pageviewIndex,
+                            activeIndex: val.pageviewIndex,
                             count: 3,
                             effect: SlideEffect(
                                 dotWidth: 16.67.w,

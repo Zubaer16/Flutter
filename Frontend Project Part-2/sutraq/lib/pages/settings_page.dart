@@ -14,7 +14,6 @@ class SettingsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final switchProvider = Provider.of<SwitchProvider>(context, listen: false);
     return SafeArea(
         child: Scaffold(
             backgroundColor: const Color(0xff08083d),
@@ -199,7 +198,7 @@ class SettingsPage extends StatelessWidget {
                                 builder: (context, val, child) => Switch(
                                   value: val.switchValue,
                                   onChanged: (value) => {
-                                    switchProvider.changeSwitchValue(value),
+                                    val.changeSwitchValue(value),
                                   },
                                   // activeColor: greenColor,
                                   activeTrackColor: greenColor,

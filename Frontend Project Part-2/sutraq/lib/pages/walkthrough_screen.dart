@@ -120,10 +120,9 @@ class _WalkthroughScreenState extends State<WalkthroughScreen> {
                         ...List.generate(
                             pic.length,
                             (index) => Consumer<WalkthroughScreenProvider>(
-                                  builder: (context, value, child) =>
+                                  builder: (context, val, child) =>
                                       DotIndicator(
-                                          isActive:
-                                              index == value.pageviewIndex),
+                                          isActive: index == val.pageviewIndex),
                                 ))
                       ],
                     ),

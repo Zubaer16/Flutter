@@ -22,12 +22,9 @@ class DashboardScreen extends StatelessWidget {
   // int _currentIndex = 0;
   @override
   Widget build(BuildContext context) {
-    final pageChangeProvider =
-        Provider.of<PageChangeProvider>(context, listen: false);
-
     return Scaffold(
       bottomNavigationBar: Consumer<PageChangeProvider>(
-        builder: (context, value, child) => BottomNavigationBar(
+        builder: (context, val, child) => BottomNavigationBar(
           type: BottomNavigationBarType.fixed,
           selectedItemColor: const Color(0xFF0DBE53),
           unselectedItemColor: const Color(0xFFDADADA),
@@ -46,12 +43,12 @@ class DashboardScreen extends StatelessWidget {
               label: 'Settings',
             ),
           ],
-          currentIndex: value.pageValue,
+          currentIndex: val.pageValue,
           onTap: (int index) {
             // setState(() {
             //   _currentIndex = index;
             // });
-            pageChangeProvider.changePage(index);
+            val.changePage(index);
           },
         ),
       ),

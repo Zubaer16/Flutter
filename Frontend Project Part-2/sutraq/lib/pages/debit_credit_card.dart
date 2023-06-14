@@ -64,21 +64,21 @@ class DebitCreditCard extends StatelessWidget {
                           height: 30.h,
                         ),
                         Consumer<DebitCreditCardRadioProvider>(
-                          builder: (context, value, child) =>
+                          builder: (context, val, child) =>
                               DebitCredidCardRadio(
-                            onChanged: (e) => {value.changeValue(e)},
+                            onChanged: (e) => {val.changeValue(e)},
                             value: '1st Card',
-                            groupValue: value.radioValue,
-                            isDot: value.radioValue != '1st Card',
+                            groupValue: val.radioValue,
+                            isDot: val.radioValue != '1st Card',
                           ),
                         ),
                         Consumer<DebitCreditCardRadioProvider>(
-                          builder: (context, value, child) =>
+                          builder: (context, val, child) =>
                               DebitCredidCardRadio(
-                            onChanged: (e) => {value.changeValue(e)},
+                            onChanged: (e) => {val.changeValue(e)},
                             value: '2nd Card',
-                            groupValue: value.radioValue,
-                            isDot: value.radioValue != '2nd Card',
+                            groupValue: val.radioValue,
+                            isDot: val.radioValue != '2nd Card',
                             cardColor: const Color(0xff330693),
                           ),
                         ),
