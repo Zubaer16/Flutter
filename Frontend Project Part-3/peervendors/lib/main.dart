@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get_navigation/get_navigation.dart';
 import 'package:peervendors/provider/language_radio_provider.dart';
 import 'package:peervendors/route/route_manage.dart';
+import 'package:peervendors/views/pages/onboarding_screen.dart';
 import 'package:peervendors/views/pages/splash_screen.dart';
 import 'package:provider/provider.dart';
 // import 'package:provider/provider.dart';
@@ -31,8 +32,8 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        home: const SplashScreen(),
-        initialRoute: splashScreen,
+        home: const OnboardingScreen(),
+        initialRoute: onboardingScreen,
         getPages: getPages,
       ),
     );
