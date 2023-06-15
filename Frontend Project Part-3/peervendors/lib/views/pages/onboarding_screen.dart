@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:peervendors/extensions/custom_extensions.dart';
 import 'package:peervendors/storage/color_storage.dart';
+import 'package:peervendors/storage/font_storage.dart';
 import 'package:peervendors/views/components/onboarding_page.dart';
 
 final List<Widget> onBoardingPage = [
@@ -53,8 +55,41 @@ class OnboardingScreen extends StatelessWidget {
               }),
         ),
         Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            TextButton(onPressed: null, child: Text('skip'.toUpperCase()))
+            TextButton(
+                onPressed: null,
+                style: TextButton.styleFrom(
+                    padding: const EdgeInsets.only(
+                            left: 34.0, bottom: 35, right: 34, top: 34)
+                        .r,
+                    tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                    minimumSize: Size.zero),
+                child: Text(
+                  'skip'.toUpperCase(),
+                  style: TextStyle(
+                      fontFamily: poppins,
+                      fontWeight: FontWeight.w600,
+                      fontSize: 20.sp,
+                      height: 30.0.toFigmaHeight(20.sp),
+                      color: pinkFF7465),
+                )),
+            ElevatedButton(
+                onPressed: null,
+                style: ElevatedButton.styleFrom(
+                    backgroundColor: whiteC4C4C4,
+                    shape: RoundedRectangleBorder(
+                        borderRadius:
+                            BorderRadius.only(topLeft: Radius.circular()))),
+                child: Text(
+                  'Next',
+                  style: TextStyle(
+                      fontFamily: poppins,
+                      fontWeight: FontWeight.w600,
+                      fontSize: 24.sp,
+                      height: 36.0.toFigmaHeight(24.sp),
+                      color: black3A3030),
+                ))
           ],
         )
       ],
