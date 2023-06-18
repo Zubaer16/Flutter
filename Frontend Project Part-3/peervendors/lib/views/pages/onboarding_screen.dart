@@ -66,10 +66,11 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     super.dispose();
   }
 
+  int nextPage = 0;
   @override
   Widget build(BuildContext context) {
     final onboardingScreenProvider =
-        Provider.of<OnboardingScreenProvider>(context, listen: true);
+        Provider.of<OnboardingScreenProvider>(context, listen: false);
     return Scaffold(
         body: Column(
       children: [
@@ -79,6 +80,11 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               itemCount: onBoardingPage.length,
               onPageChanged: (index) {
                 onboardingScreenProvider.setValue = index;
+                if (onboardingScreenProvider.getValue == 3) {
+                  nextPage = 1;
+                } else {
+                  nextPage = 0;
+                }
               },
               itemBuilder: (context, index) {
                 return onBoardingPage[index];
@@ -106,15 +112,12 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 )),
             ElevatedButton(
                 onPressed: () {
-                  int nextPage = 0;
                   _pageController.nextPage(
                       duration: const Duration(microseconds: 1000),
                       curve: Curves.easeIn);
                   if (nextPage > 0) {
-                    Get.toNamed(onboardingScreen);
-                  }
-                  if (onboardingScreenProvider.getValue == 3) {
-                    nextPage++;
+                    nextPage = 0;
+                    Get.toNamed(splashScreen);
                   }
                 },
                 style: ElevatedButton.styleFrom(

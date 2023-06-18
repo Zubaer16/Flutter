@@ -5,10 +5,8 @@ import 'package:get/get_navigation/get_navigation.dart';
 import 'package:peervendors/provider/language_radio_provider.dart';
 import 'package:peervendors/provider/onboarding_screen_provider.dart';
 import 'package:peervendors/route/route_manage.dart';
-import 'package:peervendors/views/pages/onboarding_screen.dart';
 import 'package:peervendors/views/pages/splash_screen.dart';
 import 'package:provider/provider.dart';
-// import 'package:provider/provider.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -36,8 +34,8 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        home: const OnboardingScreen(),
-        initialRoute: onboardingScreen,
+        home: const SplashScreen(),
+        initialRoute: splashScreen,
         getPages: getPages,
       ),
     );
