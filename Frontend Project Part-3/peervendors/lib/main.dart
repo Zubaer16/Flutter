@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get_navigation/get_navigation.dart';
 import 'package:peervendors/provider/language_radio_provider.dart';
+import 'package:peervendors/provider/onboarding_screen_provider.dart';
 import 'package:peervendors/route/route_manage.dart';
 import 'package:peervendors/views/pages/onboarding_screen.dart';
 import 'package:peervendors/views/pages/splash_screen.dart';
@@ -14,7 +15,10 @@ void main() async {
   SystemChrome.setPreferredOrientations(
       [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
   runApp(MultiProvider(
-    providers: [ChangeNotifierProvider(create: (_) => LanguageRadioProvider())],
+    providers: [
+      ChangeNotifierProvider(create: (_) => LanguageRadioProvider()),
+      ChangeNotifierProvider(create: (_) => OnboardingScreenProvider())
+    ],
     child: const MyApp(),
   ));
 }

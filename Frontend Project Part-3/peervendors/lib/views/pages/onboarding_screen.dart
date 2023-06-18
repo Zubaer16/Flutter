@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:get/get_navigation/get_navigation.dart';
 import 'package:peervendors/extensions/custom_extensions.dart';
+import 'package:peervendors/provider/onboarding_screen_provider.dart';
+import 'package:peervendors/route/route_manage.dart';
 import 'package:peervendors/storage/color_storage.dart';
 import 'package:peervendors/storage/font_storage.dart';
 import 'package:peervendors/views/components/onboarding_page.dart';
+import 'package:provider/provider.dart';
 
 final List<Widget> onBoardingPage = [
   OnboardingPage(
@@ -39,17 +44,42 @@ final List<Widget> onBoardingPage = [
   ),
 ];
 
-class OnboardingScreen extends StatelessWidget {
+class OnboardingScreen extends StatefulWidget {
   const OnboardingScreen({super.key});
 
   @override
+  State<OnboardingScreen> createState() => _OnboardingScreenState();
+}
+
+class _OnboardingScreenState extends State<OnboardingScreen> {
+  late PageController _pageController;
+
+  @override
+  void initState() {
+    super.initState();
+    _pageController = PageController(initialPage: 0);
+  }
+
+  @override
+  void dispose() {
+    _pageController.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
+    final onboardingScreenProvider =
+        Provider.of<OnboardingScreenProvider>(context, listen: true);
     return Scaffold(
         body: Column(
       children: [
         Expanded(
           child: PageView.builder(
+              controller: _pageController,
               itemCount: onBoardingPage.length,
+              onPageChanged: (index) {
+                onboardingScreenProvider.setValue = index;
+              },
               itemBuilder: (context, index) {
                 return onBoardingPage[index];
               }),
@@ -75,20 +105,37 @@ class OnboardingScreen extends StatelessWidget {
                       color: pinkFF7465),
                 )),
             ElevatedButton(
-                onPressed: null,
+                onPressed: () {
+                  int nextPage = 0;
+                  _pageController.nextPage(
+                      duration: const Duration(microseconds: 1000),
+                      curve: Curves.easeIn);
+                  if (nextPage > 0) {
+                    Get.toNamed(onboardingScreen);
+                  }
+                  if (onboardingScreenProvider.getValue == 3) {
+                    nextPage++;
+                  }
+                },
                 style: ElevatedButton.styleFrom(
                     backgroundColor: whiteC4C4C4,
                     shape: RoundedRectangleBorder(
-                        borderRadius:
-                            BorderRadius.only(topLeft: Radius.circular()))),
-                child: Text(
-                  'Next',
-                  style: TextStyle(
-                      fontFamily: poppins,
-                      fontWeight: FontWeight.w600,
-                      fontSize: 24.sp,
-                      height: 36.0.toFigmaHeight(24.sp),
-                      color: black3A3030),
+                        borderRadius: const BorderRadius.only(
+                                topLeft: Radius.circular(50))
+                            .r)),
+                child: Padding(
+                  padding: const EdgeInsets.only(
+                          top: 32, left: 85, right: 74, bottom: 33)
+                      .r,
+                  child: Text(
+                    'Next',
+                    style: TextStyle(
+                        fontFamily: poppins,
+                        fontWeight: FontWeight.w600,
+                        fontSize: 24.sp,
+                        height: 36.0.toFigmaHeight(24.sp),
+                        color: black3A3030),
+                  ),
                 ))
           ],
         )
