@@ -63,7 +63,7 @@ class ChooseLanguageScreen extends StatelessWidget {
                           groupValue: val.radioValue,
                           onChanged: (e) => {
                             val.changeValue = e,
-                            Get.toNamed(onboardingScreen)
+                            Get.toNamed(onboardingScreen),
                           },
                         ),
                       ),

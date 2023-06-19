@@ -5,6 +5,7 @@ import 'package:get/get_navigation/get_navigation.dart';
 import 'package:peervendors/provider/language_radio_provider.dart';
 import 'package:peervendors/provider/onboarding_screen_provider.dart';
 import 'package:peervendors/route/route_manage.dart';
+import 'package:peervendors/views/pages/onboarding_screen.dart';
 import 'package:peervendors/views/pages/splash_screen.dart';
 import 'package:provider/provider.dart';
 
