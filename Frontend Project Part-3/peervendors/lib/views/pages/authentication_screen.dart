@@ -10,8 +10,7 @@ class AuthenticationScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-        child: Scaffold(
+    return Scaffold(
       backgroundColor: whiteF4F5F7,
       body: Center(
         child: SizedBox(
@@ -74,13 +73,15 @@ class AuthenticationScreen extends StatelessWidget {
               SizedBox(
                 height: 88.h,
               ),
-              const CustomButton(
+              CustomButton(
+                onPressed: () {},
                 buttonText: 'Register',
               ),
               SizedBox(
                 height: 10.h,
               ),
-              const CustomButton(
+              CustomButton(
+                onPressed: () {},
                 buttonText: 'Login',
               ),
               SizedBox(
@@ -186,6 +187,6 @@ class AuthenticationScreen extends StatelessWidget {
           ),
         ),
       ),
-    ));
+    );
   }
 }

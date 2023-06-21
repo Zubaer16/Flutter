@@ -80,102 +80,104 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
         return false;
       },
       child: Scaffold(
+          backgroundColor: whiteF4F5F7,
           body: Column(
-        children: [
-          Expanded(
-            child: Stack(
-              clipBehavior: Clip.none,
-              children: [
-                PageView.builder(
-                    controller: _pageController,
-                    itemCount: onBoardingPage.length,
-                    onPageChanged: (index) {
-                      onboardingScreenProvider.setValue = index;
-                      if (onboardingScreenProvider.getValue == 3) {
-                        nextPage = 1;
-                      } else {
-                        nextPage = 0;
-                      }
-                    },
-                    itemBuilder: (context, index) {
-                      return onBoardingPage[index];
-                    }),
-                Positioned(
-                    top: 450.h,
-                    child: SizedBox(
-                      width: MediaQuery.of(context).size.width,
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          ...List.generate(
-                              onBoardingPage.length,
-                              (index) => Consumer<OnboardingScreenProvider>(
-                                    builder: (context, val, child) =>
-                                        CustomDotIndicator(
-                                            isActive: index == val.getValue),
-                                  ))
-                        ],
-                      ),
-                    ))
-              ],
-            ),
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              TextButton(
-                  onPressed: () {
-                    Get.toNamed(authenticationScreen);
-                  },
-                  style: TextButton.styleFrom(
-                      padding: const EdgeInsets.only(
-                              left: 34.0, bottom: 35, right: 34, top: 34)
-                          .r,
-                      tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-                      minimumSize: Size.zero),
-                  child: Text(
-                    'skip'.toUpperCase(),
-                    style: TextStyle(
-                        fontFamily: poppins,
-                        fontWeight: FontWeight.w600,
-                        fontSize: 20.sp,
-                        height: 30.0.toFigmaHeight(20.sp),
-                        color: pinkFF7465),
-                  )),
-              ElevatedButton(
-                  onPressed: () {
-                    _pageController.nextPage(
-                        duration: const Duration(microseconds: 1000),
-                        curve: Curves.easeIn);
-                    if (nextPage > 0) {
-                      nextPage = 0;
-                      Get.toNamed(authenticationScreen);
-                    }
-                  },
-                  style: ElevatedButton.styleFrom(
-                      backgroundColor: whiteC4C4C4,
-                      shape: RoundedRectangleBorder(
-                          borderRadius: const BorderRadius.only(
-                                  topLeft: Radius.circular(50))
-                              .r)),
-                  child: Padding(
-                    padding: const EdgeInsets.only(
-                            top: 32, left: 85, right: 74, bottom: 33)
-                        .r,
-                    child: Text(
-                      'Next',
-                      style: TextStyle(
-                          fontFamily: poppins,
-                          fontWeight: FontWeight.w600,
-                          fontSize: 24.sp,
-                          height: 36.0.toFigmaHeight(24.sp),
-                          color: black3A3030),
-                    ),
-                  ))
+              Expanded(
+                child: Stack(
+                  clipBehavior: Clip.none,
+                  children: [
+                    PageView.builder(
+                        controller: _pageController,
+                        itemCount: onBoardingPage.length,
+                        onPageChanged: (index) {
+                          onboardingScreenProvider.setValue = index;
+                          if (onboardingScreenProvider.getValue == 3) {
+                            nextPage = 1;
+                          } else {
+                            nextPage = 0;
+                          }
+                        },
+                        itemBuilder: (context, index) {
+                          return onBoardingPage[index];
+                        }),
+                    Positioned(
+                        top: 450.h,
+                        child: SizedBox(
+                          width: MediaQuery.of(context).size.width,
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              ...List.generate(
+                                  onBoardingPage.length,
+                                  (index) => Consumer<OnboardingScreenProvider>(
+                                        builder: (context, val, child) =>
+                                            CustomDotIndicator(
+                                                isActive:
+                                                    index == val.getValue),
+                                      ))
+                            ],
+                          ),
+                        ))
+                  ],
+                ),
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  TextButton(
+                      onPressed: () {
+                        Get.toNamed(authenticationScreen);
+                      },
+                      style: TextButton.styleFrom(
+                          padding: const EdgeInsets.only(
+                                  left: 34.0, bottom: 35, right: 34, top: 34)
+                              .r,
+                          tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                          minimumSize: Size.zero),
+                      child: Text(
+                        'skip'.toUpperCase(),
+                        style: TextStyle(
+                            fontFamily: poppins,
+                            fontWeight: FontWeight.w600,
+                            fontSize: 20.sp,
+                            height: 30.0.toFigmaHeight(20.sp),
+                            color: pinkFF7465),
+                      )),
+                  ElevatedButton(
+                      onPressed: () {
+                        _pageController.nextPage(
+                            duration: const Duration(microseconds: 1000),
+                            curve: Curves.easeIn);
+                        if (nextPage > 0) {
+                          nextPage = 0;
+                          Get.toNamed(authenticationScreen);
+                        }
+                      },
+                      style: ElevatedButton.styleFrom(
+                          backgroundColor: whiteC4C4C4,
+                          shape: RoundedRectangleBorder(
+                              borderRadius: const BorderRadius.only(
+                                      topLeft: Radius.circular(50))
+                                  .r)),
+                      child: Padding(
+                        padding: const EdgeInsets.only(
+                                top: 32, left: 85, right: 74, bottom: 33)
+                            .r,
+                        child: Text(
+                          'Next',
+                          style: TextStyle(
+                              fontFamily: poppins,
+                              fontWeight: FontWeight.w600,
+                              fontSize: 24.sp,
+                              height: 36.0.toFigmaHeight(24.sp),
+                              color: black3A3030),
+                        ),
+                      ))
+                ],
+              )
             ],
-          )
-        ],
-      )),
+          )),
     );
   }
 }

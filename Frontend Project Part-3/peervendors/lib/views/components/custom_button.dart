@@ -5,8 +5,10 @@ import 'package:peervendors/storage/color_storage.dart';
 import 'package:peervendors/storage/font_storage.dart';
 
 class CustomButton extends StatelessWidget {
-  const CustomButton({super.key, required this.buttonText});
+  const CustomButton(
+      {super.key, required this.buttonText, required this.onPressed});
   final String buttonText;
+  final Function() onPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +19,7 @@ class CustomButton extends StatelessWidget {
           style: OutlinedButton.styleFrom(
               backgroundColor: blue5364F4,
               side: const BorderSide(color: blue00A3FF)),
-          onPressed: null,
+          onPressed: onPressed,
           child: Container(
             padding: const EdgeInsets.only(left: 26).r,
             width: MediaQuery.of(context).size.width,
