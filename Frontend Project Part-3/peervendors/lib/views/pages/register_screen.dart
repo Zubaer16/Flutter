@@ -4,6 +4,7 @@ import 'package:peervendors/extensions/custom_extensions.dart';
 import 'package:peervendors/storage/color_storage.dart';
 import 'package:peervendors/storage/font_storage.dart';
 import 'package:peervendors/views/components/custom_circle_button.dart';
+import 'package:peervendors/views/components/email_phone_register.dart';
 
 class RegisterScreen extends StatelessWidget {
   const RegisterScreen({super.key});
@@ -35,6 +36,10 @@ class RegisterScreen extends StatelessWidget {
                           fontSize: 36.sp,
                           height: 54.0.toFigmaHeight(36.sp)),
                     ),
+                    SizedBox(
+                      height: 61.h,
+                    ),
+                    EmailPhoneRegister()
                   ]),
             ),
           )),
