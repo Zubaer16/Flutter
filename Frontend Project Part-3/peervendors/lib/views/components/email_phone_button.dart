@@ -8,7 +8,10 @@ import 'package:provider/provider.dart';
 import '../../storage/color_storage.dart';
 
 class EmailPhoneButton extends StatelessWidget {
-  const EmailPhoneButton({super.key});
+  const EmailPhoneButton({super.key, this.onPressedPhone, this.onPressedEmail});
+
+  final Function()? onPressedPhone;
+  final Function()? onPressedEmail;
 
   @override
   Widget build(BuildContext context) {
@@ -17,9 +20,7 @@ class EmailPhoneButton extends StatelessWidget {
         builder: (context, val, child) => Positioned(
             left: 95.w,
             child: ElevatedButton(
-              onPressed: () {
-                val.setValue = 'email';
-              },
+              onPressed: onPressedEmail,
               style: ElevatedButton.styleFrom(
                   padding: EdgeInsets.zero,
                   tapTargetSize: MaterialTapTargetSize.shrinkWrap,
@@ -50,9 +51,7 @@ class EmailPhoneButton extends StatelessWidget {
       ),
       Consumer<EmailPhoneButtonProvider>(
         builder: (context, val, child) => ElevatedButton(
-          onPressed: () {
-            val.setValue = 'phone';
-          },
+          onPressed: onPressedPhone,
           style: ElevatedButton.styleFrom(
               padding: EdgeInsets.zero,
               tapTargetSize: MaterialTapTargetSize.shrinkWrap,

@@ -10,8 +10,21 @@ import 'package:peervendors/views/components/custom_circle_button.dart';
 import 'package:peervendors/views/components/email_phone_button.dart';
 import 'package:provider/provider.dart';
 
-class RegisterScreen extends StatelessWidget {
+class RegisterScreen extends StatefulWidget {
   const RegisterScreen({super.key});
+
+  @override
+  State<RegisterScreen> createState() => _RegisterScreenState();
+}
+
+class _RegisterScreenState extends State<RegisterScreen> {
+  final _emailPhoneController = TextEditingController();
+
+  @override
+  void dispose() {
+    _emailPhoneController.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -46,7 +59,24 @@ class RegisterScreen extends StatelessWidget {
                       SizedBox(
                         height: 61.h,
                       ),
-                      const EmailPhoneButton(),
+                      Consumer<EmailPhoneButtonProvider>(
+                        builder: (context, val, child) => EmailPhoneButton(
+                          onPressedPhone: () {
+                            if (val.getValue != 'phone') {
+                              val.setValue = 'phone';
+                              _emailPhoneController.clear();
+                              FocusScope.of(context).unfocus();
+                            }
+                          },
+                          onPressedEmail: () {
+                            if (val.getValue != 'email') {
+                              val.setValue = 'email';
+                              _emailPhoneController.clear();
+                              FocusScope.of(context).unfocus();
+                            }
+                          },
+                        ),
+                      ),
                       SizedBox(
                         height: 71.h,
                       ),
@@ -78,8 +108,9 @@ class RegisterScreen extends StatelessWidget {
                         builder: (context, val, child) => SizedBox(
                             height: 30.h,
                             child: TextFormField(
+                              controller: _emailPhoneController,
                               keyboardType: val.getValue == 'phone'
-                                  ? TextInputType.number
+                                  ? TextInputType.phone
                                   : TextInputType.emailAddress,
                             )),
                       ),
