@@ -4,12 +4,13 @@ import 'package:peervendors/storage/color_storage.dart';
 import 'package:peervendors/storage/icon_storage.dart';
 
 class CustomCircleButton extends StatelessWidget {
-  const CustomCircleButton({super.key});
+  const CustomCircleButton({super.key, this.onPressed});
+  final Function()? onPressed;
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: null,
+      onTap: onPressed,
       child: Container(
         height: 45.h,
         width: 45.w,

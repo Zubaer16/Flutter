@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 import 'package:peervendors/extensions/custom_extensions.dart';
 import 'package:peervendors/provider/email_phone_button_provider.dart';
+import 'package:peervendors/route/route_manage.dart';
 import 'package:peervendors/storage/color_storage.dart';
 import 'package:peervendors/storage/font_storage.dart';
 import 'package:peervendors/storage/icon_storage.dart';
@@ -43,7 +45,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       SizedBox(
                         height: 44.h,
                       ),
-                      const CustomCircleButton(),
+                      CustomCircleButton(onPressed: () => Get.back()),
                       SizedBox(
                         height: 36.h,
                       ),
@@ -139,7 +141,11 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       SizedBox(
                         height: 66.h,
                       ),
-                      CustomButton(buttonText: 'Continue', onPressed: () {}),
+                      CustomButton(
+                          buttonText: 'Continue',
+                          onPressed: () {
+                            Get.toNamed(otpScreen);
+                          }),
                       SizedBox(
                         height: 37.h,
                       ),
