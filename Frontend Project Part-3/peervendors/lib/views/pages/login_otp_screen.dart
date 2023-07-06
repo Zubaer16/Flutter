@@ -2,14 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:peervendors/extensions/custom_extensions.dart';
-import 'package:peervendors/storage/color_storage.dart';
-import 'package:peervendors/storage/font_storage.dart';
-
 import '../../route/route_manage.dart';
+import '../../storage/color_storage.dart';
+import '../../storage/font_storage.dart';
 import '../components/custom_button.dart';
 
-class OtpScreen extends StatelessWidget {
-  const OtpScreen({super.key});
+class LoginOtpScreen extends StatelessWidget {
+  const LoginOtpScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -63,7 +62,7 @@ class OtpScreen extends StatelessWidget {
             CustomButton(
                 buttonText: 'Continue',
                 onPressed: () {
-                  Get.toNamed(successRegistration);
+                  Get.toNamed(successLogin);
                 }),
           ],
         ),

@@ -85,7 +85,9 @@ class AuthenticationScreen extends StatelessWidget {
                 height: 10.h,
               ),
               CustomButton(
-                onPressed: () {},
+                onPressed: () {
+                  Get.toNamed(loginScreen);
+                },
                 buttonText: 'Login',
               ),
               SizedBox(

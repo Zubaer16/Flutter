@@ -3,23 +3,22 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:peervendors/extensions/custom_extensions.dart';
-import 'package:peervendors/storage/color_storage.dart';
-import 'package:peervendors/storage/font_storage.dart';
-
 import '../../route/route_manage.dart';
+import '../../storage/color_storage.dart';
+import '../../storage/font_storage.dart';
 
-class SuccessRegistration extends StatefulWidget {
-  const SuccessRegistration({super.key});
+class SuccessLogin extends StatefulWidget {
+  const SuccessLogin({super.key});
 
   @override
-  State<SuccessRegistration> createState() => _SuccessRegistrationState();
+  State<SuccessLogin> createState() => _SuccessLoginState();
 }
 
-class _SuccessRegistrationState extends State<SuccessRegistration> {
+class _SuccessLoginState extends State<SuccessLogin> {
   @override
   void initState() {
     super.initState();
-    Timer(const Duration(seconds: 1), () => Get.toNamed(loginScreen));
+    Timer(const Duration(seconds: 1), () => Get.toNamed(dashboardScreen));
   }
 
   @override

@@ -144,7 +144,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       CustomButton(
                           buttonText: 'Continue',
                           onPressed: () {
-                            Get.toNamed(otpScreen);
+                            Get.toNamed(registerOtpScreen);
                           }),
                       SizedBox(
                         height: 37.h,
@@ -161,7 +161,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                             ),
                           ),
                           InkWell(
-                            onTap: null,
+                            onTap: () => {Get.toNamed(loginScreen)},
                             child: Text(
                               'Login',
                               style: TextStyle(
