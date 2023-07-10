@@ -69,7 +69,7 @@ List<PersistentBottomNavBarItem> _navBarsItems() {
       ),
       title: ("Home"),
       textStyle: TextStyle(fontSize: 14.sp, height: 0.1),
-      iconSize: 42,
+      // iconSize: 42,
       activeColorPrimary: Colors.blue,
       inactiveColorPrimary: CupertinoColors.systemGrey,
     ),
