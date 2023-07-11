@@ -6,6 +6,7 @@ import 'package:peervendors/provider/email_phone_button_provider.dart';
 import 'package:peervendors/provider/language_radio_provider.dart';
 import 'package:peervendors/provider/onboarding_screen_provider.dart';
 import 'package:peervendors/route/route_manage.dart';
+import 'package:peervendors/views/pages/dashboard_screen.dart';
 import 'package:peervendors/views/pages/splash_screen.dart';
 import 'package:provider/provider.dart';
 
@@ -36,8 +37,8 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        home: const SplashScreen(),
-        initialRoute: splashScreen,
+        home: const DashboardScreen(),
+        initialRoute: dashboardScreen,
         getPages: getPages,
       ),
     );
