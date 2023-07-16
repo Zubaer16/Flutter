@@ -11,6 +11,8 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    const List<String> categories = ['asdf'];
+
     return SafeArea(
       child: GestureDetector(
         onTap: () => FocusScope.of(context).unfocus(),
@@ -73,8 +75,8 @@ class HomeScreen extends StatelessWidget {
                             fontFamily: poppins,
                             fontWeight: FontWeight.w300,
                             height: 1),
-                        contentPadding: EdgeInsets.only(left: 21).r,
-                        suffixIcon: InkWell(
+                        contentPadding: const EdgeInsets.only(left: 21).r,
+                        suffixIcon: const InkWell(
                           onTap: null,
                           child: Icon(
                             search,
@@ -92,6 +94,15 @@ class HomeScreen extends StatelessWidget {
                               width: 1.w, color: black000000.withOpacity(0.5)),
                         )),
                   ),
+                ),
+                SizedBox(
+                  height: 12.h,
+                ),
+                Padding(
+                  padding: EdgeInsets.only(left: 28).r,
+                  child: SizedBox(
+                      width: MediaQuery.of(context).size.width,
+                      child: Text('hi')),
                 )
               ],
             )),
