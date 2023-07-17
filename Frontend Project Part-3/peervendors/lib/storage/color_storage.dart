@@ -3,6 +3,7 @@ import 'package:flutter/painting.dart';
 const whiteFFFFFF = Color(0xffFFFFFF);
 const whiteF4F5F7 = Color(0xffF4F5F7);
 const whiteC4C4C4 = Color(0xffC4C4C4);
+const white858585 = Color(0xff858585);
 
 const pinkFF7465 = Color(0xffFF7465);
 
