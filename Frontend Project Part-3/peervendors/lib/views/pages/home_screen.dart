@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:peervendors/extensions/custom_extensions.dart';
 import 'package:peervendors/provider/categories_provider.dart';
+import 'package:peervendors/provider/watch_provider.dart';
 import 'package:peervendors/storage/color_storage.dart';
 import 'package:peervendors/storage/font_storage.dart';
 import 'package:peervendors/storage/icon_storage.dart';
@@ -11,17 +12,8 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    List<String?> categories = CategoriesProvider().getGetCategories;
-
-    final List<Map> watch = List.generate(
-        20,
-        (index) => {
-              'image': 'images/appleWatch.png',
-              'name': 'Apple Watch',
-              'model': 'Series 6 . Red',
-              'price': 359
-            });
-
+    final List<String> categories = CategoriesProvider().getGetCategories;
+    final List<dynamic> watch = WatchProvider().getWatchList;
     return SafeArea(
       child: GestureDetector(
         onTap: () => FocusScope.of(context).unfocus(),
@@ -131,7 +123,7 @@ class HomeScreen extends StatelessWidget {
                                                         Radius.circular(20))
                                                     .r)),
                                     child: Text(
-                                      categories[index]!,
+                                      categories[index],
                                       style: TextStyle(
                                           fontFamily: poppins,
                                           fontWeight: FontWeight.w500,

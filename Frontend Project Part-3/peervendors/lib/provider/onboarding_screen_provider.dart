@@ -5,11 +5,11 @@ class OnboardingScreenProvider extends ChangeNotifier {
   final _onboardingScreenProvider = OnboardingScreenModel(pageIndex: 0);
 
   int get getValue {
-    return _onboardingScreenProvider.getIndex;
+    return _onboardingScreenProvider.pageIndex;
   }
 
   set setValue(int setIndex) {
-    _onboardingScreenProvider.setIndex = setIndex;
+    _onboardingScreenProvider.pageIndex = setIndex;
     notifyListeners();
   }
 }

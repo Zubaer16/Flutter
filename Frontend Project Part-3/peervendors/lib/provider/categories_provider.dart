@@ -7,7 +7,7 @@ class CategoriesProvider {
     CategoriesModel(categoriesName: 'Home Accessories')
   ];
 
-  List<String?> get getGetCategories {
+  List<String> get getGetCategories {
     return _categoriesNameList.map((e) => e.categoriesName).toList();
   }
 }

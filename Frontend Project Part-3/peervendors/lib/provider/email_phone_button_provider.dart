@@ -5,7 +5,7 @@ class EmailPhoneButtonProvider extends ChangeNotifier {
   final buttonText = EmailPhoneButtonModel(buttonText: 'phone');
   String get getValue => buttonText.buttonText;
   set setValue(setVal) {
-    buttonText.setValue = setVal;
+    buttonText.buttonText = setVal;
     notifyListeners();
   }
 }
