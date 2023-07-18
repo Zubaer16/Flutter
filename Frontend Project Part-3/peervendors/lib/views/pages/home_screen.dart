@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:peervendors/extensions/custom_extensions.dart';
+import 'package:peervendors/provider/categories_provider.dart';
 import 'package:peervendors/storage/color_storage.dart';
 import 'package:peervendors/storage/font_storage.dart';
 import 'package:peervendors/storage/icon_storage.dart';
@@ -10,11 +11,7 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const List<String> categories = [
-      'Cars, Bikes, Bicycles',
-      'Electronics & Appliances',
-      'Home Accessories'
-    ];
+    List<String?> categories = CategoriesProvider().getGetCategories;
 
     final List<Map> watch = List.generate(
         20,
@@ -134,7 +131,7 @@ class HomeScreen extends StatelessWidget {
                                                         Radius.circular(20))
                                                     .r)),
                                     child: Text(
-                                      categories[index],
+                                      categories[index]!,
                                       style: TextStyle(
                                           fontFamily: poppins,
                                           fontWeight: FontWeight.w500,
@@ -177,37 +174,75 @@ class HomeScreen extends StatelessWidget {
                                           )
                                         ],
                                       ),
-                                      child: Column(
-                                        children: [
-                                          SizedBox(height: 119.1.h),
-                                          Text(
-                                            watch[index]['name'],
-                                            textAlign: TextAlign.center,
-                                            style: TextStyle(
-                                              color:
-                                                  black000000.withOpacity(.9),
-                                              fontSize: 22.sp,
-                                              fontFamily: raleway,
-                                              fontWeight: FontWeight.w600,
-                                              height:
-                                                  22.29.toFigmaHeight(22.sp),
-                                            ),
+                                      child: Center(
+                                        child: SizedBox(
+                                          width: 136.w,
+                                          child: Column(
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
+                                            children: [
+                                              SizedBox(height: 119.1.h),
+                                              Text(
+                                                watch[index]['name'],
+                                                textAlign: TextAlign.center,
+                                                style: TextStyle(
+                                                  color: black000000
+                                                      .withOpacity(.9),
+                                                  fontSize: 22.sp,
+                                                  fontFamily: raleway,
+                                                  fontWeight: FontWeight.w600,
+                                                  height: 22.29
+                                                      .toFigmaHeight(22.sp),
+                                                ),
+                                              ),
+                                              SizedBox(
+                                                height: 7.h,
+                                              ),
+                                              Text(
+                                                watch[index]['model'],
+                                                textAlign: TextAlign.center,
+                                                style: TextStyle(
+                                                    color: white858585
+                                                        .withOpacity(0.9),
+                                                    fontSize: 16.sp,
+                                                    fontFamily: raleway,
+                                                    fontWeight: FontWeight.w600,
+                                                    height: 18.78
+                                                        .toFigmaHeight(16.sp)),
+                                              ),
+                                              SizedBox(
+                                                height: 7.h,
+                                              ),
+                                              Text.rich(TextSpan(
+                                                  text: '\$ ',
+                                                  style: TextStyle(
+                                                      color: blue5956E9,
+                                                      fontSize: 17.sp,
+                                                      fontFamily: raleway,
+                                                      fontWeight:
+                                                          FontWeight.w700,
+                                                      height: 19.96
+                                                          .toFigmaHeight(
+                                                              17.sp)),
+                                                  children: [
+                                                    TextSpan(
+                                                      text: watch[index]
+                                                              ['price']
+                                                          .toString(),
+                                                      style: TextStyle(
+                                                          color: blue5956E9,
+                                                          fontSize: 17.sp,
+                                                          fontFamily: raleway,
+                                                          fontWeight:
+                                                              FontWeight.w700,
+                                                          height: 19.96
+                                                              .toFigmaHeight(
+                                                                  17.sp)),
+                                                    )
+                                                  ])),
+                                            ],
                                           ),
-                                          SizedBox(
-                                            height: 10.h,
-                                          ),
-                                          Text(
-                                            watch[index]['model'],
-                                            textAlign: TextAlign.center,
-                                            style: TextStyle(
-                                              color:
-                                                  white858585.withOpacity(0.9),
-                                              fontSize: 16.sp,
-                                              fontFamily: raleway,
-                                              fontWeight: FontWeight.w600,
-                                            ),
-                                          ),
-                                        ],
+                                        ),
                                       ),
                                     ),
                                     Positioned(
