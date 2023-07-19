@@ -7,6 +7,8 @@ import 'package:peervendors/storage/color_storage.dart';
 import 'package:peervendors/storage/font_storage.dart';
 import 'package:peervendors/storage/icon_storage.dart';
 import 'package:peervendors/views/components/categories.dart';
+import 'package:peervendors/views/components/custom_dialog.dart';
+import 'package:peervendors/views/components/custom_floating_action_button.dart';
 import 'package:peervendors/views/components/drawer_options.dart';
 import 'package:peervendors/views/components/watch.dart';
 
@@ -30,6 +32,13 @@ class _HomeScreenState extends State<HomeScreen> {
         child: Scaffold(
             key: _scaffoldKey,
             backgroundColor: whiteF4F5F7,
+            floatingActionButton: Padding(
+                padding: const EdgeInsets.only(right: 18.0, bottom: 75).r,
+                child: CustomFloatingActionButton(
+                  onTap: () {
+                    customDialog(context, 'sfasdf', null);
+                  },
+                )),
             drawer: Drawer(
                 child: Padding(
               padding: const EdgeInsets.only(left: 39).r,
@@ -112,7 +121,9 @@ class _HomeScreenState extends State<HomeScreen> {
                             _scaffoldKey.currentState?.openDrawer();
                           },
                           child: Padding(
-                            padding: const EdgeInsets.all(8.0).r,
+                            padding: const EdgeInsets.only(
+                                    right: 8.0, top: 8, bottom: 8)
+                                .r,
                             child: Image.asset(
                               'images/help.png',
                               height: 21.h,
@@ -163,7 +174,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     height: 12.h,
                   ),
                   Padding(
-                    padding: EdgeInsets.only(left: 25).r,
+                    padding: EdgeInsets.only(left: 28).r,
                     child: SizedBox(
                         width: MediaQuery.of(context).size.width,
                         height: 39.h,
