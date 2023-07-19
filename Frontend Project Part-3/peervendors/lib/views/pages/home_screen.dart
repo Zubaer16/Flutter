@@ -6,9 +6,19 @@ import 'package:peervendors/provider/watch_provider.dart';
 import 'package:peervendors/storage/color_storage.dart';
 import 'package:peervendors/storage/font_storage.dart';
 import 'package:peervendors/storage/icon_storage.dart';
+import 'package:peervendors/views/components/categories.dart';
+import 'package:peervendors/views/components/drawer_options.dart';
+import 'package:peervendors/views/components/watch.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
+
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +28,53 @@ class HomeScreen extends StatelessWidget {
       child: GestureDetector(
         onTap: () => FocusScope.of(context).unfocus(),
         child: Scaffold(
+            key: _scaffoldKey,
             backgroundColor: whiteF4F5F7,
+            drawer: Drawer(
+                child: Padding(
+              padding: const EdgeInsets.only(left: 39).r,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  SizedBox(
+                    height: 82.h,
+                  ),
+                  Image.asset(
+                    'images/pvLogo.png',
+                    height: 99.h,
+                    width: 99.w,
+                  ),
+                  SizedBox(
+                    height: 52.h,
+                  ),
+                  const DrawerOptions(drawerOptionText: 'Account Metrics'),
+                  SizedBox(
+                    height: 14.5.h,
+                  ),
+                  const DrawerOptions(drawerOptionText: 'Help & Support'),
+                  SizedBox(
+                    height: 14.5.h,
+                  ),
+                  const DrawerOptions(drawerOptionText: 'Contact Us'),
+                  SizedBox(
+                    height: 14.5.h,
+                  ),
+                  const DrawerOptions(drawerOptionText: 'Share App'),
+                  SizedBox(
+                    height: 14.5.h,
+                  ),
+                  const DrawerOptions(drawerOptionText: 'Rate Us'),
+                  SizedBox(
+                    height: 14.5.h,
+                  ),
+                  const DrawerOptions(drawerOptionText: 'FAQ'),
+                  SizedBox(
+                    height: 14.5.h,
+                  ),
+                  const DrawerOptions(drawerOptionText: 'Privacy Policy'),
+                ],
+              ),
+            )),
             body: SingleChildScrollView(
               child: Column(
                 children: [
@@ -52,11 +108,16 @@ class HomeScreen extends StatelessWidget {
                           width: 176.w,
                         ),
                         InkWell(
-                          onTap: null,
-                          child: Image.asset(
-                            'images/help.png',
-                            height: 21.h,
-                            width: 21.w,
+                          onTap: () {
+                            _scaffoldKey.currentState?.openDrawer();
+                          },
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0).r,
+                            child: Image.asset(
+                              'images/help.png',
+                              height: 21.h,
+                              width: 21.w,
+                            ),
                           ),
                         )
                       ],
@@ -66,8 +127,8 @@ class HomeScreen extends StatelessWidget {
                     height: 12.h,
                   ),
                   SizedBox(
-                    width: 370,
-                    height: 48,
+                    width: 370.w,
+                    height: 48.h,
                     child: TextFormField(
                       decoration: InputDecoration(
                           hintText: 'Search Products',
@@ -112,26 +173,11 @@ class HomeScreen extends StatelessWidget {
                             shrinkWrap: true,
                             itemBuilder: (BuildContext context, int index) {
                               return Padding(
-                                padding: const EdgeInsets.only(right: 7).r,
-                                child: ElevatedButton(
+                                  padding: const EdgeInsets.only(right: 7).r,
+                                  child: Categories(
+                                    categoryName: categories[index],
                                     onPressed: null,
-                                    style: ElevatedButton.styleFrom(
-                                        backgroundColor: whiteC4C4C4,
-                                        shape: RoundedRectangleBorder(
-                                            borderRadius:
-                                                const BorderRadius.all(
-                                                        Radius.circular(20))
-                                                    .r)),
-                                    child: Text(
-                                      categories[index],
-                                      style: TextStyle(
-                                          fontFamily: poppins,
-                                          fontWeight: FontWeight.w500,
-                                          fontSize: 15.sp,
-                                          // height: 36.0.toFigmaHeight(24.sp),
-                                          color: black3A3030),
-                                    )),
-                              );
+                                  ));
                             })),
                   ),
                   SizedBox(
@@ -139,117 +185,15 @@ class HomeScreen extends StatelessWidget {
                   ),
                   Padding(
                     padding: const EdgeInsets.only(bottom: 20).r,
-                    child: Wrap(
-                      spacing: 24.6.w,
-                      runSpacing: 74.9.h,
-                      children: [
-                        ...List.generate(
-                            watch.length,
-                            (index) => Stack(
-                                  clipBehavior: Clip.none,
-                                  children: [
-                                    Container(
-                                      width: 170.34.w,
-                                      height: 217.10.h,
-                                      decoration: ShapeDecoration(
-                                        color: Colors.white,
-                                        shape: RoundedRectangleBorder(
-                                          borderRadius:
-                                              BorderRadius.circular(20),
-                                        ),
-                                        shadows: const [
-                                          BoxShadow(
-                                            color: Color(0x19393939),
-                                            blurRadius: 60,
-                                            offset: Offset(0, 30),
-                                            spreadRadius: 0,
-                                          )
-                                        ],
-                                      ),
-                                      child: Center(
-                                        child: SizedBox(
-                                          width: 136.w,
-                                          child: Column(
-                                            crossAxisAlignment:
-                                                CrossAxisAlignment.start,
-                                            children: [
-                                              SizedBox(height: 119.1.h),
-                                              Text(
-                                                watch[index]['name'],
-                                                textAlign: TextAlign.center,
-                                                style: TextStyle(
-                                                  color: black000000
-                                                      .withOpacity(.9),
-                                                  fontSize: 22.sp,
-                                                  fontFamily: raleway,
-                                                  fontWeight: FontWeight.w600,
-                                                  height: 22.29
-                                                      .toFigmaHeight(22.sp),
-                                                ),
-                                              ),
-                                              SizedBox(
-                                                height: 7.h,
-                                              ),
-                                              Text(
-                                                watch[index]['model'],
-                                                textAlign: TextAlign.center,
-                                                style: TextStyle(
-                                                    color: white858585
-                                                        .withOpacity(0.9),
-                                                    fontSize: 16.sp,
-                                                    fontFamily: raleway,
-                                                    fontWeight: FontWeight.w600,
-                                                    height: 18.78
-                                                        .toFigmaHeight(16.sp)),
-                                              ),
-                                              SizedBox(
-                                                height: 7.h,
-                                              ),
-                                              Text.rich(TextSpan(
-                                                  text: '\$ ',
-                                                  style: TextStyle(
-                                                      color: blue5956E9,
-                                                      fontSize: 17.sp,
-                                                      fontFamily: raleway,
-                                                      fontWeight:
-                                                          FontWeight.w700,
-                                                      height: 19.96
-                                                          .toFigmaHeight(
-                                                              17.sp)),
-                                                  children: [
-                                                    TextSpan(
-                                                      text: watch[index]
-                                                              ['price']
-                                                          .toString(),
-                                                      style: TextStyle(
-                                                          color: blue5956E9,
-                                                          fontSize: 17.sp,
-                                                          fontFamily: raleway,
-                                                          fontWeight:
-                                                              FontWeight.w700,
-                                                          height: 19.96
-                                                              .toFigmaHeight(
-                                                                  17.sp)),
-                                                    )
-                                                  ])),
-                                            ],
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                    Positioned(
-                                      left: 10.81.w,
-                                      bottom: 114.18.h,
-                                      child: Image.asset(
-                                        watch[index]['image'],
-                                        height: 151.97.h,
-                                        width: 147.11.w,
-                                      ),
-                                    ),
-                                  ],
-                                ))
-                      ],
-                    ),
+                    child: Wrap(spacing: 24.6.w, runSpacing: 74.9.h, children: [
+                      ...List.generate(
+                          watch.length,
+                          (index) => Watch(
+                              imageLink: watch[index]['image'],
+                              imageName: watch[index]['name'],
+                              model: watch[index]['model'],
+                              price: watch[index]['price']))
+                    ]),
                   )
                 ],
               ),
