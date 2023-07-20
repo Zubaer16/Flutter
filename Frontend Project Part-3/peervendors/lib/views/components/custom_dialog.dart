@@ -21,10 +21,10 @@ Future<dynamic> customDialog(
             Container(
               height: 328.h,
               width: 368.w,
-              padding: EdgeInsets.all(40).r,
+              padding: const EdgeInsets.all(40).r,
               decoration: BoxDecoration(
                   color: whiteFFFFFF,
-                  borderRadius: BorderRadius.all(Radius.circular(10)).r),
+                  borderRadius: const BorderRadius.all(Radius.circular(10)).r),
               child: GestureDetector(
                 onTap: onTap,
                 child: Column(
@@ -37,7 +37,7 @@ Future<dynamic> customDialog(
                             fontFamily: poppins,
                             fontWeight: FontWeight.w500,
                             height: 36.0.toFigmaHeight(24.sp)),
-                        child: Text('Help & Support')),
+                        child: const Text('Help & Support')),
                     SizedBox(
                       height: 40.h,
                     ),
@@ -61,7 +61,7 @@ Future<dynamic> customDialog(
                                   fontFamily: poppins,
                                   fontWeight: FontWeight.w500,
                                   height: 27.0.toFigmaHeight(18.sp)),
-                              child: Text('Fix My Location Problem')),
+                              child: const Text('Fix My Location Problem')),
                         ],
                       ),
                     ),
@@ -88,7 +88,7 @@ Future<dynamic> customDialog(
                                   fontFamily: poppins,
                                   fontWeight: FontWeight.w500,
                                   height: 27.0.toFigmaHeight(18.sp)),
-                              child: Text('How to use this app')),
+                              child: const Text('How to use this app')),
                         ],
                       ),
                     ),
@@ -115,7 +115,7 @@ Future<dynamic> customDialog(
                                   fontFamily: poppins,
                                   fontWeight: FontWeight.w500,
                                   height: 27.0.toFigmaHeight(18.sp)),
-                              child: Text('Fix My Location Problem')),
+                              child: const Text('Contact us for Location')),
                         ],
                       ),
                     ),
