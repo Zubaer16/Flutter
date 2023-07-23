@@ -1,16 +1,28 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:peervendors/extensions/custom_extensions.dart';
+import 'package:peervendors/provider/watch_provider.dart';
 import 'package:peervendors/storage/color_storage.dart';
 import 'package:peervendors/storage/font_storage.dart';
+import 'package:peervendors/views/components/custom_floating_action_button.dart';
+import 'package:peervendors/views/components/watch.dart';
+import '../components/custom_dialog.dart';
 
 class MyAddScreen extends StatelessWidget {
   const MyAddScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final List<dynamic> watch = WatchProvider().getWatchList;
+
     return Scaffold(
+      floatingActionButton: Padding(
+          padding: const EdgeInsets.only(right: 18.0, bottom: 75).r,
+          child: CustomFloatingActionButton(
+            onTap: () {
+              customDialog(context, 'sfasdf', null);
+            },
+          )),
       body: DefaultTabController(
         length: 2,
         child: NestedScrollView(
@@ -42,60 +54,85 @@ class MyAddScreen extends StatelessWidget {
                               height: 33.0.toFigmaHeight(22.sp)),
                         ),
                         SizedBox(
-                          height: 47.h,
+                          height: 22.h,
                           width: MediaQuery.of(context).size.width,
                         )
                       ],
                     ),
-                    bottom: TabBar(tabs: [
-                      Column(
-                        children: [
-                          ImageIcon(
-                            AssetImage('images/shopping.png'),
-                            color: black000000,
-                            size: 25.w,
-                          ),
-                          Text(
-                            'My Ads',
-                            style: TextStyle(
+                    bottom: TabBar(
+                        indicatorColor: whiteC4C4C4,
+                        indicatorWeight: 4.h,
+                        tabs: [
+                          Column(
+                            children: [
+                              ImageIcon(
+                                AssetImage('images/shopping.png'),
                                 color: black000000,
-                                fontSize: 13.sp,
-                                fontFamily: poppins,
-                                fontWeight: FontWeight.w400,
-                                height: 19.5.toFigmaHeight(13.sp)),
+                                size: 25.w,
+                              ),
+                              Text(
+                                'My Ads',
+                                style: TextStyle(
+                                    color: black000000,
+                                    fontSize: 13.sp,
+                                    fontFamily: poppins,
+                                    fontWeight: FontWeight.w400,
+                                    height: 19.5.toFigmaHeight(13.sp)),
+                              ),
+                              SizedBox(
+                                height: 22.h,
+                                width: MediaQuery.of(context).size.width,
+                              )
+                            ],
                           ),
-                          SizedBox(
-                            height: 22.h,
-                          )
-                        ],
-                      ),
-                      Column(
-                        children: [
-                          ImageIcon(
-                            AssetImage('images/heart.png'),
-                            color: black000000,
-                            size: 25.w,
-                          ),
-                          Text(
-                            'My Favourites',
-                            style: TextStyle(
+                          Column(
+                            children: [
+                              ImageIcon(
+                                AssetImage('images/heart.png'),
                                 color: black000000,
-                                fontSize: 13.sp,
-                                fontFamily: poppins,
-                                fontWeight: FontWeight.w400,
-                                height: 19.5.toFigmaHeight(13.sp)),
+                                size: 25.w,
+                              ),
+                              Text(
+                                'My Favourites',
+                                style: TextStyle(
+                                    color: black000000,
+                                    fontSize: 13.sp,
+                                    fontFamily: poppins,
+                                    fontWeight: FontWeight.w400,
+                                    height: 19.5.toFigmaHeight(13.sp)),
+                              ),
+                              SizedBox(
+                                height: 22.h,
+                              )
+                            ],
                           ),
-                          SizedBox(
-                            height: 22.h,
-                          )
-                        ],
-                      ),
-                    ]),
+                        ]),
                   ),
                 )
               ];
             },
-            body: TabBarView(children: [Text(''), Text('')])),
+            body: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: TabBarView(children: [
+                GridView.builder(
+                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                        crossAxisCount: 2,
+                        childAspectRatio: 1,
+                        // crossAxisSpacing: 1.w,
+                        mainAxisSpacing: 74.9.h),
+                    itemCount: watch.length,
+                    itemBuilder: (_, index) {
+                      return Center(
+                        child: Watch(
+                            imageLink: watch[index]['image'],
+                            imageName: watch[index]['name'],
+                            model: watch[index]['model'],
+                            price: watch[index]['price']),
+                      );
+                    }),
+                const Center(child: Text('my favouries screen'))
+              ]),
+            )),
       ),
     );
   }
