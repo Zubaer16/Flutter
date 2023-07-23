@@ -16,6 +16,7 @@ class MyAddScreen extends StatelessWidget {
     final List<dynamic> watch = WatchProvider().getWatchList;
 
     return Scaffold(
+      backgroundColor: whiteF4F5F7,
       floatingActionButton: Padding(
           padding: const EdgeInsets.only(right: 18.0, bottom: 75).r,
           child: CustomFloatingActionButton(

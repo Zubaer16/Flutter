@@ -4,10 +4,12 @@ import 'package:peervendors/views/pages/dashboard_screen.dart';
 import 'package:peervendors/views/pages/login_otp_screen.dart';
 import 'package:peervendors/views/pages/login_screen.dart';
 import 'package:peervendors/views/pages/onboarding_screen.dart';
+import 'package:peervendors/views/pages/product_details_screen.dart';
 import 'package:peervendors/views/pages/register_otp_screen.dart';
 import 'package:peervendors/views/pages/register_screen.dart';
 import 'package:peervendors/views/pages/splash_screen.dart';
 import 'package:peervendors/views/pages/choose_language_screen.dart';
+import 'package:peervendors/views/pages/subCategory_screen.dart';
 import 'package:peervendors/views/pages/success_login.dart';
 import 'package:peervendors/views/pages/success_registration.dart';
 
@@ -22,6 +24,8 @@ const String loginScreen = '/loginScreen';
 const String loginOtpScreen = '/loginOtpScreen';
 const String successLogin = '/successLogin';
 const String dashboardScreen = '/dashboardScreen';
+const String subCategoryScreen = '/subCategoryScreen';
+const String productDetailsScreen = '/productDetailsScreen';
 
 List<GetPage> getPages = [
   GetPage(name: splashScreen, page: () => const SplashScreen()),
@@ -34,5 +38,7 @@ List<GetPage> getPages = [
   GetPage(name: loginScreen, page: () => const LoginScreen()),
   GetPage(name: loginOtpScreen, page: () => const LoginOtpScreen()),
   GetPage(name: successLogin, page: () => const SuccessLogin()),
-  GetPage(name: dashboardScreen, page: () => const DashboardScreen())
+  GetPage(name: dashboardScreen, page: () => const DashboardScreen()),
+  GetPage(name: subCategoryScreen, page: () => const SubCategoryScreen()),
+  GetPage(name: productDetailsScreen, page: () => const ProductDetailsScreen()),
 ];

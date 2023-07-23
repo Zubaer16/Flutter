@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:peervendors/storage/color_storage.dart';
 import 'package:peervendors/views/pages/account_screen.dart';
-import 'package:peervendors/views/pages/addButton_screen.dart';
+import 'package:peervendors/views/pages/category_screen.dart';
 import 'package:peervendors/views/pages/chat_screen.dart';
 import 'package:peervendors/views/pages/home_screen.dart';
 import 'package:peervendors/views/pages/myAdd_screen.dart';
@@ -54,7 +54,7 @@ List<Widget> _buildScreens() {
   return [
     const HomeScreen(),
     const MyAddScreen(),
-    const AddButtonScreen(),
+    const CategoryScreen(),
     const ChatScreen(),
     const AccountScreen()
   ];
