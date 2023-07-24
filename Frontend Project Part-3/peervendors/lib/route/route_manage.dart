@@ -13,6 +13,7 @@ import 'package:peervendors/views/pages/choose_language_screen.dart';
 import 'package:peervendors/views/pages/subCategory_screen.dart';
 import 'package:peervendors/views/pages/success_login.dart';
 import 'package:peervendors/views/pages/success_registration.dart';
+import 'package:peervendors/views/pages/test.dart';
 
 const String splashScreen = '/splashScreen';
 const String chooseLanguageScreen = '/chooseLanguageScreen';
@@ -28,6 +29,7 @@ const String dashboardScreen = '/dashboardScreen';
 const String subCategoryScreen = '/subCategoryScreen';
 const String productDetailsScreen = '/productDetailsScreen';
 const String chooseImageScreen = '/chooseImageScreen';
+const String test = '/test';
 
 List<GetPage> getPages = [
   GetPage(name: splashScreen, page: () => const SplashScreen()),
@@ -44,4 +46,5 @@ List<GetPage> getPages = [
   GetPage(name: subCategoryScreen, page: () => const SubCategoryScreen()),
   GetPage(name: productDetailsScreen, page: () => const ProductDetailsScreen()),
   GetPage(name: chooseImageScreen, page: () => const ChooseImageScreen()),
+  GetPage(name: test, page: () => const Test()),
 ];

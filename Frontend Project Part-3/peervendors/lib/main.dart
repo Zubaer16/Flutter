@@ -8,6 +8,7 @@ import 'package:peervendors/provider/onboarding_screen_provider.dart';
 import 'package:peervendors/route/route_manage.dart';
 import 'package:peervendors/views/pages/dashboard_screen.dart';
 import 'package:peervendors/views/pages/splash_screen.dart';
+import 'package:peervendors/views/pages/test.dart';
 import 'package:provider/provider.dart';
 
 void main() async {
@@ -37,8 +38,8 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        home: const DashboardScreen(),
-        initialRoute: dashboardScreen,
+        home: const Test(),
+        initialRoute: test,
         getPages: getPages,
       ),
     );
