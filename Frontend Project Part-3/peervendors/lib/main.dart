@@ -38,8 +38,8 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        home: const Test(),
-        initialRoute: test,
+        home: const DashboardScreen(),
+        initialRoute: dashboardScreen,
         getPages: getPages,
       ),
     );
