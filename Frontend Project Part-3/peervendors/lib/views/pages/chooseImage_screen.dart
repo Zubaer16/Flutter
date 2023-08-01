@@ -14,11 +14,6 @@ class ChooseImageScreen extends StatelessWidget {
   const ChooseImageScreen({super.key});
 
   @override
-  Future<PermissionStatus> requestPhotosPermission() async {
-    return await Permission.photos.request();
-  }
-
-  @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
@@ -94,13 +89,17 @@ class ChooseImageScreen extends StatelessWidget {
                         Consumer<ChooseImageProvider>(
                           builder: (context, val, child) => GestureDetector(
                             onTap: () async {
-                              if (await Permission.location
-                                  .request()
-                                  .isGranted) {
-                                // Either the permission was already granted before or the user just granted it.
-                                print("Location Permission is granted");
-                              } else {
-                                print("Location Permission is denied.");
+                              PermissionStatus imagePermission =
+                                  await Permission.storage.request();
+                              if (imagePermission == PermissionStatus.granted) {
+                                print('granted');
+                              }
+                              if (imagePermission == PermissionStatus.denied) {
+                                print('deny');
+                              }
+                              if (imagePermission ==
+                                  PermissionStatus.permanentlyDenied) {
+                                print('Permanent deny');
                               }
                               // final pickedFile =
                               //     await ImagePicker().pickMultiImage();
