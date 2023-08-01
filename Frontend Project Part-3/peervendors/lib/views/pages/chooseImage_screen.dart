@@ -1,6 +1,4 @@
 import 'dart:io';
-
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:image_picker/image_picker.dart';
@@ -8,14 +6,20 @@ import 'package:peervendors/extensions/custom_extensions.dart';
 import 'package:peervendors/provider/chooseImage_provider.dart';
 import 'package:peervendors/storage/color_storage.dart';
 import 'package:peervendors/storage/font_storage.dart';
+import 'package:peervendors/views/components/custom_button.dart';
 import 'package:provider/provider.dart';
+import 'package:permission_handler/permission_handler.dart';
 
 class ChooseImageScreen extends StatelessWidget {
   const ChooseImageScreen({super.key});
 
   @override
+  Future<PermissionStatus> requestPhotosPermission() async {
+    return await Permission.photos.request();
+  }
+
+  @override
   Widget build(BuildContext context) {
-    print('build');
     return SafeArea(
       child: Scaffold(
         backgroundColor: whiteF4F5F7,
@@ -90,14 +94,22 @@ class ChooseImageScreen extends StatelessWidget {
                         Consumer<ChooseImageProvider>(
                           builder: (context, val, child) => GestureDetector(
                             onTap: () async {
-                              final pickedFile =
-                                  await ImagePicker().pickMultiImage();
-                              List<XFile> xfilePick = pickedFile;
-                              if (xfilePick.isNotEmpty) {
-                                for (var i = 0; i < xfilePick.length; i++) {
-                                  val.setPickedImage = File(xfilePick[i].path);
-                                }
+                              if (await Permission.location
+                                  .request()
+                                  .isGranted) {
+                                // Either the permission was already granted before or the user just granted it.
+                                print("Location Permission is granted");
+                              } else {
+                                print("Location Permission is denied.");
                               }
+                              // final pickedFile =
+                              //     await ImagePicker().pickMultiImage();
+                              // List<XFile> xfilePick = pickedFile;
+                              // if (xfilePick.isNotEmpty) {
+                              //   for (var i = 0; i < xfilePick.length; i++) {
+                              //     val.setPickedImage = File(xfilePick[i].path);
+                              //   }
+                              // }
                             },
                             child: Container(
                               height: 75.h,
@@ -127,19 +139,23 @@ class ChooseImageScreen extends StatelessWidget {
                           height: 32.h,
                         ),
                         Consumer<ChooseImageProvider>(
-                          builder: (context, val, child) => Wrap(
-                              spacing: 5.43.w,
-                              runSpacing: 74.9.h,
-                              children: [
-                                ...List.generate(
-                                    val.getPickedImage.length,
-                                    (index) => SizedBox(
-                                        height: 135.h,
-                                        width: 117.5.w,
-                                        child: Image.file(
-                                            val.getPickedImage[index]!)))
-                              ]),
+                          builder: (context, val, child) =>
+                              Wrap(runSpacing: 20.h, children: [
+                            ...List.generate(
+                                val.getPickedImage.length,
+                                (index) => SizedBox(
+                                    height: 135.h,
+                                    width: 117.5.w,
+                                    child:
+                                        Image.file(val.getPickedImage[index]!)))
+                          ]),
                         ),
+                        SizedBox(
+                          height: 33.h,
+                        ),
+                        Center(
+                            child: CustomButton(
+                                buttonText: 'Continue', onPressed: () {}))
                       ]))
             ],
           ),
