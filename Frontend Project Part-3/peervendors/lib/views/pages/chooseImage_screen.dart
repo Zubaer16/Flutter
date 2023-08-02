@@ -9,6 +9,7 @@ import 'package:peervendors/storage/font_storage.dart';
 import 'package:peervendors/views/components/custom_button.dart';
 import 'package:provider/provider.dart';
 import 'package:permission_handler/permission_handler.dart';
+import 'package:image_cropper/image_cropper.dart';
 
 class ChooseImageScreen extends StatelessWidget {
   const ChooseImageScreen({super.key});
@@ -88,27 +89,8 @@ class ChooseImageScreen extends StatelessWidget {
                         ),
                         Consumer<ChooseImageProvider>(
                           builder: (context, val, child) => GestureDetector(
-                            onTap: () async {
-                              PermissionStatus imagePermission =
-                                  await Permission.storage.request();
-                              if (imagePermission == PermissionStatus.granted) {
-                                print('granted');
-                              }
-                              if (imagePermission == PermissionStatus.denied) {
-                                print('deny');
-                              }
-                              if (imagePermission ==
-                                  PermissionStatus.permanentlyDenied) {
-                                print('Permanent deny');
-                              }
-                              // final pickedFile =
-                              //     await ImagePicker().pickMultiImage();
-                              // List<XFile> xfilePick = pickedFile;
-                              // if (xfilePick.isNotEmpty) {
-                              //   for (var i = 0; i < xfilePick.length; i++) {
-                              //     val.setPickedImage = File(xfilePick[i].path);
-                              //   }
-                              // }
+                            onTap: () {
+                              _getPermission(val);
                             },
                             child: Container(
                               height: 75.h,
@@ -139,14 +121,17 @@ class ChooseImageScreen extends StatelessWidget {
                         ),
                         Consumer<ChooseImageProvider>(
                           builder: (context, val, child) =>
-                              Wrap(runSpacing: 20.h, children: [
+                              Wrap(spacing: 18.w, runSpacing: 36.h, children: [
                             ...List.generate(
                                 val.getPickedImage.length,
                                 (index) => SizedBox(
-                                    height: 135.h,
-                                    width: 117.5.w,
-                                    child:
-                                        Image.file(val.getPickedImage[index]!)))
+                                      height: 135.h,
+                                      width: 110.5.w,
+                                      child: Image.file(
+                                        val.getPickedImage[index]!,
+                                        fit: BoxFit.fill,
+                                      ),
+                                    ))
                           ]),
                         ),
                         SizedBox(
@@ -161,5 +146,46 @@ class ChooseImageScreen extends StatelessWidget {
         ),
       ),
     );
+  }
+}
+
+Future _getPermission(ChooseImageProvider val) async {
+  PermissionStatus imagePermission = await Permission.storage.request();
+  if (imagePermission == PermissionStatus.granted) {
+    _pickCropImage(val);
+  }
+
+  if (imagePermission == PermissionStatus.permanentlyDenied) {
+    openAppSettings();
+  }
+}
+
+Future _pickCropImage(ChooseImageProvider val) async {
+  final pickedFile = await ImagePicker().pickMultiImage();
+  List<XFile> xfilePick = pickedFile;
+  if (xfilePick.isNotEmpty) {
+    for (var i = 0; i < xfilePick.length; i++) {
+      CroppedFile? cropped = await ImageCropper()
+          .cropImage(sourcePath: xfilePick[i].path, aspectRatioPresets: [
+        CropAspectRatioPreset.square,
+        CropAspectRatioPreset.ratio3x2,
+        CropAspectRatioPreset.original,
+        CropAspectRatioPreset.ratio4x3,
+        CropAspectRatioPreset.ratio16x9
+      ], uiSettings: [
+        AndroidUiSettings(
+            // toolbarTitle: 'Crop',
+            hideBottomControls: true,
+            showCropGrid: false,
+            cropGridColor: Colors.black,
+            initAspectRatio: CropAspectRatioPreset.original,
+            lockAspectRatio: false),
+        IOSUiSettings(title: 'Crop')
+      ]);
+      if (cropped != null) {
+        xfilePick[i] = XFile(cropped.path);
+        val.setPickedImage = File(xfilePick[i].path);
+      }
+    }
   }
 }
