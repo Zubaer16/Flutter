@@ -142,6 +142,9 @@ class _HomeScreenState extends State<HomeScreen> {
                     height: 48.h,
                     child: TextFormField(
                       decoration: InputDecoration(
+                          enabledBorder: const OutlineInputBorder(
+                              borderSide:
+                                  BorderSide(color: Colors.transparent)),
                           hintText: 'Search Products',
                           hintStyle: TextStyle(
                               color: black3A2F2F,
@@ -174,7 +177,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     height: 12.h,
                   ),
                   Padding(
-                    padding: EdgeInsets.only(left: 28).r,
+                    padding: const EdgeInsets.only(left: 28).r,
                     child: SizedBox(
                         width: MediaQuery.of(context).size.width,
                         height: 39.h,
