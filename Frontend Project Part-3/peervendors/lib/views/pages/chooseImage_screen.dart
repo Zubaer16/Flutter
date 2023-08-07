@@ -174,7 +174,7 @@ Future _pickCropImage(ChooseImageProvider val) async {
         CropAspectRatioPreset.ratio16x9
       ], uiSettings: [
         AndroidUiSettings(
-            // toolbarTitle: 'Crop',
+            toolbarTitle: 'Crop',
             hideBottomControls: true,
             showCropGrid: false,
             cropGridColor: Colors.black,
