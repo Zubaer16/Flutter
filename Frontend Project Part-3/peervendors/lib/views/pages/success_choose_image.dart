@@ -7,28 +7,18 @@ import 'package:peervendors/route/route_manage.dart';
 import 'package:peervendors/storage/color_storage.dart';
 import 'package:peervendors/storage/font_storage.dart';
 
-class SuccessLogin extends StatefulWidget {
-  const SuccessLogin({super.key});
+class SuccessChooseImage extends StatefulWidget {
+  const SuccessChooseImage({super.key});
 
   @override
-  State<SuccessLogin> createState() => _SuccessLoginState();
+  State<SuccessChooseImage> createState() => _SuccessChooseImageState();
 }
 
-class _SuccessLoginState extends State<SuccessLogin> {
-  Timer? pageChangeTimer;
-
+class _SuccessChooseImageState extends State<SuccessChooseImage> {
   @override
   void initState() {
-    pageChangeTimer =
-        Timer(const Duration(seconds: 1), () => Get.toNamed(dashboardScreen));
     super.initState();
-  }
-
-  @override
-  void dispose() {
-    // TODO: implement dispose
-    pageChangeTimer!.cancel();
-    super.dispose();
+    Timer(const Duration(seconds: 1), () => Get.toNamed(dashboardScreen));
   }
 
   @override

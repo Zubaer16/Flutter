@@ -11,6 +11,7 @@ import 'package:peervendors/views/pages/register_screen.dart';
 import 'package:peervendors/views/pages/splash_screen.dart';
 import 'package:peervendors/views/pages/choose_language_screen.dart';
 import 'package:peervendors/views/pages/subCategory_screen.dart';
+import 'package:peervendors/views/pages/success_choose_image.dart';
 import 'package:peervendors/views/pages/success_login.dart';
 import 'package:peervendors/views/pages/success_registration.dart';
 import 'package:peervendors/views/pages/test.dart';
@@ -30,6 +31,7 @@ const String subCategoryScreen = '/subCategoryScreen';
 const String productDetailsScreen = '/productDetailsScreen';
 const String chooseImageScreen = '/chooseImageScreen';
 const String test = '/test';
+const String successChooseImage = '/successChooseImage';
 
 List<GetPage> getPages = [
   GetPage(name: splashScreen, page: () => const SplashScreen()),
@@ -46,5 +48,6 @@ List<GetPage> getPages = [
   GetPage(name: subCategoryScreen, page: () => const SubCategoryScreen()),
   GetPage(name: productDetailsScreen, page: () => const ProductDetailsScreen()),
   GetPage(name: chooseImageScreen, page: () => const ChooseImageScreen()),
+  GetPage(name: successChooseImage, page: () => const SuccessChooseImage()),
   GetPage(name: test, page: () => const Test()),
 ];
