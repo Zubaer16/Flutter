@@ -142,9 +142,9 @@ class _HomeScreenState extends State<HomeScreen> {
                     height: 48.h,
                     child: TextFormField(
                       decoration: InputDecoration(
-                          enabledBorder: const OutlineInputBorder(
-                              borderSide:
-                                  BorderSide(color: Colors.transparent)),
+                          enabledBorder: OutlineInputBorder(
+                              borderSide: BorderSide(
+                                  color: black000000.withOpacity(.25))),
                           hintText: 'Search Products',
                           hintStyle: TextStyle(
                               color: black3A2F2F,
