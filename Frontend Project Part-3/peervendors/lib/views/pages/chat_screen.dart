@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:peervendors/extensions/custom_extensions.dart';
 import 'package:peervendors/storage/color_storage.dart';
 import 'package:peervendors/storage/font_storage.dart';
+import 'package:peervendors/storage/icon_storage.dart';
 
 class ChatScreen extends StatelessWidget {
   const ChatScreen({super.key});
@@ -45,11 +46,22 @@ class ChatScreen extends StatelessWidget {
                       height: 40.h,
                       width: 275.w,
                       child: TextFormField(
+                          cursorColor: black000000,
+                          style: TextStyle(
+                            color: black000000,
+                            fontSize: 14.sp,
+                            fontFamily: helvetica,
+                            fontWeight: FontWeight.w400,
+                            letterSpacing: 1,
+                          ),
                           decoration: InputDecoration(
                               filled: true,
+                              contentPadding: EdgeInsets.only(left: 15.r),
+                              focusedBorder: const OutlineInputBorder(
+                                  borderSide: BorderSide.none),
                               border: OutlineInputBorder(
                                 borderRadius:
-                                    const BorderRadius.all(Radius.circular(6))
+                                    const BorderRadius.all(Radius.circular(10))
                                         .r,
                                 borderSide: BorderSide(
                                     width: 1.w,
@@ -59,10 +71,59 @@ class ChatScreen extends StatelessWidget {
                               enabledBorder: const OutlineInputBorder(
                                   borderSide: BorderSide(
                                 color: Colors.transparent,
-                              )))),
+                              )),
+                              hintText: 'Search...',
+                              hintStyle: TextStyle(
+                                  color: whiteFFFFFF
+                                      .withOpacity(0.6000000238418579),
+                                  fontSize: 14.sp,
+                                  fontFamily: helvetica,
+                                  fontWeight: FontWeight.w400,
+                                  letterSpacing: 1,
+                                  height: .4),
+                              suffixIcon: InkWell(
+                                child: Container(
+                                  height: 40.h,
+                                  width: 40.w,
+                                  decoration: BoxDecoration(
+                                      color: black373333,
+                                      borderRadius: BorderRadius.all(
+                                          const Radius.circular(9).r)),
+                                  child: Center(
+                                    child: Image.asset(
+                                      'images/search_container.png',
+                                      height: 22.h,
+                                      width: 22.w,
+                                    ),
+                                  ),
+                                ),
+                              ))),
+                    ),
+                    SizedBox(
+                      width: 15.h,
+                    ),
+                    InkWell(
+                      child: Container(
+                        height: 40.h,
+                        width: 40.w,
+                        decoration: BoxDecoration(
+                            color: blue03A9F1,
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(10.r))),
+                        child: Center(
+                          child: Icon(
+                            add,
+                            color: whiteFFFFFF,
+                            size: 23.w,
+                          ),
+                        ),
+                      ),
                     )
                   ],
-                )
+                ),
+                SizedBox(
+                  height: 38.h,
+                ),
               ],
             ),
           ),
