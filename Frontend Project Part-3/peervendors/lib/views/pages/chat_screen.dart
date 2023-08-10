@@ -88,7 +88,7 @@ class ChatScreen extends StatelessWidget {
                                   decoration: BoxDecoration(
                                       color: black373333,
                                       borderRadius: BorderRadius.all(
-                                          const Radius.circular(9).r)),
+                                          const Radius.circular(6).r)),
                                   child: Center(
                                     child: Image.asset(
                                       'images/search_container.png',
@@ -124,6 +124,44 @@ class ChatScreen extends StatelessWidget {
                 SizedBox(
                   height: 38.h,
                 ),
+                SizedBox(
+                  width: MediaQuery.of(context).size.width,
+                  child: Row(children: [
+                    Image.asset(
+                      'images/bozneka_profile_pic.png',
+                      height: 34.h,
+                      width: 34.w,
+                    ),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Bożenka Malina',
+                          style: TextStyle(
+                              color: black000000,
+                              fontSize: 15.sp,
+                              fontFamily: roboto,
+                              fontWeight: FontWeight.w400,
+                              letterSpacing: 1,
+                              height: 17.58.toFigmaHeight(15.sp)),
+                        ),
+                        SizedBox(
+                          height: 5.h,
+                        ),
+                        Text(
+                          'Uploaded file.',
+                          style: TextStyle(
+                              color: black2F2D2D,
+                              fontSize: 13.sp,
+                              fontFamily: roboto,
+                              fontWeight: FontWeight.w300,
+                              letterSpacing: 1,
+                              height: 15.23.toFigmaHeight(13.sp)),
+                        )
+                      ],
+                    )
+                  ]),
+                )
               ],
             ),
           ),
