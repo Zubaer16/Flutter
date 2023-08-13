@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:peervendors/extensions/custom_extensions.dart';
@@ -127,10 +126,61 @@ class ChatScreen extends StatelessWidget {
                 SizedBox(
                   width: MediaQuery.of(context).size.width,
                   child: Row(children: [
-                    Image.asset(
-                      'images/bozneka_profile_pic.png',
-                      height: 34.h,
-                      width: 34.w,
+                    Stack(
+                      clipBehavior: Clip.none,
+                      children: [
+                        Positioned(
+                          left: 20.w,
+                          top: 11.h,
+                          child: Container(
+                            decoration: BoxDecoration(
+                              boxShadow: [
+                                BoxShadow(
+                                  color: black72000000,
+                                  blurRadius: 24.r,
+                                  offset: const Offset(4, 4),
+                                  spreadRadius: 0,
+                                )
+                              ],
+                            ),
+                            child: Image.asset(
+                              'images/bozneka_profile_pic.png',
+                              height: 34.h,
+                              width: 34.w,
+                            ),
+                          ),
+                        ),
+                        Container(
+                          height: 34.h,
+                          width: 34.w,
+                          decoration: BoxDecoration(
+                            color: black414756,
+                            shape: BoxShape.circle,
+                            boxShadow: [
+                              BoxShadow(
+                                color: black72000000,
+                                blurRadius: 34.r,
+                                offset: const Offset(20, 24),
+                                spreadRadius: 0,
+                              )
+                            ],
+                          ),
+                          child: Center(
+                              child: Text(
+                            '+5',
+                            style: TextStyle(
+                                color: whiteFFFFFF,
+                                fontSize: 15.sp,
+                                fontFamily: roboto,
+                                fontWeight: FontWeight.w400,
+                                letterSpacing: 1,
+                                height: 17.58.toFigmaHeight(15.sp)),
+                          )),
+                        ),
+                      ],
+                    ),
+                    SizedBox(
+                      width: 36.w,
                     ),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -161,7 +211,152 @@ class ChatScreen extends StatelessWidget {
                       ],
                     )
                   ]),
-                )
+                ),
+                SizedBox(
+                  height: 36.h,
+                ),
+                SizedBox(
+                  width: MediaQuery.of(context).size.width,
+                  child: Row(children: [
+                    Container(
+                      decoration: BoxDecoration(
+                        boxShadow: [
+                          BoxShadow(
+                            color: black72000000,
+                            blurRadius: 24.r,
+                            offset: const Offset(4, 4),
+                            spreadRadius: 0,
+                          )
+                        ],
+                      ),
+                      child: Image.asset(
+                        'images/odeusz_profile_pic.png',
+                        height: 44.h,
+                        width: 44.w,
+                      ),
+                    ),
+                    SizedBox(
+                      width: 26.w,
+                    ),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Odeusz Piotrowski',
+                          style: TextStyle(
+                              color: black000000,
+                              fontSize: 15.sp,
+                              fontFamily: roboto,
+                              fontWeight: FontWeight.w400,
+                              letterSpacing: 1,
+                              height: 17.58.toFigmaHeight(15.sp)),
+                        ),
+                        SizedBox(
+                          height: 5.h,
+                        ),
+                        Text(
+                          'Will do, super, thank you',
+                          style: TextStyle(
+                              color: black2F2D2D,
+                              fontSize: 13.sp,
+                              fontFamily: roboto,
+                              fontWeight: FontWeight.w300,
+                              letterSpacing: 1,
+                              height: 15.23.toFigmaHeight(13.sp)),
+                        )
+                      ],
+                    ),
+                  ]),
+                ),
+                SizedBox(
+                  width: MediaQuery.of(context).size.width,
+                  child: Row(children: [
+                    Stack(
+                      clipBehavior: Clip.none,
+                      children: [
+                        Positioned(
+                          left: 20.w,
+                          top: 11.h,
+                          child: Container(
+                            decoration: BoxDecoration(
+                              boxShadow: [
+                                BoxShadow(
+                                  color: black72000000,
+                                  blurRadius: 24.r,
+                                  offset: const Offset(4, 4),
+                                  spreadRadius: 0,
+                                )
+                              ],
+                            ),
+                            child: Image.asset(
+                              'images/bozneka_profile_pic.png',
+                              height: 34.h,
+                              width: 34.w,
+                            ),
+                          ),
+                        ),
+                        Container(
+                          height: 34.h,
+                          width: 34.w,
+                          decoration: BoxDecoration(
+                            color: black414756,
+                            shape: BoxShape.circle,
+                            boxShadow: [
+                              BoxShadow(
+                                color: black72000000,
+                                blurRadius: 34.r,
+                                offset: const Offset(20, 24),
+                                spreadRadius: 0,
+                              )
+                            ],
+                          ),
+                          child: Center(
+                              child: Text(
+                            '+5',
+                            style: TextStyle(
+                                color: whiteFFFFFF,
+                                fontSize: 15.sp,
+                                fontFamily: roboto,
+                                fontWeight: FontWeight.w400,
+                                letterSpacing: 1,
+                                height: 17.58.toFigmaHeight(15.sp)),
+                          )),
+                        ),
+                      ],
+                    ),
+                    SizedBox(
+                      width: 36.w,
+                    ),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Bożenka Malina',
+                          style: TextStyle(
+                              color: black000000,
+                              fontSize: 15.sp,
+                              fontFamily: roboto,
+                              fontWeight: FontWeight.w400,
+                              letterSpacing: 1,
+                              height: 17.58.toFigmaHeight(15.sp)),
+                        ),
+                        SizedBox(
+                          height: 5.h,
+                        ),
+                        Text(
+                          'Uploaded file.',
+                          style: TextStyle(
+                              color: black2F2D2D,
+                              fontSize: 13.sp,
+                              fontFamily: roboto,
+                              fontWeight: FontWeight.w300,
+                              letterSpacing: 1,
+                              height: 15.23.toFigmaHeight(13.sp)),
+                        )
+                      ],
+                    )
+                  ]),
+                ),
               ],
             ),
           ),
