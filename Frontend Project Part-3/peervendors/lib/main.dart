@@ -7,6 +7,7 @@ import 'package:peervendors/provider/email_phone_button_provider.dart';
 import 'package:peervendors/provider/language_radio_provider.dart';
 import 'package:peervendors/provider/onboarding_screen_provider.dart';
 import 'package:peervendors/route/route_manage.dart';
+import 'package:peervendors/views/pages/chat_details_screen.dart';
 import 'package:peervendors/views/pages/dashboard_screen.dart';
 import 'package:peervendors/views/pages/splash_screen.dart';
 import 'package:peervendors/views/pages/test.dart';
@@ -40,8 +41,8 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        home: const DashboardScreen(),
-        initialRoute: dashboardScreen,
+        home: const ChatDetailsScreen(),
+        initialRoute: chatDetailsScreen,
         getPages: getPages,
       ),
     );

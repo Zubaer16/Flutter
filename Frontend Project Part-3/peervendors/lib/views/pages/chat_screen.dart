@@ -134,14 +134,11 @@ class ChatScreen extends StatelessWidget {
                     userName: 'Odeusz Piotrowski',
                     lastMessage: 'Will do, super, thank you',
                     profileImage: 'images/odeusz_profile_pic.png'),
-                ChatFriends(
+                const ChatFriends(
                   unseenCount: 3,
                   userName: 'Krysia Eurydyka',
                   lastMessage: 'How is koronavirus?',
                   profileImage: 'images/krysia_profile_pic.png',
-                  onTap: () {
-                    print('Assalamu Alaikum');
-                  },
                 ),
               ],
             ),

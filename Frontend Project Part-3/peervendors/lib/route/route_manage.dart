@@ -1,5 +1,6 @@
 import 'package:get/get_navigation/src/routes/get_route.dart';
 import 'package:peervendors/views/pages/authentication_screen.dart';
+import 'package:peervendors/views/pages/chat_details_screen.dart';
 import 'package:peervendors/views/pages/chooseImage_screen.dart';
 import 'package:peervendors/views/pages/dashboard_screen.dart';
 import 'package:peervendors/views/pages/login_otp_screen.dart';
@@ -32,6 +33,7 @@ const String productDetailsScreen = '/productDetailsScreen';
 const String chooseImageScreen = '/chooseImageScreen';
 const String test = '/test';
 const String successChooseImage = '/successChooseImage';
+const String chatDetailsScreen = '/chatDetailsScreen';
 
 List<GetPage> getPages = [
   GetPage(name: splashScreen, page: () => const SplashScreen()),
@@ -50,4 +52,5 @@ List<GetPage> getPages = [
   GetPage(name: chooseImageScreen, page: () => const ChooseImageScreen()),
   GetPage(name: successChooseImage, page: () => const SuccessChooseImage()),
   GetPage(name: test, page: () => const Test()),
+  GetPage(name: chatDetailsScreen, page: () => const ChatDetailsScreen()),
 ];
