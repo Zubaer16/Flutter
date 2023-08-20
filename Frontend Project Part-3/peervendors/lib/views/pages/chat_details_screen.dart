@@ -13,12 +13,15 @@ class ChatDetailsScreen extends StatelessWidget {
         child: Scaffold(
       backgroundColor: whiteF4F5F7,
       appBar: PreferredSize(
-        preferredSize: Size.fromHeight(200.h),
+        preferredSize: Size.fromHeight(121.h),
         child: SizedBox(
           width: MediaQuery.of(context).size.width,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
+              SizedBox(
+                height: 77.h,
+              ),
               SizedBox(
                 width: MediaQuery.of(context).size.width - 88.w,
                 height: 44.h,
@@ -76,19 +79,61 @@ class ChatDetailsScreen extends StatelessWidget {
         ),
       ),
       body: SingleChildScrollView(
-        physics: BouncingScrollPhysics(),
         child: Column(
           children: [
-            Container(
+            SizedBox(
               height: 577.h,
               width: MediaQuery.of(context).size.width - 88.h,
               child: SingleChildScrollView(
                 child: Column(
-                  children: [...List.generate(100, (index) => Text('hi'))],
+                  children: [
+                    SizedBox(
+                      height: 35.h,
+                    ),
+                    Text(
+                      '1 FEB 12:00',
+                      style: TextStyle(
+                          color: black000000,
+                          fontSize: 12.sp,
+                          fontFamily: roboto,
+                          fontWeight: FontWeight.w400,
+                          letterSpacing: 1,
+                          height: 14.06.toFigmaHeight(12.sp)),
+                    ),
+                    Align(
+                      alignment: Alignment.topLeft,
+                      child: Container(
+                        constraints: BoxConstraints(maxWidth: 280.w),
+                        padding: EdgeInsets.only(
+                            top: 10.r, bottom: 10.r, left: 15.r, right: 15.r),
+                        decoration: BoxDecoration(
+                            color: Colors.yellow,
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(20.r))),
+                        child: Text(
+                            'hi ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd'),
+                      ),
+                    ),
+                    Align(
+                      alignment: Alignment.topRight,
+                      child: Container(
+                        constraints: BoxConstraints(maxWidth: 280.w),
+                        padding: EdgeInsets.only(
+                            top: 10.r, bottom: 10.r, left: 15.r, right: 15.r),
+                        decoration: BoxDecoration(
+                            color: Colors.yellow,
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(20.r))),
+                        child: Text(
+                            'hi ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd'),
+                      ),
+                    ),
+                  ],
                 ),
               ),
             ),
-            TextFormField()
+            Container(
+                padding: EdgeInsets.only(bottom: 20.r), child: TextFormField())
           ],
         ),
       ),
