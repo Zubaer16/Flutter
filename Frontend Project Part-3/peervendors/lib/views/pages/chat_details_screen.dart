@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:peervendors/extensions/custom_extensions.dart';
 import 'package:peervendors/storage/color_storage.dart';
 import 'package:peervendors/storage/font_storage.dart';
+import 'package:peervendors/views/components/chat_message.dart';
 
 class ChatDetailsScreen extends StatelessWidget {
   const ChatDetailsScreen({super.key});
@@ -90,50 +91,71 @@ class ChatDetailsScreen extends StatelessWidget {
                     SizedBox(
                       height: 35.h,
                     ),
-                    Text(
-                      '1 FEB 12:00',
-                      style: TextStyle(
-                          color: black000000,
-                          fontSize: 12.sp,
-                          fontFamily: roboto,
-                          fontWeight: FontWeight.w400,
-                          letterSpacing: 1,
-                          height: 14.06.toFigmaHeight(12.sp)),
-                    ),
-                    Align(
-                      alignment: Alignment.topLeft,
-                      child: Container(
-                        constraints: BoxConstraints(maxWidth: 280.w),
-                        padding: EdgeInsets.only(
-                            top: 10.r, bottom: 10.r, left: 15.r, right: 15.r),
-                        decoration: BoxDecoration(
-                            color: Colors.yellow,
-                            borderRadius:
-                                BorderRadius.all(Radius.circular(20.r))),
-                        child: Text(
-                            'hi ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd'),
+                    Padding(
+                      padding: EdgeInsets.only(bottom: 12.r),
+                      child: Text(
+                        '1 FEB 12:00',
+                        style: TextStyle(
+                            color: black000000,
+                            fontSize: 12.sp,
+                            fontFamily: roboto,
+                            fontWeight: FontWeight.w400,
+                            letterSpacing: 1,
+                            height: 14.06.toFigmaHeight(12.sp)),
                       ),
                     ),
-                    Align(
-                      alignment: Alignment.topRight,
-                      child: Container(
-                        constraints: BoxConstraints(maxWidth: 280.w),
-                        padding: EdgeInsets.only(
-                            top: 10.r, bottom: 10.r, left: 15.r, right: 15.r),
-                        decoration: BoxDecoration(
-                            color: Colors.yellow,
-                            borderRadius:
-                                BorderRadius.all(Radius.circular(20.r))),
-                        child: Text(
-                            'hi ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd'),
+                    const ChatMessage(
+                        message:
+                            'I commented on Figma, I want to add some fancy icons. Do you have any icon set?',
+                        messageStatus: 'sender'),
+                    const ChatMessage(
+                        message:
+                            'I am in a process of designing some. When do you need them?',
+                        messageStatus: 'receiver'),
+                    const ChatMessage(
+                        message: 'Next month?', messageStatus: 'sender'),
+                    Padding(
+                      padding: EdgeInsets.only(bottom: 12.r),
+                      child: Text(
+                        '08:12',
+                        style: TextStyle(
+                            color: black000000,
+                            fontSize: 12.sp,
+                            fontFamily: roboto,
+                            fontWeight: FontWeight.w400,
+                            letterSpacing: 1,
+                            height: 14.06.toFigmaHeight(12.sp)),
                       ),
                     ),
+                    const ChatMessage(
+                        message:
+                            'I am almost finish. Please give me your email, I will ZIP them and send you as son as im finish.',
+                        messageStatus: 'receiver'),
+                    const ChatMessage(message: '?', messageStatus: 'receiver'),
+                    Padding(
+                      padding: EdgeInsets.only(bottom: 12.r),
+                      child: Text(
+                        '08:12',
+                        style: TextStyle(
+                            color: black000000,
+                            fontSize: 12.sp,
+                            fontFamily: roboto,
+                            fontWeight: FontWeight.w400,
+                            letterSpacing: 1,
+                            height: 14.06.toFigmaHeight(12.sp)),
+                      ),
+                    ),
+                    const ChatMessage(
+                        message: 'maciej.kowalski@email.com',
+                        messageStatus: 'sender'),
+                    const ChatMessage(message: '👍', messageStatus: 'receiver'),
                   ],
                 ),
               ),
             ),
             Container(
-                padding: EdgeInsets.only(bottom: 20.r), child: TextFormField())
+                padding: EdgeInsets.only(top: 10.r, bottom: 20.r),
+                child: TextFormField())
           ],
         ),
       ),
