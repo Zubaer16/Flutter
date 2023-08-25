@@ -169,8 +169,9 @@ class ChatDetailsScreen extends StatelessWidget {
                     //     border: Border.all(color: Colors.transparent)),
                     child: TextFormField(
                       decoration: InputDecoration(
-                          enabledBorder: OutlineInputBorder(
-                              borderSide: BorderSide(color: blue00A3FF)),
+                          enabledBorder: const OutlineInputBorder(
+                              borderSide:
+                                  BorderSide(color: Colors.transparent)),
                           filled: true,
                           fillColor: black9E0E0C0C,
                           border: OutlineInputBorder(
