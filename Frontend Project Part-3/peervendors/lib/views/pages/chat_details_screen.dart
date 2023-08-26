@@ -164,9 +164,6 @@ class ChatDetailsScreen extends StatelessWidget {
                 SizedBox(
                     width: 275.w,
                     height: 60.h,
-                    // decoration: BoxDecoration(
-                    //     borderRadius: BorderRadius.all(Radius.circular(10.r)),
-                    //     border: Border.all(color: Colors.transparent)),
                     child: TextFormField(
                       decoration: InputDecoration(
                           enabledBorder: const OutlineInputBorder(
@@ -175,7 +172,8 @@ class ChatDetailsScreen extends StatelessWidget {
                           filled: true,
                           fillColor: black9E0E0C0C,
                           border: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(10.r))),
+                              borderRadius: BorderRadius.circular(10.r)),
+                          prefixIcon: Container()),
                     ))
               ],
             ),
