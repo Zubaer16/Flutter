@@ -43,18 +43,18 @@ class ChatScreen extends StatelessWidget {
                 Row(
                   children: [
                     SizedBox(
-                      height: 40.h,
-                      width: 275.w,
-                      child: TextFormField(
-                          cursorColor: black000000,
-                          style: TextStyle(
-                            color: black000000,
-                            fontSize: 14.sp,
-                            fontFamily: helvetica,
-                            fontWeight: FontWeight.w400,
-                            letterSpacing: 1,
-                          ),
-                          decoration: InputDecoration(
+                        height: 40.h,
+                        width: 275.w,
+                        child: TextFormField(
+                            cursorColor: black000000,
+                            style: TextStyle(
+                              color: black000000,
+                              fontSize: 14.sp,
+                              fontFamily: helvetica,
+                              fontWeight: FontWeight.w400,
+                              letterSpacing: 1,
+                            ),
+                            decoration: InputDecoration(
                               filled: true,
                               contentPadding: EdgeInsets.only(left: 15.r),
                               focusedBorder: OutlineInputBorder(
@@ -76,8 +76,10 @@ class ChatScreen extends StatelessWidget {
                                   fontWeight: FontWeight.w400,
                                   letterSpacing: 1,
                                   height: .4),
-                              suffixIcon: ElevatedButton(onPressed: null, child: Image.asset('images/')),
-                    ),
+                              suffixIcon: ElevatedButton(
+                                  onPressed: null,
+                                  child: Image.asset('images/')),
+                            ))),
                     SizedBox(
                       width: 15.h,
                     ),
