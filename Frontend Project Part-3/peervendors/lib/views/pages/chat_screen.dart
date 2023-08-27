@@ -57,21 +57,16 @@ class ChatScreen extends StatelessWidget {
                           decoration: InputDecoration(
                               filled: true,
                               contentPadding: EdgeInsets.only(left: 15.r),
-                              focusedBorder: const OutlineInputBorder(
-                                  borderSide: BorderSide.none),
-                              border: OutlineInputBorder(
-                                borderRadius:
-                                    const BorderRadius.all(Radius.circular(10))
-                                        .r,
-                                borderSide: BorderSide(
-                                    width: 1.w,
-                                    color: black000000.withOpacity(0.5)),
-                              ),
+                              focusedBorder: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(10.r),
+                                  borderSide: const BorderSide(
+                                      color: Colors.transparent)),
                               fillColor: black373333.withOpacity(0.25),
-                              enabledBorder: const OutlineInputBorder(
-                                  borderSide: BorderSide(
-                                color: Colors.transparent,
-                              )),
+                              enabledBorder: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(10.r),
+                                  borderSide: const BorderSide(
+                                    color: Colors.transparent,
+                                  )),
                               hintText: 'Search...',
                               hintStyle: TextStyle(
                                   color: whiteFFFFFF
@@ -81,23 +76,7 @@ class ChatScreen extends StatelessWidget {
                                   fontWeight: FontWeight.w400,
                                   letterSpacing: 1,
                                   height: .4),
-                              suffixIcon: InkWell(
-                                child: Container(
-                                  height: 40.h,
-                                  width: 40.w,
-                                  decoration: BoxDecoration(
-                                      color: black373333,
-                                      borderRadius: BorderRadius.all(
-                                          const Radius.circular(6).r)),
-                                  child: Center(
-                                    child: Image.asset(
-                                      'images/search_container.png',
-                                      height: 22.h,
-                                      width: 22.w,
-                                    ),
-                                  ),
-                                ),
-                              ))),
+                              suffixIcon: ElevatedButton(onPressed: null, child: Image.asset('images/'))
                     ),
                     SizedBox(
                       width: 15.h,
