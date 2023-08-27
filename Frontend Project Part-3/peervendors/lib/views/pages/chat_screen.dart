@@ -76,7 +76,7 @@ class ChatScreen extends StatelessWidget {
                                   fontWeight: FontWeight.w400,
                                   letterSpacing: 1,
                                   height: .4),
-                              suffixIcon: ElevatedButton(onPressed: null, child: Image.asset('images/'))
+                              suffixIcon: ElevatedButton(onPressed: null, child: Image.asset('images/')),
                     ),
                     SizedBox(
                       width: 15.h,

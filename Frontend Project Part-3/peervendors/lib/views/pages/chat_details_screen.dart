@@ -163,17 +163,28 @@ class ChatDetailsScreen extends StatelessWidget {
                 ),
                 SizedBox(
                     width: 275.w,
-                    height: 60.h,
+                    height: 40.h,
                     child: TextFormField(
                       decoration: InputDecoration(
-                          enabledBorder: const OutlineInputBorder(
-                              borderSide:
-                                  BorderSide(color: Colors.transparent)),
+                          enabledBorder: OutlineInputBorder(
+                              borderSide: const BorderSide(
+                                color: Colors.transparent,
+                              ),
+                              borderRadius: BorderRadius.circular(10.r)),
+                          focusedBorder: OutlineInputBorder(
+                              borderSide: const BorderSide(
+                                color: Colors.transparent,
+                              ),
+                              borderRadius: BorderRadius.circular(10.r)),
                           filled: true,
                           fillColor: black9E0E0C0C,
-                          border: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(10.r)),
-                          prefixIcon: Container()),
+                          suffixIcon: Container(
+                            height: 40.h,
+                            width: 40.w,
+                            decoration: BoxDecoration(
+                                color: black73E4E,
+                                borderRadius: BorderRadius.circular(10.r)),
+                          )),
                     ))
               ],
             ),

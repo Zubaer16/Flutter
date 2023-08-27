@@ -41,8 +41,8 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        home: const ChatDetailsScreen(),
-        initialRoute: chatDetailsScreen,
+        home: const DashboardScreen(),
+        initialRoute: dashboardScreen,
         getPages: getPages,
       ),
     );
