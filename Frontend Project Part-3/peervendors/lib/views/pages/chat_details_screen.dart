@@ -161,31 +161,58 @@ class ChatDetailsScreen extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(
-                    width: 275.w,
-                    height: 40.h,
-                    child: TextFormField(
-                      decoration: InputDecoration(
-                          enabledBorder: OutlineInputBorder(
-                              borderSide: const BorderSide(
-                                color: Colors.transparent,
+                Row(
+                  children: [
+                    SizedBox(
+                        width: 275.w,
+                        height: 40.h,
+                        child: Stack(children: [
+                          TextFormField(
+                            decoration: InputDecoration(
+                              enabledBorder: OutlineInputBorder(
+                                  borderSide: const BorderSide(
+                                    color: Colors.transparent,
+                                  ),
+                                  borderRadius: BorderRadius.circular(10.r)),
+                              focusedBorder: OutlineInputBorder(
+                                  borderSide: const BorderSide(
+                                    color: Colors.transparent,
+                                  ),
+                                  borderRadius: BorderRadius.circular(10.r)),
+                              filled: true,
+                              fillColor: black9E0E0C0C,
+                              hintText: 'Write',
+                              hintStyle: TextStyle(
+                                  color: whiteFFFFFF
+                                      .withOpacity(0.6000000238418579),
+                                  fontSize: 14.sp,
+                                  fontFamily: helvetica,
+                                  fontWeight: FontWeight.w400,
+                                  letterSpacing: 1,
+                                  height: .9.h),
+                            ),
+                          ),
+                          Align(
+                            alignment: Alignment.topRight,
+                            child: Container(
+                              height: 40.h,
+                              width: 40.w,
+                              decoration: BoxDecoration(
+                                  color: black73E4E,
+                                  borderRadius: BorderRadius.circular(10.r)),
+                              child: Center(
+                                child: Image.asset(
+                                  'images/microphone.png',
+                                  height: 20.h,
+                                  width: 20.w,
+                                ),
                               ),
-                              borderRadius: BorderRadius.circular(10.r)),
-                          focusedBorder: OutlineInputBorder(
-                              borderSide: const BorderSide(
-                                color: Colors.transparent,
-                              ),
-                              borderRadius: BorderRadius.circular(10.r)),
-                          filled: true,
-                          fillColor: black9E0E0C0C,
-                          suffixIcon: Container(
-                            height: 40.h,
-                            width: 40.w,
-                            decoration: BoxDecoration(
-                                color: black73E4E,
-                                borderRadius: BorderRadius.circular(10.r)),
-                          )),
-                    ))
+                            ),
+                          )
+                        ])),
+                    Container()
+                  ],
+                )
               ],
             ),
           ),
