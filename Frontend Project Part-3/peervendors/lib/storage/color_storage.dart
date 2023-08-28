@@ -22,6 +22,7 @@ const black414756 = Color(0xFF414756);
 const black72000000 = Color(0x72000000);
 const black9E0E0C0C = Color(0x9E0E0C0C);
 const black73E4E = Color(0xFF373E4E);
+const black565E70 = Color(0xff565E70);
 
 const blue00A3FF = Color(0xff00A3FF);
 const blue03A9F1 = Color(0xff03A9F1);

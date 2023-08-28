@@ -45,41 +45,56 @@ class ChatScreen extends StatelessWidget {
                     SizedBox(
                         height: 40.h,
                         width: 275.w,
-                        child: TextFormField(
-                            cursorColor: black000000,
-                            style: TextStyle(
-                              color: black000000,
-                              fontSize: 14.sp,
-                              fontFamily: helvetica,
-                              fontWeight: FontWeight.w400,
-                              letterSpacing: 1,
+                        child: Stack(children: [
+                          TextFormField(
+                              cursorColor: black000000,
+                              style: TextStyle(
+                                color: black000000,
+                                fontSize: 14.sp,
+                                fontFamily: helvetica,
+                                fontWeight: FontWeight.w400,
+                                letterSpacing: 1,
+                              ),
+                              decoration: InputDecoration(
+                                filled: true,
+                                contentPadding: EdgeInsets.only(left: 15.r),
+                                focusedBorder: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(10.r),
+                                    borderSide: const BorderSide(
+                                        color: Colors.transparent)),
+                                fillColor: black373333.withOpacity(0.25),
+                                enabledBorder: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(10.r),
+                                    borderSide: const BorderSide(
+                                      color: Colors.transparent,
+                                    )),
+                                hintText: 'Search...',
+                                hintStyle: TextStyle(
+                                    color: whiteFFFFFF
+                                        .withOpacity(0.6000000238418579),
+                                    fontSize: 14.sp,
+                                    fontFamily: helvetica,
+                                    fontWeight: FontWeight.w400,
+                                    letterSpacing: 1,
+                                    height: .4),
+                              )),
+                          Align(
+                            alignment: Alignment.topRight,
+                            child: Container(
+                              height: 40.h,
+                              width: 40.h,
+                              decoration: BoxDecoration(
+                                  color: black565E70,
+                                  borderRadius: BorderRadius.circular(10.r)),
+                              child: Center(
+                                  child: Image.asset(
+                                'images/search_container.png',
+                                height: 20.h,
+                                width: 20.w,
+                              )),
                             ),
-                            decoration: InputDecoration(
-                              filled: true,
-                              contentPadding: EdgeInsets.only(left: 15.r),
-                              focusedBorder: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(10.r),
-                                  borderSide: const BorderSide(
-                                      color: Colors.transparent)),
-                              fillColor: black373333.withOpacity(0.25),
-                              enabledBorder: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(10.r),
-                                  borderSide: const BorderSide(
-                                    color: Colors.transparent,
-                                  )),
-                              hintText: 'Search...',
-                              hintStyle: TextStyle(
-                                  color: whiteFFFFFF
-                                      .withOpacity(0.6000000238418579),
-                                  fontSize: 14.sp,
-                                  fontFamily: helvetica,
-                                  fontWeight: FontWeight.w400,
-                                  letterSpacing: 1,
-                                  height: .4),
-                              suffixIcon: ElevatedButton(
-                                  onPressed: null,
-                                  child: Image.asset('images/')),
-                            ))),
+                          )
+                        ])),
                     SizedBox(
                       width: 15.h,
                     ),
