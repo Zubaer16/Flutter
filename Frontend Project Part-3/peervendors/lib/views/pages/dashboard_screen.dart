@@ -5,7 +5,7 @@ import 'package:peervendors/views/pages/account_screen.dart';
 import 'package:peervendors/views/pages/category_screen.dart';
 import 'package:peervendors/views/pages/chat_screen.dart';
 import 'package:peervendors/views/pages/home_screen.dart';
-import 'package:peervendors/views/pages/myAdd_screen.dart';
+import 'package:peervendors/views/pages/my_add_screen.dart';
 import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
 
 class DashboardScreen extends StatelessWidget {
@@ -13,13 +13,13 @@ class DashboardScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    PersistentTabController _controller;
+    PersistentTabController controller;
 
-    _controller = PersistentTabController(initialIndex: 0);
+    controller = PersistentTabController(initialIndex: 0);
 
     return PersistentTabView(
       context,
-      controller: _controller,
+      controller: controller,
       screens: _buildScreens(),
       items: _navBarsItems(),
       navBarHeight: 60.h,

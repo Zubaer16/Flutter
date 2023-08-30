@@ -4,7 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:peervendors/extensions/custom_extensions.dart';
-import 'package:peervendors/provider/chooseImage_provider.dart';
+import 'package:peervendors/provider/choose_image_provider.dart';
 import 'package:peervendors/route/route_manage.dart';
 import 'package:peervendors/storage/color_storage.dart';
 import 'package:peervendors/storage/font_storage.dart';

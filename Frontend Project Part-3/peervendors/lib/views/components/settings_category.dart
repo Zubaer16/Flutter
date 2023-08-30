@@ -4,38 +4,40 @@ import 'package:peervendors/extensions/custom_extensions.dart';
 import 'package:peervendors/storage/color_storage.dart';
 import 'package:peervendors/storage/font_storage.dart';
 
-class DrawerOptions extends StatelessWidget {
-  const DrawerOptions({super.key, required this.drawerOptionText, this.onTap});
-  final String drawerOptionText;
+class SettingsCategory extends StatelessWidget {
+  const SettingsCategory({super.key, required this.categoryText, this.onTap});
+
+  final String categoryText;
   final Function()? onTap;
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: onTap,
-      child: Container(
-        width: 210.w,
-        decoration: BoxDecoration(
-            border: Border(
-                bottom: BorderSide(
-          width: .5.w,
-          color: whiteC4C4C4,
-        ))),
-        child: Column(
-          children: [
-            Row(
+      child: Column(
+        children: [
+          Container(
+            height: 48.h,
+            width: MediaQuery.of(context).size.width,
+            decoration: BoxDecoration(
+                color: whiteFFFFFF,
+                borderRadius: const BorderRadius.all(Radius.circular(6)).r),
+            child: Row(
               children: [
+                SizedBox(
+                  width: 24.w,
+                ),
                 Container(
-                  height: 30.h,
-                  width: 30.w,
+                  height: 28.h,
+                  width: 28.w,
                   decoration: const BoxDecoration(
-                      color: whiteC4C4C4, shape: BoxShape.circle),
+                      shape: BoxShape.circle, color: whiteC4C4C4),
                 ),
                 SizedBox(
-                  width: 20.w,
+                  width: 24.w,
                 ),
                 Text(
-                  drawerOptionText,
+                  categoryText,
                   style: TextStyle(
                       color: black3A2F2F,
                       fontSize: 16.sp,
@@ -45,11 +47,11 @@ class DrawerOptions extends StatelessWidget {
                 )
               ],
             ),
-            SizedBox(
-              height: 10.h,
-            )
-          ],
-        ),
+          ),
+          SizedBox(
+            height: 8.h,
+          )
+        ],
       ),
     );
   }

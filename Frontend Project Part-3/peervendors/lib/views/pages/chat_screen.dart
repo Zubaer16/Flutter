@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 import 'package:peervendors/extensions/custom_extensions.dart';
+import 'package:peervendors/route/route_manage.dart';
 import 'package:peervendors/storage/color_storage.dart';
 import 'package:peervendors/storage/font_storage.dart';
 import 'package:peervendors/storage/icon_storage.dart';
@@ -120,7 +122,10 @@ class ChatScreen extends StatelessWidget {
                 SizedBox(
                   height: 38.h,
                 ),
-                const ChatFriends(
+                ChatFriends(
+                    onTap: () {
+                      Get.toNamed(chatDetailsScreen);
+                    },
                     unseenCount: 5,
                     userName: 'Bożenka Malina',
                     lastMessage: 'Uploaded file.',

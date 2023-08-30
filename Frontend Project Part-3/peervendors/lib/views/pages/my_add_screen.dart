@@ -67,7 +67,7 @@ class MyAddScreen extends StatelessWidget {
                           Column(
                             children: [
                               ImageIcon(
-                                AssetImage('images/shopping.png'),
+                                const AssetImage('images/shopping.png'),
                                 color: black000000,
                                 size: 25.w,
                               ),
@@ -89,7 +89,7 @@ class MyAddScreen extends StatelessWidget {
                           Column(
                             children: [
                               ImageIcon(
-                                AssetImage('images/heart.png'),
+                                const AssetImage('images/heart.png'),
                                 color: black000000,
                                 size: 25.w,
                               ),

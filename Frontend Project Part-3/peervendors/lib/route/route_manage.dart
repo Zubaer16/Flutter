@@ -1,7 +1,7 @@
 import 'package:get/get_navigation/src/routes/get_route.dart';
 import 'package:peervendors/views/pages/authentication_screen.dart';
 import 'package:peervendors/views/pages/chat_details_screen.dart';
-import 'package:peervendors/views/pages/chooseImage_screen.dart';
+import 'package:peervendors/views/pages/choose_image_screen.dart';
 import 'package:peervendors/views/pages/dashboard_screen.dart';
 import 'package:peervendors/views/pages/login_otp_screen.dart';
 import 'package:peervendors/views/pages/login_screen.dart';
@@ -11,7 +11,7 @@ import 'package:peervendors/views/pages/register_otp_screen.dart';
 import 'package:peervendors/views/pages/register_screen.dart';
 import 'package:peervendors/views/pages/splash_screen.dart';
 import 'package:peervendors/views/pages/choose_language_screen.dart';
-import 'package:peervendors/views/pages/subCategory_screen.dart';
+import 'package:peervendors/views/pages/sub_category_screen.dart';
 import 'package:peervendors/views/pages/success_choose_image.dart';
 import 'package:peervendors/views/pages/success_login.dart';
 import 'package:peervendors/views/pages/success_registration.dart';

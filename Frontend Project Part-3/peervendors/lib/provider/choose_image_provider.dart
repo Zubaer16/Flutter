@@ -1,7 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter/cupertino.dart';
-import 'package:peervendors/models/chooseImage_model.dart';
+import 'package:peervendors/models/choose_image_model.dart';
 
 class ChooseImageProvider extends ChangeNotifier {
   final List<ChooseImageModel> _pickedImages = [];

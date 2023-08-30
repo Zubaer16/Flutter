@@ -86,7 +86,8 @@ class ProductDetailsScreen extends StatelessWidget {
                     ),
                     Container(
                       height: 151.h,
-                      padding: EdgeInsets.only(left: 30, top: 37, right: 30).r,
+                      padding:
+                          const EdgeInsets.only(left: 30, top: 37, right: 30).r,
                       width: MediaQuery.of(context).size.width,
                       decoration: BoxDecoration(
                           color: whiteFFFFFF,
@@ -140,7 +141,7 @@ class ProductDetailsScreen extends StatelessWidget {
                     Container(
                       height: 45.h,
                       width: MediaQuery.of(context).size.width,
-                      padding: EdgeInsets.only(left: 30, right: 30).r,
+                      padding: const EdgeInsets.only(left: 30, right: 30).r,
                       decoration: BoxDecoration(
                           color: whiteFFFFFF,
                           borderRadius:

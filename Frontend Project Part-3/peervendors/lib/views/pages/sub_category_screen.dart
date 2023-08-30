@@ -7,8 +7,8 @@ import 'package:peervendors/storage/color_storage.dart';
 import 'package:peervendors/storage/font_storage.dart';
 import 'package:peervendors/views/components/settings_category.dart';
 
-class CategoryScreen extends StatelessWidget {
-  const CategoryScreen({super.key});
+class SubCategoryScreen extends StatelessWidget {
+  const SubCategoryScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -43,7 +43,7 @@ class CategoryScreen extends StatelessWidget {
                     width: MediaQuery.of(context).size.width,
                   ),
                   Text(
-                    'Choose a Category',
+                    'Choose a Sub Category',
                     style: TextStyle(
                         color: black3A2F2F,
                         fontSize: 20.sp,
@@ -55,16 +55,16 @@ class CategoryScreen extends StatelessWidget {
                     height: 14.h,
                   ),
                   SettingsCategory(
-                    categoryText: 'Cars, Bikes, Bicycles',
+                    categoryText: 'Cars',
                     onTap: () {
-                      Get.toNamed(subCategoryScreen);
+                      Get.toNamed(productDetailsScreen);
                     },
                   ),
                   const SettingsCategory(
-                    categoryText: 'Cars, Bikes, Bicycles',
+                    categoryText: 'Bikes',
                   ),
                   const SettingsCategory(
-                    categoryText: 'Cars, Bikes, Bicycles',
+                    categoryText: 'Bicycles',
                   ),
                 ],
               ),
