@@ -1,3 +1,5 @@
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_main/helper/auth_helper.dart';
 import 'package:firebase_main/views/sign_up.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -20,7 +22,14 @@ class SignIn extends StatelessWidget {
           TextField(
             controller: _pass,
           ),
-          ElevatedButton(onPressed: () {}, child: Text('Sign IN')),
+          ElevatedButton(
+              onPressed: () {
+                final userEmail = _email.text;
+                final userPass = _pass.text;
+                var obj = AuthHelper();
+                obj.signIn(userEmail, userPass, context);
+              },
+              child: Text('Sign IN')),
           TextButton(
               onPressed: () {
                 Navigator.push(
