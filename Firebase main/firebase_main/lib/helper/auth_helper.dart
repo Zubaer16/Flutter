@@ -1,9 +1,11 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_main/views/home_screen.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:get_storage/get_storage.dart';
 
 class AuthHelper {
   Future signUp(email, password, context) async {
+    final box = GetStorage();
     try {
       UserCredential userCredential = await FirebaseAuth.instance
           .createUserWithEmailAndPassword(email: email, password: password);
@@ -11,6 +13,7 @@ class AuthHelper {
       var authCredential = userCredential.user;
       print(authCredential);
       if (authCredential!.uid.isNotEmpty) {
+        box.write('id', authCredential.uid);
         Navigator.push(
             context, CupertinoPageRoute(builder: (_) => HomeScreen()));
       } else
