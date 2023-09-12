@@ -2,7 +2,6 @@ import 'package:firebase_main/helper/auth_helper.dart';
 import 'package:firebase_main/views/sign_up.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:get_storage/get_storage.dart';
 
 class SignIn extends StatelessWidget {
   SignIn({super.key});

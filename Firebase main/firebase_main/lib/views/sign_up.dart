@@ -32,10 +32,9 @@ class SignUp extends StatelessWidget {
                 child: Text('Sign UP')),
             TextButton(
                 onPressed: () {
-                  Navigator.push(
-                      context, CupertinoPageRoute(builder: (_) => SignIn()));
+                  AuthHelper().signInWithGoogle(context);
                 },
-                child: Text('already created an accout? Login'))
+                child: Text("Login with google"))
           ]),
         ),
       ),

@@ -13,8 +13,7 @@ class Splash extends StatelessWidget {
   chooseScreen(context) async {
     var userId = box.read('id');
     if (userId != null) {
-      Navigator.push(
-          context, CupertinoPageRoute(builder: (_) => const HomeScreen()));
+      Navigator.push(context, CupertinoPageRoute(builder: (_) => HomeScreen()));
     } else {
       Navigator.push(context, CupertinoPageRoute(builder: (_) => SignUp()));
     }

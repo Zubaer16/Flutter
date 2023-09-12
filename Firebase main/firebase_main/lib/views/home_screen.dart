@@ -1,9 +1,10 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get_storage/get_storage.dart';
 
 class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key});
-
+  HomeScreen({super.key, this.user});
+  final User? user;
   @override
   State<HomeScreen> createState() => _HomeScreenState();
 }
@@ -20,6 +21,8 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      body: Center(child: Text(widget.user!.email.toString())),
+    );
   }
 }
