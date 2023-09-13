@@ -1,5 +1,4 @@
 import 'dart:async';
-
 import 'package:firebase_main/views/home_screen.dart';
 import 'package:firebase_main/views/sign_up.dart';
 import 'package:flutter/cupertino.dart';
