@@ -22,7 +22,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(child: Text(widget.user!.email.toString())),
+      body: Center(child: Text(widget.user!.phoneNumber.toString())),
     );
   }
 }

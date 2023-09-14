@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'package:firebase_main/views/home_screen.dart';
 import 'package:firebase_main/views/sign_up.dart';
+import 'package:firebase_main/views/sign_up_phone.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get_storage/get_storage.dart';
@@ -21,7 +22,9 @@ class Splash extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Timer(Duration(seconds: 3), () {
-      chooseScreen(context);
+      // chooseScreen(context);
+      Navigator.push(
+          context, CupertinoPageRoute(builder: (_) => SignUpPhone()));
     });
 
     return Scaffold(
