@@ -23,8 +23,7 @@ class Splash extends StatelessWidget {
   Widget build(BuildContext context) {
     Timer(Duration(seconds: 3), () {
       // chooseScreen(context);
-      Navigator.push(
-          context, CupertinoPageRoute(builder: (_) => SignUpPhone()));
+      Navigator.push(context, CupertinoPageRoute(builder: (_) => HomeScreen()));
     });
 
     return Scaffold(
