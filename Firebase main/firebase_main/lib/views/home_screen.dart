@@ -28,6 +28,26 @@ class _HomeScreenState extends State<HomeScreen> {
         print(message.notification!.body);
       }
     });
+
+    //app is opened but not terminated
+    FirebaseMessaging.onMessageOpenedApp.listen((message) {
+      if (message.notification != null) {
+        print(message.notification!.title);
+        print(message.notification!.body);
+        print(message.data['path']);
+        Navigator.pushNamed(context, message.data['path']);
+      }
+    });
+
+    //when app is terminated
+    FirebaseMessaging.instance.getInitialMessage().then((message) => {
+          if (message != null)
+            {
+              print(message.notification!.title),
+              print(message.notification!.body),
+              print(message.data['path'])
+            }
+        });
   }
 
   @override
