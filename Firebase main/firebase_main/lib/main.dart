@@ -21,6 +21,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
+
           // This is the theme of your application.
           //
           // TRY THIS: Try running your application with "flutter run". You'll see
@@ -40,6 +41,7 @@ class MyApp extends StatelessWidget {
           // useMaterial3: true,
           ),
       home: Splash(),
+      debugShowCheckedModeBanner: false,
       routes: {'recommended': (context) => const Recommended()},
     );
   }
