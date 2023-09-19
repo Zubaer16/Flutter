@@ -40,7 +40,7 @@ class MyApp extends StatelessWidget {
           // useMaterial3: true,
           ),
       home: Splash(),
-      routes: {'recommended': (context) => Recommended()},
+      routes: {'recommended': (context) => const Recommended()},
     );
   }
 }
