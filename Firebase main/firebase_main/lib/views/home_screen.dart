@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_main/views/add_new_course.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
@@ -63,6 +64,9 @@ class _HomeScreenState extends State<HomeScreen> {
           });
     }
 
+    final Stream<QuerySnapshot> _courseStream =
+        FirebaseFirestore.instance.collection('courses').snapshots();
+
     return SafeArea(
       child: Scaffold(
           appBar: AppBar(
@@ -77,7 +81,73 @@ class _HomeScreenState extends State<HomeScreen> {
                   icon: Icon(Icons.add))
             ],
           ),
-          body: Center()
+          body: StreamBuilder<QuerySnapshot>(
+            stream: _courseStream,
+            builder:
+                (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
+              if (snapshot.hasError) {
+                return Center(child: const Text('Something went wrong'));
+              }
+
+              if (snapshot.connectionState == ConnectionState.waiting) {
+                return Center(
+                  child: CircularProgressIndicator(),
+                );
+              }
+              return ListView(
+                children: snapshot.data!.docs
+                    .map((DocumentSnapshot document) {
+                      Map<String, dynamic> data =
+                          document.data()! as Map<String, dynamic>;
+                      return Padding(
+                        padding: const EdgeInsets.only(left: 20, right: 20),
+                        child: Stack(
+                          children: [
+                            Container(
+                              height: 200,
+                              child: Card(
+                                child: Padding(
+                                  padding: const EdgeInsets.all(10),
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Expanded(
+                                          child: Container(
+                                              width: double.maxFinite,
+                                              child: Image.network(
+                                                data['img'],
+                                                fit: BoxFit.cover,
+                                              ))),
+                                      SizedBox(
+                                        height: 5,
+                                      ),
+                                      Text(data['course_name']),
+                                      Text(data['course_details'])
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ),
+                            Positioned(
+                                child: Card(
+                              child: Container(
+                                width: 100,
+                                height: 60,
+                                child: Row(children: [
+                                  IconButton(onPressed: () {}, icon: icon)
+                                ]),
+                              ),
+                            ))
+                          ],
+                        ),
+                      );
+                    })
+                    .toList()
+                    .cast(),
+              );
+            },
+          )
           // Center(
           //     child:
           //     Text('Home Screen'
