@@ -67,6 +67,15 @@ class _HomeScreenState extends State<HomeScreen> {
     final Stream<QuerySnapshot> _courseStream =
         FirebaseFirestore.instance.collection('courses').snapshots();
 
+    Future<void> deleteCourse(selectedDocument) {
+      return FirebaseFirestore.instance
+          .collection('courses')
+          .doc(selectedDocument)
+          .delete()
+          .then((value) => print('Course has been deleted'))
+          .catchError((error) => print(error));
+    }
+
     return SafeArea(
       child: Scaffold(
           appBar: AppBar(
@@ -122,7 +131,12 @@ class _HomeScreenState extends State<HomeScreen> {
                                       SizedBox(
                                         height: 5,
                                       ),
-                                      Text(data['course_name']),
+                                      Text(
+                                        data['course_name'],
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.w600,
+                                            fontSize: 20),
+                                      ),
                                       Text(data['course_details'])
                                     ],
                                   ),
@@ -130,15 +144,32 @@ class _HomeScreenState extends State<HomeScreen> {
                               ),
                             ),
                             Positioned(
+                                right: 0,
                                 child: Card(
-                              child: Container(
-                                width: 100,
-                                height: 60,
-                                child: Row(children: [
-                                  IconButton(onPressed: () {}, icon: icon)
-                                ]),
-                              ),
-                            ))
+                                  child: Container(
+                                    width: 120,
+                                    height: 60,
+                                    child: Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        children: [
+                                          IconButton(
+                                              onPressed: () {},
+                                              icon: Icon(
+                                                Icons.edit,
+                                                color: Colors.amber,
+                                              )),
+                                          IconButton(
+                                              onPressed: () {
+                                                deleteCourse(document.id);
+                                              },
+                                              icon: Icon(
+                                                Icons.remove_circle,
+                                                color: Colors.red,
+                                              ))
+                                        ]),
+                                  ),
+                                ))
                           ],
                         ),
                       );
