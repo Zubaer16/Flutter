@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_main/views/add_new_course.dart';
+import 'package:firebase_main/views/update_course.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
@@ -74,6 +75,16 @@ class _HomeScreenState extends State<HomeScreen> {
           .delete()
           .then((value) => print('Course has been deleted'))
           .catchError((error) => print(error));
+    }
+
+    Future<void> update(selectedDocumentID, title, description, img) {
+      return showModalBottomSheet(
+          isScrollControlled: true,
+          backgroundColor: Colors.transparent,
+          context: context,
+          builder: (context) {
+            return updateCourse(selectedDocumentID, title, description, img);
+          });
     }
 
     return SafeArea(
@@ -154,7 +165,13 @@ class _HomeScreenState extends State<HomeScreen> {
                                             MainAxisAlignment.center,
                                         children: [
                                           IconButton(
-                                              onPressed: () {},
+                                              onPressed: () {
+                                                update(
+                                                    document.id,
+                                                    data['course_name'],
+                                                    data['course_details'],
+                                                    data['img']);
+                                              },
                                               icon: Icon(
                                                 Icons.edit,
                                                 color: Colors.amber,
