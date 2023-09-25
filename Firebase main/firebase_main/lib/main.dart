@@ -1,6 +1,7 @@
 import 'package:firebase_main/views/recommended.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter_stripe/flutter_stripe.dart';
 import 'package:get_storage/get_storage.dart';
 
 import 'views/splash_screen.dart';
@@ -9,6 +10,8 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
   await GetStorage.init();
+  Stripe.publishableKey =
+      'pk_test_51NuG9RCE3LCEeQ9nSjaZfDcBJ49jOqtA78M7NGNxv3szHG9DTIuTAtu1t9ISSExxb85hTgMH4EnwsopkEGSl3OCi00jCsn7KeL';
   runApp(const MyApp());
 }
 
