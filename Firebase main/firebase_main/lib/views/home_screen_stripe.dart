@@ -1,3 +1,4 @@
+import 'package:firebase_main/controller/payment_controller.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreenStripe extends StatefulWidget {
@@ -8,14 +9,14 @@ class HomeScreenStripe extends StatefulWidget {
 }
 
 class _HomeScreenStripeState extends State<HomeScreenStripe> {
-  // var obj = PaymentController();
+  var obj = PaymentController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
         child: ElevatedButton(
           onPressed: () {
-            // obj.make
+            obj.makePayment(amount: '5', currency: 'USD');
           },
           child: Text('Make A Payment'),
         ),
