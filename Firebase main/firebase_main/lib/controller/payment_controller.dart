@@ -14,13 +14,17 @@ class PaymentController {
       if (paymentIntentData != null) {
         await Stripe.instance.initPaymentSheet(
             paymentSheetParameters: SetupPaymentSheetParameters(
-                applePay: PaymentSheetApplePay(merchantCountryCode: 'US'),
-                googlePay: PaymentSheetGooglePay(merchantCountryCode: 'US'),
-                merchantDisplayName: 'Prospects',
-                customerId: paymentIntentData!['customer'],
-                paymentIntentClientSecret: paymentIntentData!['client_secret'],
-                customerEphemeralKeySecret:
-                    paymentIntentData!['ephemeralKey']));
+          // applePay: PaymentSheetApplePay(merchantCountryCode: 'US',),
+          // googlePay: PaymentSheetGooglePay(
+          //   merchantCountryCode: 'US',
+          //   testEnv: true,
+          // ),
+          merchantDisplayName: 'Zubaer',
+          paymentIntentClientSecret: paymentIntentData!['client_secret'],
+          // customerId: paymentIntentData!['customer'],
+          // customerEphemeralKeySecret: paymentIntentData!['ephemeralKey'],
+        ));
+        displayPaymentSheet();
       }
     } catch (e, s) {
       print('exception: $e$s');
@@ -55,7 +59,8 @@ class PaymentController {
         body: body,
         headers: {
           'Authorization':
-              'sk_test_51NuG9RCE3LCEeQ9ntBwMvStNEn3ivLj4ese7ddaD4UyFMXUkCkRYhqbrCB8k1P5gwax7cAl2SGsN65nmGzvDGHDd00HS0ikYaA'
+              'Bearer sk_test_51NuG9RCE3LCEeQ9ntBwMvStNEn3ivLj4ese7ddaD4UyFMXUkCkRYhqbrCB8k1P5gwax7cAl2SGsN65nmGzvDGHDd00HS0ikYaA',
+          'Content-Type': 'application/x-www-form-urlencoded'
         },
       );
       return jsonDecode(response.body);
