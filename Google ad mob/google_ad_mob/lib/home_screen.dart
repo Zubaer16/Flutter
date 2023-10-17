@@ -1,5 +1,4 @@
 import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 
@@ -29,14 +28,24 @@ class _HomeScreenState extends State<HomeScreen> {
           debugPrint('$ad loaded.');
           setState(() {
             _isLoaded = true;
-            print(_isLoaded);
           });
         },
         // Called when an ad request failed.
         onAdFailedToLoad: (ad, err) {
-          debugPrint('BannerAd failed to load: ${err}');
+          debugPrint('BannerAd failed to load: $err');
           // Dispose the ad here to free resources.
           ad.dispose();
+        },
+        onAdOpened: (Ad ad) {
+          print('Ad is opened');
+        },
+        // Called when an ad removes an overlay that covers the screen.
+        onAdClosed: (Ad ad) {
+          print('Ad is closed');
+        },
+        // Called when an impression occurs on the ad.
+        onAdImpression: (Ad ad) {
+          print('Ad impressioned');
         },
       ),
     )..load();
@@ -52,7 +61,17 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(child: AdWidget(ad: _bannerAd!)),
+      body: Stack(
+        // clipBehavior: Clip.none,
+        children: [
+          Center(child: AdWidget(ad: _bannerAd!)),
+          Container(
+            height: 200,
+            width: 200,
+            color: Colors.red,
+          )
+        ],
+      ),
     );
   }
 }
