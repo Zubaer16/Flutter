@@ -2,14 +2,14 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 
-class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key});
+class BannerAdvertise extends StatefulWidget {
+  const BannerAdvertise({super.key});
 
   @override
-  State<HomeScreen> createState() => _HomeScreenState();
+  State<BannerAdvertise> createState() => _BannerAdvertiseState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _BannerAdvertiseState extends State<BannerAdvertise> {
   BannerAd? _bannerAd;
   bool _isLoaded = false;
 
