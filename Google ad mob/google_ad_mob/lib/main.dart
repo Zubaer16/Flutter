@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_ad_mob/banner_advertise.dart';
 import 'package:google_ad_mob/interstitial_advertise.dart';
+import 'package:google_ad_mob/native_advertise.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 
 void main() {
@@ -36,7 +37,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const BannerAdvertise(),
+      home: const NativeAdvertise(),
     );
   }
 }
