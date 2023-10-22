@@ -1,0 +1,11 @@
+*** Google admob (Test version)
+	1. Banner ad. (Done)
+	2. Interstitial ad.(Done)
+	3. Native ad.(Done)
+	4. Rewarded ad.(Done)
+
+*** Google admob (Real id)
+	1. Banner ad. ("Advertise failed to load". Possible solution - linked app to Firebase on AdMob UI)
+	2. Interstitial ad.(same)
+	3. Native ad.(same)
+	4. Rewarded ad.(same)
