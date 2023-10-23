@@ -12,8 +12,8 @@
 		# For manual integration see afran sarker and other youtube tutorial
 		# For automatic integration (as per docs)
 		   
-		   First, install Firebase cli, then login to firebase_cli, then add flutterfire_cli then configure flutterfire
-		   then initial app in void main, then run
+		   First, install Firebase cli, then login to firebase_cli, then add flutterfire_cli then configure flutterfire, (make sure you are your project directory
+run this export PATH="$PATH":"$HOME/.pub-cache/bin") for ubuntu, then initial app in void main, then run
 		   
 		   There will be 2 erros, 1 in android/app/build.gradle - change google services version 4.10 to 4.15
 		   			  Another 1 in android/build.gradle - change minsdkversion 19 to 21
