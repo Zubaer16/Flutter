@@ -70,6 +70,8 @@ class DefaultFirebaseOptions {
     projectId: 'fir-test-89f19',
     databaseURL: 'https://fir-test-89f19-default-rtdb.firebaseio.com',
     storageBucket: 'fir-test-89f19.appspot.com',
+    androidClientId: '13219338302-12d8anvva2g6a7ns4auqf59dr9upt34q.apps.googleusercontent.com',
+    iosClientId: '13219338302-07vf078gsdc673vvbc6efoqeqos4pdu5.apps.googleusercontent.com',
     iosBundleId: 'com.example.firebaseTest',
   );
 
@@ -80,6 +82,8 @@ class DefaultFirebaseOptions {
     projectId: 'fir-test-89f19',
     databaseURL: 'https://fir-test-89f19-default-rtdb.firebaseio.com',
     storageBucket: 'fir-test-89f19.appspot.com',
+    androidClientId: '13219338302-12d8anvva2g6a7ns4auqf59dr9upt34q.apps.googleusercontent.com',
+    iosClientId: '13219338302-a5tn1fiqi9l0gq554h1rn0tpf9kd8pv9.apps.googleusercontent.com',
     iosBundleId: 'com.example.firebaseTest.RunnerTests',
   );
 }
