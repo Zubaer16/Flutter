@@ -1,11 +1,12 @@
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_test/dashboard_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
-  Future<UserCredential> signInWithGoogle() async {
+  Future signInWithGoogle(context) async {
     // Trigger the authentication flow
     final GoogleSignInAccount? googleUser = await GoogleSignIn().signIn();
 
@@ -19,8 +20,14 @@ class HomeScreen extends StatelessWidget {
       idToken: googleAuth?.idToken,
     );
 
+    UserCredential? userCredential =
+        await FirebaseAuth.instance.signInWithCredential(credential);
+    User? user = userCredential.user;
+    if (user!.uid.isNotEmpty) {
+      Navigator.push(context,
+          MaterialPageRoute(builder: (context) => DashBoardScreen(user: user)));
+    }
     // Once signed in, return the UserCredential
-    return await FirebaseAuth.instance.signInWithCredential(credential);
   }
 
   @override
@@ -105,7 +112,7 @@ class HomeScreen extends StatelessWidget {
             ),
             ElevatedButton(
                 onPressed: () {
-                  signInWithGoogle();
+                  signInWithGoogle(context);
                 },
                 child: Text('Sign up with google')),
             TextButton(
