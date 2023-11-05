@@ -26,8 +26,10 @@ class HomeScreen extends StatelessWidget {
     User? user = userCredential.user;
 
     if (user!.uid.isNotEmpty) {
-      Navigator.push(context,
-          MaterialPageRoute(builder: (context) => DashBoardScreen(user: user)));
+      Navigator.push(
+          context,
+          MaterialPageRoute(
+              builder: (context) => DashBoardScreen(googleUser: user)));
     }
     // Once signed in, return the UserCredential
   }
