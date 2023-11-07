@@ -38,6 +38,28 @@ class HomeScreen extends StatelessWidget {
     // Once signed in, return the UserCredential
   }
 
+  Future verifyPhone(phone, context) async {
+    await FirebaseAuth.instance.verifyPhoneNumber(
+      phoneNumber: phone,
+      verificationCompleted: (PhoneAuthCredential credential) async {
+        UserCredential _userCredential =
+            await FirebaseAuth.instance.signInWithCredential(credential);
+        User? user = _userCredential.user;
+        if (user!.uid.isNotEmpty) {
+          Navigator.push(
+              context,
+              MaterialPageRoute(
+                  builder: (context) => DashBoardScreen(
+                        phoneUser: phone,
+                      )));
+        }
+      },
+      verificationFailed: (FirebaseAuthException e) {},
+      codeSent: (String verificationId, int? resendToken) {},
+      codeAutoRetrievalTimeout: (String verificationId) {},
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
