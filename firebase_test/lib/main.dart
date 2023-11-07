@@ -24,6 +24,6 @@ class MyApp extends StatelessWidget {
           useMaterial3: true,
         ),
         debugShowCheckedModeBanner: false,
-        home: const HomeScreen());
+        home: HomeScreen());
   }
 }
