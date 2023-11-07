@@ -45,22 +45,22 @@ class HomeScreen extends StatelessWidget {
             child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(
+            const Text(
               'Please sign up first',
               style: TextStyle(fontWeight: FontWeight.w800, fontSize: 30),
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             SizedBox(
                 width: MediaQuery.of(context).size.width - 50,
                 child: TextFormField(
                   keyboardType: TextInputType.phone,
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                     hintText: 'Enter your phone number',
                   ),
                 )),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             SizedBox(
@@ -68,18 +68,18 @@ class HomeScreen extends StatelessWidget {
                 child: TextFormField(
                   obscureText: true,
                   obscuringCharacter: '*',
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                     hintText: 'Enter password',
                   ),
                 )),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
-            ElevatedButton(onPressed: () {}, child: Text('Sign up')),
-            SizedBox(
+            ElevatedButton(onPressed: () {}, child: const Text('Sign up')),
+            const SizedBox(
               height: 10,
             ),
-            Text(
+            const Text(
               'OR',
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.w700),
             ),
@@ -87,11 +87,11 @@ class HomeScreen extends StatelessWidget {
                 width: MediaQuery.of(context).size.width - 50,
                 child: TextFormField(
                   keyboardType: TextInputType.emailAddress,
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                     hintText: 'Enter your email',
                   ),
                 )),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             SizedBox(
@@ -99,18 +99,18 @@ class HomeScreen extends StatelessWidget {
                 child: TextFormField(
                   obscureText: true,
                   obscuringCharacter: '*',
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                     hintText: 'Enter password',
                   ),
                 )),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
-            ElevatedButton(onPressed: () {}, child: Text('Sign up')),
-            SizedBox(
+            ElevatedButton(onPressed: () {}, child: const Text('Sign up')),
+            const SizedBox(
               height: 10,
             ),
-            Text(
+            const Text(
               'OR',
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.w700),
             ),
@@ -118,10 +118,10 @@ class HomeScreen extends StatelessWidget {
                 onPressed: () {
                   signInWithGoogle(context);
                 },
-                child: Text('Sign up with google')),
+                child: const Text('Sign up with google')),
             TextButton(
                 onPressed: () {},
-                child: Text('Already have an account? Login here'))
+                child: const Text('Already have an account? Login here'))
           ],
         )),
       ),
