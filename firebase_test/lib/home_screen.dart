@@ -91,19 +91,6 @@ class HomeScreen extends StatelessWidget {
               const SizedBox(
                 height: 10,
               ),
-              SizedBox(
-                  width: MediaQuery.of(context).size.width - 50,
-                  child: TextFormField(
-                    controller: _phonePassword,
-                    obscureText: true,
-                    obscuringCharacter: '*',
-                    decoration: const InputDecoration(
-                      hintText: 'Enter password',
-                    ),
-                  )),
-              const SizedBox(
-                height: 10,
-              ),
               ElevatedButton(onPressed: () {}, child: const Text('Sign up')),
               const SizedBox(
                 height: 10,
