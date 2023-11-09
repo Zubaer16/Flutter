@@ -7,7 +7,6 @@ import 'package:google_sign_in/google_sign_in.dart';
 class HomeScreen extends StatelessWidget {
   HomeScreen({super.key});
   final TextEditingController _phoneNumber = TextEditingController();
-  final TextEditingController _phonePassword = TextEditingController();
   final TextEditingController _email = TextEditingController();
   final TextEditingController _emailPassword = TextEditingController();
 
