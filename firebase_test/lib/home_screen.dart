@@ -4,60 +4,13 @@ import 'package:firebase_test/dashboard_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
+import 'auth_helper_google.dart';
+
 class HomeScreen extends StatelessWidget {
   HomeScreen({super.key});
   final TextEditingController _phoneNumber = TextEditingController();
   final TextEditingController _email = TextEditingController();
   final TextEditingController _emailPassword = TextEditingController();
-
-  Future signInWithGoogle(context) async {
-    // Trigger the authentication flow
-    final GoogleSignInAccount? googleUser = await GoogleSignIn().signIn();
-
-    // Obtain the auth details from the request
-    final GoogleSignInAuthentication? googleAuth =
-        await googleUser?.authentication;
-
-    // Create a new credential
-    final credential = GoogleAuthProvider.credential(
-      accessToken: googleAuth?.accessToken,
-      idToken: googleAuth?.idToken,
-    );
-
-    UserCredential? userCredential =
-        await FirebaseAuth.instance.signInWithCredential(credential);
-    User? user = userCredential.user;
-
-    if (user!.uid.isNotEmpty) {
-      Navigator.push(
-          context,
-          MaterialPageRoute(
-              builder: (context) => DashBoardScreen(googleUser: user)));
-    }
-    // Once signed in, return the UserCredential
-  }
-
-  Future verifyPhone(phone, context) async {
-    await FirebaseAuth.instance.verifyPhoneNumber(
-      phoneNumber: phone,
-      verificationCompleted: (PhoneAuthCredential credential) async {
-        UserCredential _userCredential =
-            await FirebaseAuth.instance.signInWithCredential(credential);
-        User? user = _userCredential.user;
-        if (user!.uid.isNotEmpty) {
-          Navigator.push(
-              context,
-              MaterialPageRoute(
-                  builder: (context) => DashBoardScreen(
-                        phoneUser: phone,
-                      )));
-        }
-      },
-      verificationFailed: (FirebaseAuthException e) {},
-      codeSent: (String verificationId, int? resendToken) {},
-      codeAutoRetrievalTimeout: (String verificationId) {},
-    );
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -133,7 +86,7 @@ class HomeScreen extends StatelessWidget {
               ),
               ElevatedButton(
                   onPressed: () {
-                    signInWithGoogle(context);
+                    AuthHelperGoogle().signInWithGoogle(context);
                   },
                   child: const Text('Sign in with google')),
               TextButton(
