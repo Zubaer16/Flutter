@@ -21,6 +21,7 @@ class AuthHelperPhone {
       },
       verificationFailed: (FirebaseAuthException e) {},
       codeSent: (String verificationId, int? resendToken) {},
+      timeout: Duration(seconds: 60),
       codeAutoRetrievalTimeout: (String verificationId) {},
     );
   }
