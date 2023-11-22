@@ -37,11 +37,24 @@ class AuthHelperPhone {
                     controller: _otpController,
                   ),
                   ElevatedButton(
-                      onPressed: () {
+                      onPressed: () async {
                         PhoneAuthCredential credential =
                             PhoneAuthProvider.credential(
                                 verificationId: verificationId,
                                 smsCode: _otpController.text);
+
+                        UserCredential _userCredential = await FirebaseAuth
+                            .instance
+                            .signInWithCredential(credential);
+                        User? user = _userCredential.user;
+                        if (user!.uid.isNotEmpty) {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => DashBoardScreen(
+                                        phoneUser: phone,
+                                      )));
+                        }
                       },
                       child: Text('Submit'))
                 ]),
