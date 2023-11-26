@@ -14,7 +14,7 @@ class DashBoardScreen extends StatelessWidget {
     print(FirebaseAuth.instance.currentUser?.uid);
     return Scaffold(
       body: Center(
-        child: Text('Welcome ${googleUser?.displayName}'),
+        child: Text('Welcome  ${googleUser?.displayName}'),
       ),
     );
   }
