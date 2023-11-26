@@ -15,7 +15,7 @@ class DashBoardScreen extends StatelessWidget {
     return Scaffold(
       body: Center(
         child: Text(
-            'Welcome  ${googleUser != null ? googleUser?.displayName : phoneUser != null ? phoneUser?.displayName : 'Login failed'}'),
+            'Welcome  ${googleUser != null ? googleUser?.displayName : phoneUser != null ? phoneUser?.phoneNumber : "Error"}'),
       ),
     );
   }

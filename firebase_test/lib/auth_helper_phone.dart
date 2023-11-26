@@ -17,7 +17,7 @@ class AuthHelperPhone {
               context,
               MaterialPageRoute(
                   builder: (context) => DashBoardScreen(
-                        phoneUser: phone,
+                        phoneUser: user,
                       )));
         }
       },
@@ -52,7 +52,7 @@ class AuthHelperPhone {
                               context,
                               MaterialPageRoute(
                                   builder: (context) => DashBoardScreen(
-                                        phoneUser: phone,
+                                        phoneUser: user,
                                       )));
                         }
                       },

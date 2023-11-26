@@ -1,3 +1,4 @@
+import 'package:firebase_test/auth_helper_phone.dart';
 import 'package:flutter/material.dart';
 import 'auth_helper_google.dart';
 
@@ -38,7 +39,11 @@ class HomeScreen extends StatelessWidget {
               const SizedBox(
                 height: 10,
               ),
-              ElevatedButton(onPressed: () {}, child: const Text('Sign up')),
+              ElevatedButton(
+                  onPressed: () {
+                    AuthHelperPhone().verifyPhone(_phoneNumber.text, context);
+                  },
+                  child: const Text('Sign in')),
               const SizedBox(
                 height: 10,
               ),
