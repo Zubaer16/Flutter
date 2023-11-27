@@ -3,11 +3,11 @@ import 'package:firebase_auth/firebase_auth.dart';
 
 class DashBoardScreen extends StatelessWidget {
   const DashBoardScreen(
-      {super.key, this.googleUser, this.phoneUser, this.emailUser});
+      {super.key, this.googleUser, this.phoneUser, this.emailPasswordUser});
 
   final User? googleUser;
   final User? phoneUser;
-  final User? emailUser;
+  final User? emailPasswordUser;
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +15,7 @@ class DashBoardScreen extends StatelessWidget {
     return Scaffold(
       body: Center(
         child: Text(
-            'Welcome  ${googleUser != null ? googleUser?.displayName : phoneUser != null ? phoneUser?.phoneNumber : "Error"}'),
+            'Welcome  ${googleUser != null ? googleUser!.displayName : phoneUser != null ? phoneUser!.phoneNumber : emailPasswordUser != null ? emailPasswordUser!.email : 'Signup failed'}'),
       ),
     );
   }

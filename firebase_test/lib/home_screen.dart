@@ -1,3 +1,4 @@
+import 'package:firebase_test/auth_helper_email.dart';
 import 'package:firebase_test/auth_helper_phone.dart';
 import 'package:flutter/material.dart';
 import 'auth_helper_google.dart';
@@ -76,7 +77,12 @@ class HomeScreen extends StatelessWidget {
               const SizedBox(
                 height: 10,
               ),
-              ElevatedButton(onPressed: () {}, child: const Text('Sign up')),
+              ElevatedButton(
+                  onPressed: () {
+                    AuthHelperEmail().singUpWithEmailPassword(
+                        _email.text, _emailPassword.text, context);
+                  },
+                  child: const Text('Sign up')),
               const SizedBox(
                 height: 10,
               ),
