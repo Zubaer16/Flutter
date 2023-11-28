@@ -1,5 +1,6 @@
 import 'package:firebase_test/auth_helper_email.dart';
 import 'package:firebase_test/auth_helper_phone.dart';
+import 'package:firebase_test/login_screen.dart';
 import 'package:flutter/material.dart';
 import 'auth_helper_google.dart';
 
@@ -27,30 +28,6 @@ class HomeScreen extends StatelessWidget {
               ),
               const SizedBox(
                 height: 10,
-              ),
-              SizedBox(
-                  width: MediaQuery.of(context).size.width - 50,
-                  child: TextFormField(
-                    controller: _phoneNumber,
-                    keyboardType: TextInputType.phone,
-                    decoration: const InputDecoration(
-                      hintText: 'Enter your phone number',
-                    ),
-                  )),
-              const SizedBox(
-                height: 10,
-              ),
-              ElevatedButton(
-                  onPressed: () {
-                    AuthHelperPhone().verifyPhone(_phoneNumber.text, context);
-                  },
-                  child: const Text('Sign in')),
-              const SizedBox(
-                height: 10,
-              ),
-              const Text(
-                'OR',
-                style: TextStyle(fontSize: 20, fontWeight: FontWeight.w700),
               ),
               SizedBox(
                   width: MediaQuery.of(context).size.width - 50,
@@ -83,6 +60,33 @@ class HomeScreen extends StatelessWidget {
                         _email.text, _emailPassword.text, context);
                   },
                   child: const Text('Sign up')),
+              TextButton(
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (_) => LoginScreen()));
+                  },
+                  child: const Text('Already have an account? Login here')),
+              const Text(
+                'OR',
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.w700),
+              ),
+              SizedBox(
+                  width: MediaQuery.of(context).size.width - 50,
+                  child: TextFormField(
+                    controller: _phoneNumber,
+                    keyboardType: TextInputType.phone,
+                    decoration: const InputDecoration(
+                      hintText: 'Enter your phone number',
+                    ),
+                  )),
+              const SizedBox(
+                height: 10,
+              ),
+              ElevatedButton(
+                  onPressed: () {
+                    AuthHelperPhone().verifyPhone(_phoneNumber.text, context);
+                  },
+                  child: const Text('Sign in')),
               const SizedBox(
                 height: 10,
               ),
@@ -95,9 +99,6 @@ class HomeScreen extends StatelessWidget {
                     AuthHelperGoogle().signInWithGoogle(context);
                   },
                   child: const Text('Sign in with google')),
-              TextButton(
-                  onPressed: () {},
-                  child: const Text('Already have an account? Login here'))
             ],
           ),
         )),
