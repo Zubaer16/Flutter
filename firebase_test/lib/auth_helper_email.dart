@@ -13,8 +13,14 @@ class AuthHelperEmail {
       );
 
       var authCredential = credential.user;
-      var sendEmailVerification = await authCredential?.sendEmailVerification();
-      print('Please see confirmation url');
+
+      if (!authCredential!.emailVerified) {
+        await authCredential.sendEmailVerification();
+        print('A verification link will sent to your account');
+      }
+
+      //     .then((value) => print(authCredential.emailVerified));
+
       // if (authCredential!.uid.isNotEmpty) {
       //   Navigator.push(
       //       context,
