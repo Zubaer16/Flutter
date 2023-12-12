@@ -11,7 +11,7 @@ class FirestoreScreen extends StatelessWidget {
       body: Center(
         child: TextButton(
           onPressed: () {},
-          child: Text('Create document'),
+          child: const Text('Create document'),
         ),
       ),
     ));
