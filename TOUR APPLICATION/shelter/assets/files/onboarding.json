@@ -1,0 +1,17 @@
+[
+  {
+    "title": "Welcome",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
+    "source": "assets/files/welcome.json"
+  },
+  {
+    "title": "Categories",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
+    "source": "assets/files/categories.json"
+  },
+  {
+    "title": "Support",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
+    "source": "assets/files/support.json"
+  }
+]
