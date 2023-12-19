@@ -1,5 +1,5 @@
 // To parse this JSON data, do
-//
+
 //     final onboardingModel = onboardingModelFromJson(jsonString);
 
 import 'dart:convert';
