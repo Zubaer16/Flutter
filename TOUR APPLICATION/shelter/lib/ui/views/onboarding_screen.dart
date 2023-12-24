@@ -4,28 +4,36 @@ import 'package:lottie/lottie.dart';
 import 'package:shelter/helper/onboarding_helper.dart';
 import 'package:shelter/models/onboarding_model.dart';
 
-class OnboardingScreen extends StatelessWidget {
-  List<OnboardingModel>? onboardingData;
+class OnboardingScreen extends StatefulWidget {
+  const OnboardingScreen({super.key});
 
-  OnboardingScreen({super.key});
-  Future<void> getData() async {
-    onboardingData = await OnboardingHelper().readJson();
+  @override
+  State<OnboardingScreen> createState() => _OnboardingScreenState();
+}
+
+class _OnboardingScreenState extends State<OnboardingScreen> {
+  List<OnboardingModel>? onboardingData;
+  getData() async {
+    List<OnboardingModel> asyncData = await OnboardingHelper().readJson();
+    setState(() {
+      onboardingData = asyncData;
+    });
   }
 
   @override
   Widget build(BuildContext context) {
     getData();
+
     return SafeArea(
       child: Scaffold(
           body: Padding(
         padding: EdgeInsets.all(32.r),
         child: Column(
           children: [
-            Expanded(
-                flex: 2,
-                child: Lottie.asset(onboardingData!.isNotEmpty
-                    ? onboardingData![0].title
-                    : 'null')),
+            onboardingData!.isEmpty
+                ? Container()
+                : Expanded(
+                    flex: 2, child: Lottie.asset(onboardingData![0].source)),
             Expanded(
               flex: 1,
               child: Container(
