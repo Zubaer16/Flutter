@@ -14,7 +14,7 @@ class OnboardingScreen extends StatefulWidget {
 class _OnboardingScreenState extends State<OnboardingScreen> {
   List<OnboardingModel>? onboardingData;
   getData() async {
-    List<OnboardingModel> asyncData = await OnboardingHelper().readJson();
+    List<OnboardingModel>? asyncData = await OnboardingHelper().readJson();
     setState(() {
       onboardingData = asyncData;
     });
@@ -30,10 +30,11 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
         padding: EdgeInsets.all(32.r),
         child: Column(
           children: [
-            onboardingData!.isEmpty
-                ? Container()
-                : Expanded(
-                    flex: 2, child: Lottie.asset(onboardingData![0].source)),
+            Expanded(
+                flex: 2,
+                child: onboardingData != null
+                    ? Lottie.asset(onboardingData![0].source)
+                    : Container()),
             Expanded(
               flex: 1,
               child: Container(
