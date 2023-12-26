@@ -30,7 +30,7 @@ class MyApp extends StatelessWidget {
                 scaffoldBackgroundColor: AppColors.scaffoldColor),
             initialRoute: splash,
             getPages: getPages,
-            home: SplashScreen());
+            home: const SplashScreen());
       },
     );
   }

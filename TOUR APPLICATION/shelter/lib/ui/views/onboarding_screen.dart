@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 import 'package:lottie/lottie.dart';
+import 'package:shelter/const/app_colors.dart';
 import 'package:shelter/helper/onboarding_helper.dart';
 import 'package:shelter/models/onboarding_model.dart';
 
@@ -13,6 +15,7 @@ class OnboardingScreen extends StatefulWidget {
 
 class _OnboardingScreenState extends State<OnboardingScreen> {
   List<OnboardingModel>? onboardingData;
+  final RxInt _currentIndex = 0.obs;
   getData() async {
     List<OnboardingModel>? asyncData = await OnboardingHelper().readJson();
     setState(() {
@@ -33,14 +36,59 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             Expanded(
                 flex: 2,
                 child: onboardingData != null
-                    ? Lottie.asset(onboardingData![0].source)
+                    ? Obx(
+                        () => Lottie.asset(
+                            onboardingData![_currentIndex.toInt()].source),
+                      )
                     : Container()),
             Expanded(
-              flex: 1,
-              child: Container(
-                color: Colors.blue,
-              ),
-            )
+                flex: 1,
+                child: Container(
+                  decoration: ShapeDecoration(
+                    color: AppColors.onboardingShowdowColorWhite1,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20.r),
+                    ),
+                    shadows: [
+                      BoxShadow(
+                        color: AppColors.onboardingShowdowColorWhite2,
+                        blurRadius: 13.r,
+                        offset: Offset(5.w, 5.h),
+                        spreadRadius: 0,
+                      ),
+                      BoxShadow(
+                        color: AppColors.onboardingShowdowColorWhite3,
+                        blurRadius: 10.r,
+                        offset: Offset(-5.w, -5.h),
+                        spreadRadius: 0,
+                      ),
+                      BoxShadow(
+                        color: AppColors.onboardingShowdowColorblue,
+                        blurRadius: 10.r,
+                        offset: Offset(5.w, -5.h),
+                        spreadRadius: 0,
+                      ),
+                      BoxShadow(
+                        color: AppColors.onboardingShowdowColorblue,
+                        blurRadius: 10.r,
+                        offset: Offset(-5.w, 5.h),
+                        spreadRadius: 0,
+                      )
+                    ],
+                  ),
+                  child: Column(children: [
+                    onboardingData != null
+                        ? Obx(() =>
+                            Text(onboardingData![_currentIndex.toInt()].title))
+                        : Container(),
+                    onboardingData != null
+                        ? Obx(
+                            () => Text(onboardingData![_currentIndex.toInt()]
+                                .description),
+                          )
+                        : Container(),
+                  ]),
+                ))
           ],
         ),
       )),
