@@ -1,17 +1,17 @@
 [
   {
     "title": "Welcome",
-    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
+    "description": "Lorem Ipsum is simply \ndummy text of the printing \nand typesetting industry. ",
     "source": "assets/files/welcome.json"
   },
   {
     "title": "Categories",
-    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
+    "description": "Lorem Ipsum is simply \ndummy text of the printing \nand typesetting industry. ",
     "source": "assets/files/categories.json"
   },
   {
     "title": "Support",
-    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
+    "description": "Lorem Ipsum is simply \ndummy text of the printing \nand typesetting industry. ",
     "source": "assets/files/support.json"
   }
 ]

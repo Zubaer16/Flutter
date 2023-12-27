@@ -6,4 +6,5 @@ class AppColors {
   static const onboardingShowdowColorWhite2 = Color(0xE5D2D5D8);
   static const onboardingShowdowColorWhite3 = Color(0xE5FFFFFF);
   static const onboardingShowdowColorblue = Color(0x33D2D5D8);
+  static const onboardingInactiveColorblack = Color(0xFF736F76);
 }
