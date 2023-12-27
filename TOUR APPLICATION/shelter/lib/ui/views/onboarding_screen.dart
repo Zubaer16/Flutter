@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:lottie/lottie.dart';
 import 'package:shelter/const/app_colors.dart';
+import 'package:shelter/const/app_icons.dart';
 import 'package:shelter/helper/onboarding_helper.dart';
 import 'package:shelter/models/onboarding_model.dart';
 import 'package:shelter/ui/styles/styles.dart';
@@ -98,6 +99,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                               )
                             : Container(),
                         Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             DotsIndicator(
                               dotsCount: onboardingData != null
@@ -122,29 +124,33 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                                     color:
                                         AppColors.onboardingShowdowColorWhite2,
                                     blurRadius: 13.r,
-                                    offset: Offset(5, 5),
+                                    offset: Offset(5.w, 5.h),
                                     spreadRadius: 0,
                                   ),
                                   BoxShadow(
                                     color:
                                         AppColors.onboardingShowdowColorWhite3,
                                     blurRadius: 10.r,
-                                    offset: Offset(-5, -5),
+                                    offset: Offset(-5.w, -5.h),
                                     spreadRadius: 0,
                                   ),
                                   BoxShadow(
                                     color: AppColors.onboardingShowdowColorblue,
                                     blurRadius: 10.r,
-                                    offset: Offset(5, -5),
+                                    offset: Offset(5.w, -5.h),
                                     spreadRadius: 0,
                                   ),
                                   BoxShadow(
                                     color: AppColors.onboardingShowdowColorblue,
                                     blurRadius: 10.r,
-                                    offset: Offset(-5, 5),
+                                    offset: Offset(-5.w, 5.h),
                                     spreadRadius: 0,
                                   )
                                 ],
+                              ),
+                              child: Icon(
+                                AppIcons.doubleRightArrow,
+                                size: 28.w,
                               ),
                             )
                           ],
