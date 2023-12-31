@@ -18,7 +18,7 @@ class OnboardingScreen extends StatefulWidget {
 
 class _OnboardingScreenState extends State<OnboardingScreen> {
   List<OnboardingModel>? onboardingData;
-  final RxInt _currentIndex = 0.obs;
+  RxInt _currentIndex = 0.obs;
   getData() async {
     List<OnboardingModel>? asyncData = await OnboardingHelper().readJson();
     setState(() {
@@ -79,83 +79,101 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                       )
                     ],
                   ),
-                  child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        onboardingData != null
-                            ? Obx(() => Text(
-                                  onboardingData![_currentIndex.toInt()].title,
-                                  style: AppStyles.onboardingTitleTextStyle,
-                                ))
-                            : Container(),
-                        onboardingData != null
-                            ? Obx(
-                                () => Text(
-                                  onboardingData![_currentIndex.toInt()]
-                                      .description,
-                                  style:
-                                      AppStyles.onboardingDescriptionTextStyle,
+                  child: Padding(
+                    padding: const EdgeInsets.all(30.0).r,
+                    child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          onboardingData != null
+                              ? Obx(() => Text(
+                                    onboardingData![_currentIndex.toInt()]
+                                        .title,
+                                    style: AppStyles.onboardingTitleTextStyle,
+                                  ))
+                              : Container(),
+                          SizedBox(height: 15.h),
+                          onboardingData != null
+                              ? Obx(
+                                  () => Text(
+                                    onboardingData![_currentIndex.toInt()]
+                                        .description,
+                                    style: AppStyles
+                                        .onboardingDescriptionTextStyle,
+                                  ),
+                                )
+                              : Container(),
+                          SizedBox(height: 45.h),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              DotsIndicator(
+                                dotsCount: onboardingData != null
+                                    ? onboardingData!.length
+                                    : 3,
+                                position: _currentIndex.toInt(),
+                                decorator: DotsDecorator(
+                                  activeColor: Colors.black,
+                                  color: AppColors.onboardingInactiveColorblack,
+                                  activeSize: Size.fromRadius(8.r),
+                                  size: Size.fromRadius(6.r),
+                                ),
+                              ),
+                              InkWell(
+                                onTap: () {
+                                  if (_currentIndex.toInt() == 2) {
+                                    _currentIndex = 0.obs;
+                                  } else {
+                                    _currentIndex++;
+                                  }
+                                },
+                                child: Container(
+                                  width: 37.w,
+                                  height: 37.h,
+                                  decoration: ShapeDecoration(
+                                    color:
+                                        AppColors.onboardingShowdowColorWhite1,
+                                    shape: const OvalBorder(),
+                                    shadows: [
+                                      BoxShadow(
+                                        color: AppColors
+                                            .onboardingShowdowColorWhite2,
+                                        blurRadius: 13.r,
+                                        offset: Offset(5.w, 5.h),
+                                        spreadRadius: 0,
+                                      ),
+                                      BoxShadow(
+                                        color: AppColors
+                                            .onboardingShowdowColorWhite3,
+                                        blurRadius: 10.r,
+                                        offset: Offset(-5.w, -5.h),
+                                        spreadRadius: 0,
+                                      ),
+                                      BoxShadow(
+                                        color: AppColors
+                                            .onboardingShowdowColorblue,
+                                        blurRadius: 10.r,
+                                        offset: Offset(5.w, -5.h),
+                                        spreadRadius: 0,
+                                      ),
+                                      BoxShadow(
+                                        color: AppColors
+                                            .onboardingShowdowColorblue,
+                                        blurRadius: 10.r,
+                                        offset: Offset(-5.w, 5.h),
+                                        spreadRadius: 0,
+                                      )
+                                    ],
+                                  ),
+                                  child: Icon(
+                                    AppIcons.doubleRightArrow,
+                                    size: 37.w,
+                                  ),
                                 ),
                               )
-                            : Container(),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            DotsIndicator(
-                              dotsCount: onboardingData != null
-                                  ? onboardingData!.length
-                                  : 3,
-                              position: _currentIndex.toInt(),
-                              decorator: DotsDecorator(
-                                activeColor: Colors.black,
-                                color: AppColors.onboardingInactiveColorblack,
-                                activeSize: Size.fromRadius(8.r),
-                                size: Size.fromRadius(6.r),
-                              ),
-                            ),
-                            Container(
-                              width: 37.w,
-                              height: 37.h,
-                              decoration: ShapeDecoration(
-                                color: AppColors.onboardingShowdowColorWhite1,
-                                shape: OvalBorder(),
-                                shadows: [
-                                  BoxShadow(
-                                    color:
-                                        AppColors.onboardingShowdowColorWhite2,
-                                    blurRadius: 13.r,
-                                    offset: Offset(5.w, 5.h),
-                                    spreadRadius: 0,
-                                  ),
-                                  BoxShadow(
-                                    color:
-                                        AppColors.onboardingShowdowColorWhite3,
-                                    blurRadius: 10.r,
-                                    offset: Offset(-5.w, -5.h),
-                                    spreadRadius: 0,
-                                  ),
-                                  BoxShadow(
-                                    color: AppColors.onboardingShowdowColorblue,
-                                    blurRadius: 10.r,
-                                    offset: Offset(5.w, -5.h),
-                                    spreadRadius: 0,
-                                  ),
-                                  BoxShadow(
-                                    color: AppColors.onboardingShowdowColorblue,
-                                    blurRadius: 10.r,
-                                    offset: Offset(-5.w, 5.h),
-                                    spreadRadius: 0,
-                                  )
-                                ],
-                              ),
-                              child: Icon(
-                                AppIcons.doubleRightArrow,
-                                size: 28.w,
-                              ),
-                            )
-                          ],
-                        )
-                      ]),
+                            ],
+                          )
+                        ]),
+                  ),
                 ))
           ],
         ),
