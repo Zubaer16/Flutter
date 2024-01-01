@@ -7,6 +7,7 @@ import 'package:shelter/const/app_colors.dart';
 import 'package:shelter/const/app_icons.dart';
 import 'package:shelter/helper/onboarding_helper.dart';
 import 'package:shelter/models/onboarding_model.dart';
+import 'package:shelter/ui/routes/route.dart';
 import 'package:shelter/ui/styles/styles.dart';
 
 class OnboardingScreen extends StatefulWidget {
@@ -121,7 +122,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                               InkWell(
                                 onTap: () {
                                   if (_currentIndex.toInt() == 2) {
-                                    _currentIndex = 0.obs;
+                                    Get.toNamed(signUp);
                                   } else {
                                     _currentIndex++;
                                   }
