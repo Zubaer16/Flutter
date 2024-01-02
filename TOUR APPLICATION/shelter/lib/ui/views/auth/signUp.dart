@@ -5,6 +5,9 @@ class SignUp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return SafeArea(
+        child: Scaffold(
+      body: Column(children: [Text('Create Your\nAccount')]),
+    ));
   }
 }

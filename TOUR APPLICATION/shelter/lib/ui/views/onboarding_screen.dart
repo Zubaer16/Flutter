@@ -49,31 +49,31 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 flex: 1,
                 child: Container(
                   decoration: ShapeDecoration(
-                    color: AppColors.onboardingShowdowColorWhite1,
+                    color: AppColors.brightGray,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20.r),
                     ),
                     shadows: [
                       BoxShadow(
-                        color: AppColors.onboardingShowdowColorWhite2,
+                        color: AppColors.lightGray,
                         blurRadius: 13.r,
                         offset: Offset(5.w, 5.h),
                         spreadRadius: 0,
                       ),
                       BoxShadow(
-                        color: AppColors.onboardingShowdowColorWhite3,
+                        color: AppColors.white,
                         blurRadius: 10.r,
                         offset: Offset(-5.w, -5.h),
                         spreadRadius: 0,
                       ),
                       BoxShadow(
-                        color: AppColors.onboardingShowdowColorblue,
+                        color: AppColors.lightGray_1,
                         blurRadius: 10.r,
                         offset: Offset(5.w, -5.h),
                         spreadRadius: 0,
                       ),
                       BoxShadow(
-                        color: AppColors.onboardingShowdowColorblue,
+                        color: AppColors.lightGray_1,
                         blurRadius: 10.r,
                         offset: Offset(-5.w, 5.h),
                         spreadRadius: 0,
@@ -114,14 +114,15 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                                 position: _currentIndex.toInt(),
                                 decorator: DotsDecorator(
                                   activeColor: Colors.black,
-                                  color: AppColors.onboardingInactiveColorblack,
+                                  color: AppColors.sonicSilver,
                                   activeSize: Size.fromRadius(8.r),
                                   size: Size.fromRadius(6.r),
                                 ),
                               ),
                               InkWell(
                                 onTap: () {
-                                  if (_currentIndex.toInt() == 2) {
+                                  if (_currentIndex.toInt() ==
+                                      onboardingData!.length - 1) {
                                     Get.toNamed(signUp);
                                   } else {
                                     _currentIndex++;
@@ -131,34 +132,29 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                                   width: 37.w,
                                   height: 37.h,
                                   decoration: ShapeDecoration(
-                                    color:
-                                        AppColors.onboardingShowdowColorWhite1,
+                                    color: AppColors.brightGray,
                                     shape: const OvalBorder(),
                                     shadows: [
                                       BoxShadow(
-                                        color: AppColors
-                                            .onboardingShowdowColorWhite2,
+                                        color: AppColors.lightGray,
                                         blurRadius: 13.r,
                                         offset: Offset(5.w, 5.h),
                                         spreadRadius: 0,
                                       ),
                                       BoxShadow(
-                                        color: AppColors
-                                            .onboardingShowdowColorWhite3,
+                                        color: AppColors.white,
                                         blurRadius: 10.r,
                                         offset: Offset(-5.w, -5.h),
                                         spreadRadius: 0,
                                       ),
                                       BoxShadow(
-                                        color: AppColors
-                                            .onboardingShowdowColorblue,
+                                        color: AppColors.lightGray_1,
                                         blurRadius: 10.r,
                                         offset: Offset(5.w, -5.h),
                                         spreadRadius: 0,
                                       ),
                                       BoxShadow(
-                                        color: AppColors
-                                            .onboardingShowdowColorblue,
+                                        color: AppColors.lightGray_1,
                                         blurRadius: 10.r,
                                         offset: Offset(-5.w, 5.h),
                                         spreadRadius: 0,

@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
                 primarySwatch: Colors.blue,
                 textTheme: GoogleFonts.poppinsTextTheme(
                     Theme.of(context).textTheme.apply()),
-                scaffoldBackgroundColor: AppColors.scaffoldColor),
+                scaffoldBackgroundColor: AppColors.brightGray),
             initialRoute: splash,
             getPages: getPages,
             home: const SplashScreen());

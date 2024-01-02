@@ -4,16 +4,26 @@ import 'package:get/get.dart';
 import 'package:shelter/const/app_strings.dart';
 import 'package:shelter/ui/routes/route.dart';
 
-class SplashScreen extends StatelessWidget {
+class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  State<SplashScreen> createState() => _SplashScreenState();
+}
+
+class _SplashScreenState extends State<SplashScreen> {
+  @override
+  void initState() {
     Future.delayed(
         const Duration(
           seconds: 3,
         ),
         () => Get.toNamed(onboarding));
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
           body: SizedBox(

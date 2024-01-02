@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 
 class AppColors {
-  static const scaffoldColor = Color(0xffE9EDF0);
-  static const onboardingShowdowColorWhite1 = Color(0xFFE9EDF0);
-  static const onboardingShowdowColorWhite2 = Color(0xE5D2D5D8);
-  static const onboardingShowdowColorWhite3 = Color(0xE5FFFFFF);
-  static const onboardingShowdowColorblue = Color(0x33D2D5D8);
-  static const onboardingInactiveColorblack = Color(0xFF736F76);
+  static const brightGray = Color(0xffE9EDF0);
+  static const lightGray = Color(0xE5D2D5D8);
+  static const lightGray_1 = Color(0x33D2D5D8);
+  static const white = Color(0xE5FFFFFF);
+  static const sonicSilver = Color(0xFF736F76);
 }
