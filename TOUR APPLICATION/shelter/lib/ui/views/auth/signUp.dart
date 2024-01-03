@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:shelter/ui/styles/styles.dart';
+import 'package:shelter/ui/widgets/violetButton.dart';
 
 class SignUp extends StatelessWidget {
   SignUp({super.key});
@@ -40,6 +41,10 @@ class SignUp extends StatelessWidget {
               controller: _passwordController,
               decoration: AppStyles.inputDecorationStyle_1('Enter Password'),
             ),
+            SizedBox(
+              height: 102.h,
+            ),
+            VioletButton()
           ]),
         ),
       ),
