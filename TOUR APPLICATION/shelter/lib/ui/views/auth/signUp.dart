@@ -44,7 +44,13 @@ class SignUp extends StatelessWidget {
             SizedBox(
               height: 102.h,
             ),
-            VioletButton()
+            VioletButton(
+              title: 'Create Account',
+            ),
+            SizedBox(
+              height: 10.h,
+            ),
+            Center(child: Text('--OR--', style: AppStyles.textStyle_4)),
           ]),
         ),
       ),
