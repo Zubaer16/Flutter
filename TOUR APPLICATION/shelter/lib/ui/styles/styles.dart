@@ -29,6 +29,16 @@ class AppStyles {
     fontSize: 16.sp,
     fontWeight: FontWeight.w400,
   );
+  static final textStyle_6 = TextStyle(
+    color: Colors.black,
+    fontSize: 18.sp,
+    fontWeight: FontWeight.w300,
+  );
+  static final textStyle_7 = TextStyle(
+    color: AppColors.violet,
+    fontSize: 18.sp,
+    fontWeight: FontWeight.w600,
+  );
   static inputDecorationStyle_1(String hintText) => InputDecoration(
         hintText: hintText,
         hintStyle: textStyle_5,

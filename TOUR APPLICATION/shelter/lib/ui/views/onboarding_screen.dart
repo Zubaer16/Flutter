@@ -102,7 +102,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                                   ),
                                 )
                               : Container(),
-                          SizedBox(height: 45.h),
+                          SizedBox(height: 34.h),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
@@ -167,7 +167,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                                 ),
                               )
                             ],
-                          )
+                          ),
                         ]),
                   ),
                 ))

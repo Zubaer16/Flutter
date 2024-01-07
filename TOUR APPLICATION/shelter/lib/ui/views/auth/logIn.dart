@@ -6,8 +6,8 @@ import 'package:shelter/ui/routes/route.dart';
 import 'package:shelter/ui/styles/styles.dart';
 import 'package:shelter/ui/widgets/violetButton.dart';
 
-class SignUp extends StatelessWidget {
-  SignUp({super.key});
+class LogIn extends StatelessWidget {
+  LogIn({super.key});
 
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
@@ -22,14 +22,9 @@ class SignUp extends StatelessWidget {
           child:
               Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
             Text(
-              'Create Your\nAccount',
+              'Login\nTo Your Account',
               style: AppStyles.textStyle_3,
             ),
-            SizedBox(
-              height: 12.h,
-            ),
-            Text('Create your account and start your\njourney',
-                style: AppStyles.textStyle_4),
             SizedBox(
               height: 102.h,
             ),
@@ -48,7 +43,7 @@ class SignUp extends StatelessWidget {
               height: 102.h,
             ),
             VioletButton(
-              title: 'Create Account',
+              title: 'Login',
             ),
             SizedBox(
               height: 10.h,
@@ -84,15 +79,15 @@ class SignUp extends StatelessWidget {
             Center(
               child: RichText(
                   text: TextSpan(
-                      text: 'Already an user? ',
+                      text: 'Donn\'t have registered yet? ',
                       style: AppStyles.textStyle_6,
                       children: [
                     TextSpan(
-                        text: 'Log In',
+                        text: 'Sign Up',
                         style: AppStyles.textStyle_7,
                         recognizer: TapGestureRecognizer()
                           ..onTap = () {
-                            Get.toNamed(logIn);
+                            Get.toNamed(signUp);
                           })
                   ])),
             )
