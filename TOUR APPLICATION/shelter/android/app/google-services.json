@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "524599079755",
+    "project_id": "shelter-105fe",
+    "storage_bucket": "shelter-105fe.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:524599079755:android:d43183b0b180ca29ae2ece",
+        "android_client_info": {
+          "package_name": "com.example.shelter"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAuUFBbNomA_9KH_MQ_V3e-QOWO7U1qHX8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -2,6 +2,7 @@ import 'package:get/get.dart';
 import 'package:shelter/ui/views/auth/logIn.dart';
 import 'package:shelter/ui/views/auth/signUp.dart';
 import 'package:shelter/ui/views/onboarding_screen.dart';
+import 'package:shelter/ui/views/privacy_policy.dart';
 import 'package:shelter/ui/views/splash_screen.dart';
 import 'package:shelter/ui/views/user_from.dart';
 
@@ -10,6 +11,7 @@ const String onboarding = '/onboarding-screen';
 const String signUp = '/sign-up-screen';
 const String logIn = '/log-in-screen';
 const String userForm = '/user-form-screen';
+const String privacyPolicy = '/privacy-policy-screen';
 
 // Control our page route flow
 
@@ -19,4 +21,5 @@ List<GetPage> getPages = [
   GetPage(name: signUp, page: () => SignUp()),
   GetPage(name: logIn, page: () => LogIn()),
   GetPage(name: userForm, page: () => UserForm()),
+  GetPage(name: privacyPolicy, page: () => PrivacyPolicy()),
 ];

@@ -5,13 +5,30 @@ import 'package:get/get.dart';
 import 'package:shelter/ui/routes/route.dart';
 import 'package:shelter/ui/styles/styles.dart';
 import 'package:shelter/ui/widgets/violetButton.dart';
+import 'package:toggle_switch/toggle_switch.dart';
 
 class UserForm extends StatelessWidget {
   UserForm({super.key});
+
   final TextEditingController _nameController = TextEditingController();
   final TextEditingController _phoneController = TextEditingController();
   final TextEditingController _addressController = TextEditingController();
-  final TextEditingController _dobController = TextEditingController();
+  final Rx<TextEditingController> _dobController = TextEditingController().obs;
+  final Rx<DateTime> selectedDate = DateTime.now().obs;
+
+  Future<void> _selectDate(BuildContext context) async {
+    final selected = await showDatePicker(
+        context: context,
+        initialDate: selectedDate.value,
+        firstDate: DateTime(2000),
+        lastDate: DateTime(2025));
+
+    if (selected != null && selected != selectedDate) {
+      _dobController.value.text =
+          '${selected.day}-${selected.month}-${selected.year}';
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -52,79 +69,53 @@ class UserForm extends StatelessWidget {
                         SizedBox(
                           height: 28.h,
                         ),
-                        TextFormField(
-                          controller: _dobController,
-                          readOnly: true,
-                          decoration: InputDecoration(
-                              suffixIcon: IconButton(
-                                onPressed: () {},
-                                icon: Icon(
-                                  Icons.calendar_month_rounded,
-                                  color: Colors.black,
+                        Obx(
+                          () => TextFormField(
+                            controller: _dobController.value,
+                            readOnly: true,
+                            decoration: InputDecoration(
+                                suffixIcon: IconButton(
+                                  onPressed: () => _selectDate(context),
+                                  icon: const Icon(
+                                    Icons.calendar_month_rounded,
+                                    color: Colors.black,
+                                  ),
                                 ),
-                              ),
-                              hintText: 'Date of Birth',
-                              hintStyle: TextStyle(
-                                color: Colors.black,
-                                fontSize: 16.sp,
-                                fontWeight: FontWeight.w400,
-                              )),
+                                hintText: 'Date of Birth',
+                                hintStyle: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 16.sp,
+                                  fontWeight: FontWeight.w400,
+                                )),
+                          ),
                         ),
                         SizedBox(
-                          height: 102.h,
+                          height: 28.h,
+                        ),
+                        ToggleSwitch(
+                          initialLabelIndex: 0,
+                          totalSwitches: 2,
+                          minWidth: 100.w,
+                          dividerMargin: 10.w,
+                          activeBgColor: const [Color(0xFFFC4646)],
+                          customTextStyles: const [
+                            TextStyle(color: Colors.white)
+                          ],
+                          labels: const ['Male', 'Female'],
+                          onToggle: (index) {
+                            print('switched to: $index');
+                          },
+                        ),
+                        SizedBox(
+                          height: 128.h,
                         ),
                         VioletButton(
                           title: 'Submit',
-                          onAction: () => Get.toNamed(userForm),
+                          onAction: () => Get.toNamed(privacyPolicy),
                         ),
                         SizedBox(
                           height: 10.h,
                         ),
-                        Center(
-                            child:
-                                Text('--OR--', style: AppStyles.textStyle_4)),
-                        SizedBox(
-                          height: 10.h,
-                        ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            IconButton(
-                              onPressed: () {},
-                              icon: Image.asset(
-                                'assets/icons/facebook.png',
-                                height: 23.h,
-                                width: 23.w,
-                              ),
-                            ),
-                            IconButton(
-                              onPressed: () {},
-                              icon: Image.asset(
-                                'assets/icons/google.png',
-                                height: 23.h,
-                                width: 23.w,
-                              ),
-                            ),
-                          ],
-                        ),
-                        SizedBox(
-                          height: 10.h,
-                        ),
-                        Center(
-                          child: RichText(
-                              text: TextSpan(
-                                  text: 'Already an user? ',
-                                  style: AppStyles.textStyle_6,
-                                  children: [
-                                TextSpan(
-                                    text: 'Log In',
-                                    style: AppStyles.textStyle_7,
-                                    recognizer: TapGestureRecognizer()
-                                      ..onTap = () {
-                                        Get.toNamed(logIn);
-                                      })
-                              ])),
-                        )
                       ]),
                 ),
               ),

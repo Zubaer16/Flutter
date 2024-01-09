@@ -7,4 +7,5 @@ class AppColors {
   static const white = Color(0xE5FFFFFF);
   static const sonicSilver = Color(0xFF736F76);
   static const violet = Color(0xFF7F00FF);
+  static const tartOrange = Color(0xFFFC4646);
 }
