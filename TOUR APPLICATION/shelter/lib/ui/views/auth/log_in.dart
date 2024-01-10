@@ -4,7 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:shelter/ui/routes/route.dart';
 import 'package:shelter/ui/styles/styles.dart';
-import 'package:shelter/ui/widgets/violetButton.dart';
+import 'package:shelter/ui/widgets/violet_button.dart';
 
 class LogIn extends StatelessWidget {
   LogIn({super.key});

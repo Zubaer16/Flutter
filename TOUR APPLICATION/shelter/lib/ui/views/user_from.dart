@@ -4,7 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:shelter/ui/routes/route.dart';
 import 'package:shelter/ui/styles/styles.dart';
-import 'package:shelter/ui/widgets/violetButton.dart';
+import 'package:shelter/ui/widgets/violet_button.dart';
 import 'package:toggle_switch/toggle_switch.dart';
 
 class UserForm extends StatelessWidget {
@@ -23,7 +23,7 @@ class UserForm extends StatelessWidget {
         firstDate: DateTime(2000),
         lastDate: DateTime(2025));
 
-    if (selected != null && selected != selectedDate) {
+    if (selected != null && selected != selectedDate.value) {
       _dobController.value.text =
           '${selected.day}-${selected.month}-${selected.year}';
     }

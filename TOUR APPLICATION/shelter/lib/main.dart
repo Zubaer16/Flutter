@@ -13,18 +13,19 @@ import 'package:shelter/ui/views/splash_screen.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await GetStorage.init();
-  runApp(const App());
+  // await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+  runApp(App());
 }
 
 class App extends StatelessWidget {
-  const App({super.key});
+  App({super.key});
+  final Future<FirebaseApp> _initialization =
+      Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
 
   @override
   Widget build(BuildContext context) {
     return FutureBuilder(
-        future: Firebase.initializeApp(
-          options: DefaultFirebaseOptions.currentPlatform,
-        ),
+        future: _initialization,
         builder: (context, snapshot) {
           if (snapshot.hasError) {
             return const Center(

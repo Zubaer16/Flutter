@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
-import 'package:shelter/ui/views/auth/logIn.dart';
-import 'package:shelter/ui/views/auth/signUp.dart';
+import 'package:shelter/ui/views/auth/log_in.dart';
+import 'package:shelter/ui/views/auth/sign_up.dart';
 import 'package:shelter/ui/views/onboarding_screen.dart';
 import 'package:shelter/ui/views/privacy_policy.dart';
 import 'package:shelter/ui/views/splash_screen.dart';
@@ -21,5 +21,5 @@ List<GetPage> getPages = [
   GetPage(name: signUp, page: () => SignUp()),
   GetPage(name: logIn, page: () => LogIn()),
   GetPage(name: userForm, page: () => UserForm()),
-  GetPage(name: privacyPolicy, page: () => PrivacyPolicy()),
+  GetPage(name: privacyPolicy, page: () => const PrivacyPolicy()),
 ];
