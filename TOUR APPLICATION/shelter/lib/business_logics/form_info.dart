@@ -4,15 +4,15 @@ import 'package:fluttertoast/fluttertoast.dart';
 import 'package:get/get.dart';
 import 'package:shelter/ui/routes/route.dart';
 
-class UserInfo {
+class FormInfo {
   final FirebaseAuth _auth = FirebaseAuth.instance;
 
   Future<void> sendFormDataToDB(
       String name, int phone, String address, String dob, String gender) async {
     try {
-      CollectionReference _course =
+      CollectionReference course =
           FirebaseFirestore.instance.collection("users-form-data");
-      _course.doc(_auth.currentUser!.email).set({
+      course.doc(_auth.currentUser!.email).set({
         'name': name,
         'phone': phone,
         'address': address,

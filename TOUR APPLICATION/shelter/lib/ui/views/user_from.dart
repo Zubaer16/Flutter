@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:shelter/ui/routes/route.dart';
 import 'package:shelter/ui/styles/styles.dart';
 import 'package:shelter/ui/widgets/violet_button.dart';
 import 'package:toggle_switch/toggle_switch.dart';
+import 'package:shelter/business_logics/form_info.dart';
 
 class UserForm extends StatelessWidget {
   UserForm({super.key});
@@ -30,6 +30,7 @@ class UserForm extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    String gender = 'Male';
     return SafeArea(
         child: GestureDetector(
             onTap: () => FocusScope.of(context).unfocus(),
@@ -102,6 +103,11 @@ class UserForm extends StatelessWidget {
                           ],
                           labels: const ['Male', 'Female'],
                           onToggle: (index) {
+                            if (index == 0) {
+                              gender = 'Male';
+                            } else {
+                              gender = 'Female';
+                            }
                             print('switched to: $index');
                           },
                         ),
@@ -109,9 +115,15 @@ class UserForm extends StatelessWidget {
                           height: 128.h,
                         ),
                         VioletButton(
-                          title: 'Submit',
-                          onAction: () => Get.toNamed(privacyPolicy),
-                        ),
+                            title: 'Submit',
+                            onAction: () {
+                              FormInfo().sendFormDataToDB(
+                                  _nameController.text,
+                                  int.parse(_phoneController.text),
+                                  _addressController.text,
+                                  _dobController.value.text,
+                                  gender);
+                            }),
                         SizedBox(
                           height: 10.h,
                         ),
