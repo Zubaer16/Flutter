@@ -33,7 +33,7 @@ class PrivacyPolicy extends StatelessWidget {
                       Get.toNamed(bottomNavController);
                     })
                 : const Text('Still loading'))
-          ],
+          ], //
         ),
       ),
     ));
