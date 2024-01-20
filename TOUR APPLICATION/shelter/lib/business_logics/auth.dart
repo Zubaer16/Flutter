@@ -33,3 +33,20 @@ class Auth {
     }
   }
 }
+
+Future<void> login(String emailAddress, String password, context) async {
+  try {
+    UserCredential userCredential = await FirebaseAuth.instance
+        .signInWithEmailAndPassword(email: emailAddress, password: password);
+    var authCredential = userCredential.user;
+    print(authCredential);
+    if (authCredential!.uid.isNotEmpty) {
+      Fluttertoast.showToast(msg: 'Login Successfull');
+      Get.toNamed(bottomNavController);
+    } else {
+      print('Sign up failed');
+    }
+  } catch (e) {
+    Fluttertoast.showToast(msg: 'Error is $e');
+  }
+}
