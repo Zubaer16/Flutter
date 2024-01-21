@@ -2,6 +2,7 @@ import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:get_storage/get_storage.dart';
 import 'package:lottie/lottie.dart';
 import 'package:shelter/const/app_colors.dart';
 import 'package:shelter/const/app_icons.dart';
@@ -18,6 +19,7 @@ class OnboardingScreen extends StatefulWidget {
 }
 
 class _OnboardingScreenState extends State<OnboardingScreen> {
+  final box = GetStorage();
   List<OnboardingModel>? onboardingData;
   RxInt _currentIndex = 0.obs;
   getData() async {
@@ -122,6 +124,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                                 onTap: () {
                                   if (_currentIndex.toInt() ==
                                       onboardingData!.length - 1) {
+                                    box.write('introPage', 1);
                                     Get.toNamed(signUp);
                                   } else {
                                     _currentIndex++;

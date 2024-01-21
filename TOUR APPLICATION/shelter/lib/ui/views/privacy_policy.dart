@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:get_storage/get_storage.dart';
 import 'package:shelter/ui/routes/route.dart';
 import 'package:shelter/ui/widgets/violet_button.dart';
 import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
@@ -9,7 +10,7 @@ class PrivacyPolicy extends StatelessWidget {
   PrivacyPolicy({super.key});
   // final PdfViewerController? _pdfViewerController;
   final RxBool _loaded = false.obs;
-
+  final box = GetStorage();
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -30,6 +31,7 @@ class PrivacyPolicy extends StatelessWidget {
                 ? VioletButton(
                     title: 'Agree',
                     onAction: () {
+                      box.write('introPage', 4);
                       Get.toNamed(bottomNavController);
                     })
                 : const Text('Still loading'))

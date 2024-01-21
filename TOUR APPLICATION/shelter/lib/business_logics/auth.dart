@@ -17,6 +17,7 @@ class Auth {
       if (authCredential!.uid.isNotEmpty) {
         Fluttertoast.showToast(msg: 'Registration Successful');
         box.write('uid', authCredential.uid);
+        box.write('introPage', 2);
         Get.toNamed(userForm);
       } else {
         print('Sign up failed');
