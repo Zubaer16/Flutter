@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
+import 'package:shelter/get_state/button_loading_state.dart';
 import 'package:shelter/ui/routes/route.dart';
 import 'package:shelter/ui/widgets/violet_button.dart';
 import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
@@ -30,6 +31,7 @@ class PrivacyPolicy extends StatelessWidget {
             Obx(() => _loaded.value
                 ? VioletButton(
                     title: 'Agree',
+                    value: ButtonLoadingState.privacyPolicyValue,
                     onAction: () {
                       box.write('introPage', 4);
                       Get.toNamed(bottomNavController);

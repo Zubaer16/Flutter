@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:shelter/business_logics/auth.dart';
+import 'package:shelter/get_state/button_loading_state.dart';
 import 'package:shelter/ui/routes/route.dart';
 import 'package:shelter/ui/styles/styles.dart';
 import 'package:shelter/ui/widgets/violet_button.dart';
@@ -49,6 +50,7 @@ class LogIn extends StatelessWidget {
               ),
               VioletButton(
                 title: 'Login',
+                value: ButtonLoadingState.loginValue,
                 onAction: () {
                   Auth().login(
                       _emailController.text, _passwordController.text, context);

@@ -4,15 +4,19 @@ import 'package:get/get.dart';
 import 'package:shelter/const/app_colors.dart';
 
 class VioletButton extends StatelessWidget {
-  VioletButton({super.key, required this.title, required this.onAction});
+  const VioletButton(
+      {super.key,
+      required this.title,
+      required this.onAction,
+      required this.value});
   final String title;
   final Function onAction;
-  final RxBool _value = false.obs;
+  final RxBool value;
   @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        _value.value = true;
+        value.value = true;
         onAction();
       },
       child: Obx(
@@ -22,7 +26,7 @@ class VioletButton extends StatelessWidget {
               color: AppColors.violet,
               borderRadius: BorderRadius.all(Radius.circular(5.r)),
             ),
-            child: _value.value == false
+            child: value.value == false
                 ? Center(
                     child: Text(
                     title,

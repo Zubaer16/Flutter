@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:shelter/get_state/button_loading_state.dart';
 import 'package:shelter/ui/styles/styles.dart';
 import 'package:shelter/ui/widgets/violet_button.dart';
 import 'package:toggle_switch/toggle_switch.dart';
@@ -116,6 +117,7 @@ class UserForm extends StatelessWidget {
                         ),
                         VioletButton(
                             title: 'Submit',
+                            value: ButtonLoadingState.userFormValue,
                             onAction: () {
                               FormInfo().sendFormDataToDB(
                                   _nameController.text,
