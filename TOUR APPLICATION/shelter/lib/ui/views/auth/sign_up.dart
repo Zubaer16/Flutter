@@ -18,6 +18,7 @@ class SignUp extends StatelessWidget {
   Widget build(BuildContext context) {
     return PopScope(
       canPop: false,
+      //
       child: SafeArea(
           child: GestureDetector(
         onTap: () => FocusScope.of(context).unfocus(),
