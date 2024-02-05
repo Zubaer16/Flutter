@@ -25,4 +25,5 @@ List<GetPage> getPages = [
   GetPage(name: userForm, page: () => UserForm()),
   GetPage(name: privacyPolicy, page: () => PrivacyPolicy()),
   GetPage(name: bottomNavController, page: () => const BottomNavController()),
+  //
 ];
