@@ -18,7 +18,6 @@ class _SplashScreenState extends State<SplashScreen> {
   Future<void> chooseScreen() async {
     var userId = box.read('uid');
     var introPage = box.read('introPage');
-    print(introPage); //
 
     if (userId == null && introPage == null) {
       Get.toNamed(onboarding);

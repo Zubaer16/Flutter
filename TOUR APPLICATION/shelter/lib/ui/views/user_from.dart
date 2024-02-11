@@ -32,107 +32,111 @@ class UserForm extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     String gender = 'Male';
-    return SafeArea(
-        child: GestureDetector(
-            onTap: () => FocusScope.of(context).unfocus(),
-            child: Scaffold(
-              body: Padding(
-                padding: const EdgeInsets.only(left: 27, right: 27, top: 56).r,
-                child: SingleChildScrollView(
-                  child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          'Tell Us More About You.',
-                          style: AppStyles.textStyle_8,
-                        ),
-                        SizedBox(
-                          height: 12.h,
-                        ),
-                        Text(
-                            'We will not share your information\noutside this application.',
-                            style: AppStyles.textStyle_4),
-                        SizedBox(
-                          height: 50.h,
-                        ),
-                        formField(
-                            _nameController, TextInputType.name, 'Full Name'),
-                        SizedBox(
-                          height: 28.h,
-                        ),
-                        formField(_phoneController, TextInputType.number,
-                            'Phone Number'),
-                        SizedBox(
-                          height: 28.h,
-                        ),
-                        formField(
-                            _addressController, TextInputType.text, 'Address'),
-                        SizedBox(
-                          height: 28.h,
-                        ),
-                        Obx(
-                          () => TextFormField(
-                            controller: _dobController.value,
-                            readOnly: true,
-                            decoration: InputDecoration(
-                                suffixIcon: IconButton(
-                                  onPressed: () => _selectDate(context),
-                                  icon: const Icon(
-                                    Icons.calendar_month_rounded,
-                                    color: Colors.black,
-                                  ),
-                                ),
-                                hintText: 'Date of Birth',
-                                hintStyle: TextStyle(
-                                  color: Colors.black,
-                                  fontSize: 16.sp,
-                                  fontWeight: FontWeight.w400,
-                                )),
+    return PopScope(
+      canPop: false,
+      child: SafeArea(
+          child: GestureDetector(
+              onTap: () => FocusScope.of(context).unfocus(),
+              child: Scaffold(
+                body: Padding(
+                  padding:
+                      const EdgeInsets.only(left: 27, right: 27, top: 56).r,
+                  child: SingleChildScrollView(
+                    child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'Tell Us More About You.',
+                            style: AppStyles.textStyle_8,
                           ),
-                        ),
-                        SizedBox(
-                          height: 28.h,
-                        ),
-                        ToggleSwitch(
-                          initialLabelIndex: 0,
-                          totalSwitches: 2,
-                          minWidth: 100.w,
-                          dividerMargin: 10.w,
-                          activeBgColor: const [Color(0xFFFC4646)],
-                          customTextStyles: const [
-                            TextStyle(color: Colors.white)
-                          ],
-                          labels: const ['Male', 'Female'],
-                          onToggle: (index) {
-                            if (index == 0) {
-                              gender = 'Male';
-                            } else {
-                              gender = 'Female';
-                            }
-                            print('switched to: $index');
-                          },
-                        ),
-                        SizedBox(
-                          height: 128.h,
-                        ),
-                        VioletButton(
-                            title: 'Submit',
-                            value: ButtonLoadingState.userFormValue,
-                            onAction: () {
-                              FormInfo().sendFormDataToDB(
-                                  _nameController.text,
-                                  int.parse(_phoneController.text),
-                                  _addressController.text,
-                                  _dobController.value.text,
-                                  gender);
-                            }),
-                        SizedBox(
-                          height: 10.h,
-                        ),
-                      ]),
+                          SizedBox(
+                            height: 12.h,
+                          ),
+                          Text(
+                              'We will not share your information\noutside this application.',
+                              style: AppStyles.textStyle_4),
+                          SizedBox(
+                            height: 50.h,
+                          ),
+                          formField(
+                              _nameController, TextInputType.name, 'Full Name'),
+                          SizedBox(
+                            height: 28.h,
+                          ),
+                          formField(_phoneController, TextInputType.number,
+                              'Phone Number'),
+                          SizedBox(
+                            height: 28.h,
+                          ),
+                          formField(_addressController, TextInputType.text,
+                              'Address'),
+                          SizedBox(
+                            height: 28.h,
+                          ),
+                          Obx(
+                            () => TextFormField(
+                              controller: _dobController.value,
+                              readOnly: true,
+                              decoration: InputDecoration(
+                                  suffixIcon: IconButton(
+                                    onPressed: () => _selectDate(context),
+                                    icon: const Icon(
+                                      Icons.calendar_month_rounded,
+                                      color: Colors.black,
+                                    ),
+                                  ),
+                                  hintText: 'Date of Birth',
+                                  hintStyle: TextStyle(
+                                    color: Colors.black,
+                                    fontSize: 16.sp,
+                                    fontWeight: FontWeight.w400,
+                                  )),
+                            ),
+                          ),
+                          SizedBox(
+                            height: 28.h,
+                          ),
+                          ToggleSwitch(
+                            initialLabelIndex: 0,
+                            totalSwitches: 2,
+                            minWidth: 100.w,
+                            dividerMargin: 10.w,
+                            activeBgColor: const [Color(0xFFFC4646)],
+                            customTextStyles: const [
+                              TextStyle(color: Colors.white)
+                            ],
+                            labels: const ['Male', 'Female'],
+                            onToggle: (index) {
+                              if (index == 0) {
+                                gender = 'Male';
+                              } else {
+                                gender = 'Female';
+                              }
+                              print('switched to: $index');
+                            },
+                          ),
+                          SizedBox(
+                            height: 128.h,
+                          ),
+                          VioletButton(
+                              title: 'Submit',
+                              value: ButtonLoadingState.userFormValue,
+                              onAction: () {
+                                FormInfo().sendFormDataToDB(
+                                    _nameController.text,
+                                    int.parse(_phoneController.text),
+                                    _addressController.text,
+                                    _dobController.value.text,
+                                    gender);
+                              }),
+                          SizedBox(
+                            height: 10.h,
+                          ),
+                        ]),
+                  ),
                 ),
-              ),
-            )));
+              ))),
+    );
   }
 }
 

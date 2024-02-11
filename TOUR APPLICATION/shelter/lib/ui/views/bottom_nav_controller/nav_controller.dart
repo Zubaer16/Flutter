@@ -5,9 +5,12 @@ class BottomNavController extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-        child: Scaffold(
-      body: Text('Bottom nav'),
-    ));
+    return PopScope(
+      canPop: false,
+      child: SafeArea(
+          child: Scaffold(
+        body: Text('Bottom nav'),
+      )),
+    );
   }
 }

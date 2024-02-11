@@ -16,96 +16,104 @@ class LogIn extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-        child: GestureDetector(
-      onTap: () => FocusScope.of(context).unfocus(),
-      child: Scaffold(
-        body: Padding(
-          padding: const EdgeInsets.only(left: 30, right: 30, top: 80).r,
-          child: SingleChildScrollView(
-            child:
-                Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-              Text(
-                'Login\nTo Your Account',
-                style: AppStyles.textStyle_3,
-              ),
-              SizedBox(
-                height: 102.h,
-              ),
-              TextFormField(
-                controller: _emailController,
-                keyboardType: TextInputType.emailAddress,
-                decoration: AppStyles.inputDecorationStyle_1('E-mail Address'),
-              ),
-              SizedBox(
-                height: 28.h,
-              ),
-              TextFormField(
-                controller: _passwordController,
-                keyboardType: TextInputType.text,
-                decoration: AppStyles.inputDecorationStyle_1('Enter Password'),
-              ),
-              SizedBox(
-                height: 102.h,
-              ),
-              VioletButton(
-                title: 'Login',
-                value: ButtonLoadingState.loginValue,
-                onAction: () {
-                  Auth().login(
-                      _emailController.text, _passwordController.text, context);
-                },
-              ),
-              SizedBox(
-                height: 10.h,
-              ),
-              Center(child: Text('--OR--', style: AppStyles.textStyle_4)),
-              SizedBox(
-                height: 10.h,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  IconButton(
-                    onPressed: () {},
-                    icon: Image.asset(
-                      'assets/icons/facebook.png',
-                      height: 23.h,
-                      width: 23.w,
+    return PopScope(
+      onPopInvoked: (didPop) {
+        ButtonLoadingState.signUpValue.value = false;
+      },
+      child: SafeArea(
+          child: GestureDetector(
+        onTap: () => FocusScope.of(context).unfocus(),
+        child: Scaffold(
+          body: Padding(
+            padding: const EdgeInsets.only(left: 30, right: 30, top: 80).r,
+            child: SingleChildScrollView(
+              child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Login\nTo Your Account',
+                      style: AppStyles.textStyle_3,
                     ),
-                  ),
-                  IconButton(
-                    onPressed: () {},
-                    icon: Image.asset(
-                      'assets/icons/google.png',
-                      height: 23.h,
-                      width: 23.w,
+                    SizedBox(
+                      height: 102.h,
                     ),
-                  ),
-                ],
-              ),
-              SizedBox(
-                height: 10.h,
-              ),
-              Center(
-                child: RichText(
-                    text: TextSpan(
-                        text: 'Donn\'t have registered yet? ',
-                        style: AppStyles.textStyle_6,
-                        children: [
-                      TextSpan(
-                          text: 'Sign Up',
-                          style: AppStyles.textStyle_7,
-                          recognizer: TapGestureRecognizer()
-                            ..onTap = () {
-                              Get.toNamed(signUp);
-                            })
-                    ])),
-              )
-            ]),
+                    TextFormField(
+                      controller: _emailController,
+                      keyboardType: TextInputType.emailAddress,
+                      decoration:
+                          AppStyles.inputDecorationStyle_1('E-mail Address'),
+                    ),
+                    SizedBox(
+                      height: 28.h,
+                    ),
+                    TextFormField(
+                      controller: _passwordController,
+                      keyboardType: TextInputType.text,
+                      decoration:
+                          AppStyles.inputDecorationStyle_1('Enter Password'),
+                    ),
+                    SizedBox(
+                      height: 102.h,
+                    ),
+                    VioletButton(
+                      title: 'Login',
+                      value: ButtonLoadingState.loginValue,
+                      onAction: () {
+                        Auth().login(_emailController.text,
+                            _passwordController.text, context);
+                      },
+                    ),
+                    SizedBox(
+                      height: 10.h,
+                    ),
+                    Center(child: Text('--OR--', style: AppStyles.textStyle_4)),
+                    SizedBox(
+                      height: 10.h,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        IconButton(
+                          onPressed: () {},
+                          icon: Image.asset(
+                            'assets/icons/facebook.png',
+                            height: 23.h,
+                            width: 23.w,
+                          ),
+                        ),
+                        IconButton(
+                          onPressed: () {},
+                          icon: Image.asset(
+                            'assets/icons/google.png',
+                            height: 23.h,
+                            width: 23.w,
+                          ),
+                        ),
+                      ],
+                    ),
+                    SizedBox(
+                      height: 10.h,
+                    ),
+                    Center(
+                      child: RichText(
+                          text: TextSpan(
+                              text: 'Donn\'t have registered yet? ',
+                              style: AppStyles.textStyle_6,
+                              children: [
+                            TextSpan(
+                                text: 'Sign Up',
+                                style: AppStyles.textStyle_7,
+                                recognizer: TapGestureRecognizer()
+                                  ..onTap = () {
+                                    Get.toNamed(signUp);
+                                  })
+                          ])),
+                    )
+                  ]),
+            ),
           ),
         ),
-      ),
-    ));
+      )),
+    );
   }
 }
