@@ -44,7 +44,7 @@ class Auth {
         Fluttertoast.showToast(msg: 'Login Successfull');
         Get.toNamed(bottomNavController);
       } else {
-        print('Sign up failed');
+        print('Log in failed');
       }
     } catch (e) {
       Fluttertoast.showToast(msg: 'Error is $e');
