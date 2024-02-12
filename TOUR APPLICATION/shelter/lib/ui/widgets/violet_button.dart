@@ -16,7 +16,7 @@ class VioletButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        value.value = true;
+        value.value;
         onAction();
       },
       child: Obx(
