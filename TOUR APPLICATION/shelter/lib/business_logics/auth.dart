@@ -2,6 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
+import 'package:shelter/get_state/button_loading_state.dart';
 import 'package:shelter/ui/routes/route.dart';
 
 class Auth {
@@ -47,6 +48,7 @@ class Auth {
         print('Log in failed');
       }
     } catch (e) {
+      ButtonLoadingState.loginValue.value = false;
       Fluttertoast.showToast(msg: 'Error is $e');
     }
   }
