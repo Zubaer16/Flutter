@@ -77,6 +77,11 @@ class LogIn extends StatelessWidget {
                             }
                           },
                         ),
+                        Visibility(
+                            child: Text(
+                          'Username and password do not match',
+                          style: TextStyle(color: Color(0xffff0000)),
+                        )),
                         SizedBox(
                           height: 102.h,
                         ),

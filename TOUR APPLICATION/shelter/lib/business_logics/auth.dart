@@ -49,7 +49,7 @@ class Auth {
       }
     } catch (e) {
       ButtonLoadingState.loginValue.value = false;
-      Fluttertoast.showToast(msg: 'Error is $e');
+      Fluttertoast.showToast(msg: 'Username and password do not match');
     }
   }
 }
