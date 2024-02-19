@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:shelter/business_logics/auth.dart';
 import 'package:shelter/get_state/button_loading_state.dart';
+import 'package:shelter/get_state/server_state.dart';
 import 'package:shelter/ui/routes/route.dart';
 import 'package:shelter/ui/styles/styles.dart';
 import 'package:shelter/ui/validator/regex_extention.dart';
@@ -47,7 +48,9 @@ class LogIn extends StatelessWidget {
                         ),
                         TextFormField(
                           controller: _emailController,
+                          textInputAction: TextInputAction.next,
                           validator: (val) {
+                            ServerState.loginState.value = false;
                             if (val!.isEmpty) {
                               return 'This field cannot be empty';
                             } else if (val.isValidEmail() == false &&
@@ -67,9 +70,11 @@ class LogIn extends StatelessWidget {
                         TextFormField(
                           controller: _passwordController,
                           keyboardType: TextInputType.text,
+                          textInputAction: TextInputAction.done,
                           decoration: AppStyles.inputDecorationStyle_1(
                               'Enter Password'),
                           validator: (val) {
+                            ServerState.loginState.value = false;
                             if (val!.isEmpty) {
                               return 'This field cannot be empty';
                             } else {
@@ -77,11 +82,17 @@ class LogIn extends StatelessWidget {
                             }
                           },
                         ),
-                        Visibility(
-                            child: Text(
-                          'Username and password do not match',
-                          style: TextStyle(color: Color(0xffff0000)),
-                        )),
+                        Obx(
+                          () => Visibility(
+                              visible: ServerState.loginState.value,
+                              child: Text(
+                                'Username and password do not match',
+                                style: TextStyle(
+                                    color: const Color(0xffff0000),
+                                    fontSize: 13.sp,
+                                    height: 2.7.h),
+                              )),
+                        ),
                         SizedBox(
                           height: 102.h,
                         ),
