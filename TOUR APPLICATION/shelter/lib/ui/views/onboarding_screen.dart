@@ -1,5 +1,8 @@
+import 'dart:io';
+
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
@@ -34,7 +37,13 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     getData();
 
     return PopScope(
-      canPop: false,
+      onPopInvoked: (didPop) {
+        if (Platform.isAndroid) {
+          SystemNavigator.pop();
+        } else {
+          exit(0);
+        }
+      },
       child: SafeArea(
         child: Scaffold(
             body: Padding(

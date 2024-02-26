@@ -1,5 +1,8 @@
+import 'dart:io';
+
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:shelter/business_logics/auth.dart';
@@ -19,7 +22,13 @@ class SignUp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return PopScope(
-      canPop: false,
+      onPopInvoked: (didPop) {
+        if (Platform.isAndroid) {
+          SystemNavigator.pop();
+        } else {
+          exit(0);
+        }
+      },
       child: SafeArea(
           child: GestureDetector(
         onTap: () => FocusScope.of(context).unfocus(),
@@ -47,6 +56,7 @@ class SignUp extends StatelessWidget {
                       TextFormField(
                         controller: _emailController,
                         keyboardType: TextInputType.emailAddress,
+                        textInputAction: TextInputAction.next,
                         validator: (val) {
                           if (val!.isEmpty) {
                             return 'This field cannot be empty';
