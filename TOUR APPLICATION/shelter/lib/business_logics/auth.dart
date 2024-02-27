@@ -1,3 +1,4 @@
+import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:get/get.dart';
@@ -49,9 +50,15 @@ class Auth {
         print('Log in failed');
       }
     } catch (e) {
+      final connectivityResult = await (Connectivity().checkConnectivity());
       ButtonLoadingState.loginValue.value = false;
-      ServerState.loginState.value = true;
-      Fluttertoast.showToast(msg: 'Username and password do not match');
+      if (connectivityResult != ConnectivityResult.wifi &&
+          connectivityResult != ConnectivityResult.ethernet) {
+        Fluttertoast.showToast(msg: 'Please check your internet connection');
+      } else {
+        ServerState.loginState.value = true;
+        Fluttertoast.showToast(msg: 'Username and password do not match');
+      }
     }
   }
 }
