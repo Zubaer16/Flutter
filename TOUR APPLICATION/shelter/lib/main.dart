@@ -9,6 +9,7 @@ import 'package:shelter/const/app_strings.dart';
 import 'package:shelter/firebase_options.dart';
 import 'package:shelter/ui/routes/route.dart';
 import 'package:shelter/ui/views/splash_screen.dart';
+import 'package:shelter/ui/views/verify_email.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -61,9 +62,9 @@ class MyApp extends StatelessWidget {
                 textTheme: GoogleFonts.poppinsTextTheme(
                     Theme.of(context).textTheme.apply()),
                 scaffoldBackgroundColor: AppColors.brightGray),
-            initialRoute: splash,
+            initialRoute: verifyEmail,
             getPages: getPages,
-            home: const SplashScreen());
+            home: const VerifyEmail());
       },
     );
   }
