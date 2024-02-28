@@ -47,7 +47,7 @@ class AppStyles {
   );
   static final textStyle_9 = TextStyle(
     color: Colors.black,
-    fontSize: 32.sp,
+    fontSize: 27.sp,
     fontWeight: FontWeight.bold,
   );
   static final textStyle_10 = TextStyle(
