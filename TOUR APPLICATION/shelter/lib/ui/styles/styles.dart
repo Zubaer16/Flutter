@@ -48,7 +48,12 @@ class AppStyles {
   static final textStyle_9 = TextStyle(
     color: Colors.black,
     fontSize: 32.sp,
-    fontWeight: FontWeight.w600,
+    fontWeight: FontWeight.bold,
+  );
+  static final textStyle_10 = TextStyle(
+    color: Colors.black,
+    fontSize: 17.sp,
+    fontWeight: FontWeight.bold,
   );
   static inputDecorationStyle_1(String hintText) => InputDecoration(
         hintText: hintText,
