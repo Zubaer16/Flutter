@@ -6,7 +6,6 @@ import 'package:shelter/ui/views/onboarding_screen.dart';
 import 'package:shelter/ui/views/privacy_policy.dart';
 import 'package:shelter/ui/views/splash_screen.dart';
 import 'package:shelter/ui/views/user_from.dart';
-import 'package:shelter/ui/views/verify_email.dart';
 
 const String splash = '/splash-screen';
 const String onboarding = '/onboarding-screen';
@@ -15,7 +14,6 @@ const String logIn = '/log-in-screen';
 const String userForm = '/user-form-screen';
 const String privacyPolicy = '/privacy-policy-screen';
 const String bottomNavController = '/bottom-nav-controller-screen';
-const String verifyEmail = '/verify-email-screen';
 
 // Control our page route flow
 
@@ -27,5 +25,4 @@ List<GetPage> getPages = [
   GetPage(name: userForm, page: () => UserForm()),
   GetPage(name: privacyPolicy, page: () => PrivacyPolicy()),
   GetPage(name: bottomNavController, page: () => const BottomNavController()),
-  GetPage(name: verifyEmail, page: () => const VerifyEmail()),
 ];

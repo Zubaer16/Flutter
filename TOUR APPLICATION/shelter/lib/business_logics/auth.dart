@@ -1,11 +1,13 @@
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:shelter/get_state/button_loading_state.dart';
 import 'package:shelter/get_state/server_state.dart';
 import 'package:shelter/ui/routes/route.dart';
+import 'package:shelter/ui/views/verify_email.dart';
 
 class Auth {
   final box = GetStorage();
@@ -17,13 +19,20 @@ class Auth {
           .createUserWithEmailAndPassword(
               email: emailAddress, password: password);
       var authCredential = userCredential.user;
-      if (authCredential!.uid.isNotEmpty) {
+      if (authCredential!.uid.isNotEmpty && !authCredential.emailVerified) {
+        Navigator.push(
+            context,
+            MaterialPageRoute(
+                builder: (_) => VerifyEmail(
+                      user: authCredential,
+                    )));
+        authCredential.sendEmailVerification();
+      } else if (authCredential.uid.isNotEmpty &&
+          authCredential.emailVerified) {
         Fluttertoast.showToast(msg: 'Registration Successful');
         box.write('uid', authCredential.uid);
         box.write('introPage', 2);
         Get.toNamed(userForm);
-      } else {
-        print('Sign up failed');
       }
     } on FirebaseAuthException catch (e) {
       if (e.code == 'weak-password') {
@@ -43,17 +52,24 @@ class Auth {
           .signInWithEmailAndPassword(email: emailAddress, password: password);
       var authCredential = userCredential.user;
       print(authCredential);
-      if (authCredential!.uid.isNotEmpty) {
+      if (authCredential!.uid.isNotEmpty && !authCredential.emailVerified) {
+        Navigator.push(
+            context,
+            MaterialPageRoute(
+                builder: (_) => VerifyEmail(
+                      user: authCredential,
+                    )));
+      } else if (authCredential.uid.isNotEmpty &&
+          authCredential.emailVerified) {
         Fluttertoast.showToast(msg: 'Login Successfull');
         Get.toNamed(bottomNavController);
-      } else {
-        print('Log in failed');
       }
     } catch (e) {
       final connectivityResult = await (Connectivity().checkConnectivity());
       ButtonLoadingState.loginValue.value = false;
       if (connectivityResult != ConnectivityResult.wifi &&
-          connectivityResult != ConnectivityResult.ethernet) {
+          connectivityResult != ConnectivityResult.ethernet &&
+          connectivityResult != ConnectivityResult.mobile) {
         Fluttertoast.showToast(msg: 'Please check your internet connection');
       } else {
         ServerState.loginState.value = true;

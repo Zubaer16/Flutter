@@ -1,11 +1,53 @@
+import 'dart:async';
+
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:get/get.dart';
+import 'package:shelter/ui/routes/route.dart';
 import 'package:shelter/ui/styles/styles.dart';
 import 'package:shelter/ui/widgets/violet_button.dart';
 
-class VerifyEmail extends StatelessWidget {
-  const VerifyEmail({super.key});
+class VerifyEmail extends StatefulWidget {
+  const VerifyEmail({super.key, required this.user});
+  final User? user;
+  @override
+  State<VerifyEmail> createState() => _VerifyEmailState();
+}
+
+class _VerifyEmailState extends State<VerifyEmail> {
+  bool isEmailVerified = false;
+  Timer? timer;
+  @override
+  void initState() {
+    timer = Timer.periodic(const Duration(seconds: 3), (timer) {
+      return checkEmailVerified();
+    });
+
+    super.initState();
+  }
+
+  void checkEmailVerified() async {
+    await widget.user!.reload();
+
+    setState(() {
+      isEmailVerified = FirebaseAuth.instance.currentUser!.emailVerified;
+    });
+
+    if (isEmailVerified) {
+      Fluttertoast.showToast(msg: "Email Successfully Verified");
+      Get.toNamed(bottomNavController);
+      timer?.cancel();
+    }
+  }
+
+  @override
+  void dispose() {
+    // TODO: implement dispose
+    timer?.cancel();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +70,7 @@ class VerifyEmail extends StatelessWidget {
                 textAlign: TextAlign.center,
               ),
               Text(
-                'zubaer.16@gmail.com',
+                widget.user!.email.toString(),
                 style: AppStyles.textStyle_10,
                 textAlign: TextAlign.center,
               ),
@@ -55,7 +97,11 @@ class VerifyEmail extends StatelessWidget {
               SizedBox(
                   width: 200.w,
                   child: VioletButton(
-                      title: 'Resend Email', onAction: () {}, value: false.obs))
+                      title: 'Resend Email',
+                      onAction: () {
+                        widget.user?.sendEmailVerification();
+                      },
+                      value: false.obs))
             ]),
       ),
     );
