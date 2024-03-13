@@ -9,7 +9,7 @@ class BottomNavController extends StatelessWidget {
       canPop: false,
       child: SafeArea(
           child: Scaffold(
-        body: const Text('Bottom nav screen'),
+        body: Text('Bottom nav screen'),
       )),
     );
   }
