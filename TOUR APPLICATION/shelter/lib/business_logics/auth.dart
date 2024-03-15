@@ -59,8 +59,7 @@ class Auth {
                 builder: (_) => VerifyEmail(
                       user: authCredential,
                     )));
-      } else if (authCredential.uid.isNotEmpty &&
-          authCredential.emailVerified) {
+      } else if (authCredential.uid.isNotEmpty) {
         Fluttertoast.showToast(msg: 'Login Successfull');
         Get.toNamed(bottomNavController);
       }
