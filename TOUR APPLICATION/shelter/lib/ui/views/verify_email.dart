@@ -37,7 +37,7 @@ class _VerifyEmailState extends State<VerifyEmail> {
 
     if (isEmailVerified) {
       Fluttertoast.showToast(msg: "Email Successfully Verified");
-      Get.toNamed(bottomNavController);
+      Get.toNamed(mainHomeScreen);
       timer?.cancel();
     }
   }

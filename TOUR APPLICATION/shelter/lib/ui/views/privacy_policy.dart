@@ -36,7 +36,7 @@ class PrivacyPolicy extends StatelessWidget {
                       value: ButtonLoadingState.privacyPolicyValue,
                       onAction: () {
                         box.write('introPage', 4);
-                        Get.toNamed(bottomNavController);
+                        Get.toNamed(mainHomeScreen);
                       })
                   : const Text('Still loading'))
             ], //

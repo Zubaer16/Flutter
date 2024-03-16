@@ -28,7 +28,7 @@ class _SplashScreenState extends State<SplashScreen> {
     } else if (userId != null && introPage == 3) {
       Get.toNamed(privacyPolicy);
     } else {
-      Get.toNamed(bottomNavController);
+      Get.toNamed(mainHomeScreen);
     }
   }
 

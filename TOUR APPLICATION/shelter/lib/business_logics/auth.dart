@@ -61,7 +61,7 @@ class Auth {
                     )));
       } else if (authCredential.uid.isNotEmpty) {
         Fluttertoast.showToast(msg: 'Login Successfull');
-        Get.toNamed(bottomNavController);
+        Get.toNamed(mainHomeScreen);
       }
     } catch (e) {
       final connectivityResult = await (Connectivity().checkConnectivity());
