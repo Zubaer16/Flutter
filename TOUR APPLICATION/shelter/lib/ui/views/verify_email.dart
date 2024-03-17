@@ -59,7 +59,7 @@ class _VerifyEmailState extends State<VerifyEmail> {
             children: [
               Text(
                 'Please verify your email',
-                style: AppStyles.textStyle_9,
+                style: AppStyles.textStyleB27B,
                 textAlign: TextAlign.center,
               ),
               SizedBox(
@@ -71,7 +71,7 @@ class _VerifyEmailState extends State<VerifyEmail> {
               ),
               Text(
                 widget.user!.email.toString(),
-                style: AppStyles.textStyle_10,
+                style: AppStyles.textStyleB17B,
                 textAlign: TextAlign.center,
               ),
               SizedBox(

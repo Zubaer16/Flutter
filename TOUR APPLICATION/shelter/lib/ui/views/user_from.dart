@@ -48,14 +48,14 @@ class UserForm extends StatelessWidget {
                         children: [
                           Text(
                             'Tell Us More About You.',
-                            style: AppStyles.textStyle_8,
+                            style: AppStyles.textStyleV32500,
                           ),
                           SizedBox(
                             height: 12.h,
                           ),
                           Text(
                               'We will not share your information\noutside this application.',
-                              style: AppStyles.textStyle_4),
+                              style: AppStyles.textStyleB16300),
                           SizedBox(
                             height: 50.h,
                           ),

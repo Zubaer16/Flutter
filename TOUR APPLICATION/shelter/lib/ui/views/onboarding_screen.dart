@@ -102,7 +102,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                                 ? Obx(() => Text(
                                       onboardingData![_currentIndex.toInt()]
                                           .title,
-                                      style: AppStyles.textStyle_1,
+                                      style: AppStyles.textStyleB20600,
                                     ))
                                 : Container(),
                             SizedBox(height: 15.h),
@@ -111,7 +111,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                                     () => Text(
                                       onboardingData![_currentIndex.toInt()]
                                           .description,
-                                      style: AppStyles.textStyle_2,
+                                      style: AppStyles.textStyleB20300,
                                     ),
                                   )
                                 : Container(),

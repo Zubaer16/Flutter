@@ -42,13 +42,13 @@ class SignUp extends StatelessWidget {
                     children: [
                       Text(
                         'Create\nYour Account',
-                        style: AppStyles.textStyle_3,
+                        style: AppStyles.textStyleV36500,
                       ),
                       SizedBox(
                         height: 12.h,
                       ),
                       Text('Create your account and start your\njourney',
-                          style: AppStyles.textStyle_4),
+                          style: AppStyles.textStyleB16300),
                       SizedBox(
                         height: 102.h,
                       ),
@@ -105,7 +105,8 @@ class SignUp extends StatelessWidget {
                         height: 10.h,
                       ),
                       Center(
-                          child: Text('--OR--', style: AppStyles.textStyle_4)),
+                          child:
+                              Text('--OR--', style: AppStyles.textStyleB16300)),
                       SizedBox(
                         height: 10.h,
                       ),
@@ -137,11 +138,11 @@ class SignUp extends StatelessWidget {
                         child: RichText(
                             text: TextSpan(
                                 text: 'Already an user? ',
-                                style: AppStyles.textStyle_6,
+                                style: AppStyles.textStyleB18300,
                                 children: [
                               TextSpan(
                                   text: 'Log In',
-                                  style: AppStyles.textStyle_7,
+                                  style: AppStyles.textStyleV18600,
                                   recognizer: TapGestureRecognizer()
                                     ..onTap = () {
                                       Get.toNamed(logIn);

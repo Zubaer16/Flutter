@@ -4,59 +4,74 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:shelter/const/app_colors.dart';
 
 class AppStyles {
-  static final textStyle_1 = TextStyle(
+  static final textStyleB20600 = TextStyle(
     color: Colors.black,
     fontSize: 20.sp,
     fontWeight: FontWeight.w600,
   );
 
-  static final textStyle_2 = TextStyle(
+  static final textStyleB20300 = TextStyle(
     color: Colors.black,
     fontSize: 20.sp,
     fontWeight: FontWeight.w300,
   );
-  static final textStyle_3 = TextStyle(
+  static final textStyleV36500 = TextStyle(
     color: AppColors.violet,
     fontSize: 36.sp,
     fontWeight: FontWeight.w500,
   );
-  static final textStyle_4 = TextStyle(
+  static final textStyleB16300 = TextStyle(
     color: Colors.black,
     fontSize: 16.sp,
     fontWeight: FontWeight.w300,
   );
-  static final textStyle_5 = TextStyle(
+  static final textStyleB16400 = TextStyle(
     color: Colors.black,
     fontSize: 16.sp,
     fontWeight: FontWeight.w400,
   );
-  static final textStyle_6 = TextStyle(
+  static final textStyleB18300 = TextStyle(
     color: Colors.black,
     fontSize: 18.sp,
     fontWeight: FontWeight.w300,
   );
-  static final textStyle_7 = TextStyle(
+  static final textStyleV18600 = TextStyle(
     color: AppColors.violet,
     fontSize: 18.sp,
     fontWeight: FontWeight.w600,
   );
-  static final textStyle_8 = TextStyle(
+  static final textStyleV32500 = TextStyle(
     color: AppColors.violet,
     fontSize: 32.sp,
     fontWeight: FontWeight.w500,
   );
-  static final textStyle_9 = TextStyle(
+  static final textStyleB27B = TextStyle(
     color: Colors.black,
     fontSize: 27.sp,
     fontWeight: FontWeight.bold,
   );
-  static final textStyle_10 = TextStyle(
+  static final textStyleB17B = TextStyle(
     color: Colors.black,
     fontSize: 17.sp,
     fontWeight: FontWeight.bold,
   );
+  static final textStyleB32500 = TextStyle(
+    color: Colors.black,
+    fontSize: 32.sp,
+    fontWeight: FontWeight.w500,
+  );
+  static final textStyleB15300 = TextStyle(
+    color: Colors.black,
+    fontSize: 15.sp,
+    fontWeight: FontWeight.w300,
+  );
+  static final textStyleB20400 = TextStyle(
+    color: Colors.black,
+    fontSize: 20.sp,
+    fontWeight: FontWeight.w400,
+  );
   static inputDecorationStyle_1(String hintText) => InputDecoration(
         hintText: hintText,
-        hintStyle: textStyle_5,
+        hintStyle: textStyleB16400,
       );
 }

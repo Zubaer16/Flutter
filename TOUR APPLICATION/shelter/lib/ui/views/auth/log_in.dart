@@ -41,7 +41,7 @@ class LogIn extends StatelessWidget {
                       children: [
                         Text(
                           'Login\nTo Your Account',
-                          style: AppStyles.textStyle_3,
+                          style: AppStyles.textStyleV36500,
                         ),
                         SizedBox(
                           height: 102.h,
@@ -111,8 +111,8 @@ class LogIn extends StatelessWidget {
                           height: 10.h,
                         ),
                         Center(
-                            child:
-                                Text('--OR--', style: AppStyles.textStyle_4)),
+                            child: Text('--OR--',
+                                style: AppStyles.textStyleB16300)),
                         SizedBox(
                           height: 10.h,
                         ),
@@ -144,11 +144,11 @@ class LogIn extends StatelessWidget {
                           child: RichText(
                               text: TextSpan(
                                   text: 'Donn\'t have registered yet? ',
-                                  style: AppStyles.textStyle_6,
+                                  style: AppStyles.textStyleB18300,
                                   children: [
                                 TextSpan(
                                     text: 'Sign Up',
-                                    style: AppStyles.textStyle_7,
+                                    style: AppStyles.textStyleV18600,
                                     recognizer: TapGestureRecognizer()
                                       ..onTap = () {
                                         Get.toNamed(signUp);
