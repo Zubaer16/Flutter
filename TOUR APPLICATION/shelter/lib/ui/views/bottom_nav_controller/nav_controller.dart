@@ -5,22 +5,15 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:shelter/const/app_icons.dart';
 import 'package:shelter/const/app_strings.dart';
+import 'package:shelter/ui/views/bottom_nav_controller/pages/nav_add.dart';
+import 'package:shelter/ui/views/bottom_nav_controller/pages/nav_favourite.dart';
+import 'package:shelter/ui/views/bottom_nav_controller/pages/nav_home.dart';
 
 class BottomNavController extends StatelessWidget {
   BottomNavController({super.key});
   final RxInt _currentIndex = 0.obs;
   final RxBool _drawer = false.obs;
-  final pages = [
-    Container(
-      color: Colors.green,
-    ),
-    Container(
-      color: Colors.black,
-    ),
-    Container(
-      color: Colors.yellow,
-    ),
-  ];
+  final pages = [const NavHome(), const NavAdd(), const NavFavourite()];
   @override
   Widget build(BuildContext context) {
     return Obx(
