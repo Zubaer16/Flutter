@@ -39,7 +39,7 @@ class DrawerScreen extends StatelessWidget {
           drawerItem('How to use', () {
             Get.toNamed(howToUseScreen);
           }),
-          const Expanded(child: SizedBox()),
+          Expanded(child: SizedBox()),
           InkWell(
             onTap: () {
               Get.toNamed(settingScreen);
