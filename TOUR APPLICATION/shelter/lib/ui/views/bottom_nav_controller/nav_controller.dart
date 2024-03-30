@@ -1,10 +1,9 @@
-import 'dart:ffi';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:shelter/const/app_icons.dart';
 import 'package:shelter/const/app_strings.dart';
+import 'package:shelter/ui/styles/styles.dart';
 import 'package:shelter/ui/views/bottom_nav_controller/pages/nav_add.dart';
 import 'package:shelter/ui/views/bottom_nav_controller/pages/nav_favourite.dart';
 import 'package:shelter/ui/views/bottom_nav_controller/pages/nav_home.dart';
@@ -26,7 +25,10 @@ class BottomNavController extends StatelessWidget {
         child: Scaffold(
           appBar: AppBar(
             backgroundColor: Colors.white,
-            title: const Text(AppStrings.appBarName),
+            title: Text(
+              AppStrings.appBarName,
+              style: AppStyles.textStyleB20400,
+            ),
             elevation: 0,
             leading: _drawer.value == false
                 ? IconButton(
