@@ -35,12 +35,18 @@ class BottomNavController extends StatelessWidget {
                     onPressed: () {
                       _drawer.value = true;
                     },
-                    icon: Icon(AppIcons.menuIcon))
+                    icon: const Icon(
+                      AppIcons.menuIcon,
+                      color: Colors.black,
+                    ))
                 : IconButton(
                     onPressed: () {
                       _drawer.value = false;
                     },
-                    icon: const Icon(AppIcons.close)),
+                    icon: const Icon(
+                      AppIcons.close,
+                      color: Colors.black,
+                    )),
           ),
           bottomNavigationBar: BottomNavigationBar(
               onTap: (value) {

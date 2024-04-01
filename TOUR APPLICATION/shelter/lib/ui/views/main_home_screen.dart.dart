@@ -6,7 +6,7 @@ import 'package:shelter/ui/views/bottom_nav_controller/nav_controller.dart';
 import 'package:shelter/ui/views/drawer_screen.dart';
 
 class MainHomeScreen extends StatelessWidget {
-  MainHomeScreen({super.key});
+  const MainHomeScreen({super.key});
 
   Future _exitDialog(context) {
     return showDialog(
