@@ -6,7 +6,7 @@ class NavHome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Text('Nav Home'),
+      body: const Text('Nav Home'),
     );
   }
 }
