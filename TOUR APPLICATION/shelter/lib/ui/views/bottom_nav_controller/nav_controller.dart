@@ -12,12 +12,12 @@ class BottomNavController extends StatelessWidget {
   BottomNavController({super.key});
   final RxInt _currentIndex = 0.obs;
   final RxBool _drawer = false.obs;
-  final pages = [const NavHome(), const NavAdd(), const NavFavourite()];
+  final pages = [NavHome(), const NavAdd(), const NavFavourite()];
   @override
   Widget build(BuildContext context) {
     return Obx(
       () => AnimatedPositioned(
-        duration: Duration(milliseconds: 400),
+        duration: const Duration(milliseconds: 400),
         top: _drawer.value == false ? 0 : 100.h,
         bottom: _drawer.value == false ? 0 : 100.h,
         left: _drawer.value == false ? 0 : 200.w,
