@@ -51,7 +51,7 @@ class Auth {
       UserCredential userCredential = await FirebaseAuth.instance
           .signInWithEmailAndPassword(email: emailAddress, password: password);
       var authCredential = userCredential.user;
-      print(authCredential);
+
       if (authCredential!.uid.isNotEmpty && !authCredential.emailVerified) {
         Navigator.push(
             context,
@@ -61,6 +61,8 @@ class Auth {
                     )));
       } else if (authCredential.uid.isNotEmpty) {
         Fluttertoast.showToast(msg: 'Login Successfull');
+        box.write('uid', authCredential.uid);
+        box.write('introPage', 4);
         Get.toNamed(mainHomeScreen);
       }
     } catch (e) {
