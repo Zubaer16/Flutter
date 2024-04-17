@@ -19,7 +19,7 @@ class NavHome extends StatelessWidget {
         CarouselSlider(
             items: imageItems,
             options: CarouselOptions(
-              // height: 200,
+              //// height: 200,
 
               aspectRatio: 16 / 9,
               viewportFraction: 0.8,
