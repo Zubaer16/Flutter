@@ -7,4 +7,5 @@ class AppIcons {
   static const add = Icons.add_outlined;
   static const favourite = Icons.favorite_outlined;
   static const close = Icons.close;
+  static const search = Icons.search;
 }

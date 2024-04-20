@@ -3,6 +3,7 @@ import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:shelter/ui/widgets/search_input.dart';
 
 class NavHome extends StatelessWidget {
   NavHome({super.key});
@@ -20,28 +21,32 @@ class NavHome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: SingleChildScrollView(
-      child: Column(children: [
-        CarouselSlider(
-            items: imageItems,
-            options: CarouselOptions(
-              aspectRatio: 16 / 7,
-              initialPage: 0,
-              enableInfiniteScroll: true,
-              enlargeCenterPage: true,
-              enlargeFactor: 0.2,
-              scrollDirection: Axis.horizontal,
-              onPageChanged: (index, reason) {
-                carouselIndex.value = index;
-              },
-            )),
-        Obx(
-          () => DotsIndicator(
-            dotsCount: imageItems.length,
-            position: carouselIndex.value,
+        body: GestureDetector(
+      onTap: () => FocusScope.of(context).unfocus(),
+      child: SingleChildScrollView(
+        child: Column(children: [
+          CarouselSlider(
+              items: imageItems,
+              options: CarouselOptions(
+                aspectRatio: 16 / 7,
+                initialPage: 0,
+                enableInfiniteScroll: true,
+                enlargeCenterPage: true,
+                enlargeFactor: 0.2,
+                scrollDirection: Axis.horizontal,
+                onPageChanged: (index, reason) {
+                  carouselIndex.value = index;
+                },
+              )),
+          Obx(
+            () => DotsIndicator(
+              dotsCount: imageItems.length,
+              position: carouselIndex.value,
+            ),
           ),
-        )
-      ]),
+          searchInput()
+        ]),
+      ),
     ));
   }
 }
