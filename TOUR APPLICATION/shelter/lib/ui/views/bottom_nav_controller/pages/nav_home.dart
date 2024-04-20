@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 class NavHome extends StatelessWidget {
   NavHome({super.key});
 
-  List<Widget> imageItems = [
+  final List<Widget> imageItems = [
     Image.asset('assets/images/navHomePic1.png'),
     Image.asset('assets/images/navHomePic2.png'),
     Image.asset('assets/images/navHomePic3.png')
