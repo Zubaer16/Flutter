@@ -3,6 +3,7 @@ import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:shelter/ui/styles/styles.dart';
 import 'package:shelter/ui/widgets/search_input.dart';
 
 class NavHome extends StatelessWidget {
@@ -44,7 +45,35 @@ class NavHome extends StatelessWidget {
               position: carouselIndex.value,
             ),
           ),
-          searchInput()
+          searchInput(),
+          SizedBox(height: 61.h),
+          Padding(
+              padding: const EdgeInsets.only(left: 10, right: 10).r,
+              child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text('For You', style: AppStyles.textStyleB16500),
+                    TextButton(
+                        onPressed: () {},
+                        child:
+                            Text('See All', style: AppStyles.textStyleG14500))
+                  ])),
+          SizedBox(
+            height: 120.h,
+            child: ListView.builder(
+                itemCount: 10,
+                scrollDirection: Axis.horizontal,
+                itemBuilder: (BuildContext context, int index) {
+                  return Container(
+                      height: 120.h,
+                      width: 92.w,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(15).r,
+                        // image: DecorationImage(
+                        //     image: AssetImage(''), fit: BoxFit.cover)
+                      ));
+                }),
+          )
         ]),
       ),
     ));
