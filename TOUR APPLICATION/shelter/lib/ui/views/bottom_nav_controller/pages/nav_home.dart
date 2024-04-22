@@ -47,33 +47,7 @@ class NavHome extends StatelessWidget {
           ),
           searchInput(),
           SizedBox(height: 61.h),
-          Padding(
-              padding: const EdgeInsets.only(left: 10, right: 10).r,
-              child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text('For You', style: AppStyles.textStyleB16500),
-                    TextButton(
-                        onPressed: () {},
-                        child:
-                            Text('See All', style: AppStyles.textStyleG14500))
-                  ])),
-          SizedBox(
-            height: 120.h,
-            child: ListView.builder(
-                itemCount: 10,
-                scrollDirection: Axis.horizontal,
-                itemBuilder: (BuildContext context, int index) {
-                  return Container(
-                      height: 120.h,
-                      width: 92.w,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(15).r,
-                        // image: DecorationImage(
-                        //     image: AssetImage(''), fit: BoxFit.cover)
-                      ));
-                }),
-          )
+          navAddItems(false)
         ]),
       ),
     ));
