@@ -47,14 +47,14 @@ class NavHome extends StatelessWidget {
           ),
           searchInput(),
           SizedBox(height: 61.h),
-          navAddItems(false)
+          navAddItems(false, 'assets/images/navAddItemPic1.png')
         ]),
       ),
     ));
   }
 }
 
-Widget navAddItems(bool circlePic) {
+Widget navAddItems(bool circlePic, String link) {
   return SizedBox(
     child: Column(
       children: [
@@ -73,20 +73,23 @@ Widget navAddItems(bool circlePic) {
           child: ListView.builder(
               itemCount: 10,
               scrollDirection: Axis.horizontal,
+              shrinkWrap: true,
               itemBuilder: (BuildContext context, int index) {
-                return Container(
-                    height: 120.h,
-                    width: 92.w,
-                    decoration: BoxDecoration(
-                      shape: circlePic == true
-                          ? BoxShape.circle
-                          : BoxShape.rectangle,
-                      borderRadius: circlePic == false
-                          ? BorderRadius.circular(15).r
-                          : null,
-                      // image: DecorationImage(
-                      //     image: AssetImage(''), fit: BoxFit.cover)
-                    ));
+                return Padding(
+                  padding: const EdgeInsets.only(right: 10.0).r,
+                  child: Container(
+                      height: 120.h,
+                      width: 92.w,
+                      decoration: BoxDecoration(
+                          shape: circlePic == true
+                              ? BoxShape.circle
+                              : BoxShape.rectangle,
+                          borderRadius: circlePic == false
+                              ? BorderRadius.circular(15).r
+                              : null,
+                          image: DecorationImage(
+                              image: AssetImage(link), fit: BoxFit.cover))),
+                );
               }),
         )
       ],
