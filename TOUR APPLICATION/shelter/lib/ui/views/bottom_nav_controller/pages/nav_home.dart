@@ -79,3 +79,43 @@ class NavHome extends StatelessWidget {
     ));
   }
 }
+
+Widget navAddItems(bool circlePic) {
+  return SizedBox(
+    child: Column(
+      children: [
+        Padding(
+            padding: const EdgeInsets.only(left: 37, right: 37).r,
+            child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text('For You', style: AppStyles.textStyleB16500),
+                  TextButton(
+                      onPressed: () {},
+                      child: Text('See All', style: AppStyles.textStyleG14500))
+                ])),
+        SizedBox(
+          height: 120.h,
+          child: ListView.builder(
+              itemCount: 10,
+              scrollDirection: Axis.horizontal,
+              itemBuilder: (BuildContext context, int index) {
+                return Container(
+                    height: 120.h,
+                    width: 92.w,
+                    decoration: BoxDecoration(
+                      shape: circlePic == true
+                          ? BoxShape.circle
+                          : BoxShape.rectangle,
+                      borderRadius: circlePic == false
+                          ? BorderRadius.circular(15).r
+                          : null,
+                      // image: DecorationImage(
+                      //     image: AssetImage(''), fit: BoxFit.cover)
+                    ));
+              }),
+        )
+      ],
+    ),
+  );
+}
