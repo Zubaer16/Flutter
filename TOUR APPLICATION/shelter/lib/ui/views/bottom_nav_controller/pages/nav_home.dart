@@ -52,6 +52,7 @@ class NavHome extends StatelessWidget {
           navAddItems(false, 'assets/images/navAddItemPic2.png'),
           SizedBox(height: 31.h),
           navAddItems(true, 'assets/images/navAddItemPic3.png'),
+          //
         ]),
       ),
     ));
