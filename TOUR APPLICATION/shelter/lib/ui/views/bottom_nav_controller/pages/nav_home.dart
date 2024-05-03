@@ -3,7 +3,7 @@ import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:shelter/ui/widgets/nav_add_items.dart';
+import 'package:shelter/ui/widgets/nav_home_categories.dart';
 import 'package:shelter/ui/widgets/search_input.dart';
 
 class NavHome extends StatelessWidget {
@@ -47,11 +47,14 @@ class NavHome extends StatelessWidget {
           ),
           searchInput(),
           SizedBox(height: 61.h),
-          navAddItems(false, 'assets/images/navAddItemPic1.png'),
+          navHomeCategories(
+              false, 'assets/images/navAddItemPic1.png', 'For You'),
           SizedBox(height: 31.h),
-          navAddItems(false, 'assets/images/navAddItemPic2.png'),
+          navHomeCategories(
+              false, 'assets/images/navAddItemPic2.png', 'Recently Added'),
           SizedBox(height: 31.h),
-          navAddItems(true, 'assets/images/navAddItemPic3.png'),
+          navHomeCategories(
+              true, 'assets/images/navAddItemPic3.png', 'Top Places'),
         ]),
       ),
     ));

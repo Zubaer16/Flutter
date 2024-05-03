@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:shelter/ui/styles/styles.dart';
 
-Widget navAddItems(bool circlePic, String link) {
+Widget navHomeCategories(bool circlePic, String link, String category) {
   return SizedBox(
     child: Column(
       children: [
@@ -11,7 +11,7 @@ Widget navAddItems(bool circlePic, String link) {
             child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text('For You', style: AppStyles.textStyleB16500),
+                  Text(category, style: AppStyles.textStyleB16500),
                   TextButton(
                       onPressed: () {},
                       child: Text('See All', style: AppStyles.textStyleG14500))
