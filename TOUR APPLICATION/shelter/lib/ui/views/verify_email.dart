@@ -1,9 +1,11 @@
 import 'dart:async';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:get/get.dart';
+import 'package:get_storage/get_storage.dart';
 import 'package:shelter/ui/routes/route.dart';
 import 'package:shelter/ui/styles/styles.dart';
 import 'package:shelter/ui/widgets/violet_button.dart';
@@ -11,6 +13,7 @@ import 'package:shelter/ui/widgets/violet_button.dart';
 class VerifyEmail extends StatefulWidget {
   const VerifyEmail({super.key, required this.user});
   final User? user;
+
   @override
   State<VerifyEmail> createState() => _VerifyEmailState();
 }
@@ -35,9 +38,32 @@ class _VerifyEmailState extends State<VerifyEmail> {
     });
 
     if (isEmailVerified) {
+      bool isCollExists = await _isCollectionExits();
+      final box = GetStorage();
       Fluttertoast.showToast(msg: "Email Successfully Verified");
-      Get.toNamed(mainHomeScreen);
-      timer?.cancel();
+      if (isCollExists) {
+        box.write('introPage', 3);
+        Get.toNamed(privacyPolicy);
+        timer?.cancel();
+      } else {
+        box.write('introPage', 2);
+        Get.toNamed(userForm);
+        timer?.cancel();
+      }
+    }
+  }
+
+  Future<bool> _isCollectionExits() async {
+    DocumentSnapshot<Map<String, dynamic>> query = await FirebaseFirestore
+        .instance
+        .collection('users-form-data')
+        .doc(widget.user?.email.toString())
+        .get();
+
+    if (query.exists) {
+      return true;
+    } else {
+      return false;
     }
   }
 

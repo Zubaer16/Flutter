@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -51,7 +52,7 @@ class Auth {
       UserCredential userCredential = await FirebaseAuth.instance
           .signInWithEmailAndPassword(email: emailAddress, password: password);
       var authCredential = userCredential.user;
-
+      bool isCollExists = await _isCollectionExits(authCredential?.email);
       if (authCredential!.uid.isNotEmpty && !authCredential.emailVerified) {
         Navigator.push(
             context,
@@ -59,11 +60,16 @@ class Auth {
                 builder: (_) => VerifyEmail(
                       user: authCredential,
                     )));
-      } else if (authCredential.uid.isNotEmpty) {
+      } else if (authCredential.uid.isNotEmpty && isCollExists) {
         Fluttertoast.showToast(msg: 'Login Successfull');
         box.write('uid', authCredential.uid);
         box.write('introPage', 4);
         Get.toNamed(mainHomeScreen);
+      } else if (authCredential.uid.isNotEmpty && !isCollExists) {
+        Fluttertoast.showToast(msg: 'Login Successfull');
+        box.write('uid', authCredential.uid);
+        box.write('introPage', 2);
+        Get.toNamed(userForm);
       }
     } catch (e) {
       final connectivityResult = await (Connectivity().checkConnectivity());
@@ -77,5 +83,19 @@ class Auth {
         Fluttertoast.showToast(msg: 'Username and password do not match');
       }
     }
+  }
+}
+
+Future<bool> _isCollectionExits(cred) async {
+  DocumentSnapshot<Map<String, dynamic>> query = await FirebaseFirestore
+      .instance
+      .collection('users-form-data')
+      .doc(cred.toString())
+      .get();
+
+  if (query.exists) {
+    return true;
+  } else {
+    return false;
   }
 }
