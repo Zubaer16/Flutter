@@ -41,14 +41,14 @@ class _VerifyEmailState extends State<VerifyEmail> {
       bool isCollExists = await _isCollectionExits();
       final box = GetStorage();
       Fluttertoast.showToast(msg: "Email Successfully Verified");
+      box.write('uid', widget.user!.uid);
+      timer?.cancel();
       if (isCollExists) {
         box.write('introPage', 3);
         Get.toNamed(privacyPolicy);
-        timer?.cancel();
       } else {
         box.write('introPage', 2);
         Get.toNamed(userForm);
-        timer?.cancel();
       }
     }
   }

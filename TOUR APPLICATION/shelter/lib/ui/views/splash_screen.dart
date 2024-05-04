@@ -34,8 +34,6 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   void initState() {
-    print(box.read('uid'));
-    print(box.read('introPage'));
     Future.delayed(
         const Duration(
           seconds: 3,
