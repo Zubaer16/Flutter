@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:shelter/const/app_colors.dart';
 import 'package:shelter/const/app_icons.dart';
 import 'package:shelter/ui/styles/styles.dart';
 
@@ -12,7 +11,6 @@ Widget searchInput() {
       decoration: InputDecoration(
         prefixIcon: const Icon(
           AppIcons.search,
-          // color: Colors.black,
         ),
         hintText: 'Search for your next tour',
         hintStyle: AppStyles.textStyleB12400,
