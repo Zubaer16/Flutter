@@ -1,6 +1,8 @@
 import 'package:get/get.dart';
 import 'package:shelter/ui/views/auth/log_in.dart';
 import 'package:shelter/ui/views/auth/sign_up.dart';
+import 'package:shelter/ui/views/bottom_nav_controller/search_screen.dart';
+import 'package:shelter/ui/views/bottom_nav_controller/see_all.dart';
 import 'package:shelter/ui/views/drawer_pages/faq.dart';
 import 'package:shelter/ui/views/drawer_pages/how_to_use.dart';
 import 'package:shelter/ui/views/drawer_pages/privacy.dart';
@@ -24,6 +26,8 @@ const String privacyScreen = '/privacy-screen';
 const String faqScreen = '/faq-screen';
 const String howToUseScreen = '/how-to-use-screen';
 const String settingScreen = '/setting-screen';
+const String searchScreen = '/search-screen';
+const String seeAllScreen = '/see-all-screen';
 
 // Control our page route flow
 
@@ -34,10 +38,15 @@ List<GetPage> getPages = [
   GetPage(name: logIn, page: () => LogIn()),
   GetPage(name: userForm, page: () => UserForm()),
   GetPage(name: privacyPolicy, page: () => PrivacyPolicy()),
-  GetPage(name: mainHomeScreen, page: () => MainHomeScreen()),
+  GetPage(name: mainHomeScreen, page: () => const MainHomeScreen()),
   GetPage(name: supportScreen, page: () => const Support()),
   GetPage(name: privacyScreen, page: () => const Privacy()),
   GetPage(name: faqScreen, page: () => const Faq()),
   GetPage(name: howToUseScreen, page: () => const HowToUse()),
   GetPage(name: settingScreen, page: () => const Setting()),
+  GetPage(
+      name: searchScreen,
+      page: () => const SearchScreen(),
+      transition: Transition.downToUp),
+  GetPage(name: seeAllScreen, page: () => const SeeAll())
 ];

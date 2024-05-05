@@ -3,6 +3,7 @@ import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:shelter/ui/routes/route.dart';
 import 'package:shelter/ui/widgets/nav_home_categories.dart';
 import 'package:shelter/ui/widgets/search_input.dart';
 
@@ -45,10 +46,15 @@ class NavHome extends StatelessWidget {
               position: carouselIndex.value,
             ),
           ),
-          searchInput(),
+          searchInput(() {
+            Get.toNamed(searchScreen);
+          }),
           SizedBox(height: 61.h),
           navHomeCategories(
-              false, 'assets/images/navAddItemPic1.png', 'For You'),
+            false,
+            'assets/images/navAddItemPic1.png',
+            'For You',
+          ),
           SizedBox(height: 31.h),
           navHomeCategories(
               false, 'assets/images/navAddItemPic2.png', 'Recently Added'),

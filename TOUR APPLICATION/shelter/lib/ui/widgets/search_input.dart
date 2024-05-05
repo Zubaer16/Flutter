@@ -4,11 +4,12 @@ import 'package:shelter/const/app_colors.dart';
 import 'package:shelter/const/app_icons.dart';
 import 'package:shelter/ui/styles/styles.dart';
 
-Widget searchInput() {
+Widget searchInput(void Function()? onTap) {
   return SizedBox(
     width: 323.w,
     height: 45.h,
     child: TextFormField(
+      onTap: onTap,
       readOnly: true,
       decoration: InputDecoration(
         prefixIcon: const Icon(

@@ -1,8 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
+import 'package:shelter/ui/routes/route.dart';
 import 'package:shelter/ui/styles/styles.dart';
 
-Widget navHomeCategories(bool circlePic, String link, String category) {
+Widget navHomeCategories(
+  bool circlePic,
+  String link,
+  String category,
+) {
   return SizedBox(
     child: Column(
       children: [
@@ -13,7 +19,9 @@ Widget navHomeCategories(bool circlePic, String link, String category) {
                 children: [
                   Text(category, style: AppStyles.textStyleB16500),
                   TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Get.toNamed(seeAllScreen);
+                      },
                       child: Text('See All', style: AppStyles.textStyleG14500))
                 ])),
         SizedBox(
