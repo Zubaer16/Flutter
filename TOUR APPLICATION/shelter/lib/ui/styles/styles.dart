@@ -80,6 +80,11 @@ class AppStyles {
     fontSize: 16.sp,
     fontWeight: FontWeight.w500,
   );
+  static final textStyleB24400 = TextStyle(
+    color: Colors.black,
+    fontSize: 24.sp,
+    fontWeight: FontWeight.w400,
+  );
   static final textStyleG14500 = TextStyle(
       color: AppColors.slimyGreen,
       fontSize: 14.sp,

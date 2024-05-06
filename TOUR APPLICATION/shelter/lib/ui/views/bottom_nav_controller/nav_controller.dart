@@ -10,7 +10,7 @@ import 'package:shelter/ui/views/bottom_nav_controller/pages/nav_home.dart';
 
 class BottomNavController extends StatelessWidget {
   BottomNavController({super.key});
-  final RxInt _currentIndex = 0.obs;
+  final RxInt _currentIndex = 1.obs;
   final RxBool _drawer = false.obs;
   final pages = [NavHome(), const NavAdd(), const NavFavourite()];
   @override
