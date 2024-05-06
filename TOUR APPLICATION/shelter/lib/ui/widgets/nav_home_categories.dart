@@ -5,10 +5,7 @@ import 'package:shelter/ui/routes/route.dart';
 import 'package:shelter/ui/styles/styles.dart';
 
 Widget navHomeCategories(
-  bool circlePic,
-  String link,
-  String category,
-) {
+    bool circlePic, String link, String category, void Function()? onPressed) {
   return SizedBox(
     child: Column(
       children: [
@@ -19,9 +16,7 @@ Widget navHomeCategories(
                 children: [
                   Text(category, style: AppStyles.textStyleB16500),
                   TextButton(
-                      onPressed: () {
-                        Get.toNamed(seeAllScreen);
-                      },
+                      onPressed: onPressed,
                       child: Text('See All', style: AppStyles.textStyleG14500))
                 ])),
         SizedBox(

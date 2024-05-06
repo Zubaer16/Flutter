@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:shelter/ui/routes/route.dart';
+import 'package:shelter/ui/views/bottom_nav_controller/see_all.dart';
 import 'package:shelter/ui/widgets/nav_home_categories.dart';
 import 'package:shelter/ui/widgets/search_input.dart';
 
@@ -16,6 +17,12 @@ class NavHome extends StatelessWidget {
     ),
     Image.asset('assets/images/navHomePic2.png'),
     Image.asset('assets/images/navHomePic3.png')
+  ];
+
+  final List<String> imageLinks = [
+    'assets/images/navHomePic1.png',
+    'assets/images/navHomePic2.png',
+    'assets/images/navHomePic3.png'
   ];
 
   final RxInt carouselIndex = 0.obs;
@@ -50,17 +57,32 @@ class NavHome extends StatelessWidget {
             Get.toNamed(searchScreen);
           }),
           SizedBox(height: 61.h),
-          navHomeCategories(
-            false,
-            'assets/images/navAddItemPic1.png',
-            'For You',
-          ),
+          navHomeCategories(false, imageLinks[0], 'For You', () {
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (_) => SeeAll(
+                          imageUrl: imageLinks[0],
+                        )));
+          }),
           SizedBox(height: 31.h),
-          navHomeCategories(
-              false, 'assets/images/navAddItemPic2.png', 'Recently Added'),
+          navHomeCategories(false, imageLinks[1], 'Recently Added', () {
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (_) => SeeAll(
+                          imageUrl: imageLinks[1],
+                        )));
+          }),
           SizedBox(height: 31.h),
-          navHomeCategories(
-              true, 'assets/images/navAddItemPic3.png', 'Top Places'),
+          navHomeCategories(true, imageLinks[2], 'Top Places', () {
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (_) => SeeAll(
+                          imageUrl: imageLinks[2],
+                        )));
+          }),
         ]),
       ),
     ));

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:shelter/const/app_colors.dart';
 import 'package:shelter/const/app_icons.dart';
+import 'package:shelter/ui/styles/styles.dart';
 
 class SearchScreen extends StatelessWidget {
   const SearchScreen({super.key});
@@ -10,6 +12,7 @@ class SearchScreen extends StatelessWidget {
     return GestureDetector(
       onTap: () => FocusScope.of(context).unfocus(),
       child: Scaffold(
+        backgroundColor: AppColors.brightGray,
         body: Padding(
           padding: const EdgeInsets.only(left: 30, right: 30, top: 50).r,
           child: Column(children: [
