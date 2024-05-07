@@ -35,6 +35,11 @@ class AppStyles {
     fontSize: 18.sp,
     fontWeight: FontWeight.w300,
   );
+  static final textStyleB18500 = TextStyle(
+    color: Colors.black,
+    fontSize: 18.sp,
+    fontWeight: FontWeight.w500,
+  );
   static final textStyleV18600 = TextStyle(
     color: AppColors.violet,
     fontSize: 18.sp,
