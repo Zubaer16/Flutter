@@ -56,7 +56,8 @@ class BottomNavController extends StatelessWidget {
               items: const [
                 BottomNavigationBarItem(
                     icon: Icon(AppIcons.home), label: 'Home'),
-                BottomNavigationBarItem(icon: Icon(AppIcons.add), label: 'Add'),
+                BottomNavigationBarItem(
+                    icon: Icon(AppIcons.addOutlined), label: 'Add'),
                 BottomNavigationBarItem(
                     icon: Icon(AppIcons.favourite), label: 'Favourite')
               ]),

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 import 'package:shelter/get_state/button_loading_state.dart';
+import 'package:shelter/ui/routes/route.dart';
 import 'package:shelter/ui/styles/styles.dart';
 import 'package:shelter/ui/widgets/custom_text_field.dart';
 import 'package:shelter/ui/widgets/violet_button.dart';
@@ -25,11 +27,11 @@ class NavAdd extends StatelessWidget {
               SizedBox(
                 height: 20.h,
               ),
-              customTextField('Owner Name'),
-              customTextField('Description'),
-              customTextField('Cost'),
-              customTextField('Facilities', maxLines: 4),
-              customTextField('Destination'),
+              customTextField('Owner Name', null),
+              customTextField('Description', null),
+              customTextField('Cost', null),
+              customTextField('Facilities', null, maxLines: 4),
+              customTextField('Destination', null),
               SizedBox(
                 height: 10.h,
               ),
@@ -37,7 +39,10 @@ class NavAdd extends StatelessWidget {
                 height: 50.h,
                 child: VioletButton(
                     title: 'Next',
-                    onAction: () {},
+                    onAction: () {
+                      ButtonLoadingState.addNextValue.value = true;
+                      Get.toNamed(uploadScreen);
+                    },
                     value: ButtonLoadingState.addNextValue),
               )
             ]),

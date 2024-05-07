@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:shelter/const/app_colors.dart';
 import 'package:shelter/ui/styles/styles.dart';
 
-Widget customTextField(title, {maxLines}) {
+Widget customTextField(title, readonly, {maxLines}) {
   return Column(
     crossAxisAlignment: CrossAxisAlignment.start,
     children: [
@@ -16,6 +16,7 @@ Widget customTextField(title, {maxLines}) {
             color: AppColors.brightGray1,
             borderRadius: BorderRadius.all(const Radius.circular(7).r)),
         child: TextField(
+          readOnly: readonly ?? false,
           maxLines: maxLines,
           decoration: InputDecoration(
               border: InputBorder.none,

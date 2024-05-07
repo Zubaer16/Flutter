@@ -2,6 +2,7 @@ import 'package:get/get.dart';
 import 'package:shelter/ui/views/auth/log_in.dart';
 import 'package:shelter/ui/views/auth/sign_up.dart';
 import 'package:shelter/ui/views/bottom_nav_controller/search_screen.dart';
+import 'package:shelter/ui/views/bottom_nav_controller/upload_screen.dart';
 import 'package:shelter/ui/views/drawer_pages/faq.dart';
 import 'package:shelter/ui/views/drawer_pages/how_to_use.dart';
 import 'package:shelter/ui/views/drawer_pages/privacy.dart';
@@ -26,6 +27,7 @@ const String faqScreen = '/faq-screen';
 const String howToUseScreen = '/how-to-use-screen';
 const String settingScreen = '/setting-screen';
 const String searchScreen = '/search-screen';
+const String uploadScreen = '/upload-screen';
 
 // Control our page route flow
 
@@ -46,4 +48,5 @@ List<GetPage> getPages = [
       name: searchScreen,
       page: () => const SearchScreen(),
       transition: Transition.downToUp),
+  GetPage(name: uploadScreen, page: () => UploadScreen())
 ];
