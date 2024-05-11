@@ -26,63 +26,61 @@ class UploadScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        backgroundColor: Colors.white,
-        body: Padding(
-          padding: const EdgeInsets.only(left: 20, right: 20).r,
-          child: Column(children: [
-            SizedBox(
-              height: 20.h,
-            ),
-            customTextField('Phone Number', null),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  'Destination Date & Time',
-                  style: AppStyles.textStyleB18500,
+    return Scaffold(
+      backgroundColor: Colors.white,
+      body: Padding(
+        padding: const EdgeInsets.only(left: 20, right: 20).r,
+        child: Column(children: [
+          SizedBox(
+            height: 60.h,
+          ),
+          customTextField('Phone Number', null),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                'Destination Date & Time',
+                style: AppStyles.textStyleB18500,
+              ),
+              Obx(
+                () => Container(
+                  decoration: BoxDecoration(
+                      color: AppColors.brightGray1,
+                      borderRadius:
+                          BorderRadius.all(const Radius.circular(7).r)),
+                  child: TextField(
+                    onTap: () => _selectDate(context),
+                    controller: _dateController.value,
+                    readOnly: true,
+                    decoration: InputDecoration(
+                        border: InputBorder.none,
+                        contentPadding: const EdgeInsets.only(left: 20).r),
+                  ),
                 ),
-                Obx(
-                  () => Container(
-                    decoration: BoxDecoration(
-                        color: AppColors.brightGray1,
-                        borderRadius:
-                            BorderRadius.all(const Radius.circular(7).r)),
-                    child: TextField(
-                      onTap: () => _selectDate(context),
-                      controller: _dateController.value,
-                      readOnly: true,
-                      decoration: InputDecoration(
-                          border: InputBorder.none,
-                          contentPadding: const EdgeInsets.only(left: 20).r),
+              ),
+              SizedBox(
+                height: 10.h,
+              )
+            ],
+          ),
+          Stack(
+            children: [
+              customTextField('Choose Images', true, maxLines: 4),
+              Positioned.fill(
+                child: SizedBox(
+                  child: Padding(
+                    padding: const EdgeInsets.only(top: 12.0).r,
+                    child: Icon(
+                      AppIcons.addCircle,
+                      color: Colors.blue,
+                      size: 50.r,
                     ),
                   ),
                 ),
-                SizedBox(
-                  height: 10.h,
-                )
-              ],
-            ),
-            Stack(
-              children: [
-                customTextField('Choose Images', true, maxLines: 4),
-                Positioned.fill(
-                  child: SizedBox(
-                    child: Padding(
-                      padding: const EdgeInsets.only(top: 12.0).r,
-                      child: Icon(
-                        AppIcons.addCircle,
-                        color: Colors.blue,
-                        size: 50.r,
-                      ),
-                    ),
-                  ),
-                )
-              ],
-            ),
-          ]),
-        ),
+              )
+            ],
+          ),
+        ]),
       ),
     );
   }
