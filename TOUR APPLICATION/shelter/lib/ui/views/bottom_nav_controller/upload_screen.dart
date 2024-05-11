@@ -67,13 +67,15 @@ class UploadScreen extends StatelessWidget {
             Stack(
               children: [
                 customTextField('Choose Images', true, maxLines: 4),
-                Positioned(
+                Positioned.fill(
                   child: SizedBox(
-                    width: MediaQuery.of(context).size.width,
-                    child: Icon(
-                      AppIcons.addCircle,
-                      color: Colors.blue,
-                      size: 50.r,
+                    child: Padding(
+                      padding: const EdgeInsets.only(top: 12.0).r,
+                      child: Icon(
+                        AppIcons.addCircle,
+                        color: Colors.blue,
+                        size: 50.r,
+                      ),
                     ),
                   ),
                 )
