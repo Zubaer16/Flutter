@@ -70,10 +70,13 @@ class UploadScreen extends StatelessWidget {
                 child: SizedBox(
                   child: Padding(
                     padding: const EdgeInsets.only(top: 12.0).r,
-                    child: Icon(
-                      AppIcons.addCircle,
-                      color: Colors.blue,
-                      size: 50.r,
+                    child: InkWell(
+                      onTap: () => print('hi'),
+                      child: Icon(
+                        AppIcons.addCircle,
+                        color: Colors.blue,
+                        size: 60.r,
+                      ),
                     ),
                   ),
                 ),
