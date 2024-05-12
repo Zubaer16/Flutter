@@ -1,7 +1,11 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:get/get_rx/src/rx_types/rx_types.dart';
+import 'package:get/get_state_manager/get_state_manager.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:shelter/const/app_colors.dart';
 import 'package:shelter/const/app_icons.dart';
 import 'package:shelter/ui/styles/styles.dart';
@@ -11,6 +15,7 @@ class UploadScreen extends StatelessWidget {
   UploadScreen({super.key});
   final Rx<DateTime> selectedDate = DateTime.now().obs;
   final Rx<TextEditingController> _dateController = TextEditingController().obs;
+
   Future<void> _selectDate(BuildContext context) async {
     final selected = await showDatePicker(
         context: context,
@@ -26,11 +31,12 @@ class UploadScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    RxList showImage = [].obs;
     return Scaffold(
       backgroundColor: Colors.white,
       body: Padding(
         padding: const EdgeInsets.only(left: 20, right: 20).r,
-        child: Column(children: [
+        child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
           SizedBox(
             height: 60.h,
           ),
@@ -71,7 +77,11 @@ class UploadScreen extends StatelessWidget {
                   child: Padding(
                     padding: const EdgeInsets.only(top: 12.0).r,
                     child: InkWell(
-                      onTap: () => print('hi'),
+                      onTap: () async {
+                        final XFile? image = await ImagePicker()
+                            .pickImage(source: ImageSource.gallery);
+                        showImage.add(image!);
+                      },
                       child: Icon(
                         AppIcons.addCircle,
                         color: Colors.blue,
@@ -83,6 +93,30 @@ class UploadScreen extends StatelessWidget {
               )
             ],
           ),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              Obx(
+                () => showImage.isEmpty
+                    ? Container()
+                    // : Image.file(File(showImage[0].path))
+                    : Wrap(spacing: 18.w, runSpacing: 36.h, children: [
+                        ...List.generate(
+                            showImage.length,
+                            (index) => Container(
+                                  color: Colors.black,
+                                  height: 135.h,
+                                  width: 110.5.w,
+                                  child: Image.file(
+                                    File(showImage[index].path),
+                                    fit: BoxFit.cover,
+                                  ),
+                                ))
+                      ]),
+              ),
+            ],
+          )
         ]),
       ),
     );
