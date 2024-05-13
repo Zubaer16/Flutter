@@ -10,4 +10,5 @@ class AppIcons {
   static const search = Icons.search;
   static const searchOutlined = Icons.search_outlined;
   static const addCircle = Icons.add_circle;
+  static const removeCircle = Icons.remove_circle;
 }
