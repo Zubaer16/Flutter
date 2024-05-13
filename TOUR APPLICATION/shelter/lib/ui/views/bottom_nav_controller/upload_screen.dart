@@ -8,8 +8,10 @@ import 'package:get/get_state_manager/get_state_manager.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:shelter/const/app_colors.dart';
 import 'package:shelter/const/app_icons.dart';
+import 'package:shelter/get_state/button_loading_state.dart';
 import 'package:shelter/ui/styles/styles.dart';
 import 'package:shelter/ui/widgets/custom_text_field.dart';
+import 'package:shelter/ui/widgets/violet_button.dart';
 
 class UploadScreen extends StatelessWidget {
   UploadScreen({super.key});
@@ -78,9 +80,10 @@ class UploadScreen extends StatelessWidget {
                     padding: const EdgeInsets.only(top: 12.0).r,
                     child: InkWell(
                       onTap: () async {
-                        final XFile? image = await ImagePicker()
-                            .pickImage(source: ImageSource.gallery);
-                        showImage.add(image!);
+                        final List<XFile?> image =
+                            await ImagePicker().pickMultiImage();
+
+                        showImage.value = List.from(image);
                       },
                       child: Icon(
                         AppIcons.addCircle,
@@ -93,30 +96,37 @@ class UploadScreen extends StatelessWidget {
               )
             ],
           ),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              Obx(
-                () => showImage.isEmpty
-                    ? Container()
-                    // : Image.file(File(showImage[0].path))
-                    : Wrap(spacing: 18.w, runSpacing: 36.h, children: [
-                        ...List.generate(
-                            showImage.length,
-                            (index) => Container(
-                                  color: Colors.black,
-                                  height: 135.h,
-                                  width: 110.5.w,
-                                  child: Image.file(
-                                    File(showImage[index].path),
-                                    fit: BoxFit.cover,
-                                  ),
-                                ))
-                      ]),
-              ),
-            ],
-          )
+          Obx(() => showImage.isEmpty
+              ? SizedBox(
+                  height: 170.h,
+                )
+              : SizedBox(
+                  height: 170.h,
+                  child: ListView.builder(
+                    itemCount: showImage.length,
+                    scrollDirection: Axis.horizontal,
+                    itemBuilder: (BuildContext context, int index) {
+                      return Padding(
+                        padding: const EdgeInsets.only(right: 8.0).r,
+                        child: Image.file(
+                          File(showImage[index].path),
+                          fit: BoxFit.cover,
+                          height: 170.h,
+                          width: 150.w,
+                        ),
+                      );
+                    },
+                  ),
+                )),
+          SizedBox(
+            height: 30.h,
+          ),
+          VioletButton(
+              title: 'Upload',
+              onAction: () {
+                ButtonLoadingState.uploadValue.value = true;
+              },
+              value: ButtonLoadingState.uploadValue)
         ]),
       ),
     );

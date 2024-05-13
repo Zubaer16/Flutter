@@ -6,4 +6,5 @@ class ButtonLoadingState {
   static RxBool privacyPolicyValue = false.obs;
   static RxBool userFormValue = false.obs;
   static RxBool addNextValue = false.obs;
+  static RxBool uploadValue = false.obs;
 }
