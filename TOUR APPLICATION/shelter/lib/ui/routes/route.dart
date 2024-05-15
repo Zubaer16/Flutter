@@ -48,5 +48,5 @@ List<GetPage> getPages = [
       name: searchScreen,
       page: () => const SearchScreen(),
       transition: Transition.downToUp),
-  GetPage(name: uploadScreen, page: () => UploadScreen())
+  GetPage(name: uploadScreen, page: () => UploadScreen()),
 ];

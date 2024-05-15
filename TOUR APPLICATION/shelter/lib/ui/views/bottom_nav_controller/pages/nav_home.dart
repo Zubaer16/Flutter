@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:shelter/ui/routes/route.dart';
+import 'package:shelter/ui/views/bottom_nav_controller/details_screen.dart';
 import 'package:shelter/ui/views/bottom_nav_controller/see_all.dart';
 import 'package:shelter/ui/widgets/nav_home_categories.dart';
 import 'package:shelter/ui/widgets/search_input.dart';
@@ -64,6 +65,9 @@ class NavHome extends StatelessWidget {
                     builder: (_) => SeeAll(
                           imageUrl: imageLinks[0],
                         )));
+          }, () {
+            Navigator.push(
+                context, MaterialPageRoute(builder: (_) => DetailsScreen()));
           }),
           SizedBox(height: 31.h),
           navHomeCategories(false, imageLinks[1], 'Recently Added', () {
@@ -73,6 +77,9 @@ class NavHome extends StatelessWidget {
                     builder: (_) => SeeAll(
                           imageUrl: imageLinks[1],
                         )));
+          }, () {
+            Navigator.push(
+                context, MaterialPageRoute(builder: (_) => DetailsScreen()));
           }),
           SizedBox(height: 31.h),
           navHomeCategories(true, imageLinks[2], 'Top Places', () {
@@ -82,6 +89,9 @@ class NavHome extends StatelessWidget {
                     builder: (_) => SeeAll(
                           imageUrl: imageLinks[2],
                         )));
+          }, () {
+            Navigator.push(
+                context, MaterialPageRoute(builder: (_) => DetailsScreen()));
           }),
         ]),
       ),

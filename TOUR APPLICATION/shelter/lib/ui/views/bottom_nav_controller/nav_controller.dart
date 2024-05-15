@@ -59,7 +59,7 @@ class BottomNavController extends StatelessWidget {
                 BottomNavigationBarItem(
                     icon: Icon(AppIcons.addOutlined), label: 'Add'),
                 BottomNavigationBarItem(
-                    icon: Icon(AppIcons.favourite), label: 'Favourite')
+                    icon: Icon(AppIcons.favouriteOutlined), label: 'Favourite')
               ]),
           body: pages[_currentIndex.value],
         ),
