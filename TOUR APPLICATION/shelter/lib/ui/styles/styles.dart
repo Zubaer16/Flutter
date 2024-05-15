@@ -94,6 +94,7 @@ class AppStyles {
       color: AppColors.slimyGreen,
       fontSize: 14.sp,
       fontWeight: FontWeight.w500);
+
   static inputDecorationStyle_1(String hintText) => InputDecoration(
         hintText: hintText,
         hintStyle: textStyleB16400,
