@@ -19,7 +19,10 @@ class DetailsScreen extends StatelessWidget {
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Et netus et malesuada fames ac turpis egestas maecenas. Velit laoreet id donec ultrices tincidunt arcu.Ac ut consequat semper viverra nam. Adipiscing at in tellus integer feugiat scelerisque varius morbi. Gravida neque convallis a cras semper. Ullamcorper dignissim cras tincidunt lobortis feugiat. Volutpat odio facilisis mauris sit amet massa vitae tortor. Eget lorem dolor sed viverra ipsum nunc aliquet bibendum.';
   String facilities =
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Et netus et malesuada fames ac turpis egestas maecenas. Velit laoreet id donec ultrices tincidunt arcu.';
-
+  String destination =
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Et netus et malesuada fames ac turpis egestas maecenas';
+  String journeyDate =
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -58,14 +61,18 @@ class DetailsScreen extends StatelessWidget {
                       )),
                   detailsDescription('Description', description),
                   detailsDescription('Facilities', facilities),
+                  detailsDescription('Destination', destination),
+                  detailsDescription('Journey Date & Time', journeyDate),
+                  detailsDescription('Cost', '3000 ')
                 ],
               ))),
           Expanded(
               flex: 1,
-              child: Container(
-                  color: Colors.white,
-                  width: MediaQuery.of(context).size.width,
-                  child: Text('hi')))
+              child: Card(
+                color: Colors.white,
+                elevation: 1,
+                child: Text('hi'),
+              ))
         ],
       ),
     );
