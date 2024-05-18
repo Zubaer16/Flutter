@@ -68,10 +68,9 @@ class DetailsScreen extends StatelessWidget {
               ))),
           Expanded(
               flex: 1,
-              child: Card(
+              child: Container(
+                width: MediaQuery.of(context).size.width,
                 color: Colors.white,
-                elevation: 1,
-                child: Text('hi'),
               ))
         ],
       ),
