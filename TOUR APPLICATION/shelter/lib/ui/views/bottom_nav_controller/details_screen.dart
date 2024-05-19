@@ -71,6 +71,9 @@ class DetailsScreen extends StatelessWidget {
               child: Container(
                 width: MediaQuery.of(context).size.width,
                 color: Colors.white,
+                child: Row(
+                  children: [],
+                ),
               ))
         ],
       ),
