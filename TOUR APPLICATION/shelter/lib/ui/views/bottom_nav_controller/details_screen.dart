@@ -15,13 +15,13 @@ class DetailsScreen extends StatelessWidget {
     Image.asset('assets/images/navHomePic3.png')
   ];
 
-  String description =
+  final String description =
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Et netus et malesuada fames ac turpis egestas maecenas. Velit laoreet id donec ultrices tincidunt arcu.Ac ut consequat semper viverra nam. Adipiscing at in tellus integer feugiat scelerisque varius morbi. Gravida neque convallis a cras semper. Ullamcorper dignissim cras tincidunt lobortis feugiat. Volutpat odio facilisis mauris sit amet massa vitae tortor. Eget lorem dolor sed viverra ipsum nunc aliquet bibendum.';
-  String facilities =
+  final String facilities =
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Et netus et malesuada fames ac turpis egestas maecenas. Velit laoreet id donec ultrices tincidunt arcu.';
-  String destination =
+  final String destination =
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Et netus et malesuada fames ac turpis egestas maecenas';
-  String journeyDate =
+  final String journeyDate =
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.';
   @override
   Widget build(BuildContext context) {
