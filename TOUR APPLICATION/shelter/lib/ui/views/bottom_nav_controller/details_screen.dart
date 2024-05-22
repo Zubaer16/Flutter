@@ -69,11 +69,11 @@ class DetailsScreen extends StatelessWidget {
           Expanded(
               flex: 1,
               child: Container(
-                width: MediaQuery.of(context).size.width,
                 color: Colors.white,
-                child: Row(
-                  children: [],
-                ),
+                child: Row(children: [
+                  SizedBox(width: 30),
+                  Text('Owner Name'),
+                ]),
               ))
         ],
       ),
