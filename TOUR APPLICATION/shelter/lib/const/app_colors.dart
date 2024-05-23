@@ -12,4 +12,5 @@ class AppColors {
   static const violet = Color(0xFF7F00FF);
   static const tartOrange = Color(0xFFFC4646);
   static const slimyGreen = Color(0xff2BA018);
+  static const silverSand = Color(0xffc4c4c4);
 }

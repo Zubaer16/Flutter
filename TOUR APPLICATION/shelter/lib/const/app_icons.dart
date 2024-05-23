@@ -12,4 +12,6 @@ class AppIcons {
   static const addCircle = Icons.add_circle;
   static const removeCircle = Icons.remove_circle;
   static const favoriteOutline = Icons.favorite_outline;
+  static const phoneInTalkOutlined = Icons.phone_in_talk_outlined;
+  static const chatOutlined = Icons.chat_outlined;
 }

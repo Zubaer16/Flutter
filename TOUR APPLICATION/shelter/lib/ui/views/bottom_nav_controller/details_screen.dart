@@ -1,5 +1,8 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
+import 'package:shelter/const/app_colors.dart';
 import 'package:shelter/const/app_icons.dart';
 import 'package:shelter/ui/styles/styles.dart';
 import 'package:shelter/ui/widgets/details_description.dart';
@@ -71,8 +74,41 @@ class DetailsScreen extends StatelessWidget {
               child: Container(
                 color: Colors.white,
                 child: Row(children: [
-                  SizedBox(width: 30),
-                  Text('Owner Name'),
+                  SizedBox(width: 30.w),
+                  Text(
+                    'Owner Name',
+                    style: AppStyles.textStyleB14500,
+                  ),
+                  SizedBox(
+                    width: 172.w,
+                  ),
+                  Container(
+                      height: 28.h,
+                      width: 28.w,
+                      decoration: BoxDecoration(
+                        color: AppColors.silverSand,
+                        shape: BoxShape.circle,
+                      ),
+                      child: Center(
+                          child: Icon(
+                        AppIcons.phoneInTalkOutlined,
+                        size: 15.w,
+                      ))),
+                  SizedBox(
+                    width: 21.w,
+                  ),
+                  Container(
+                      height: 28.h,
+                      width: 28.w,
+                      decoration: BoxDecoration(
+                        color: AppColors.silverSand,
+                        shape: BoxShape.circle,
+                      ),
+                      child: Center(
+                          child: Icon(
+                        AppIcons.chatOutlined,
+                        size: 15.w,
+                      ))),
                 ]),
               ))
         ],
