@@ -77,38 +77,22 @@ class DetailsScreen extends StatelessWidget {
                   SizedBox(width: 30.w),
                   Text(
                     'Owner Name',
-                    style: AppStyles.textStyleB14500,
+                    style: AppStyles.textStyleB17B,
                   ),
                   SizedBox(
                     width: 172.w,
                   ),
-                  Container(
-                      height: 28.h,
-                      width: 28.w,
-                      decoration: BoxDecoration(
-                        color: AppColors.silverSand,
-                        shape: BoxShape.circle,
-                      ),
-                      child: Center(
-                          child: Icon(
-                        AppIcons.phoneInTalkOutlined,
-                        size: 15.w,
-                      ))),
+                  Icon(
+                    AppIcons.phoneInTalkOutlined,
+                    size: 30.w,
+                  ),
                   SizedBox(
                     width: 21.w,
                   ),
-                  Container(
-                      height: 28.h,
-                      width: 28.w,
-                      decoration: BoxDecoration(
-                        color: AppColors.silverSand,
-                        shape: BoxShape.circle,
-                      ),
-                      child: Center(
-                          child: Icon(
-                        AppIcons.chatOutlined,
-                        size: 15.w,
-                      ))),
+                  Icon(
+                    AppIcons.chatOutlined,
+                    size: 30.w,
+                  ),
                 ]),
               ))
         ],
