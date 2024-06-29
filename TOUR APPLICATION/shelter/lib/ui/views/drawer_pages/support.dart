@@ -6,10 +6,12 @@ class Support extends StatelessWidget {
   Support({super.key});
   final emailController = TextEditingController();
   final facebookController = TextEditingController();
+  final phoneController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     emailController.text = 'zubaer.ahmed7690@gmail.com';
     facebookController.text = 'zubaer.ahmed7690@gmail.com';
+    phoneController.text = '0174117690';
     return GestureDetector(
       onTap: () => FocusScope.of(context).unfocus(),
       child: Scaffold(
@@ -46,12 +48,9 @@ class Support extends StatelessWidget {
                 'Phone',
                 style: AppStyles.textStyleB20300,
               ),
-              SizedBox(
-                height: 10.h,
-              ),
-              Text(
-                '01740117690',
-                style: AppStyles.textStyleB20300,
+              TextFormField(
+                controller: phoneController,
+                readOnly: true,
               ),
               SizedBox(
                 height: 20.h,
