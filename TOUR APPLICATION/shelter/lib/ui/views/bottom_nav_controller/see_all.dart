@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:shelter/const/app_colors.dart';
-import 'package:shelter/ui/styles/styles.dart';
+import 'package:shelter/ui/widgets/custom_appbar.dart';
 
 class SeeAll extends StatelessWidget {
   const SeeAll({super.key, this.imageUrl});
@@ -10,16 +10,7 @@ class SeeAll extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.brightGray,
-      appBar: AppBar(
-        title: Text(
-          'See all',
-          style: AppStyles.textStyleB20400,
-        ),
-        iconTheme: const IconThemeData(
-          color: Colors.black, //change your color here
-        ),
-        backgroundColor: Colors.white,
-      ),
+      appBar: customAppBar('See all'),
       body: GridView.builder(
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 2, // number of items in each row

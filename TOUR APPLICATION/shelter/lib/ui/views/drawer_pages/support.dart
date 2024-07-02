@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:shelter/ui/styles/styles.dart';
+import 'package:shelter/ui/widgets/custom_appbar.dart';
 
 class Support extends StatelessWidget {
   Support({super.key});
@@ -15,16 +16,7 @@ class Support extends StatelessWidget {
     return GestureDetector(
       onTap: () => FocusScope.of(context).unfocus(),
       child: Scaffold(
-        appBar: AppBar(
-          title: Text(
-            'Support',
-            style: AppStyles.textStyleB20400,
-          ),
-          iconTheme: const IconThemeData(
-            color: Colors.black,
-          ),
-          backgroundColor: Colors.white,
-        ),
+        appBar: customAppBar('Support'),
         body: Padding(
           padding: const EdgeInsets.all(10.0).r,
           child: Column(

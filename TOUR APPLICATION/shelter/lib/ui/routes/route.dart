@@ -6,6 +6,7 @@ import 'package:shelter/ui/views/bottom_nav_controller/upload_screen.dart';
 import 'package:shelter/ui/views/drawer_pages/faq.dart';
 import 'package:shelter/ui/views/drawer_pages/how_to_use.dart';
 import 'package:shelter/ui/views/drawer_pages/privacy.dart';
+import 'package:shelter/ui/views/drawer_pages/profile.dart';
 import 'package:shelter/ui/views/drawer_pages/setting.dart';
 import 'package:shelter/ui/views/drawer_pages/support.dart';
 import 'package:shelter/ui/views/main_home_screen.dart.dart';
@@ -28,6 +29,7 @@ const String howToUseScreen = '/how-to-use-screen';
 const String settingScreen = '/setting-screen';
 const String searchScreen = '/search-screen';
 const String uploadScreen = '/upload-screen';
+const String profileScreen = '/profile-screen';
 
 // Control our page route flow
 
@@ -49,4 +51,5 @@ List<GetPage> getPages = [
       page: () => const SearchScreen(),
       transition: Transition.downToUp),
   GetPage(name: uploadScreen, page: () => UploadScreen()),
+  GetPage(name: profileScreen, page: () => const Profile())
 ];

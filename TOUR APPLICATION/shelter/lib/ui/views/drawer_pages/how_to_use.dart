@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:shelter/ui/styles/styles.dart';
+import 'package:shelter/ui/widgets/custom_appbar.dart';
 
 class HowToUse extends StatelessWidget {
   const HowToUse({super.key});
@@ -7,16 +7,7 @@ class HowToUse extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: Text(
-            'How to use',
-            style: AppStyles.textStyleB20400,
-          ),
-          iconTheme: const IconThemeData(
-            color: Colors.black,
-          ),
-          backgroundColor: Colors.white,
-        ),
+        appBar: customAppBar('How to use'),
         body: Center(child: Text('Video player')));
   }
 }

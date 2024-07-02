@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:shelter/ui/routes/route.dart';
 import 'package:shelter/ui/styles/styles.dart';
+import 'package:shelter/ui/widgets/custom_appbar.dart';
 import 'package:shelter/ui/widgets/drawer_item.dart';
 
 class Setting extends StatelessWidget {
@@ -11,16 +13,7 @@ class Setting extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: Text(
-            'Settings',
-            style: AppStyles.textStyleB20400,
-          ),
-          iconTheme: const IconThemeData(
-            color: Colors.black,
-          ),
-          backgroundColor: Colors.white,
-        ),
+        appBar: customAppBar('Settings'),
         body: Padding(
           padding: const EdgeInsets.only(left: 25, right: 25, top: 20).r,
           child: Column(
@@ -39,7 +32,7 @@ class Setting extends StatelessWidget {
                 ],
               ),
               drawerItem('Logout', () => {}),
-              drawerItem('Profile', () => {}),
+              drawerItem('Profile', () => {Get.toNamed(profileScreen)}),
               drawerItem('Languages', () => {}),
             ],
           ),
