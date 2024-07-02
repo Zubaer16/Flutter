@@ -43,7 +43,7 @@ List<GetPage> getPages = [
   GetPage(name: privacyScreen, page: () => const Privacy()),
   GetPage(name: faqScreen, page: () => const Faq()),
   GetPage(name: howToUseScreen, page: () => const HowToUse()),
-  GetPage(name: settingScreen, page: () => const Setting()),
+  GetPage(name: settingScreen, page: () => Setting()),
   GetPage(
       name: searchScreen,
       page: () => const SearchScreen(),
