@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shelter/ui/widgets/custom_appbar.dart';
-
+//
 class Faq extends StatelessWidget {
   const Faq({super.key});
 
