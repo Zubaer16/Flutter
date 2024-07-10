@@ -10,7 +10,7 @@ class Support extends StatelessWidget {
   final phoneController = TextEditingController();
   @override
   Widget build(BuildContext context) {
-    //
+    
     emailController.text = 'zubaer.ahmed7690@gmail.com';
     facebookController.text = 'zubaer.ahmed7690@gmail.com';
     phoneController.text = '0174117690';
