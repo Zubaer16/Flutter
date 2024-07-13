@@ -5,7 +5,7 @@ import 'package:shelter/ui/routes/route.dart';
 import 'package:shelter/ui/styles/styles.dart';
 import 'package:shelter/ui/widgets/custom_appbar.dart';
 import 'package:shelter/ui/widgets/drawer_item.dart';
-//
+
 class Setting extends StatelessWidget {
   Setting({super.key});
   final RxBool darkMode = false.obs;
