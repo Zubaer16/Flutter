@@ -7,7 +7,6 @@ class Privacy extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: customAppBar('Privacy'),
-        body: const Center(child: Text('Show pdf')));
+        appBar: customAppBar('Privacy'), body: Center(child: Text('Show pdf')));
   }
 }
